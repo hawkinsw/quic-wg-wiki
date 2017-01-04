@@ -9,7 +9,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 # FCFS Space
 
 | Version | Owner | Notes |
-|--|--|--|
+|---------|-------|-------|
 | 0x00000000 | n/a | This value is reserved as invalid |
 | 0x22000000 | Google | Google QUIC 34 |
 | 0x23000000 | Google | Google QUIC 35 |
