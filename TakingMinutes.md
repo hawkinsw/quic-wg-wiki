@@ -1,6 +1,6 @@
 > It is characteristic of all committee discussions and decisions that every member has a vivid recollection of them and that every member’s recollection of them differs violently from every other member’s recollection. Consequently, we accept the convention that the official decisions are those and only those which have been officially recorded in the minutes by the officials, from which it emerges with an elegant inevitability that any decision which has been officially reached will have been officially recorded in the minutes by the officials and any decision which is not recorded in the minutes has not been officially reached even if one or more members believe they can recollect it, so in this particular case, if the decision had been officially reached it would have been officially recorded in the minutes by the officials, and it isn’t so it wasn’t.
 
-_ — [Sir Humphrey Appleby, Yes Prime Minister](https://youtu.be/85fx0LrSMsE?t=1m55s)_
+_— [Sir Humphrey Appleby, Yes Prime Minister](https://youtu.be/85fx0LrSMsE?t=1m55s)_
 
 ---
 
