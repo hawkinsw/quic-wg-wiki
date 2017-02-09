@@ -11,6 +11,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | Version | Owner | Notes |
 |---------|-------|-------|
 | 0x00000000 | n/a | This value is reserved as invalid |
+| 0x?a?a?a?a | IETF | Values meeting this pattern ((x&0x0f0f0f0f)==0x0a0a0a0a) are reserved for ensuring that version negotiation remains viable.  Endpoints SHOULD use these values.  Endpoints can expect that these versions will not be accepted by their peer. |
 | 0x22000000 | Google | Google QUIC 34 |
 | 0x23000000 | Google | Google QUIC 35 |
 | 0x24000000 | Google | Google QUIC 36 |
