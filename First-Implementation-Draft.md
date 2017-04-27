@@ -10,6 +10,8 @@ Implementing all of QUIC is difficult, if not impossible, at this stage, so we'r
 
 * integration with TLS 1.3 handshake - The basic 1-RTT mode is all that is needed here.  TLS exporters are not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  All MTI algorithms listed in TLS 1.3 are expected.
 
+* address validation and HelloRetryRequest - This need not be stateless, but implementations need to support HelloRetryRequest in TLS for other reasons.
+
 * transport parameters - This includes sending and parsing all the mandatory parameters.  Implementations will also have to validate version negotiation and fail the handshake if that is not successful.
 
 * authentication for cleartext - FNV-1a authentication will be needed.  Implementations will be expected to verify this and discard packets that are not correct.
