@@ -3,6 +3,7 @@ This version of the implementation draft will concentrate on just the handshake,
 * version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.
 
 * basic packetization and reliability. This includes:
+
   ** packetization for STREAM frames on Stream ID 1,
   ** transmitting those STREAM frames in unencrypted packets, 
   ** sending ACK frames in response (no timestamps needed)
