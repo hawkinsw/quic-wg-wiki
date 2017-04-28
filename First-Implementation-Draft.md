@@ -12,8 +12,8 @@ This version of the implementation draft will concentrate on just the handshake,
 For this part, a sender does not have to generate RTT samples and can use a fixed timer for retransmitting lost handshake packets. A receiver must be able to handle packets received out of order and generate ACK frames that indicate missing packets.
 
 * basic STREAM sending and receiving. This includes:
-  ** accepting stream data for the handshake and generating STREAM frames
-  ** assembling a stream of bytes from received STREAM frames.
+  * accepting stream data for the handshake and generating STREAM frames
+  * assembling a stream of bytes from received STREAM frames.
 
 For this part, a receiver must handle STREAM data received reordered, with gaps, or duplicated. Specifically, a receiver must allow for a sender to rebundle retransmitted STREAM data, meaning that a received STREAM frame may contain bytes that have already been received, and bytes that were lost.
 
