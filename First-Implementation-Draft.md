@@ -19,7 +19,7 @@ This version of the implementation draft will concentrate on just the handshake,
 
 * integration with TLS 1.3 handshake - The basic 1-RTT mode must be supported. TLS exporters are not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  All MTI algorithms listed in TLS 1.3 are expected.
 
-* HelloRetryRequest - This need not be stateless, but implementations need to support HelloRetryRequest in TLS for other reasons. Address validation may be supported.
+* address validation and HelloRetryRequest - This need not be stateless, but implementations need to support HelloRetryRequest in TLS for other reasons. Address validation must be supported.
 
 * transport parameters - This includes sending and parsing all the mandatory parameters. Implementations will also have to validate version negotiation and fail the handshake if that is not successful.
 
