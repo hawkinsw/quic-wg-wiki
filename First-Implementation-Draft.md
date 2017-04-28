@@ -3,12 +3,11 @@ This version of the implementation draft will concentrate on just the handshake,
 * version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.
 
 * basic packetization and reliability. This includes:
-
-  ** packetization for STREAM frames on Stream ID 1,
-  ** transmitting those STREAM frames in unencrypted packets, 
-  ** sending ACK frames in response (no timestamps needed)
-  ** processing ACK frames, removing acked packets from the retransmission buffer
-  ** timer-based retransmission of lost handshake packets
+  * packetization for STREAM frames on Stream ID 1,
+  * transmitting those STREAM frames in unencrypted packets, 
+  * sending ACK frames in response (no timestamps needed)
+  * processing ACK frames, removing acked packets from the retransmission buffer
+  * timer-based retransmission of lost handshake packets
 
 For this part, a sender does not have to generate RTT samples and can use a fixed timer for retransmitting lost handshake packets. A receiver must be able to handle packets received out of order and generate ACK frames that indicate missing packets.
 
