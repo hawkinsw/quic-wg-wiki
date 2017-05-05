@@ -1,6 +1,4 @@
-Register the use of a QUIC version here to avoid collisions.
-
-Note: These values are all defined in big endian.
+Register the use of a QUIC version here to avoid collisions. Note: These values are all defined in big endian.
 
 # Standard Space
 
