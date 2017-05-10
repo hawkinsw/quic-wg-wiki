@@ -5,7 +5,7 @@ This version of the implementation draft will concentrate on just the handshake,
 * basic packetization and reliability. This includes:
   * packetization for STREAM frames on Stream ID 1,
   * transmitting those STREAM frames in unencrypted packets, 
-  * sending ACK frames in response (no timestamps needed)
+  * sending ACK frames in response (no timestamps in unprotected packets and no delayed ack timer)
   * processing ACK frames, removing acked packets from the retransmission buffer
   * timer-based retransmission of lost handshake packets
 
