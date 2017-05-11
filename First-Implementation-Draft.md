@@ -47,3 +47,7 @@ This removes a bunch of things from consideration.  Implementations can do more 
 * Flow control - We can assume that the flow control window is sufficiently open to handshake; max stream ID isn't needed because we won't have more than 1 stream.
 
 * Streams other than the one carrying TLS.
+
+* 0-RTT and resumption.
+
+* Key updates.
