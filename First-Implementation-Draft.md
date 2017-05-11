@@ -32,7 +32,7 @@ This version of the implementation draft will concentrate on a successful handsh
 
 * Packet protection - All post handshake packets must be sent with 1RTT keys and packet protection.  
 
-* Connection Close - The implementation must close the connection after the handshake is complete.  This may be immediately or on a timer.  The peer must process the connection close packet and close the connection.  The connection close packet must use packet protection.  The packet containing a connection close does not need to be retransmitted.
+* Connection Close - The implementation must close the connection after the handshake is complete.  This may be immediately or on a timer.  The peer must process the connection close packet and close the connection.  The connection close packet must use packet protection.  The packet containing a connection close does not need to be retransmitted.  Implementations should have configuration for switching this on, or for waiting for a close from their peer.
 
 * Frame parsing for all frames - Rather than prohibit senders from generating frames that we don't expect to be used, receivers must accept all defined frame types.  Implementations need to parse every frame type, even if it is only so that they can correctly skip them.
 
