@@ -22,8 +22,6 @@ This version of the implementation draft will concentrate on a successful handsh
 
 * Address validation and HelloRetryRequest - This need not be stateless, but implementations need to support HelloRetryRequest in TLS for other reasons. Address validation must be supported.
 
-* Transport parameters - This includes sending and parsing all the mandatory parameters. Implementations will also have to validate version negotiation and fail the handshake if that is not successful.
-
 * Authentication for cleartext - FNV-1a authentication will be needed.  Implementations will be expected to verify this and discard packets that are not correct.
 
 * PADDING frames - The first client packet will be padded to 1280 octets (policing of this limit at the server would also be good).
@@ -49,5 +47,7 @@ This removes a bunch of things from consideration.  Implementations can do more 
 * Streams other than the one carrying TLS.
 
 * 0-RTT and resumption.
+
+* Transport parameter exchange and negotiation.
 
 * Key updates.
