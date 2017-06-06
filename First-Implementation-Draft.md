@@ -51,3 +51,5 @@ This removes a bunch of things from consideration.  Implementations can do more 
 * Key updates.
 
 * Address validation and HelloRetryRequest.
+
+* Public Reset.
