@@ -18,9 +18,7 @@ This version of the implementation draft will concentrate on a successful handsh
 
   > Note: For this part, a receiver must handle STREAM data received reordered, with gaps, or duplicated. Specifically, a receiver must allow for a sender to rebundle retransmitted STREAM data, meaning that a received STREAM frame may contain bytes that have already been received, and bytes that were lost.
 
-* Integration with TLS 1.3 handshake - The basic 1-RTT mode must be supported. Transport parameter exchange is not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  TLS key export is necessary in order to exercise the 1-RTT keys.  All MTI algorithms listed in TLS 1.3 are expected.
-
-* Address validation and HelloRetryRequest - This need not be stateless, but implementations need to support HelloRetryRequest in TLS for other reasons. Address validation must be supported.
+* Integration with TLS 1.3 handshake - The basic 1-RTT mode must be supported. Transport parameter exchange is not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  TLS key export is necessary in order to exercise the 1-RTT keys.  All MTI algorithms listed in TLS 1.3 are expected.  Clients MUST offer a key share with P-256, servers MUST accept that share (this avoids the need for HelloRetryRequest).
 
 * Authentication for cleartext - FNV-1a authentication will be needed.  Implementations will be expected to verify this and discard packets that are not correct.
 
@@ -51,3 +49,5 @@ This removes a bunch of things from consideration.  Implementations can do more 
 * Transport parameter exchange and negotiation.
 
 * Key updates.
+
+* Address validation and HelloRetryRequest.
