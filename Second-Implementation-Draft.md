@@ -8,19 +8,21 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Further revisions to mechanisms in the First Implementation Draft (e.g. changes to the public header format, connection close).
 
-* Transport Parameter Exchange
+* Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft.
 
-* A simple single-streamed application (or, one stream in each direction) - exercise the entire life cycle of a stream.
+* A simple single-streamed application (or, one stream in each direction). This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client on server.
 
-* Connection-level flow control (MAX_DATA frame)
+* Exercise the entire life cycle of a stream, including appropriate use/handling of RST_STREAM and GOAWAY.
 
-* Public Reset
+* Connection-level flow control (MAX_DATA, MAX_STREAM_ID frames)
+
+* Public Reset (generate where appropriate; validate & process correctly)
 
 # Could include
 
 * An HTTP/2 application to require multiple streams
 
-* Stream level flow control
+* Stream level flow control (MAX_STREAM_DATA)
 
 * Address validation and HelloRetryRequest
 
