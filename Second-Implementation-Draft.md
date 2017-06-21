@@ -28,7 +28,7 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 # Should Not Include
 
-* Loss Recovery includes a number of concepts that are extensively tested in TCP and has low interoperability concerns. We will maintain fixed RTO-based retransmissions (i.e., no RTT calcuation)
+* Loss Recovery includes a number of concepts that are extensively tested in TCP and has low interoperability concerns. We will maintain fixed RTO-based retransmissions (i.e., no RTT calculation)
 
 * Congestion Control
 
