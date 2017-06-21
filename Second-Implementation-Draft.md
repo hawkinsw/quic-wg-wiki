@@ -10,9 +10,7 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Transport Parameter Exchange
 
-* Address validation and HelloRetryRequest
-
-* A simple single-streamed application (or, one stream in each direction)
+* A simple single-streamed application (or, one stream in each direction) - exercise the entire life cycle of a stream.
 
 * Connection-level flow control (MAX_DATA frame)
 
@@ -24,6 +22,8 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Stream level flow control
 
+* Address validation and HelloRetryRequest
+
 * 0-RTT and Resumption
 
 # Should Not Include
@@ -34,6 +34,6 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Key Updates
 
-* Connection ID Changes
+* Connection ID Changes (Migration)
 
 * PMTU Discovery
