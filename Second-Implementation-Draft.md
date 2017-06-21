@@ -2,7 +2,7 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 # Must Include
 
-* Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation-Draft).
+* Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation-Draft). These are not yet known.
 
 # Should Include
 
