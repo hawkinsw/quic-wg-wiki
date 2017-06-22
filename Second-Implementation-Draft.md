@@ -18,7 +18,7 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Stream level flow control (MAX_STREAM_DATA)
 
-* Public Reset (generate where appropriate; validate & process correctly)
+* Stateless Reset (generate where appropriate; validate & process correctly)
 
 # Could include
 
@@ -36,6 +36,6 @@ The following is a straw-man list of features in the second QUIC implementation 
 
 * Key Updates
 
-* Connection ID Changes (Migration)
+* Post handshake Connection ID Changes (Migration)
 
 * PMTU Discovery
