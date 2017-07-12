@@ -4,6 +4,7 @@ Please add your implementation below.
 
 name | description | language | version | role(s) | handshake(s) | protocol id(s) |
 --- | --- | --- | --- | --- | --- | ---
+[minq](https://www.github.com/ekr/minq) | Minimal QUIC implementation with emphasis on readability and simplicity. Very un-baked but will track the emerging document. Library plus test programs. | Go | draft-04 + editor's changes | client and server | TLS 1.3-20 | 0xff000004 |
 [lsquic](https://www.litespeedtech.com/products)  |  LiteSpeed QUIC implementation for use with LiteSpeed server products. | C, C++ | Q035, Q037 | Server | QUIC Crypto 
 mozquic | an iQUIC library - eventually meant to support both transport and http features. Very nascent, but meant to track standardization milestones. pmcmanus@mozilla.com | c++ with C interface | | library client and server | tls | 0xff000004 and 0xf123f0c5
 [ngtcp2](https://github.com/ngtcp2/ngtcp2) | ngtcp2 project is an effort to implement IETF QUIC protocol  | C | draft-04 | client, library, server | with boringssl: TLSv1.3-18, with OpenSSL: TLSv1.3-21 | 0xff000004
