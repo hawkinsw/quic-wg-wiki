@@ -34,11 +34,29 @@ Any implementations deployed at scale must also do:
 
 Put in all the features that allow performance testing.
 
-* An HTTP/2 application to require multiple streams (with stateless HPACK compression, no QPACK, QCRAM, etc) and no server push.
+* An HTTP/2 application to require multiple streams
 
 * 0-RTT and Resumption
 
 * Loss Recovery beyond the exising 1-RTO retransmissions. (I believe this includes a number of concepts that are extensively tested in TCP and has low interoperability concerns). 
+
+* Congestion Control
+
+# Strategy 3
+
+The objective of this plan is to build something that, while not having the full feature set, can be deployed at scale.
+
+* Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft.
+
+* Address validation and HelloRetryRequest
+
+* Stateless Reset (generate where appropriate; validate & process correctly)
+
+* An HTTP/2 application to require multiple streams (with stateless HPACK compression, no QPACK, QCRAM, etc) and no server push.
+
+Any implementations deployed at scale must also do:
+
+* Loss Recovery beyond the exising 1-RTO retransmissions. (I believe this includes a number of concepts that are extensively tested in TCP and has low interoperability concerns).
 
 * Congestion Control
 
