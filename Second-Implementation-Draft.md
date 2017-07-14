@@ -24,6 +24,12 @@ Lock down the unencrypted wire image to avoid middleboxes ossifying on Google-QU
 
 * Stateless Reset (generate where appropriate; validate & process correctly)
 
+Any implementations deployed at scale must also do:
+
+* Loss Recovery beyond the exising 1-RTO retransmissions. (I believe this includes a number of concepts that are extensively tested in TCP and has low interoperability concerns).
+
+* Congestion Control
+
 # Strategy 2
 
 Put in all the features that allow performance testing.
