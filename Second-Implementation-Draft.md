@@ -28,7 +28,7 @@ Lock down the unencrypted wire image to avoid middleboxes ossifying on Google-QU
 
 Put in all the features that allow performance testing.
 
-* An HTTP/2 application to require multiple streams
+* An HTTP/2 application to require multiple streams (with stateless HPACK compression, no QPACK, QCRAM, etc) and no server push.
 
 * 0-RTT and Resumption
 
