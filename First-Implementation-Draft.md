@@ -1,6 +1,6 @@
 This version of the implementation draft will concentrate on a successful handshake and a clean connection close, and will require integration with TLS 1.3. No application data will be exchanged. Implementing all of QUIC is difficult, if not impossible, at this stage, so we're going to focus on the 1RTT handshake. Specifically:
 
-* Version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.
+* Version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.  The version will be 0xff00000004.
 
 * Basic packetization and reliability. This includes:
   * Packetization for STREAM frames on Stream ID 0,
@@ -18,7 +18,7 @@ This version of the implementation draft will concentrate on a successful handsh
 
   > Note: For this part, a receiver must handle STREAM data received reordered, with gaps, or duplicated. Specifically, a receiver must allow for a sender to rebundle retransmitted STREAM data, meaning that a received STREAM frame may contain bytes that have already been received, and bytes that were lost.
 
-* Integration with TLS 1.3 handshake - The basic 1-RTT mode must be supported. Transport parameter exchange is not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  TLS exporters are necessary in order to exercise the 1-RTT keys.  All MTI algorithms listed in TLS 1.3 are expected.  Clients MUST offer a key share with P-256, servers MUST accept that share (this avoids the need for HelloRetryRequest).
+* Integration with TLS 1.3 handshake - The basic 1-RTT mode must be supported. Transport parameter exchange is not needed, nor are session tickets.  Basic key exchange is sufficient and implementations can use any certificate.  TLS exporters are necessary in order to exercise the 1-RTT keys.  All MTI algorithms listed in TLS 1.3 are expected.  Clients MUST be able to offer a key share with P-256, servers MUST accept that share (this avoids the need for HelloRetryRequest).  The ALPN label will be "hq-04", even though this won't necessarily include any of the HTTP mapping.
 
 * Authentication for cleartext - FNV-1a authentication will be needed.  Implementations will be expected to verify this and discard packets that are not correct.
 
@@ -52,4 +52,4 @@ This removes a bunch of things from consideration.  Implementations can do more 
 
 * Address validation and HelloRetryRequest.
 
-* Public Reset.
+* Public/Stateless Reset.
