@@ -1,4 +1,8 @@
-This version of the implementation draft will concentrate on a successful handshake and a clean connection close, and will require integration with TLS 1.3. No application data will be exchanged. Implementing all of QUIC is difficult, if not impossible, at this stage, so we're going to focus on the 1RTT handshake. Specifically:
+The first thing that we aim to implement will concentrate on a successful handshake and a clean connection close, and will require integration with TLS 1.3. No application data will be exchanged. Implementing all of QUIC is difficult, if not impossible, at this stage, so we're going to focus on the 1RTT handshake. 
+
+This roughly aligns with the pre-05 versions of the drafts, and we will use that to identify the protocol.
+
+Specifically:
 
 * Version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.  The version will be 0xff00000005.
 
