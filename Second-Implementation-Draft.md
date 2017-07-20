@@ -37,9 +37,3 @@ The following is a list of features in the second QUIC implementation draft. The
 * Congestion Control
 
 * HTTP/2 mapping, compression, etc.
-
-Changes based on feedback from the 1st session in Prague:
-
-- Eliminating "performance testing" and "deploy at scale" strategies to focus on the handshake and converging the wire image to the final version.
-
-- 
