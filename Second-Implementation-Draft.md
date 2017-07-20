@@ -18,7 +18,7 @@ Lock down the unencrypted wire image to avoid middleboxes ossifying on Google-QU
 
 * Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft.
 
-* A simple single-streamed application (or, one stream in each direction). This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client on server. Brian proposed "echo and amplify" and volunteered to write it up.
+* A simple single-streamed application (or, one stream in each direction). This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client and server. Brian proposed "echo and amplify" and volunteered to write it up.
 
 * Address validation and HelloRetryRequest
 
