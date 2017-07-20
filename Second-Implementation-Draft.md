@@ -2,7 +2,7 @@ The following is a list of features in the second QUIC implementation draft. The
 
 # Consensus to Include These
 
-* Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation-Draft). These are not yet known.
+* Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation-Draft). None have been identified to date.
 
 * Further revisions to mechanisms in the First Implementation Draft (e.g. changes to the public header format, connection close).
 
@@ -14,7 +14,7 @@ The following is a list of features in the second QUIC implementation draft. The
 
 * Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft.
 
-* A simple multi-streamed application (or, one stream in each direction). This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client and server. Brian proposed "echo and amplify" and volunteered to write it up. For instance, the client could send data on one stream and the server could echo copies of that on multiple streams.
+* A simple multi-streamed application. This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client and server. For instance, the client could send data on one stream and the server could echo copies of that on multiple streams. Brian proposed "echo and amplify" and volunteered to write it up. 
 
 * Address validation and HelloRetryRequest
 
