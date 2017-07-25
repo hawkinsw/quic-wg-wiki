@@ -12,7 +12,7 @@ The first implementation focused on the basic handshake. The second will add add
 
 * Address validation and HelloRetryRequest
 
-* Exercise the entire life cycle of a stream, including appropriate use/handling of RST_STREAM.
+* Exercise the entire life cycle of a stream, including appropriate use/handling of RST_STREAM. Streams are *bidirectional*, regardless of ongoing issue discussion.
 
 * Connection-level flow control (MAX_DATA, MAX_STREAM_ID frames). The intent, at this point, is to provide reasonable limits to traffic burstiness and expect peers to respect them. A non-goal is to fine-tune the algorithms that generate optimal flow control limits.
 
