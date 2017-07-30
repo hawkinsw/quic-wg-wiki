@@ -18,7 +18,7 @@ The first implementation focused on the basic handshake. The second will add add
 
 * Stream level flow control (MAX_STREAM_DATA). See note above.
 
-* A simple multi-streamed application. This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client and server. The client will send simple HTTP/0.9 GETs and the server will respond in the response stream. Any relationship to the future HTTP/2 mapping is incidental.
+* A simple multi-streamed application. This application would ideally leverage a very simple socket API and follow simple logic easily implementable on both client and server. The client will send simple HTTP/0.9 GETs (https://www.w3.org/Protocols/HTTP/AsImplemented.html) and the server will respond in the response stream. Any relationship to the future HTTP/2 mapping is incidental.
 
 * Public/Stateless Reset (generate where appropriate; validate & process correctly)
 
