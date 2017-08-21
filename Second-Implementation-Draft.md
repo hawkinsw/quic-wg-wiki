@@ -8,7 +8,7 @@ The first implementation focused on the basic handshake. The second will add add
 
 * Further revisions to mechanisms in the First Implementation Draft (e.g. changes to the public header format, connection close).
 
-* Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft.
+* Transport Parameter Exchange. At the very least, the four parameters specified as MUST in the draft. (TODO: is this four, or five? Per draft-05, servers must send the stateless reset secret, and clients must understand it)
 
 * Address validation and HelloRetryRequest
 
