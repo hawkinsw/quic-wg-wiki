@@ -15,4 +15,4 @@ name | description | language | version | role(s) | handshake(s) | protocol id(s
 [quicly](https://github.com/h2o/quicly) | QUIC protocol implementation for H2O server | C | draft-04 | client and server | TLS 1.3-18 |
 [stellite](https://github.com/line/stellite) | Stellite project is a client library and server application that offers an easy way to develop, build, and implement client/server. It aims to provide fast and stable connectivity to mobile applications. | C++ | | client, library, server | QUIC Crypto |
 [Wireshark](https://code.wireshark.org/review/#/c/22366/) | Wireshark is Network Analyzer Tools  | C | draft-05 | Tools |  | 0xff000005
-
+[ats](https://cwiki.apache.org/confluence/display/TS/QUIC) | QUIC implementation in Apache Traffic Server | C++ | draft-05 | Server | TLS 1.3-21 | 0xff000005
