@@ -37,17 +37,15 @@ Minimal QUIC implementation with emphasis on readability and simplicity. Very un
 - **Protocol IDs:** `0xff000004`
 - **Public server:**
 
-
 ## [mozquic](https://github.com/mcmanus/mozquic)
-
-an iQUIC library - eventually meant to support both transport and http features. Very nascent, but meant to track standardization milestones.
+an iQUIC library meant to track standardization milestones.
 
 - **Language:** c++ with C interface
-- **Version:** library client and server
-- **Roles:** tls 1.3 -21; plausibly -1
-- **Handshake:** `0xff000005` and `0xf123f0c5` hq-05
-- **Protocol IDs:**
-- **Public server:**
+- **Version:**  -06
+- **Roles:** library, client, server
+- **Handshake:**   TLS 1.3-21 or -2
+- **Protocol IDs:** `0xff000005` and `0xf123f0c5` and `0xff000006` hq-05
+- **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
 ## [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 
@@ -92,9 +90,9 @@ QUANT (QUIC Userspace Accelerated Network Transfers), the beginnings of a BSD-li
 - **Language:** C11
 - **Version:**
 - **Roles:** client, library, server
-- **Handshake:** (same as quicly below)
+- **Handshake:** TLS 1.3-18
 - **Protocol IDs:** `0xff000005`
-- **Public server:** quant.eggert.org:4433
+- **Public server:** quant.eggert.org
 
 
 ## [quic-go](https://github.com/lucas-clemente/quic-go)
@@ -106,7 +104,7 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
-- **Public server:**
+- **Public server:** kazuhooku.com:4433
 
 
 ## [quicly](https://github.com/h2o/quicly)
@@ -114,11 +112,11 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-05
+- **Version:** draft-04
 - **Roles:** client and server
-- **Handshake:** TLS 1.3-21
+- **Handshake:** TLS 1.3-18
 - **Protocol IDs:**
-- **Public server:** kazuhooku.com:4433
+- **Public server:**
 
 
 ## [stellite](https://github.com/line/stellite)
