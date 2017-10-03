@@ -141,12 +141,12 @@ Stellite project is a client library and server application that offers an easy 
 - **Protocol IDs:**
 - **Public server:**
 
-## [winquic]
+## Winquic
 
-Winquic is a closed source implementation of QUIC on Windows.
+Winquic is an implementation of QUIC on Windows.
 
 - **Language:** C
-- **Version:**
+- **Version:** draft-05
 - **Roles:** client, server
 - **Handshake:** TLS 1.3-21
 - **Protocol IDs:** 
