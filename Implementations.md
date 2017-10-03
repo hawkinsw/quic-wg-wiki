@@ -90,9 +90,9 @@ QUANT (QUIC Userspace Accelerated Network Transfers), the beginnings of a BSD-li
 - **Language:** C11
 - **Version:**
 - **Roles:** client, library, server
-- **Handshake:** TLS 1.3-18
+- **Handshake:** *same as quicly below*
 - **Protocol IDs:** `0xff000005`
-- **Public server:** quant.eggert.org
+- **Public server:** quant.eggert.org:4433 (Logs at https://quant.eggert.org)
 
 
 ## [quic-go](https://github.com/lucas-clemente/quic-go)
