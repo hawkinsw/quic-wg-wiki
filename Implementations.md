@@ -58,11 +58,7 @@ an iQUIC library meant to track standardization milestones.
 - **Protocol IDs:** `0xff000005` and `0xf123f0c5` and `0xff000006` hq-05
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
-
-
-
-## [picoquic](https://github.com/private-octopus/picoquic)## [ngtcp2](https://github.com/ngtcp2/ngtcp2)
-
+## [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
@@ -72,6 +68,7 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Protocol IDs:** `0xff000005`
 - **Public server:**
 
+## [picoquic](https://github.com/private-octopus/picoquic)
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
 
 - **Language:** C
