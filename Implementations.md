@@ -19,8 +19,8 @@ QUIC implementation in Apache Traffic Server
 LiteSpeed QUIC implementation for use with LiteSpeed server products.
 
 - **Language:**  C, C++
-- **Version:** Q035, Q037
-- **Roles:** Server
+- **Version:** Q035, Q037, Q038, Q039, Q041.
+- **Roles:** Server and Client.  The latter is available as an [open-source library](https://github.com/litespeedtech/lsquic-client).
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
 - **Public server:**
