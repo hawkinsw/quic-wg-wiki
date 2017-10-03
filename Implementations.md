@@ -2,6 +2,17 @@ This wiki tracks known implementations of QUIC. See also our [Tools listing](Too
 
 Please add your implementation below. Keep sorted alphabetically.
 
+## AppleQUIC
+
+AppleQUIC is a test client and server implementation.  
+
+- **Language:** C, Objective-C
+- **Version:** draft-05
+- **Roles:** Client, Server
+- **Handshake:** TLS 1.3-21
+- **Protocol IDs:** `0xff000005`
+- **Public server:**
+
 ## [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
 
 QUIC implementation in Apache Traffic Server
