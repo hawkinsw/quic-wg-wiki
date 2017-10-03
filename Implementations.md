@@ -106,7 +106,7 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
-- **Public server:** kazuhooku.com:4433
+- **Public server:**
 
 
 ## [quicly](https://github.com/h2o/quicly)
@@ -114,11 +114,11 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-04
+- **Version:** draft-05
 - **Roles:** client and server
-- **Handshake:** TLS 1.3-18
+- **Handshake:** TLS 1.3-21
 - **Protocol IDs:**
-- **Public server:**
+- **Public server:** kazuhooku.com:4433
 
 
 ## [stellite](https://github.com/line/stellite)
