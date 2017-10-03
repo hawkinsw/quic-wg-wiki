@@ -106,7 +106,7 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
-- **Public server:**
+- **Public server:** kazuhooku.com:4433
 
 
 ## [quicly](https://github.com/h2o/quicly)
