@@ -157,5 +157,5 @@ MVFST is the facebook implementation of QUIC
 - **Version:** draft-05
 - **Roles:** client, server
 - **Handshake:** TLS 1.3-21
-- **Protocol IDs: 0xff000005 ** 
+- **Protocol IDs:** `0xff000005` 
 - **Public server:** fb.mvfst.net:4433
