@@ -1,6 +1,6 @@
 This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools).
 
-Please add your implementation below. Keep sorted alphabetically.
+Please add your implementation below. Keep sorted alphabetically. There are two sections, one for "IETF QUIC" and one for "Google QUIC".
 
 ## IETF QUIC
 
