@@ -26,7 +26,7 @@ QUIC implementation in Apache Traffic Server
 - **Roles:** Server
 - **Handshake:** TLS 1.3-21
 - **Protocol IDs:** `0xff000005`
-- **Public server:**
+- **Public server:** quic.ogre.com:4433
 
 
 ### [minq](https://www.github.com/ekr/minq)
@@ -171,4 +171,3 @@ Stellite project is a client library and server application that offers an easy 
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
 - **Public server:**
-
