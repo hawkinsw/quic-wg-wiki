@@ -2,7 +2,11 @@ This wiki tracks known implementations of QUIC. See also our [Tools listing](Too
 
 Please add your implementation below. Keep sorted alphabetically.
 
-## AppleQUIC
+## IETF QUIC
+
+The following stacks implement the IETF versions of QUIC.
+
+### AppleQUIC
 
 AppleQUIC is a test client and server implementation.  
 
@@ -13,7 +17,7 @@ AppleQUIC is a test client and server implementation.
 - **Protocol IDs:** `0xff000005`
 - **Public server:**
 
-## [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
+### [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
 
 QUIC implementation in Apache Traffic Server
 
@@ -25,19 +29,7 @@ QUIC implementation in Apache Traffic Server
 - **Public server:**
 
 
-## [lsquic](https://www.litespeedtech.com/products)
-
-LiteSpeed QUIC implementation for use with LiteSpeed server products.
-
-- **Language:**  C, C++
-- **Version:** Q035, Q037, Q038, Q039, Q041.
-- **Roles:** Server and Client.  The latter is available as an [open-source library](https://github.com/litespeedtech/lsquic-client).
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
-
-## [minq](https://www.github.com/ekr/minq)
+### [minq](https://www.github.com/ekr/minq)
 
 Minimal QUIC implementation with emphasis on readability and simplicity. Very un-baked but will track the emerging document. Library plus test programs.
 
@@ -48,7 +40,8 @@ Minimal QUIC implementation with emphasis on readability and simplicity. Very un
 - **Protocol IDs:** `0xff000004`
 - **Public server:** minq.dev.mozaws.net:4433, logs available at https://minq.dev.mozaws.net:3000/<client-connection-id-hex>
 
-## [mozquic](https://github.com/mcmanus/mozquic)
+
+### [mozquic](https://github.com/mcmanus/mozquic)
 an iQUIC library meant to track standardization milestones.
 
 - **Language:** c++ with C interface
@@ -58,7 +51,8 @@ an iQUIC library meant to track standardization milestones.
 - **Protocol IDs:** `0xff000005` and `0xf123f0c5` and `0xff000006` hq-05
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
-## [ngtcp2](https://github.com/ngtcp2/ngtcp2)
+
+### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
@@ -68,7 +62,8 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Protocol IDs:** `0xff000005`
 - **Public server:** nghttp2.org:4433
 
-## [picoquic](https://github.com/private-octopus/picoquic)
+
+### [picoquic](https://github.com/private-octopus/picoquic)
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
 
 - **Language:** C
@@ -79,43 +74,19 @@ A small implementation of QUIC in C, to explore the protocol and the API, for ex
 - **Public server:**
 
 
-## [proto-quic](https://github.com/google/proto-quic)
-
-`proto-quic` is intended as a standalone library for QUIC. It contains the subset of Chromium code and dependencies require for QUIC so folks can use the Chromium code without depending on all of Chromium. It is intended to be a cross-platform library, but will only support the set (or a strict subset) of platforms which Chromium already supports.
-
-- **Language:** C++
-- **Version:**
-- **Roles:** library
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
-
-## [quant](https://github.com/NTAP/quant)
+### [quant](https://github.com/NTAP/quant)
 
 QUANT (QUIC Userspace Accelerated Network Transfers), the beginnings of a BSD-licensed C11 implementation on top of the zero-copy [warpcore](https://github.com/NTAP/warpcore) userspace UDP/IPv4 stack for the [netmap](http://info.iet.unipi.it/~luigi/netmap/) packet I/O framework
 
 - **Language:** C11
-- **Version:**
+- **Version:** draft-05
 - **Roles:** client, library, server
 - **Handshake:** *same as quicly below*
 - **Protocol IDs:** `0xff000005`
 - **Public server:** quant.eggert.org:4433 (Logs for last run at https://quant.eggert.org/log; all logs at https://quant.eggert.org/)
 
 
-## [quic-go](https://github.com/lucas-clemente/quic-go)
-
-A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE)
-
-- **Language:** Go
-- **Version:**
-- **Roles:** client, library, server
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
-
-## [quicly](https://github.com/h2o/quicly)
+### [quicly](https://github.com/h2o/quicly)
 
 QUIC protocol implementation for H2O server
 
@@ -127,7 +98,7 @@ QUIC protocol implementation for H2O server
 - **Public server:** kazuhooku.com:4433
 
 
-## [stellite](https://github.com/line/stellite)
+### [stellite](https://github.com/line/stellite)
 
 Stellite project is a client library and server application that offers an easy way to develop, build, and implement client/server. It aims to provide fast and stable connectivity to mobile applications.
 
@@ -138,7 +109,7 @@ Stellite project is a client library and server application that offers an easy 
 - **Protocol IDs:**
 - **Public server:**
 
-## Winquic
+### Winquic
 
 Winquic is an implementation of QUIC on Windows.
 
@@ -149,7 +120,7 @@ Winquic is an implementation of QUIC on Windows.
 - **Protocol IDs:** `0xff000005`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
-## MVFST
+### MVFST
 
 MVFST is the facebook implementation of QUIC
 
@@ -159,3 +130,45 @@ MVFST is the facebook implementation of QUIC
 - **Handshake:** TLS 1.3-21
 - **Protocol IDs:** `0xff000005` 
 - **Public server:** fb.mvfst.net:4433
+
+
+## Google QUIC
+
+The following stacks implement the earlier Google versions of QUIC.
+
+### [lsquic](https://www.litespeedtech.com/products)
+
+LiteSpeed QUIC implementation for use with LiteSpeed server products.
+
+- **Language:**  C, C++
+- **Version:** Q035, Q037, Q038, Q039, Q041.
+- **Roles:** Server and Client.  The latter is available as an [open-source library](https://github.com/litespeedtech/lsquic-client).
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
+
+
+### [proto-quic](https://github.com/google/proto-quic)
+
+`proto-quic` is intended as a standalone library for QUIC. It contains the subset of Chromium code and dependencies require for QUIC so folks can use the Chromium code without depending on all of Chromium. It is intended to be a cross-platform library, but will only support the set (or a strict subset) of platforms which Chromium already supports.
+
+- **Language:** C++
+- **Version:**
+- **Roles:** library
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
+
+
+### [quic-go](https://github.com/lucas-clemente/quic-go)
+
+A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE)
+
+- **Language:** Go
+- **Version:**
+- **Roles:** client, library, server
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
+
+
