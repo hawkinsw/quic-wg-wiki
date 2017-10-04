@@ -42,11 +42,11 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 Minimal QUIC implementation with emphasis on readability and simplicity. Very un-baked but will track the emerging document. Library plus test programs.
 
 - **Language:** Go
-- **Version:** draft-04 + editor's changes
+- **Version:** draft-05
 - **Roles:** client and server
 - **Handshake:** TLS 1.3-21 or -2
 - **Protocol IDs:** `0xff000004`
-- **Public server:**
+- **Public server:** minq.dev.mozaws.net:4433, logs available at https://minq.dev.mozaws.net:3000/<client-connection-id-hex>
 
 ## [mozquic](https://github.com/mcmanus/mozquic)
 an iQUIC library meant to track standardization milestones.
