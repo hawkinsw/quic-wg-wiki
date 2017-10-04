@@ -66,7 +66,7 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Roles:** client, library, server
 - **Handshake:** TLSv1.3-21
 - **Protocol IDs:** `0xff000005`
-- **Public server:**
+- **Public server:** nghttp2.org:4433
 
 ## [picoquic](https://github.com/private-octopus/picoquic)
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
