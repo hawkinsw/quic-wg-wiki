@@ -146,7 +146,7 @@ Winquic is an implementation of QUIC on Windows.
 - **Version:** draft-05
 - **Roles:** client, server
 - **Handshake:** TLS 1.3-21
-- **Protocol IDs:** 
+- **Protocol IDs:** `0xff000005`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
 ## MVFST
