@@ -98,17 +98,6 @@ QUIC protocol implementation for H2O server
 - **Public server:** kazuhooku.com:4433
 
 
-### [stellite](https://github.com/line/stellite)
-
-Stellite project is a client library and server application that offers an easy way to develop, build, and implement client/server. It aims to provide fast and stable connectivity to mobile applications.
-
-- **Language:** C++
-- **Version:**
-- **Roles:** client, library, server
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
 ### Winquic
 
 Winquic is an implementation of QUIC on Windows.
@@ -171,4 +160,15 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 - **Protocol IDs:**
 - **Public server:**
 
+
+### [stellite](https://github.com/line/stellite)
+
+Stellite project is a client library and server application that offers an easy way to develop, build, and implement client/server. It aims to provide fast and stable connectivity to mobile applications.
+
+- **Language:** C++
+- **Version:**
+- **Roles:** client, library, server
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
 
