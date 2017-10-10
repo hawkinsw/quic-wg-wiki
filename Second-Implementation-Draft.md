@@ -63,3 +63,37 @@ We thus suggest that all servers can serve a home page (index.html), and at leas
 * 999999.txt: a text file containing 999999 ASCII characters, organized as a set of line feed terminated lines.
 
 Transfers can be verified by checking that the JPG images display correctly, or by verifying a checksum contained in the last line of text files (TBD).
+
+## Handshake test
+
+This test is performed by setting a connection from a client to a server, and verifying that the handshake completes.
+
+## Version Negotiation test
+
+In the version negotiation test, the client proposes a non supported version number such as 0xA1A2A3A4 to the server. The expectation is that the server will send back a version negotiation packet, after which client and server will complete the handshake. 
+
+## Stream Data (encrypted)
+
+The stream data test is preformed by establishing a connection, then requesting the page "index.html". The text succeeds if the data is accepted and some reply is received.
+
+## Close
+
+The Close test is performed by setting a connection, downloading the "index.html" page, and then sending a "Connection Close" request. The test succeeds if the connection is closed properly by server and clients.
+
+## HTTP/0.9 exchange
+
+The HTTP/0.9 exchange test is preformed by establishing a connection, then requesting the page "index.html" by sending the "Get /index.html\n" command in a STREAM DATA message, then signalling the FIN bit to close that stream in the sending direction. The text succeeds if the proper HTML content of the index.html page is received on the corresponding stream from the server.
+
+## Server stateless retry
+
+The server stateless retry (SRR) test requires configuring a server to respond to connection requests by an SRR message. Many implementers have done that by deploying two servers, a regular server on port 4433, and a server that automatically sends SRR. (The Server Stateless Retry option is sometimes designated by its TLS equivalent, Hello Retry request, HRR.)
+
+The test is executed by having the client connect to the SRR port of the server, receive the SRR message, and then successfully complete the handshake.
+
+## Stateless reset
+
+TBD.
+
+## Flow control
+
+The flow control test is executed by having a client negotiate a small enough initial MAX DATA transport parameter, e.g. 16K or 64K, and then establishing a connection and requesting 4 files in parallel: logo.jpg, main.jpg, 1000001.txt and 999999.txt. The test succeeds if at least two of these files are correctly received.
