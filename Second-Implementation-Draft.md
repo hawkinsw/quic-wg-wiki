@@ -37,3 +37,29 @@ The first implementation focused on the basic handshake. The second will add add
 * Congestion Control
 
 * HTTP/2 mapping, compression, etc.
+
+# Testing processes and server expectations
+
+The following test procedures allow participants to verify interoperability and test a set of
+functions, such as basic connectivity, flow control, negotiation, etc. The tests are performed
+by clients connecting to servers. We design these procedures with the following considerations
+in mind:
+
+* We want to support two kinds of servers, the "static server serving a small set of files", and the "test server making up pages on the fly".
+
+* We want to support two kinds of clients, those that just perform a series of download according to a simple script,
+and those that start by downloading a home page, and then load the documents referenced in that home page.
+
+* We want to enable "flow control" tests, in which two large enough documents are loaded in parallel.
+
+We thus suggest that all servers can serve a home page (index.html), and at least 2 of the following four documents:
+
+* logo.jpg: a large JPEG image, displaying something like the QUIC logo or the logo of the server.
+
+* main.jpg: a large JPEG image, displaying whatever the implementer sees fit. (Please keep it safe for work.)
+
+* 1000001.txt: a text file containing 1000001 ASCII characters, organized as a set of line feed terminated lines.
+
+* 999999.txt: a text file containing 999999 ASCII characters, organized as a set of line feed terminated lines.
+
+Transfers can be verified by checking that the JPG images display correctly, or by verifying a checksum contained in the last line of text files (TBD).
