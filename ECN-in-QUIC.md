@@ -12,4 +12,13 @@ A design team will focus of the wireline format of ECN capability exchange as we
 * R.5 A QUIC implementation MUST be able to verify ECN support in the OS network stack. 
 * R.6 Initial ECN capability exchange SHOULD verify that ECN works e2e, this SHOULD be further verified at runtime 
 * R.7 Initial ECN capability exchange MUST verify that endpoints support ECN   
+
+## ECN capability exchange
+The ECN capability exchange serves to:
+1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header. This is simple and straightforward in Linux OS stacks. The level of support in Windows and OSX, iOS and Android is less clear.
+2. Initially test that ECN works e2e 
+Section 2.1 in [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) contains a proposal for ECN capability exchange.
+
+## ECN feedback
+The ECN feedback echoes the ECN marks back to the sender. The exact details are subject to discussion. One proposal is found in section 2.3 in [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt)
   
