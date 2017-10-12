@@ -1,5 +1,5 @@
 # Introduction
-ECN is short for Explicit Congestion Notification, this wiki page covers items such as requirements, [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) and earlier versions give a reasonable  
+ECN is short for Explicit Congestion Notification, this wiki page covers items such as requirements, [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) and earlier versions give a short introduction to the topic. 
 
 ## Design team
 A design team will focus of the wireline format of ECN capability exchange as well as the ECN feedback. It is suggested that the design team meet at IETF-100 to discuss the way forward and formalize a first joint version of the ECN specifics for QUIC. 
