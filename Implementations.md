@@ -56,10 +56,10 @@ an iQUIC library meant to track standardization milestones.
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
-- **Version:** draft-05, draft-06
+- **Version:** draft-07
 - **Roles:** client, library, server
 - **Handshake:** TLSv1.3-21
-- **Protocol IDs:** `0xff000005`, `0xff000006`
+- **Protocol IDs:** `0xff000007`
 - **Public server:** nghttp2.org:4433
 
 
