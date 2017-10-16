@@ -2,6 +2,8 @@ The first thing that we aim to implement will concentrate on a successful handsh
 
 This roughly aligns with the pre-05 versions of the drafts, and we will use that to identify the protocol.
 
+Also see [Second Implementation Draft](https://github.com/quicwg/base-drafts/wiki/Second-Implementation-Draft) for additional features under interop testing.
+
 Specifically:
 
 * Version negotiation - All server implementations will handle packets with an unknown version and arbitrary payloads and respond with a version negotiation packet. Client implementations will consume a version negotiation packet and either abort or select a compatible version. The expectation is that only one version will be implemented, but clients MAY implement greasing.  The version will be 0xff00000005.
