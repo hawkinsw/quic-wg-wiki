@@ -11,7 +11,7 @@ A design team will focus of the wireline format of ECN capability exchange as we
 * R.4 It SHOULD be possible measure amount of Not-ECT marked packets. This MAY be implemented as a dedicated feedback but can also be inferred from the regular ACK frames and the reports of ECN, ECT(0) and ECT(1).
 * R.5 A QUIC implementation MUST be able to verify ECN support in the OS network stack. 
 * R.6 Initial ECN capability exchange SHOULD verify that ECN works e2e, this SHOULD be further verified at runtime 
-* R.7 Initial ECN capability exchange MUST verify that endpoints support ECN   
+* R.7 Initial ECN capability exchange MUST verify that endpoints support ECN, the ECN capability exchange MAY take place either at QUIC connection setup or after the connection setup is completed   
 
 ## ECN capability exchange
 The ECN capability exchange serves to:
