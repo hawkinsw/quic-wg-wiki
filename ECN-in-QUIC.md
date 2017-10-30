@@ -132,14 +132,14 @@ encode each of the ECT/CE fields. The proposed format is useful both for classic
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |R|R|E1 |E2 |CE | # ECT(0) bytes (0/16/32/48)                 ...
+     |R|R|E0 |E1 |CE | # ECT(0) bytes (0/16/32/48)                 ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      |  # ECT(1) bytes (0/16/32/48)                                ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      |  # ECN-CE bytes (0/16/32/48)                                ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-The E1,E2 and CE fields indicate the length of each encoding for the
+The E0,E1 and CE fields indicate the length of each encoding for the
 number of ECT(0), ECT(1) and ECN-CE marked bytes.  This is encoded
 as:
 * 00: 0 bits
@@ -149,9 +149,10 @@ as:
 
 R indicates reserved bits.
 
-The proposed encoding enables flexible encoding of the ECN
+The proposed encoding enables flexible and compact encoding of the ECN
 information, with a minimal 1 octet overhead for the cases where ECN
-is not supported by the connection.
+is not supported by the connection. The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
+In normal ECN operation it is likely that only the ECN-CE bytes field, and either of the ECT(0) or ECT(1) bytes fields are encoded. The number of bits to encode can also be used wisely to make for efficient encoding. 
 
 ## ECN+TS feedback, wire format
 The addition of the timestamp means that the ACK frame is prepended with a 32 bit timestamp as indicated in [QUIC ACK Timestamps](https://github.com/quicwg/base-drafts/wiki/Time-stamps-in-QUIC) and appended with the ECN block as indicated in the section above.
