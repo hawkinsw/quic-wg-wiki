@@ -85,13 +85,10 @@ The ECN negotiation has two steps:
 
    * R='1' and EE= '11': It is possible to set the ECN bits in outgoing
       packets.
-
    * R='0' or EE <> '11': ECN support is not certain as it is either
       not possible for remote peer to read the ECN bits or that the ECN
       bits are altered.
-
    * W='1' : It is meaningful to send ECN feedback
-
    * W='0' : It is not meaningful to send ECN feedback as the remote
       peer cannot set (write) the ECN bits in the IP header.
 
@@ -103,5 +100,57 @@ The ECN negotiation has two steps:
    does not reveal if the OS ECN support is asymmetric.
 
 ## ECN feedback
-The ECN feedback echoes the ECN marks back to the sender. The exact details are subject to discussion. One proposal is found in section 2.3 in [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt)
+The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
+
+At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the ACK frames as well.
+While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
+1. SCReAM (https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable
+2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
+
+This leads to a few questions when a combined ECN-ACK frame is devised.
+1. Should it be an ECN-ACK frame only ?
+2. Should it be an ECN-ACK-TS frame ?
+
+### ECN feedback, wire format
+   The proposed alternative proposes a format for the ECN-ACK frame. 
+It uses one byte to indicate how many bits that
+   encode each of the ECT/CE fields. The proposed format is useful both for classic ECN and L4S. 
+
+      0                   1                   2                   3
+      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |              First Ack Block Length (8/16/32/48)            ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  [Gap 1 (8)]  |       [Ack Block 1 Length (8/16/32/48)]     ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  [Gap 2 (8)]  |       [Ack Block 2 Length (8/16/32/48)]     ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                                  ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  [Gap N (8)]  |       [Ack Block N Length (8/16/32/48)]     ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |R|R|E1 |E2 |CE | # ECT(0) bytes (0/16/32/48)                 ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  # ECT(1) bytes (0/16/32/48)                                ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  # ECN-CE bytes (0/16/32/48)                                ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+   The E1,E2 and CE fields indicate the length of each encoding for the
+   number of ECT(0), ECT(1) and ECN-CE marked bytes.  This is encoded
+   as:
+
+   * 00: 0 bits
+   * 01: 16 bits
+   * 10: 32 bits
+   * 11: 48 bits
+
+   R indicates reserved bits.
+
+   The proposed encoding enables flexible encoding of the ECN
+   information, with a minimal 1 octet overhead for the cases where ECN
+   is not supported by the connection.
+
+
+
   
