@@ -21,13 +21,9 @@ The ECN capability exchange serves to:
 The wire format below is proposed for the ECN capability exchange. The capability exchange should take place after the connection setup. It may however take place already at the connection setup.
 `
       0                   1
-
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
      |  Type         |C|R|W|U U U|E E|
-
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 `
