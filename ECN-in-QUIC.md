@@ -122,24 +122,15 @@ While timestamps and ECN may not be tightly coupled, there is a possibility that
 This leads to a few questions when a combined ECN+ACK frame is devised.
 1. Should it be an ECN+ACK frame only ?
 2. Should it be an ECN+ACK+TS frame ?
+
  
 ## ECN feedback, wire format
-The proposed alternative proposes a format for the ECN-ACK frame. 
-It uses one byte to indicate how many bits that
+The proposed alternative proposes a format for the ECN-ACK frame. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
+The ECN block uses one byte to indicate how many bits that
 encode each of the ECT/CE fields. The proposed format is useful both for classic ECN and L4S. 
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |              First Ack Block Length (8/16/32/48)            ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  [Gap 1 (8)]  |       [Ack Block 1 Length (8/16/32/48)]     ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  [Gap 2 (8)]  |       [Ack Block 2 Length (8/16/32/48)]     ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-                                  ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  [Gap N (8)]  |       [Ack Block N Length (8/16/32/48)]     ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      |R|R|E1 |E2 |CE | # ECT(0) bytes (0/16/32/48)                 ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -161,6 +152,9 @@ R indicates reserved bits.
 The proposed encoding enables flexible encoding of the ECN
 information, with a minimal 1 octet overhead for the cases where ECN
 is not supported by the connection.
+
+## ECN+TS feedback, wire format
+The addition of the timestamp means that the ACK frame is prepended with a 32 bit timestamp as indicated in [QUIC ACK Timestamps](https://github.com/quicwg/base-drafts/wiki/Time-stamps-in-QUIC) and appended with the ECN block as indicated in the section above.
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
