@@ -176,7 +176,8 @@ ect is 1 for ECT(0) and 2 for ECT(1)
 On the receiver side it is necessary to use the recvmsg call with an extended struct to get access to the ECN bits. An example code snippet is found at [ECN in Linux](https://gist.github.com/jirihnidek/95c369996a81be1b854e).
 
 ## Microsoft Windows
-
+TBD
 ## Apple iOS and OS X
-  
+TBD  
 ## Android
+TBD
