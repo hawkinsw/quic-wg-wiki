@@ -150,6 +150,19 @@ is not supported by the connection.
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
-## Linux, ECN support is  
+## Linux 
+ECN support is straightforward. 
+On the sender side the code snippet below sets the ECN capability 
 
+    int iptos = ect; 
+    res = setsockopt(fd_out_rtp, IPPROTO_IP, IP_TOS,  &iptos, sizeof(iptos));
+
+ect is 1 for ECT(0) and 2 for ECT(1)
+
+On the receiver side it is necessary to use the recvmsg call with an extended struct to get access to the ECN bits. An example code snippet is found at [ECN in Linux](https://gist.github.com/jirihnidek/95c369996a81be1b854e).
+
+## Microsoft Windows
+
+## Apple iOS and OS X
   
+## Android
