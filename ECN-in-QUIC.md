@@ -114,15 +114,15 @@ does not reveal if the OS ECN support is asymmetric.
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
 
-At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the ACK frames as well.
+At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed.
 While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
 1. [SCReAM](https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN/loss feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable.
 2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
 
-This leads to a few questions when a combined ECN-ACK frame is devised.
-1. Should it be an ECN-ACK frame only ?
-2. Should it be an ECN-ACK-TS frame ?
-
+This leads to a few questions when a combined ECN+ACK frame is devised.
+1. Should it be an ECN+ACK frame only ?
+2. Should it be an ECN+ACK+TS frame ?
+ 
 ## ECN feedback, wire format
 The proposed alternative proposes a format for the ECN-ACK frame. 
 It uses one byte to indicate how many bits that
