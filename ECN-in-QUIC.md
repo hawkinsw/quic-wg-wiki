@@ -1,5 +1,19 @@
 # Introduction
-ECN is short for Explicit Congestion Notification, this wiki page covers items such as requirements, [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) and earlier versions give a short introduction to the topic. 
+ECN is short for Explicit Congestion Notification. 
+ECN support in transport protocols is a fundamental feature that
+should be included in the QUIC specification as a mandatory element.
+ECN has the key benefit that it allows for non-destructive congestion
+notification by network node, i.e packets are marked instead
+discarded.  This is particularly beneficial for realtime applications
+with requirements on latency, ECN also has the benefit that it
+provides with a congestion signal that is unambiguous.  The benefits
+with ECN is described in more detail in [RFC8087](https://tools.ietf.org/html/rfc8087).
+The ECN support should be implemented to support both present and
+future ECN, the latter is outlined in
+[ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), of particular interest is the
+ability to discriminate between classic ECN and L4S ECN by means of
+differentiation between the use of the ECT(0) and ECT(1) code points.
+[ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) also covers this work, there may however be occasions where the wike and the draft are not in synch, the ultimate goal is to move the specific wireformat and how-to´s to the QUIC transport draft later on.
 
 # Design team
 A design team will focus of the wireline format of ECN capability exchange as well as the ECN feedback. It is suggested that the design team meet at IETF-100 to discuss the way forward and formalize a first joint version of the ECN specifics for QUIC. 
