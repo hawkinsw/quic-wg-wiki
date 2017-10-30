@@ -125,7 +125,7 @@ This leads to a few questions when a combined ECN+ACK frame is devised.
 
  
 ## ECN feedback, wire format
-The proposed alternative proposes a format for the ECN-ACK frame. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
+The proposed alternative proposes a format for an ECN block. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
 The ECN block uses one byte to indicate how many bits that
 encode each of the ECT/CE fields. The proposed format is useful both for classic ECN and L4S. 
 
