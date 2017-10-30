@@ -19,11 +19,13 @@ The ECN capability exchange serves to:
 2. Initially test that ECN works e2e 
 ### Proposed wire format
 The wire format below is proposed for the ECN capability exchange. The capability exchange should take place after the connection setup. It may however take place already at the connection setup.
+`
       0                   1
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      |  Type         |C|R|W|U U U|E E|
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+`
 The first byte contains a frame type, registered with IANA
 The second byte contains the flags:
 * C: Challenge bit, indicates that the transmitted ECN negotiation frame is a challenge, if bit is not set then it is a response.
