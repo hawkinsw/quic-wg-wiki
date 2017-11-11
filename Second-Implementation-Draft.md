@@ -2,6 +2,8 @@ This document describes the next set of features to implement after we have reac
 
 The first implementation focused on the basic handshake. The second will add additional handshake features and support a rudimentary application to exercise the stream infrastructure.
 
+**Interop matrix is [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing).**
+
 # New Features in this Implementation
 
 * Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation). None have been identified to date.
