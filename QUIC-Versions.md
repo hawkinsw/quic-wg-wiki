@@ -20,3 +20,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0xff000002 | IETF | draft-ietf-quic-transport-02 |
 | 0xff000003 | IETF | draft-ietf-quic-transport-03 |
 | 0xff000004 | IETF | draft-ietf-quic-transport-04 |
+| 0xff000005 | IETF | draft-ietf-quic-transport-05 |
+| 0xff000006 | IETF | draft-ietf-quic-transport-06 |
+| 0xff000007 | IETF | draft-ietf-quic-transport-07 |
+| 0xff000008 | IETF | draft-ietf-quic-transport-08 |
