@@ -171,7 +171,9 @@ ect is 1 for ECT(0) and 2 for ECT(1)
 On the receiver side it is necessary to use the recvmsg call with an extended struct to get access to the ECN bits. An example code snippet is found at [ECN in Linux](https://gist.github.com/jirihnidek/95c369996a81be1b854e).
 
 ## Microsoft Windows
-TBD
+IP_RECVTOS (for IPv4) and IP_RECVTCLASS (for IPv6) socket option will allow a datagram socket to retrieve TOS bits including ECN values. See https://msdn.microsoft.com/en-us/library/windows/desktop/ms738586(v=vs.85).aspx. This API was added in Windows 10 Creators Update. No current documented way to set the ECN bits.
+
+
 ## Apple iOS and OS X
 TBD  
 ## Android
