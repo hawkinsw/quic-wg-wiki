@@ -173,8 +173,12 @@ On the receiver side it is necessary to use the recvmsg call with an extended st
 ## Microsoft Windows
 IP_RECVTOS (for IPv4) and IP_RECVTCLASS (for IPv6) socket option will allow a datagram socket to retrieve TOS bits including ECN values. See https://msdn.microsoft.com/en-us/library/windows/desktop/ms738586(v=vs.85).aspx. This API was added in Windows 10 Creators Update. No current documented way to set the ECN bits.
 
+## Apple iOS, macOS, watchOS, etc.
 
-## Apple iOS and OS X
-TBD  
+To set ECT(0) or ECT(1) on outgoing UDP packets, use setsockopt() with IP_TOS (for IPv4) or IPV6_TCLASS (for IPv6).
+
+To retrieve congestion marks from received UDP packets, use recvmsg() with IP_RECVTOS (for IPv4) or IPV6_RECVTCLASS (for IPv6).
+
 ## Android
+
 TBD
