@@ -24,3 +24,4 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0xff000006 | IETF | draft-ietf-quic-transport-06 |
 | 0xff000007 | IETF | draft-ietf-quic-transport-07 |
 | 0xff000008 | IETF | draft-ietf-quic-transport-08 |
+| 0xf0f0f0f[0-f] | ETH Zürich | Measurability experiments |
