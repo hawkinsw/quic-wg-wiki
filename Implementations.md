@@ -115,10 +115,10 @@ QUIC protocol implementation for H2O server
 Winquic is an implementation of QUIC on Windows.
 
 - **Language:** C
-- **Version:** draft-05
+- **Version:** draft-07
 - **Roles:** client, server
 - **Handshake:** TLS 1.3-21
-- **Protocol IDs:** `0xff000005`
+- **Protocol IDs:** `0xff000007`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
 ### MVFST
