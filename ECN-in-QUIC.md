@@ -31,7 +31,7 @@ The ECN capability check serves to:
 1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header.  
 2. Initially test that ECN works e2e 
 
-ECN capability check starts in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints. This packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that ECN capability exchange is successful in one direction but not the other (for instance due to ECN bleaching), means that ECN may only be used in one direction.
+ECN capability checks start in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints for a new path. This first packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that the ECN capability check is successful in one direction but not the other (for instance due to ECN bleaching in one direction), means that ECN may only be used in one direction.
 
      ---------                                  ---------
      |       |-----1st packet with ECT set ---->|       |
@@ -40,13 +40,17 @@ ECN capability check starts in the first packet [ED note, should we say 'frame'?
      ---------                                  ---------
 
 
-## Capability exchange, challenge/response
+## Capability check, challenge/response [or ect/echo?]
+The capability check makes use of the generic ECN echo functionality of a receiver [consider explaining this first].
 A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
 
-The other peer (B) receives the packet and sends an ACK frame in return, this ACK frame contains a counter that indicate amount of received packets (or bytes) with ECT(0),ECT(1) and CE. 
+The other peer (B) receives the packet and just performs the generic ECN echo functionality, i.e. it sends an ACK frame in return, that contains counters that indicates the amount of received bytes with ECT(0),ECT(1) and CE. 
 
-Peer A verifies that the initial frame with ECT set successfully arrived at peer B, this is indicated in the ACK frame that is transmitted by peer B. Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
-ECN capability exchange is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.
+Peer A can confirm that the path direction supports ECN if the counters show a correct amount of bytes received for a valid and expected counter combination. 
+
+[In case duplicates are asked in QUIC: should verify that the initial frame with ECT set successfully arrived at peer B, this is indicated in the ACK frame that is transmitted by peer B. Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
+ECN capability exchange is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.]
+
 This capability exchange will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
 ## Handling of lost first frame
