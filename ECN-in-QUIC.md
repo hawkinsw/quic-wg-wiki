@@ -27,11 +27,11 @@ A design team will focus of the wireline format of ECN capability exchange as we
 * R.6 Initial connection ECN capability check SHOULD verify that ECN works e2e, this SHOULD be further verified at runtime 
 
 # ECN capability check
-The ECN capability exchange serves to:
+The ECN capability check serves to:
 1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header.  
 2. Initially test that ECN works e2e 
 
-ECN capability exchange occurs in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints. This packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that ECN capability exchange is successful in one direction but not the other (for instance due to ECN bleaching), means that ECN may only be used in one direction.
+ECN capability check starts in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints. This packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that ECN capability exchange is successful in one direction but not the other (for instance due to ECN bleaching), means that ECN may only be used in one direction.
 
      ---------                                  ---------
      |       |-----1st packet with ECT set ---->|       |
