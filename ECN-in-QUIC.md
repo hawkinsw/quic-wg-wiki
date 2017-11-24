@@ -29,87 +29,32 @@ A design team will focus of the wireline format of ECN capability exchange as we
 
 # ECN capability exchange
 The ECN capability exchange serves to:
-1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header. This is simple and straightforward in Linux OS stacks. The level of support in Windows and OSX, iOS and Android is less clear.
+1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header.  
 2. Initially test that ECN works e2e 
-## Proposed wire format
-The wire format below is proposed for the ECN capability exchange. The capability exchange should take place after the connection setup. It may however take place already at the connection setup.
 
-      0                   1
-      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  Type         |C|R|W|U U U|E E|
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ECN capability exchange occurs in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints. This packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that ECN capability exchange is successful in one direction but not the other (for instance due to ECN bleaching), means that ECN may only be used in one direction.
 
-The first byte contains a frame type, registered with IANA (?)
-The second byte contains the flags:
-* C: Challenge bit, indicates that the transmitted ECN negotiation frame is a challenge, if bit is not set then it is a response.
-* R: Possible to read ECN bits in IP header
-* W: Possible to write ECN bits in IP header
-* EE : Echo of ECN bits
-* U: Unused
+     ---------                                  ---------
+     |       |-----1st packet with ECT set ---->|       |
+     |   A   |                                  |   B   |
+     |       |<-------ACK + ECN field-----------|       |
+     ---------                                  ---------
 
-The ECN negotiation has two steps:
-* Challenge/response
-* Determine degree of ECN support
+
 ## Capability exchange, challenge/response
-A peer transmits the ECN negotiation frame with the R,W and EE bits
-in the 2nd byte set to '0' and the C bit set to '1'.  This frame is
-echoed back with the flags set according to the degree of ECN support
-and with the ECN bits in the IP header of the received ECN
-negotiation frame copied to the EE field, the C bit is '0'.  As both
-peers MUST transmit an ECN negotiation frame there will be a total of
-4 ECN negotiation frames transmitted, two challenges and two
-responses.
+A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
 
-An ECN negotiation frame should be transmitted in a unique packet,
-this to avoid that possible loss of ECN negotiation packets cause
-loss of other frames than the ECN negotiation frame.
+The other peer (B) receives the packet and sends an ACK frame in return, this ACK frame contains a counter that indicate amount of received packets (or bytes) with ECT(0),ECT(1) and CE. 
 
-The IP header for the ECN negotiation frame should set the ECN bits
-to either ECT(0) or ECT(1), depending on which codepoint is to be used thorughout the connection. The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
-When the corresponding response is received then an EE
-pattern of '11' indicates that ECN is likely supported in the
-network.  This does not give a full guarantee that ECN is supported
-in the network.  Monitoring of the ECN field in the ACK-frame serves
-to give further indication of ECN support once ECN is turned on.
-An ECN negotiation is declared successful when an ECN negotiation
-response is received that indicates ECN support.  A peer is not
-allowed to set ECT on outgoing data packets until a successful ECN
-negotiation is done.  In other words it is only the ECN negotiation
-frame that is allowed to set the ECN bits in the IP header until ECN
-negotiation is concluded and successful.
+Peer A verifies that the initial frame with ECT set successfully arrived at peer B, this is indicated in the ACK frame that is transmitted by peer B. Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
+ECN capability exchange is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.
+This capability exchange will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
-A lack of an ECN negotiation response may indicate that the ECN
-challenge frame or the ECN response frame was lost or that a node in
-the network deliberately discards ECN-CE marked packets.  The peer
-should transmit an additional ECN challenge within an RTO interval in
-case a negotiation response is not received, a maximum of ?
-retransmissions are attempted.
+## Handling of lost first frame
+A lost 1st frame will be handled by QUICs retransmission logic, a retransmitted 1st frame should also have the ECT codepoint set.
 
-A failed challenge/response phase indicates that ECN should not be
-used in the connection.  [NOTE, a special case is where one peer does
-not receive an ECN negotiation response but still receives ECT and CE
-marked packets from the other peer.  It is T.B.D how this should be
-handled]
-
-## Capability exchange, determine degree of ECN support
-If the ECN challenge/response is successful, the degree of ECN
-capability depends on how the R, W and EE bits are set.
-* R='1' and EE= '11': It is possible to set the ECN bits in outgoing
-      packets.
-* R='0' or EE <> '11': ECN support is not certain as it is either
-      not possible for remote peer to read the ECN bits or that the ECN
-      bits are altered.
-* W='1' : It is meaningful to send ECN feedback
-* W='0' : It is not meaningful to send ECN feedback as the remote
-      peer cannot set (write) the ECN bits in the IP header.
-
-The mode mechanism in [RFC6679] can serve as in input to a solution
-for the support of ECN in the case that OS ECN support is asymmetric.
-It is however unclear how a QUIC implementation can determine
-asymmetric ECN support in the underlying OS.  For instance the method
-to send ECN marked packets to the local host to determine OS support
-does not reveal if the OS ECN support is asymmetric.
+## QUIC v1.0 limitation
+Subsequent packets (after the 1st) should set the ECN bits to Not-ECT. This because v1.0 will only verify that the ECN capability exchange and the ACK+ECN frame operates correctly.  
 
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
@@ -123,39 +68,42 @@ This leads to a few questions when a combined ECN+ACK frame is devised.
 1. Should it be an ECN+ACK frame only ?
 2. Should it be an ECN+ACK+TS frame ?
 
+An additional question is if the ECN field should report 
+1. Bytes marked
+2. Packets marked
+
+The wire specification below only address the ACK+ECN frame and assumes bytes marked as report metric.
  
 ## ECN feedback, wire format
+[TODO rewrite this in its entirety, a more compressed format is highly recommended]
+
 The proposed alternative proposes a format for an ECN block. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
-The ECN block uses one byte to indicate how many bits that
-encode each of the ECT/CE fields. The proposed format is useful both for classic ECN and L4S. 
+The proposed format is useful both for classic ECN and L4S. 
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |R|R|E0 |E1 |CE | # ECT(0) bytes (0/16/32/48)                 ...
+     |n m: # ECT(0) marked bytes encoded as 6,14,30 or 62 bits   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  # ECT(1) bytes (0/16/32/48)                                ...
+     |n m: # ECT(1) marked bytes encoded as 6,14,30 or 62 bits   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |  # ECN-CE bytes (0/16/32/48)                                ...
+     |n m: # ECN-CE marked bytes encoded as 6,14,30 or 62 bits   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-The E0,E1 and CE fields indicate the length of each encoding for the
-number of ECT(0), ECT(1) and ECN-CE marked bytes.  This is encoded
+This is encoded as 1,2,4 or 8 octet each, given by the most significant [nm] bits for each field
 as:
-* 00: 0 bits
-* 01: 16 bits
-* 10: 32 bits
-* 11: 48 bits
 
-R indicates reserved bits.
+
+* nm=00: 1 octet,  giving 6 bits for the encoding
+* nm=01: 2 octets, giving 14 bits for the encoding
+* nm=10: 4 octets, giving 30 bits for the encoding
+* nm=11: 8 octets, giving 62 bits for the encoding
 
 The proposed encoding enables flexible and compact encoding of the ECN
-information, with a minimal 1 octet overhead for the cases where ECN
-is not supported by the connection. The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
-In normal ECN operation it is likely that only the ECN-CE bytes field, and either of the ECT(0) or ECT(1) bytes fields are encoded. The number of bits to encode can also be used wisely to make for efficient encoding. 
+information, with a minimal 1 octet overhead per counter. 
+The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
+In normal ECN operation it is likely that only the ECN-CE bytes field, and either of the ECT(0) or ECT(1) bytes fields are encoded. The number of bits to encode can also be used wisely to make for efficient encoding.
 
-## ECN+TS feedback, wire format
-The addition of the timestamp means that the ACK frame is prepended with a 32 bit timestamp as indicated in [QUIC ACK Timestamps](https://github.com/quicwg/base-drafts/wiki/Time-stamps-in-QUIC) and appended with the ECN block as indicated in the section above.
+[ED note, 6 bits to encode number of marked bytes is likely quite useless, unless of course the counter does not change at all] 
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
