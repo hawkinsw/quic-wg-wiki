@@ -48,10 +48,10 @@ The other peer (B) receives the packet and just performs the generic ECN echo fu
 
 Peer A can confirm that the path direction supports ECN if the counters show a correct amount of bytes received for a valid and expected counter combination. 
 
-[In case duplicates are asked in QUIC: should verify that the initial frame with ECT set successfully arrived at peer B, this is indicated in the ACK frame that is transmitted by peer B. Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
-ECN capability exchange is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.]
+[In case duplicates are asked in QUIC: Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
+ECN capability check is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.]
 
-This capability exchange will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
+This capability check will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
 ## Handling of lost first frame
 A lost 1st frame will be handled by QUICs retransmission logic, a retransmitted 1st frame should also have the ECT codepoint set.
@@ -62,7 +62,7 @@ Subsequent packets (after the 1st) should set the ECN bits to Not-ECT. This beca
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
 
-At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed.
+At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed. [Since ECN echo and ASKs are tightly coupled it might be better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.]
 While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
 1. [SCReAM](https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN/loss feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable.
 2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
