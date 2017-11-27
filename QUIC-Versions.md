@@ -10,6 +10,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 |---------|-------|-------|
 | 0x00000000 | n/a | This value is reserved as invalid |
 | 0x?a?a?a?a | IETF | Values meeting this pattern ((x&0x0f0f0f0f)==0x0a0a0a0a) are reserved for ensuring that version negotiation remains viable.  Endpoints SHOULD use these values.  Endpoints can expect that these versions will not be accepted by their peer. |
+| 0x50435130     | Private Octopus | Picoquic internal test version | 
 | 0x5130303[1-9] | Google | Google QUIC 01 - 09 (Q001 - Q009) |
 | 0x5130313[0-9] | Google | Google QUIC 10 - 19 (Q010 - Q019) |
 | 0x5130323[0-9] | Google | Google QUIC 20 - 29 (Q020 - Q029) |
