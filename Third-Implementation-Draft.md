@@ -11,7 +11,9 @@
   - 0-RTT rejection and retransmit
   - Loss of 0-RTT data and retransmit
   
-- Functional loss recovery. Test cases:
+- Functional loss recovery. The target here is that the operation eventually succeeds, not
+that it succeeds within any particular time frame. I.e., timeout
+based loss recovery is fine. Test cases:
 
   - Drop CI
   - Drop all of server first flight
@@ -20,9 +22,6 @@
   - Drop client second flight (generally one datagram)
   - Transfer a file of 1 MB with random 10% loss
 
-The target here is that the operation eventually succeeds, not
-that it succeeds within any particular time frame. I.e., timeout
-based loss recovery is fine.
 
 
     
