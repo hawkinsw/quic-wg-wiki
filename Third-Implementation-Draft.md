@@ -1,6 +1,6 @@
 - Features in 2nd implementation draft
 
-- Update to draft-08
+- Update to draft-08 and TLS 1.3 -22
 
 - Resumption
   - Successful resumption
