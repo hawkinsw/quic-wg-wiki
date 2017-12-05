@@ -15,7 +15,7 @@
 that it succeeds within any particular time frame. I.e., timeout
 based loss recovery is fine. Test cases:
 
-  - Drop CI
+  - Drop Initial
   - Drop all of server first flight
   - Have a certificate large enough to have two packets in
     server first flight, drop P1 and P2
