@@ -90,20 +90,14 @@ Encode ECT(0), ECT(1) and CE as bytes
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECT(0) marked bytes encoded as 6,14,30 or 62 bits   ...
+     |# ECT(0) marked bytes (i)                                   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECT(1) marked bytes encoded as 6,14,30 or 62 bits   ...
+     |# ECT(1) marked bytes (i)                                   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECN-CE marked bytes encoded as 6,14,30 or 62 bits   ...
+     |# ECN-CE marked bytes (i)                                   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-This is encoded as 1,2,4 or 8 octet each, given by the most significant [nm] bits for each field
-as:
 
-
-* nm=00: 1 octet,  giving 6 bits for the encoding
-* nm=01: 2 octets, giving 14 bits for the encoding
-* nm=10: 4 octets, giving 30 bits for the encoding
-* nm=11: 8 octets, giving 62 bits for the encoding
+(i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
 
 The proposed encoding enables flexible and compact encoding of the ECN
 information, with a minimal 1 octet overhead per counter. 
@@ -117,14 +111,15 @@ One observation is that the ECT(0) and ECT(1) are only used for the detection of
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECT(0) marked packets encoded as 6,14,30 or 62 bits  ...
+     |# ECT(0) marked packets (i)                                 ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECT(1) marked packets encoded as 6,14,30 or 62 bits  ...
+     |# ECT(1) marked packets  (i)                                ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |n m: # ECN-CE marked bytes encoded as 6,14,30 or 62 bits   ...
+     |# ECN-CE marked bytes (i)                                   ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-This is encoded as 1,2,4 or 8 octet each, given by the most significant [nm] bits for each field
-as:
+
+(i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
+
 The ECT(0) and ECT(1) fields are mostly encoded with 1 octet each, and rarely with two octects.
 
 There are good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
