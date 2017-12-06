@@ -163,12 +163,12 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
-A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE)
+A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
 
 - **Language:** Go
-- **Version:**
+- **Version:** Q039 (production), draft-07 (experimental)
 - **Roles:** client, library, server
-- **Handshake:** QUIC Crypto
+- **Handshake:** QUIC Crypto (production), TLS 1.3-21 (experimental)
 - **Protocol IDs:**
 - **Public server:**
 
@@ -178,7 +178,7 @@ A QUIC implementation in pure Go that has interop with Google QUIC (Chrome + GFE
 Stellite project is a client library and server application that offers an easy way to develop, build, and implement client/server. It aims to provide fast and stable connectivity to mobile applications.
 
 - **Language:** C++
-- **Version:**
+- **Version:** 
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
