@@ -123,6 +123,8 @@ The ECT(0) and ECT(1) fields are mostly encoded with 1 octet each, and rarely wi
 There are good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
 
 ## Handling of lost ACKs
+ACK frames are not retransmitted [QUIC packetization and reliability](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html#rfc.section.9). This means that the ECT(0), ECT(1) and CE deltas for each transmitted ACK frame should be stored until the ACK frame is ACKed. 
+If an ACK frame is deemed lost, then the delta values should be added to the delta values of the next ACK frame to be transmitted.
 
 
 # ECN support in various OS stacks
