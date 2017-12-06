@@ -78,8 +78,6 @@ An additional question is if the ECN field should report
 The wire specification below only address the ACK+ECN frame and assumes bytes marked as report metric.
  
 ## ECN feedback, wire format
-[TODO rewrite this in its entirety, a more compressed format is highly recommended]
-
 The proposed alternative proposes a format for an ECN block. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
 The proposed format is useful both for classic ECN and L4S. 
 
