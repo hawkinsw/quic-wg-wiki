@@ -104,9 +104,25 @@ as:
 The proposed encoding enables flexible and compact encoding of the ECN
 information, with a minimal 1 octet overhead per counter. 
 The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
-In normal ECN operation it is likely that only the ECN-CE bytes field, and either of the ECT(0) or ECT(1) bytes fields are encoded. The number of bits to encode can also be used wisely to make for efficient encoding.
 
-[ED note, 6 bits to encode number of marked bytes is likely quite useless, unless of course the counter does not change at all] 
+One observation is that the ECT(0) and ECT(1) are only used for the detection of malfunction, for instance cases where ECN is bleached or otherwise remarked in violation against the rules in RFC6040. For that reason it is possible to count the number of ECT(0) and ECT(1) marked packets. This allows for a more compact encoding of the ECN feedback.
+
+      0                   1                   2                   3
+      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |n m: # ECT(0) marked packets encoded as 6,14,30 or 62 bits  ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |n m: # ECT(1) marked packets encoded as 6,14,30 or 62 bits  ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |n m: # ECN-CE marked bytes encoded as 6,14,30 or 62 bits   ...
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+This is encoded as 1,2,4 or 8 octet each, given by the most significant [nm] bits for each field
+as:
+The ECT(0) and ECT(1) fields are mostly encoded with 1 octet each, and rarely with two octects.
+There are still good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
+
+## Handling of lost ACKs
+
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
@@ -120,6 +136,10 @@ On the sender side the code snippet below sets the ECN capability
 ect is 1 for ECT(0) and 2 for ECT(1)
 
 On the receiver side it is necessary to use the recvmsg call with an extended struct to get access to the ECN bits. An example code snippet is found at [ECN in Linux](https://gist.github.com/jirihnidek/95c369996a81be1b854e).
+
+## FreeBSD
+ECN functions the same as for Linux
+Ref. Lars Eggert
 
 ## Microsoft Windows
 IP_RECVTOS (for IPv4) and IP_RECVTCLASS (for IPv6) socket option will allow a datagram socket to retrieve TOS bits including ECN values. See https://msdn.microsoft.com/en-us/library/windows/desktop/ms738586(v=vs.85).aspx. This API was added in Windows 10 Creators Update. No current documented way to set the ECN bits.
