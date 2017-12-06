@@ -119,7 +119,8 @@ One observation is that the ECT(0) and ECT(1) are only used for the detection of
 This is encoded as 1,2,4 or 8 octet each, given by the most significant [nm] bits for each field
 as:
 The ECT(0) and ECT(1) fields are mostly encoded with 1 octet each, and rarely with two octects.
-There are still good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
+
+There are good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
 
 ## Handling of lost ACKs
 
