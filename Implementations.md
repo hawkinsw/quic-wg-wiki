@@ -137,6 +137,32 @@ MVFST is the facebook implementation of QUIC
 
 The following stacks implement the earlier Google versions of QUIC.
 
+
+### [goquic](https://github.com/devsisters/goquic)
+
+Work-in-progress QUIC implementation for Go. This is based on libquic library.
+
+- **Language:** Go
+- **Version:** Q030, Q031, Q032, Q033, Q033, Q034, Q035, Q036.
+- **Roles:** client, library, server
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
+
+
+### [libquic](https://github.com/devsisters/libquic/)
+
+Library which is made from sources and dependencies extracted from Chromium's QUIC Implementation with a few modifications and patches to minimize dependencies needed to build QUIC library.
+
+- **Language:**  C, C++
+- **Version:** Q030, Q031, Q032, Q033, Q033, Q034, Q035, Q036.
+- **Roles:** library
+- **Handshake:** QUIC Crypto
+- **Protocol IDs:**
+- **Public server:**
+
+
+
 ### [lsquic](https://www.litespeedtech.com/products)
 
 LiteSpeed QUIC implementation for use with LiteSpeed server products.
