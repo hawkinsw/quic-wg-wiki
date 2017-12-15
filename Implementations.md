@@ -91,10 +91,10 @@ A small implementation of QUIC in C, to explore the protocol and the API, for ex
 QUANT (QUIC Userspace Accelerated Network Transfers), the beginnings of a BSD-licensed C11 implementation on top of the zero-copy [warpcore](https://github.com/NTAP/warpcore) userspace UDP/IPv4 stack for the [netmap](http://info.iet.unipi.it/~luigi/netmap/) packet I/O framework
 
 - **Language:** C11
-- **Version:** draft-07
+- **Version:** draft-08
 - **Roles:** client, library, server
-- **Handshake:** *same as quicly below*
-- **Protocol IDs:** `0xff000005`
+- **Handshake:** TLS1.3-22
+- **Protocol IDs:** `0xff000008`
 - **Public server:** quant.eggert.org:4433 (Logs for last run at https://quant.eggert.org/log; all logs at https://quant.eggert.org/)
 
 
