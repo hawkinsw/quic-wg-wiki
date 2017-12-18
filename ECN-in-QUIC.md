@@ -44,7 +44,7 @@ ECN capability checks start in the first packet [ED note, should we say 'frame'?
 The capability check makes use of the generic ECN echo functionality of a receiver [consider explaining this first].
 A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
 
-The other peer (B) receives the packet and just performs the generic ECN echo functionality, i.e. it sends an ACK frame in return, that contains counters that indicates the amount of received bytes with ECT(0),ECT(1) and CE. 
+The other peer (B) receives the packet and just performs the generic ECN echo functionality, i.e. it sends an ACK frame in return, that contains counters that indicates the amount of received bytes or packets [T.B.D] with ECT(0),ECT(1) and CE. 
 
 Peer A can confirm that the path direction supports ECN if the counters show a correct amount of bytes received for a valid and expected counter combination. 
 
@@ -75,7 +75,7 @@ An additional question is if the ECN field should report
 1. Bytes marked
 2. Packets marked
 
-The wire specification below only address the ACK+ECN frame and assumes bytes marked as report metric.
+The wire specification below only address the ACK+ECN frame.
  
 ## ECN feedback, wire format
 The proposed alternative proposes a format for an ECN block. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
@@ -147,7 +147,7 @@ The proposed encoding enables flexible and compact encoding of the ECN
 information, with a minimal 1 octet overhead per counter. 
 The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
 
-All in all this alternative would mostly encode the ECN block as 3 octects and sometimes as 4 or 6 octets.
+All in all this alternative would mostly encode the ECN block as 4 octects and sometimes as 5 or 6 octets.
 
 ## Handling of lost ACKs
 ACK frames are not retransmitted [QUIC packetization and reliability](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html#rfc.section.9). This means that the ECT(0), ECT(1) and CE deltas for each transmitted ACK frame should be stored until the ACK frame is ACKed. 
@@ -159,7 +159,7 @@ The transmission of the ACK + ECN frame is only necessary in any of the two case
 2. An ACK + ECN frame is detected as lost
 
 
-Further reduction of over head is possible if the CE counter does not increase, which is for instance the case when QUIC is application limited and does not fill the bottleneck. It is not necessary to frequently indicate that the ECT(0) or ECT(1) increases with frequent feedback as these counters are only used for fault detection. In such cases it is sufficient to send an ACK + ECN frame once per RTT [NOTE 'once per RTT' can be discussed]
+Further reduction of over head is possible if the CE counter does not increase, which is for instance the case when QUIC is application limited and does not fill the bottleneck. It is not necessary to frequently indicate that the ECT(0) or ECT(1) increases with frequent feedback as these counters are only used for fault detection. In such cases it is sufficient to send an ACK + ECN frame once per RTT [NOTE 'once per RTT' can be discussed], [NOTE 2, to be discussed if this complicates design too much]
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
