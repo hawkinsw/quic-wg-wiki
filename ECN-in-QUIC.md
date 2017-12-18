@@ -13,7 +13,7 @@ future ECN, the latter is outlined in
 [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), of particular interest is the
 ability to discriminate between classic ECN and L4S ECN by means of
 differentiation between the use of the ECT(0) and ECT(1) code points.
-[ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) also covers this work, there may however be occasions where the wike and the draft are not in synch, the ultimate goal is to move the specific wireformat and how-to´s to the QUIC transport draft later on.
+[ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) also covers this work, there may however be occasions where the wiki and the draft are not in synch, the ultimate goal is to move the specific wireformat and how-to´s to the QUIC transport draft later on.
 
 # Design team
 A design team will focus of the wireline format of ECN capability exchange as well as the ECN feedback. It is suggested that the design team meet at IETF-100 to discuss the way forward and formalize a first joint version of the ECN specifics for QUIC. 
@@ -23,13 +23,13 @@ A design team will focus of the wireline format of ECN capability exchange as we
 * R.2 The ECN feedback MUST report all ECN-CE marked packets. This is important especially for the implementation of L4S support. It is an open question whether detailed packet information is needed or if is sufficient with a report of accumulated number of bytes that are ECN-CE marked.
 * R.3 The ECN feedback SHOULD report ECT(0) and ECT(1) marked packets. This is beneficial for the detection of remarking, bleaching or ECN black holes. 
 * R.4 It SHOULD be possible measure amount of Not-ECT marked packets. This MAY be implemented as a dedicated feedback but can also be inferred from the regular ACK frames and the reports of CE, ECT(0) and ECT(1).
-* R.5 A QUIC implementation must not be able to verify ECN support in the OS network stack. The capability check should cover this case similar as if the network does not support ECN (see R6).
+* R.5 A QUIC implementation may not be able to verify ECN support in the OS network stack. The capability check should cover this case similar as if the network does not support ECN (see R6).
 * R.6 Initial connection ECN capability check SHOULD verify that ECN works e2e, this SHOULD be further verified at runtime 
 
 # ECN capability check
 The ECN capability check serves to:
 1. Verify that the OS stacks in both endpoints support read and write of the ECN bits in the IP header.  
-2. Initially test that ECN works e2e 
+2. Initially test that ECN works over the used e2e network path.
 
 ECN capability checks start in the first packet [ED note, should we say 'frame'?] that is transmitted from each of the two endpoints for a new path. This first packet sets ECT (ECT(0) or ECT(1)) in the IP header. The verification is two-way, i.e each direction is verified independently of the other. Given the possibility that the ECN capability check is successful in one direction but not the other (for instance due to ECN bleaching in one direction), means that ECN may only be used in one direction.
 
@@ -85,12 +85,12 @@ There are three alternative, explained more below
 2. Encode ECT(0) and ECT(1) as packets, and CE as bytes
 3. Encode ECT(0), ECT(1) and CE as bytes
 
-Of the three alternatives below, alternative is currently deemed as being the most credible, the other two alternatives are recorded as input to discussion.
+Of the three alternatives below, alternative 1 is currently deemed as being the most credible, the other two alternatives are recorded as input to discussion.
 
 ***
 Alternative 1 : Encode ECT(0), ECT(1) and CE as packets
 
-This alternative is the most compact as it encodes only packets marked. The possible drawback is that for instance scalable congestion control algorithms do not get information about the exact amount of bytes that are marked. It is however easy compute an average packet size on the sender side and use that as input to the congestion control. Furhermore [RFC7567](https://tools.ietf.org/html/rfc7567#section-4.4) states that ECN marking decisions should not take packet size into account.  
+This alternative is the most compact as it encodes only packets marked. The possible drawback is that for instance scalable congestion control algorithms do not get information about the exact amount of bytes that are marked. It is however easy compute an average packet size on the sender side and use that as input to the congestion control. Furthermore [RFC7567](https://tools.ietf.org/html/rfc7567#section-4.4) states that ECN marking decisions should not take packet size into account.  
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
