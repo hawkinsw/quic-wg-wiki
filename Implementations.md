@@ -24,8 +24,8 @@ QUIC implementation in Apache Traffic Server
 - **Language:** C++
 - **Version:** draft-08
 - **Roles:** Server
-- **Handshake:** TLS 1.3-21
-- **Protocol IDs:** `0xff000005`
+- **Handshake:** TLS 1.3-22
+- **Protocol IDs:** `0xff000008`
 - **Public server:** quic.ogre.com:4433
 
 
