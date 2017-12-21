@@ -79,18 +79,7 @@ The wire specification below only address the ACK+ECN frame.
  
 ## ECN feedback, wire format
 The proposed alternative proposes a format for an ECN block. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
-The proposed format is useful both for classic ECN and L4S. 
-There are three alternative, explained more below
-1. Encode ECT(0), ECT(1) and CE as packets
-2. Encode ECT(0) and ECT(1) as packets, and CE as bytes
-3. Encode ECT(0), ECT(1) and CE as bytes
-
-Of the three alternatives below, alternative 1 is currently deemed as being the most credible, the other two alternatives are recorded as input to discussion.
-
-***
-Alternative 1 : Encode ECT(0), ECT(1) and CE as packets
-
-This alternative is the most compact as it encodes only packets marked. The possible drawback is that for instance scalable congestion control algorithms do not get information about the exact amount of bytes that are marked. It is however easy compute an average packet size on the sender side and use that as input to the congestion control. Furthermore [RFC7567](https://tools.ietf.org/html/rfc7567#section-4.4) states that ECN marking decisions should not take packet size into account.  
+The proposed format is useful both for classic ECN and L4S and encodes marked packets. The possible drawback is that for instance scalable congestion control algorithms do not get information about the exact amount of bytes that are marked. It is however easy compute an average packet size on the sender side and use that as input to the congestion control. Furthermore [RFC7567](https://tools.ietf.org/html/rfc7567#section-4.4) states that ECN marking decisions should not take packet size into account.  
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -107,47 +96,6 @@ This alternative is the most compact as it encodes only packets marked. The poss
 The ECT(0), ECT(1) and CE fields are mostly encoded with 1 octet each, and rarely with two octects.
 All in all this alternative would mostly encode the ECN block as 3 octects and sometimes as 4 or 5 octets.
 
-***
-Alternative 2 : Encode ECT(0) and ECT(1) as packets, and CE as bytes
-
-One observation is that the ECT(0) and ECT(1) are only used for the detection of malfunction, for instance cases where ECN is bleached or otherwise remarked in violation against the rules in RFC6040. For that reason it is possible to count the number of ECT(0) and ECT(1) marked packets. This allows for a more compact encoding of the ECN feedback.
-
-      0                   1                   2                   3
-      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECT(0) marked packets (i)                                 ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECT(1) marked packets  (i)                                ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECN-CE marked bytes (i)                                   ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-(i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
-
-The ECT(0) and ECT(1) fields are mostly encoded with 1 octet each, and rarely with two octects.
-
-There are good reasons to encode CE marked bytes as this gives the necessary granularity for scalable congestion controls. The CE field will mostly be encoded with 1 octet, i.e for cases where ECN marking does not occur, but will be likely be encoded with 2 octets when ECN marking happens. Encoding with 4 octets can occur for instance if the ACK rate is reduced and/or if the MTU is large.
-
-***
-Alternative 3 : Encode ECT(0), ECT(1) and CE as bytes
-
-      0                   1                   2                   3
-      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECT(0) marked bytes (i)                                   ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECT(1) marked bytes (i)                                   ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-     |# ECN-CE marked bytes (i)                                   ...
-     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-(i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
-
-The proposed encoding enables flexible and compact encoding of the ECN
-information, with a minimal 1 octet overhead per counter. 
-The marked bytes counted are including QUIC header and payload but excluding UDP and IP headers.
-
-All in all this alternative would mostly encode the ECN block as 4 octects and sometimes as 5 or 6 octets.
 
 ## Handling of lost ACKs
 ACK frames are not retransmitted [QUIC packetization and reliability](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html#rfc.section.9). This means that the ECT(0), ECT(1) and CE deltas for each transmitted ACK frame should be stored until the ACK frame is ACKed. 
