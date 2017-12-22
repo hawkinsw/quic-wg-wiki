@@ -99,7 +99,7 @@ The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets e
 ## Reduction of overhead
 It is possible to reduce the overhead of the ECN counters. The following observations can be made
 1. The ECT(0) and ECT(1) counters are only used to monitor that ECN bleaching does not occur along the transmission path, thus it is sufficient to just see that the counters change. Therefore it is enough to only use 1 byte variable-length integers. Full integer values should however be reported for ECT(0) and ECT(1) at CONNECTION_CLOSE for monitoring purposes.
-2. The CE counter does only need to be encoded with 2 bytes of the value wraps around the 6 bits that the one byte varaible-length integer can host. Encoding with 4 or 8 bytes should not be necessary as the congestion control is only designed to operate on the delta increase. Full integer values should however be reported for CE at CONNECTION_CLOSE for monitoring purposes.
+2. The CE counter does only need to be encoded with 2 bytes if the value wraps around the 6 bits that the one byte varaible-length integer can host. Encoding with 4 or 8 bytes should not be necessary as the congestion control is only designed to operate on the delta increase. Full integer values should however be reported for CE at CONNECTION_CLOSE for monitoring purposes.
 
 ## Handling of lost ACKs
 No special handling of lost ACK+ECN frames is necessary. The ECN counters are cumulative, which means that if an ACK+ECN frame with a potential increased CE count is lost, the next successfully received ACK+ECN frame will indicate the increased CE count.
