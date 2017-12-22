@@ -98,13 +98,11 @@ All in all this alternative would mostly encode the ECN block as 3 octects and s
 
 
 ## Handling of lost ACKs
-ACK frames are not retransmitted [QUIC packetization and reliability](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html#rfc.section.9). This means that the ECT(0), ECT(1) and CE deltas for each transmitted ACK frame should be stored until the ACK frame is ACKed. 
-If an ACK frame is deemed lost, then the delta values should be added to the delta values of the next ACK frame to be transmitted.
+No special handling of lost ACK+ECN frames is necessary. The ECN counters are cumulative, which means that if an ACK+ECN frame with a potential increased CE count is lost, the next successfully received ACK+ECN frame will indicate the increased CE count.
 
 ## Reduction of overhead
-The transmission of the ACK + ECN frame is only necessary in any of the two cases below
-1. Any of the ECT(0), ECT(1) or CE counters have increased
-2. An ACK + ECN frame is detected as lost
+The transmission of the ACK + ECN frame is only necessary if any of the ECT(0), ECT(1) or CE counters have increased
+
 
 
 Further reduction of over head is possible if the CE counter does not increase, which is for instance the case when QUIC is application limited and does not fill the bottleneck. It is not necessary to frequently indicate that the ECT(0) or ECT(1) increases with frequent feedback as these counters are only used for fault detection. In such cases it is sufficient to send an ACK + ECN frame once per RTT [NOTE 'once per RTT' can be discussed], [NOTE 2, to be discussed if this complicates design too much]
