@@ -62,7 +62,7 @@ Subsequent packets (after the 1st) should set the ECN bits to Not-ECT. This beca
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
 
-At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed. [Since ECN echo and ASKs are tightly coupled it might be better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.]
+At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed. [Since ECN echo and ACKs are tightly coupled it might be better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.]
 While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
 1. [SCReAM](https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN/loss feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable.
 2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
@@ -93,19 +93,17 @@ The proposed format is useful both for classic ECN and L4S and encodes marked pa
 
 (i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
 
-The ECT(0), ECT(1) and CE fields are mostly encoded with 1 octet each, and rarely with two octects.
-All in all this alternative would mostly encode the ECN block as 3 octects and sometimes as 4 or 5 octets.
+The ECT(0), ECT(1) and CE fields are in the worst case mostly encoded with 8 octets each, this however assumes that all counters are very large and that no effort is done to save overhead, see below for possible ways to reduce the overhead.
 
+## Reduction of overhead
+It is possible to reduce the overhead of the ECN counters. The following observations can be made
+1. The ECT(0) and ECT(1) counters are only used to monitor that ECN bleaching does not occur along the transmission path, thus it is enough to just see that the counters change. Therefore it is sufficient to only use 1 byte variable-length integers. Full integer values should however be reported for ECT(0) and ECT(1) at CONNECTION_CLOSE for monitoring purposes.
+2. The CE counter does only need to be encoded with 2 bytes of the value wraps around the 6 bits that the one byte varaible-length integer can host. Encoding with 4 or 8 bytes should not be necessary as the congestion control is only designed to operate on the delta increase. Full integer values should however be reported for CE at CONNECTION_CLOSE for monitoring purposes.
 
 ## Handling of lost ACKs
 No special handling of lost ACK+ECN frames is necessary. The ECN counters are cumulative, which means that if an ACK+ECN frame with a potential increased CE count is lost, the next successfully received ACK+ECN frame will indicate the increased CE count.
 
-## Reduction of overhead
-The transmission of the ACK + ECN frame is only necessary if any of the ECT(0), ECT(1) or CE counters have increased
 
-
-
-Further reduction of over head is possible if the CE counter does not increase, which is for instance the case when QUIC is application limited and does not fill the bottleneck. It is not necessary to frequently indicate that the ECT(0) or ECT(1) increases with frequent feedback as these counters are only used for fault detection. In such cases it is sufficient to send an ACK + ECN frame once per RTT [NOTE 'once per RTT' can be discussed], [NOTE 2, to be discussed if this complicates design too much]
 
 # ECN support in various OS stacks
 The network stack support for ECN varies between operating systems. In principle, what is needed is the ability to set and read the ECN bits in the IP header, from user space, in other words this access should preferably be possible without root privilege. 
