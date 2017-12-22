@@ -36,7 +36,7 @@ ECN capability checks start in the first packet [ED note, should we say 'frame'?
      ---------                                  ---------
      |       |-----1st packet with ECT set ---->|       |
      |   A   |                                  |   B   |
-     |       |<-------ACK + ECN field-----------|       |
+     |       |<-------ACK + ECN counter---------|       |
      ---------                                  ---------
 
 
@@ -57,19 +57,20 @@ This capability check will verify that the path between the peers is free from i
 A lost 1st frame will be handled by QUICs retransmission logic, a retransmitted 1st frame should also have the ECT codepoint set.
 
 ## QUIC v1.0 limitation
-Subsequent packets (after the 1st) should set the ECN bits to Not-ECT. This because v1.0 will only verify that the ECN capability exchange and the ACK+ECN frame operates correctly.  
-
+Initial capability exchange and acking with ECN information MUST be implemented. 
+After initial exchange the setting of ECT is OPTIONAL. If a sender sets the ECN field to ECT after the initial one the sender MUST implement a congestion response to ACKs indicating ECN-CE marked packets. It is expected that future QUIC profiles will define if ECN sender capability is mandated. 
+   
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
 
-At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ECN+ACK frame is needed. [Since ECN echo and ACKs are tightly coupled it might be better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.]
+At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames, this means that ECN frames are unlikely to be in the default ACK frames as well. Therefore a dedicated ACK+ECN frame is needed. [Since ECN echo and ACKs are tightly coupled it might be better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.]
 While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
 1. [SCReAM](https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN/loss feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable.
 2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
 
 This leads to a few questions when a combined ECN+ACK frame is devised.
-1. Should it be an ECN+ACK frame only ?
-2. Should it be an ECN+ACK+TS frame ?
+1. Should it be an ACK+ECN frame only ?
+2. Should it be an ACK+ECN+TS frame ?
 
 An additional question is if the ECN field should report 
 1. Bytes marked
@@ -93,11 +94,11 @@ The proposed format is useful both for classic ECN and L4S and encodes marked pa
 
 (i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
 
-The ECT(0), ECT(1) and CE fields are in the worst case mostly encoded with 8 octets each, this however assumes that all counters are very large and that no effort is done to save overhead, see below for possible ways to reduce the overhead.
+The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets each, this however assumes that all counters have very large values and that no effort is done to save overhead, see below for possible ways to reduce the overhead.
 
 ## Reduction of overhead
 It is possible to reduce the overhead of the ECN counters. The following observations can be made
-1. The ECT(0) and ECT(1) counters are only used to monitor that ECN bleaching does not occur along the transmission path, thus it is enough to just see that the counters change. Therefore it is sufficient to only use 1 byte variable-length integers. Full integer values should however be reported for ECT(0) and ECT(1) at CONNECTION_CLOSE for monitoring purposes.
+1. The ECT(0) and ECT(1) counters are only used to monitor that ECN bleaching does not occur along the transmission path, thus it is sufficient to just see that the counters change. Therefore it is enough to only use 1 byte variable-length integers. Full integer values should however be reported for ECT(0) and ECT(1) at CONNECTION_CLOSE for monitoring purposes.
 2. The CE counter does only need to be encoded with 2 bytes of the value wraps around the 6 bits that the one byte varaible-length integer can host. Encoding with 4 or 8 bytes should not be necessary as the congestion control is only designed to operate on the delta increase. Full integer values should however be reported for CE at CONNECTION_CLOSE for monitoring purposes.
 
 ## Handling of lost ACKs
