@@ -196,7 +196,7 @@ A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto (production), TLS 1.3-21 (experimental)
 - **Protocol IDs:**
-- **Public server:**
+- **Public server:** h256.de (Q039)
 
 
 ### [stellite](https://github.com/line/stellite)
