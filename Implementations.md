@@ -117,8 +117,8 @@ Winquic is an implementation of QUIC on Windows.
 - **Language:** C
 - **Version:** draft-07
 - **Roles:** client, server
-- **Handshake:** TLS 1.3-21
-- **Protocol IDs:** `0xff000007`
+- **Handshake:** TLS 1.3-22
+- **Protocol IDs:** `0xff000008`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
 ### MVFST
