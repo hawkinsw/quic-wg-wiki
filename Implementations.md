@@ -121,15 +121,15 @@ Winquic is an implementation of QUIC on Windows.
 - **Protocol IDs:** `0xff000008`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
-### MVFST
+### mvfst
 
-MVFST is the facebook implementation of QUIC
+mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 
 - **Language:** C++
-- **Version:** draft-05
+- **Version:** draft-07, draft-08 in progress
 - **Roles:** client, server
-- **Handshake:** TLS 1.3-21
-- **Protocol IDs:** `0xff000005` 
+- **Handshake:** TLS 1.3-21, 22
+- **Protocol IDs:** `0xff000007` 
 - **Public server:** fb.mvfst.net:4433
 
 
