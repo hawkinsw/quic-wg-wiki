@@ -26,7 +26,7 @@ A design team will focus of the wireline format of ECN capability exchange as we
 
 # Requirements
 * R.1 The ECN specification SHOULD be easy to implement. Care should be taken to minimize additional complexity in the implementation of ACK frames and the QUIC congestion control/recovery
-* R.2 The ECN feedback MUST report all ECN-CE marked packets. This is important especially for the implementation of L4S support. It is an open question whether detailed packet information is needed or if is sufficient with a report of accumulated number of bytes that are ECN-CE marked.
+* R.2 The ECN feedback MUST report all ECN-CE marked packets. This is important especially for the implementation of L4S support. It is an open question whether detailed packet information is needed or if is sufficient with a report of accumulated number of packets that are ECN-CE marked.
 * R.3 The ECN feedback SHOULD report ECT(0) and ECT(1) marked packets. This is beneficial for the detection of remarking, bleaching or ECN black holes. 
 * R.4 It SHOULD be possible measure amount of Not-ECT marked packets. This MAY be implemented as a dedicated feedback but can also be inferred from the regular ACK frames and the reports of CE, ECT(0) and ECT(1).
 * R.5 A QUIC implementation may not be able to verify ECN support in the OS network stack. The capability check should cover this case similar as if the network does not support ECN (see R6).
@@ -54,7 +54,7 @@ The other peer (B) receives the packet and just performs the generic ECN echo fu
 
 Peer A can confirm that the path direction supports ECN if the counters show a correct amount of packets received for a valid and expected counter combination. 
 
-[In case duplicates are asked in QUIC: Once peer A receives the ACK frame it verifies that the number of ECT marked bytes(or packets) is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
+[In case duplicates are asked in QUIC: Once peer A receives the ACK frame it verifies that the number of ECT marked packets is equal to or greater than the number of transmitted ditto [ED note, "equal to or larger" in case duplicates are counted]
 ECN capability check is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction.
 
 This capability check will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
