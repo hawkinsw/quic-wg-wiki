@@ -52,6 +52,18 @@ an iQUIC library meant to track standardization milestones.
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
 
+### mvfst
+
+mvfst (pronounced move fast) is an implementation of QUIC by Facebook
+
+- **Language:** C++
+- **Version:** draft-07, draft-08 in progress
+- **Roles:** client, server
+- **Handshake:** TLS 1.3-21, 22
+- **Protocol IDs:** `0xff000007` 
+- **Public server:** fb.mvfst.net:4433
+
+
 ### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
@@ -120,17 +132,6 @@ Winquic is an implementation of QUIC on Windows.
 - **Handshake:** TLS 1.3-22
 - **Protocol IDs:** `0xff000008`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
-
-### mvfst
-
-mvfst (pronounced move fast) is an implementation of QUIC by Facebook
-
-- **Language:** C++
-- **Version:** draft-07, draft-08 in progress
-- **Roles:** client, server
-- **Handshake:** TLS 1.3-21, 22
-- **Protocol IDs:** `0xff000007` 
-- **Public server:** fb.mvfst.net:4433
 
 
 ## Google QUIC
