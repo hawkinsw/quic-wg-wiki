@@ -69,17 +69,6 @@ After initial exchange the setting of ECT is OPTIONAL. If a sender sets the ECN 
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
 
-At the QUIC interrim (October 2017) it was decided that timestamps should be removed from the default ACK frames. Since ECN echo and ACKs are tightly coupled and both used for congestion control, it is better to use the same frame. It will reduce the ACK size as it will always be together with the ACK.
-While timestamps and ECN may not be tightly coupled, there is a possibility that the two can be combined for enhanced congestion control purposes. Two examples are 
-1. [SCReAM](https://tools.ietf.org/wg/rmcat/draft-ietf-rmcat-scream-cc/) seamlessly combines ECN/loss feedback and delay estimation, thus delay estimation serves as a fallback for the case that congested nodes are non ECN capable.
-2. BBR type bandwidth estimation may be combined with L4S marking for improved MIMD type congestion control, suitable for e.g high bitrate interactive applications such as VR.
-
-This leads to a few questions when a combined ECN+ACK frame is devised.
-1. Should it be an ACK+ECN frame only ?
-2. Should it be an ACK+ECN+TS frame ?
-
-The wire specification below only address the ACK+ECN frame.
- 
 ## ECN feedback, wire format
 Following ECN block definition is proposed. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
 The proposed format is useful both for classic ECN and L4S and encodes marked packets received. The DCTCP congestion control counts the number of marked bytes to calculate the drop probability (alpha), but [RFC7567](https://tools.ietf.org/html/rfc7567#section-4.4) states that ECN marking decisions should not take packet size into account, so packet counters will be sufficient, with a more compact ECN-echo protocol as a result.  
@@ -102,6 +91,12 @@ The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets e
 Currently no header size optimization schemes are considered, besides the variable integers.
 It is possible to reduce the size of the ECN block later by future protocol extensions.
 
+A few observations on the properties of the counters outline the possibilities to reduce the overhead.
+* The ECT(0) and ECT(1) counters are only needed to verify that the ECN bits are not cleared (ECN bleach) during the connection lifetime. For this reason it is sufficient to only report the 6 or 14 least significant bits of the ECT(0) and ECT(1) counters. Furthermore, either the ECT(0) or the ECT(1) is expected to be zero, given the recommended ECN bit usage in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), this makes it possible to encode one ECT counter with only one octet.
+* The CE counter only needs to record a sufficient number of bits to make it possible to compute a delta increase of the number of CE marked packets. Thus, it is sufficient to encode the CE counter with only 1 or 2 octets.
+
+Given the above observations it should be possible to reduce the overhead to 5 octets, 1 octet for the "unused" ECT codepoint, 2 octets for the "used" ECT codepoints and 2 octets for the CE counter.
+It is however recommended that full counters are reported at CONNECTION_CLOSE for monitoring purposes. 
 
 ## Handling of lost ACKs
 No special handling of lost ACK+ECN frames is necessary. The ECN counters are cumulative, which means that if an ACK+ECN frame with a potential increased CE count is lost, the next successfully received ACK+ECN frame will indicate the increased CE count.
