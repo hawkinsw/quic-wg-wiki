@@ -67,7 +67,7 @@ Initial capability exchange and acking with ECN information MUST be implemented.
 After initial exchange the setting of ECT is OPTIONAL. If a sender sets the ECN field to ECT after the initial one the sender MUST implement a congestion response to ACKs indicating ECN-CE marked packets. It is expected that future QUIC profiles will define if ECN sender capability is mandated. 
    
 # ECN feedback
-The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery.
+The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery. A dedicated ACK_ECN frame should be used.
 
 ## ECN feedback, wire format
 Following ECN block definition is proposed. The ECN block is appended after the ACK block section specified in [QUIC Transport](https://tools.ietf.org/wg/quic/draft-ietf-quic-transport/) 
@@ -95,7 +95,7 @@ A few observations on the properties of the counters outline the possibilities t
 * The ECT(0) and ECT(1) counters are only needed to verify that the ECN bits are not cleared (ECN bleach) during the connection lifetime. For this reason it is sufficient to only report the 6 or 14 least significant bits of the ECT(0) and ECT(1) counters. Furthermore, either the ECT(0) or the ECT(1) is expected to be zero, given the recommended ECN bit usage in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), this makes it possible to encode one ECT counter with only one octet.
 * The CE counter only needs to record a sufficient number of bits to make it possible to compute a delta increase of the number of CE marked packets. Thus, it is sufficient to encode the CE counter with only 1 or 2 octets.
 
-Given the above observations it should be possible to reduce the overhead to 5 octets, 1 octet for the "unused" ECT codepoint, 2 octets for the "used" ECT codepoints and 2 octets for the CE counter.
+Given the above observations it should be possible to reduce the overhead to 5 octets, 1 octet for the "unused" ECT codepoint, 2 octets for the "used" ECT codepoints and 2 octets for the CE counter. Section 5.7 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html) outlines how packet numbers are safely encoded with only the least significant bits using, a similar approach is recommended for the ECN Block encoding.
 It is however recommended that full counters are reported at CONNECTION_CLOSE and APPLICATION_CLOSEfor monitoring purposes. 
 
 ## Handling of lost ACKs
