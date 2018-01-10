@@ -96,7 +96,7 @@ A few observations on the properties of the counters outline the possibilities t
 * The CE counter only needs to record a sufficient number of bits to make it possible to compute a delta increase of the number of CE marked packets. Thus, it is sufficient to encode the CE counter with only 1 or 2 octets.
 
 Given the above observations it should be possible to reduce the overhead to 5 octets, 1 octet for the "unused" ECT codepoint, 2 octets for the "used" ECT codepoints and 2 octets for the CE counter.
-It is however recommended that full counters are reported at CONNECTION_CLOSE for monitoring purposes. 
+It is however recommended that full counters are reported at CONNECTION_CLOSE and APPLICATION_CLOSEfor monitoring purposes. 
 
 ## Handling of lost ACKs
 No special handling of lost ACK+ECN frames is necessary. The ECN counters are cumulative, which means that if an ACK+ECN frame with a potential increased CE count is lost, the next successfully received ACK+ECN frame will indicate the increased CE count.
