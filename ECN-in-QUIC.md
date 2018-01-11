@@ -140,6 +140,7 @@ This section outlines where the specification text for ECN in QUIC is suggested 
 
 8.16++.  ACK_ECN Frame
 The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
+
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -153,7 +154,8 @@ The ACK_ECN frame contains all the elements of the ACK frame with the addition o
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
      |                           ECN Block                         ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-                        Figure NN: ACK_ECN Frame Format
+
+                  Figure NN: ACK_ECN Frame Format
  
 8.16++.1.  ECN Block
 
