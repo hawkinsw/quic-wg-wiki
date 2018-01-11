@@ -132,3 +132,30 @@ To retrieve congestion marks from received UDP packets, use recvmsg() with IP_RE
 ## Android
 
 TBD
+
+# Suggested additions to 'to become' RFCs
+This section outlines where the specification text for ECN in QUIC is suggested to be placed. (++) means that the section number is one more than the actual number, meaning that the section comes after..
+
+## transport draft ACK_ECN frame format
+
+8.16++.  ACK_ECN Frame
+The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
+     0                   1                   2                   3
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                     Largest Acknowledged (i)                ...
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                          ACK Delay (i)                      ...
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                       ACK Block Count (i)                   ...
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                          ACK Blocks (*)                     ...
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |                           ECN Block                         ...
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+                        Figure NN: ACK_ECN Frame Format
+ 
+8.16++.1.  ECN Block
+
+
+ 
