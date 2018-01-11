@@ -169,6 +169,6 @@ The ACK_ECN frame contains all the elements of the ACK frame with the addition o
      |# ECN-CE marked packets (i)                                 ...
      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-                  Figure NN2: ACK_ECN Frame Format
+                  Figure NN2: ECN Block
 
  
