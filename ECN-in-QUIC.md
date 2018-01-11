@@ -139,6 +139,7 @@ This section outlines where the specification text for ECN in QUIC is suggested 
 ## transport draft ACK_ECN frame format
 
 8.16++.  ACK_ECN Frame
+
 The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
 
      0                   1                   2                   3
@@ -158,6 +159,7 @@ The ACK_ECN frame contains all the elements of the ACK frame with the addition o
                   Figure NN1: ACK_ECN Frame Format
  
 8.16++.1.  ECN Block
+
 The ECN block is described below. The size (i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
 
 The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets each, this however assumes that all counters have very large values and a lot of packets have been sent in this connection. The encoding size should be selected such that all the significant bits are represented.
@@ -175,6 +177,7 @@ The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets e
                   Figure NN2: ECN Block
 
 8.16++.2   ECN counters
+
 The receiver side should implement 3 64 bit counters that are copied to the ECN block when an ACK_ECN frame is generated. 
 * ECT_0 : Initial value = 0, incremented when a packet marked ECT(0) is received
 * ECT_1 : Initial value = 0, incremented when a packet marked ECT(1) is received 
