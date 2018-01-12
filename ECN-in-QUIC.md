@@ -140,7 +140,7 @@ This section outlines where the specification text for ECN in QUIC is suggested 
 
 8.16++.  ACK_ECN Frame
 
-The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
+The ACK_ECN frame is used to convey ACKs when the ECN capability exchange concludes that ECN should be used for the given connection. The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
 
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -160,9 +160,7 @@ The ACK_ECN frame contains all the elements of the ACK frame with the addition o
  
 8.16++.1.  ECN Block
 
-The ECN block is described below. The size (i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html)
-
-The ECT(0), ECT(1) and CE counters are in the worst case encoded with 8 octets each, this however assumes that all counters have very large values and a lot of packets have been sent in this connection. The encoding size should be selected such that all the significant bits are represented.
+The ECN block is described below. The size (i) indicates variable-length encoding, explained in section 8.1 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html). The encoding length for each counter (1, 2, 4 or 8 bytes) should be selected such that all the significant bits are represented.
 
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
