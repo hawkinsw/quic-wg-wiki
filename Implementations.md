@@ -72,7 +72,7 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Roles:** client, library, server
 - **Handshake:** TLSv1.3-22
 - **Protocol IDs:** `0xff000008`
-- **Public server:** nghttp2.org:4433, h256.de:4433
+- **Public server:** nghttp2.org:4433
 
 
 ### ngx_quic
@@ -197,7 +197,7 @@ A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto (production), TLS 1.3-21 (experimental)
 - **Protocol IDs:**
-- **Public server:** h256.de (Q039)
+- **Public server:** henrock.net:443 (Q039)
 
 
 ### [stellite](https://github.com/line/stellite)
