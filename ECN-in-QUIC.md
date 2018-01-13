@@ -4,7 +4,7 @@ ECN support in transport protocols is a fundamental feature that
 should be included in the QUIC specification as a mandatory element.
 ECN has the key benefit that it allows for non-destructive congestion
 notification by a network node, i.e packets are marked instead
-discarded.  This is particularly beneficial for realtime applications
+of being discarded.  This is particularly beneficial for realtime applications
 with requirements on latency, ECN also has the benefit that it
 provides with a congestion signal that is unambiguous (only congestion, not a 
 transmission error) and that it is independent from the transport protocol. A transport
@@ -20,9 +20,6 @@ of particular interest is the
 ability to discriminate between classic ECN and L4S ECN by means of
 differentiation between the use of the ECT(0) and ECT(1) code points.
 [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) also covers this work, there may however be occasions where the wiki and the draft are not in synch, the ultimate goal is to move the specific wireformat and how-to´s to the QUIC transport draft later on.
-
-# Design team
-A design team will focus of the wireline format of ECN capability exchange as well as the ECN feedback. It is suggested that the design team meet at IETF-100 to discuss the way forward and formalize a first joint version of the ECN specifics for QUIC. 
 
 # Requirements
 * R.1 The ECN specification SHOULD be easy to implement. Care should be taken to minimize additional complexity in the implementation of ACK frames and the QUIC congestion control/recovery
@@ -183,8 +180,12 @@ The receiver side should implement 3 64 bit counters that are copied to the ECN 
 Duplicate packets should not increment the counters
 
 ## ECN capability exchange 
+
 The following text is suggested to be included in the transport draft
-The capability check makes use of the generic ECN echo functionality of a receiver [consider explaining this first].
+
+7.X ECN capability exchange
+
+The capability check makes use of the generic ECN echo functionality of a receiver, implemented with the ACK_ECN frame in section 8.16++.
 A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
 
 The other peer (B) receives the packet and just performs the generic ECN echo functionality, i.e. it sends an ACK frame in return, that contains counters that indicates the amount of received packets with ECT(0),ECT(1) and CE. 
