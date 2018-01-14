@@ -15,7 +15,7 @@ its protocol, and respond to the echoed signal to drive it's congestion controll
 of ECN are described in more detail in [RFC8087](https://tools.ietf.org/html/rfc8087).
 The ECN-echo functionality in QUIC should support both present and
 future ECN, the latter is outlined in
-[ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), 
+[ECN experiments](https://www.rfc-editor.org/info/rfc8311), 
 of particular interest is the
 ability to discriminate between classic ECN and L4S ECN by means of
 differentiation between the use of the ECT(0) and ECT(1) code points.
@@ -45,7 +45,7 @@ ECN capability check start in the first packet that is transmitted from each of 
 
 ## Capability check, ect/echo
 The capability check makes use of the generic ECN echo functionality of a receiver [consider explaining this first].
-A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/)
+A peer (A) transmits the the first packet with the ECN bits set to ECT (either ECT(0) or ECT(1)). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311)
 
 The other peer (B) receives the packet and just performs the generic ECN echo functionality, i.e. it sends an ACK frame in return, that contains counters that indicates the amount of received packets with ECT(0),ECT(1) and CE. 
 
@@ -89,7 +89,7 @@ Currently no header size optimization schemes are considered, besides the variab
 It is possible to reduce the size of the ECN block later by future protocol extensions.
 
 A few observations on the properties of the counters outline the possibilities to reduce the overhead.
-* The ECT(0) and ECT(1) counters are only needed to verify that the ECN bits are not cleared (ECN bleach) during the connection lifetime. For this reason it is sufficient to only report the 6 or 14 least significant bits of the ECT(0) and ECT(1) counters. Furthermore, either the ECT(0) or the ECT(1) is expected to be zero, given the recommended ECN bit usage in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/), this makes it possible to encode one ECT counter with only one octet.
+* The ECT(0) and ECT(1) counters are only needed to verify that the ECN bits are not cleared (ECN bleach) during the connection lifetime. For this reason it is sufficient to only report the 6 or 14 least significant bits of the ECT(0) and ECT(1) counters. Furthermore, either the ECT(0) or the ECT(1) is expected to be zero, given the recommended ECN bit usage in [ECN experiments](https://www.rfc-editor.org/info/rfc8311), this makes it possible to encode one ECT counter with only one octet.
 * The CE counter only needs to record a sufficient number of bits to make it possible to compute a delta increase of the number of CE marked packets. Thus, it is sufficient to encode the CE counter with only 1 or 2 octets.
 
 Given the above observations it should be possible to reduce the overhead to 5 octets, 1 octet for the "unused" ECT codepoint, 2 octets for the "used" ECT codepoints and 2 octets for the CE counter. Section 5.7 in [QUIC transport](https://quicwg.github.io/base-drafts/draft-ietf-quic-transport.html) outlines how packet numbers are safely encoded with only the least significant bits using, a similar approach is recommended for the ECN Block encoding.
@@ -133,7 +133,9 @@ TBD
 # Suggested additions to 'to become' RFCs
 This section outlines where the specification text for ECN in QUIC is suggested to be placed. (++) means that the section number is one more than the actual number, meaning that the section comes after..
 
-## transport draft ACK_ECN frame format
+## Transport draft ACK_ECN frame format
+
+The following text on the ACK_ECN frame is suggested to be included in the transport draft
 
 8.16++.  ACK_ECN Frame
 
@@ -179,13 +181,13 @@ The receiver side should implement 3 64 bit counters that are copied to the ECN 
 * CE    : Initial value = 0, incremented when a packet marked CE is received 
 Duplicate packets should not increment the counters
 
-## ECN capability exchange 
+## Transport draft ECN capability exchange 
 
-The following text is suggested to be included in the transport draft
+The following text on ECN capability exchange is suggested to be included in the transport draft
 
 7.X ECN capability exchange
 
-The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet sets the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://tools.ietf.org/wg/tsvwg/draft-ietf-tsvwg-ecn-experimentation/). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE.
+The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet sets the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE.
    
 The ACK_ECN frame will, when received, confirm that the path direction supports ECN if the counters show a correct amount of packets received for a valid and expected counter combination.
  
@@ -195,3 +197,7 @@ ECT marked packets can become remarked as CE somewhere along the path between th
 
 ECN capability check is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction. This capability check will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
+## Recovery draft, ECN-CE reaction 
+
+The following text is suggested in section 4.7 in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
+T.B.D 
