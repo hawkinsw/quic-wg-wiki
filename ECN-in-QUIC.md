@@ -200,4 +200,15 @@ ECN capability check is deemed successful if the verification above yields a pos
 ## Recovery draft, ECN-CE reaction 
 
 The following text is suggested in section 4.7 in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
-T.B.D 
+
+4.7.6++.  On Packets Marked
+
+      Invoked by an increment in the number of CE marked packets, as indicated by a newly received ACK_ECN frame.
+
+      OnPacketsMarked():
+        // Start a new congestion epoch
+        if (end_of_recovery < ???):
+          end_of_recovery = ???
+          congestion_window *= kMarkReductionFactor
+          congestion_window = max(congestion_window, kMinimumWindow)
+          ssthresh = congestion_window
