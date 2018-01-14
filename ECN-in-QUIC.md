@@ -189,7 +189,7 @@ The capability check makes use of the ACK_ECN frame in section 8.16++. Each endp
    
 The ACK_ECN frame will, when received, confirm that the path direction supports ECN if the counters show a correct amount of packets received for a valid and expected counter combination.
  
-It is expected that QUIC discards duplicate packets early, however if that is not the case [ED note, have not seen any clear statement in the drafts], then it should be verified that the number of ECT marked packets are equal to or larger that the amount of ECT marked packets that have been transmitted. 
+It is expected that QUIC discards duplicate packets early, however if that is not the case **[ED note, have not seen any clear statement in the drafts]**, then it should be verified that the number of ECT marked packets are equal to or larger that the amount of ECT marked packets that have been transmitted. 
 
 ECT marked packets can become remarked as CE somewhere along the path between the peers, in such case the number of CE plus ECT marked packets should match the number of packets that was transmitted with ECT marking.     
 
