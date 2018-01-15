@@ -197,9 +197,20 @@ ECT marked packets can become remarked as CE somewhere along the path between th
 
 ECN capability check is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction. This capability check will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
+## Transport draft, Connection migration
+
+ECN capability should be verified at connection migration, this to verify that both endpoints support ECN and that the path is free from ECN bleaching. An additonal section is suggested in the transport draft.
+
+7.7.3.  ECN capability exchange for Migrated Connection
+
+The ECN capability as indicated in section 7.X should be repeated when a connection is migrated. This verifies that the endpoints are ECN capable and that the ECN bits are not bleached along the new path.
+
+
+
+
 ## Recovery draft, ECN-CE reaction 
 
-The following text is suggested in section 4.7 in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
+The following additional text  is suggested in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
 
 
 ***
