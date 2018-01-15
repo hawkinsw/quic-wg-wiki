@@ -201,14 +201,43 @@ ECN capability check is deemed successful if the verification above yields a pos
 
 The following text is suggested in section 4.7 in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
 
+
+***
+
+The function OnAckReceipt() is motified to detect if it is an ACK frame or an ACK_ECN frame and to take the necessary additional actions for the case that it is an ACK_ECN frame
+
+3.4.5.  On Ack Receipt
+
+      OnAckReceived(ack):           
+        largest_acked_packet = ack.largest_acked
+        // If the largest acked is newly acked, update the RTT.
+        if (sent_packets[ack.largest_acked]):
+          latest_rtt = now - sent_packets[ack.largest_acked].time
+          UpdateRtt(latest_rtt, ack.ack_delay)
+        // Find all newly acked packets.
+        for acked_packet in DetermineNewlyAckedPackets():
+          OnPacketAcked(acked_packet.packet_number)
+
+        DetectLostPackets(ack.largest_acked_packet)
+        SetLossDetectionAlarm()
+        // Detect if ACK_ECN frame indicates ECN marking
+        if (ack is of type ACK_ECN):
+           largest_acked_packet
+           OnPacketsMarked(ack.ce_counter, largest_acked_packet
+
+
+
+***
+An additional section that describes the OnPacketsMarked is added
+
 4.7.6++.  On Packets Marked
 
       Invoked by an increment in the number of CE marked packets, as indicated by a newly received ACK_ECN frame.
 
-      OnPacketsMarked():
+      OnPacketsMarked(ce_counter):
         // Start a new congestion epoch
-        if (end_of_recovery < ???):
-          end_of_recovery = ???
+        if (end_of_recovery < largest_acked_packet):
+          end_of_recovery = largest_sent_packet
           congestion_window *= kMarkReductionFactor
           congestion_window = max(congestion_window, kMinimumWindow)
           ssthresh = congestion_window
