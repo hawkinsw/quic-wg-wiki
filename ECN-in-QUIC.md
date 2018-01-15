@@ -133,7 +133,7 @@ TBD
 # Suggested additions to 'to become' RFCs
 This section outlines where the specification text for ECN in QUIC is suggested to be placed. (++) means that the section number is one more than the actual number, meaning that the section comes after..
 
-## Transport draft ACK_ECN frame format
+## Transport draft: ACK_ECN frame format
 
 The following text on the ACK_ECN frame is suggested to be included in the transport draft
 
@@ -181,7 +181,7 @@ The receiver side should implement 3 64 bit counters that are copied to the ECN 
 * CE    : Initial value = 0, incremented when a packet marked CE is received 
 Duplicate packets should not increment the counters
 
-## Transport draft ECN capability exchange 
+## Transport draft: ECN capability exchange 
 
 The following text on ECN capability exchange is suggested to be included in the transport draft
 
@@ -197,7 +197,7 @@ ECT marked packets can become remarked as CE somewhere along the path between th
 
 ECN capability check is deemed successful if the verification above yields a positive result, and ECN can be used for the given direction. This capability check will verify that the path between the peers is free from issues with ECN bleaching and that the application does not have problems with access to the ECN bits in the IP header.       
 
-## Transport draft, Connection migration
+## Transport draft: Connection migration
 
 ECN capability should be verified at connection migration, this to verify that both endpoints support ECN and that the path is free from ECN bleaching. An additonal section is suggested in the transport draft.
 
@@ -208,7 +208,7 @@ The ECN capability as indicated in section 7.X should be repeated when a connect
 
 
 
-## Recovery draft, ECN-CE reaction 
+## Recovery draft: ECN-CE reaction 
 
 The following additional text  is suggested in the recovery draft. It addresses the reaction to ECN classic marking, i.e, the appropriate reaction when packets are marked ECT(0) as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311).
 
