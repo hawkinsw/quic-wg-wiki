@@ -222,7 +222,6 @@ The function OnAckReceipt() is motified to detect if it is an ACK frame or an AC
         SetLossDetectionAlarm()
         // Detect if ACK_ECN frame indicates ECN marking
         if (ack is of type ACK_ECN):
-           largest_acked_packet
            OnPacketsMarked(ack.ce_counter, largest_acked_packet
 
 
