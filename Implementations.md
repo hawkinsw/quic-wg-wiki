@@ -15,7 +15,7 @@ AppleQUIC is a test client and server implementation.
 - **Roles:** Client, Server
 - **Handshake:** TLS 1.3-21
 - **Protocol IDs:** `0xff000005`
-- **Public server:** test.privateoctopus.com:4433
+- **Public server:** 
 
 ### [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
 
@@ -95,7 +95,7 @@ A small implementation of QUIC in C, to explore the protocol and the API, for ex
 - **Roles:** library and test tools, test client, test server
 - **Handshake:** TLS 1.3 draft 22
 - **Protocol IDs:** `0xff000008`
-- **Public server:**
+- **Public server:** test.privateoctopus.com:4433
 
 
 ### [quant](https://github.com/NTAP/quant)
