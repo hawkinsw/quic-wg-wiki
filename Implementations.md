@@ -91,10 +91,10 @@ Implementation of QUIC for NGINX
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
 
 - **Language:** C
-- **Version:** draft-05
-- **Roles:** library and test tools
-- **Handshake:** TLS 1.3 draft 21
-- **Protocol IDs:** `0xff000005`
+- **Version:** draft-08
+- **Roles:** library and test tools, test client, test server
+- **Handshake:** TLS 1.3 draft 22
+- **Protocol IDs:** `0xff000008`
 - **Public server:**
 
 
