@@ -219,5 +219,5 @@ Client and server library for our experimenting with different QUIC applications
 - **Version:** draft-08 (mostly)
 - **Roles:** library with minimal client, server
 - **Handshake:** QUIC Crypto, TLS -22 (using picots)
-- **Protocol IDs:** 0xff000008
+- **Protocol IDs:** `0xff000008`
 - **Public server:** not yet
