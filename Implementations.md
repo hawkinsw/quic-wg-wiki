@@ -218,6 +218,6 @@ Client and server library for our experimenting with different QUIC applications
 - **Language:** C
 - **Version:** draft-08 (mostly)
 - **Roles:** library with minimal client, server
-- **Handshake:** QUIC Crypto, TLS -22 (using picots)
+- **Handshake:** QUIC Crypto, TLS -22 (using picotls)
 - **Protocol IDs:** `0xff000008`
 - **Public server:** not yet
