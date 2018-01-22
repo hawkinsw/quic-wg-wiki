@@ -179,7 +179,8 @@ The receiver side should implement 3 64 bit counters that are copied to the ECN 
 * ECT_0 : Initial value = 0, incremented when a packet marked ECT(0) is received
 * ECT_1 : Initial value = 0, incremented when a packet marked ECT(1) is received 
 * CE    : Initial value = 0, incremented when a packet marked CE is received 
-Duplicate packets should not increment the counters
+
+Duplicate packets SHOULD NOT increment the counters
 
 ## Transport draft: ECN capability exchange 
 
