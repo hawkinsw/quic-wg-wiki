@@ -218,7 +218,7 @@ The following additional text  is suggested in the recovery draft. It addresses 
 
 ***
 
-The function OnAckReceipt() is motified to detect if it is an ACK frame or an ACK_ECN frame and to take the necessary additional actions for the case that it is an ACK_ECN frame
+The function OnAckReceived() is motified to detect if it is an ACK frame or an ACK_ECN frame and to take the necessary additional actions for the case that it is an ACK_ECN frame
 
 3.4.5.  On Ack Receipt
 
