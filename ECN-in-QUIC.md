@@ -187,9 +187,9 @@ The following text on ECN capability exchange is suggested to be included in the
 
 7.X ECN capability exchange
 
-The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet, containing the 1st frame, sets the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE. 
+The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet, containing the 1st frame, SHOULD set the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE. 
 
-A retransmitted 1st frame should also have the ECT codepoint set [ED note. Not full agreement in the design team, an option is that the ECT code point is not set for the retransmitted 1st frame, ECT black holes are still a theoretical possibility even though recent studies have indicated that they are very rare] 
+A retransmitted 1st frame SHOULD also have the ECT codepoint set [ED note. Not full agreement in the design team, an option is that the ECT code point is not set for the retransmitted 1st frame, ECT black holes are still a theoretical possibility even though recent studies have indicated that they are very rare] 
    
 The ACK_ECN frame will, when received, confirm that the path direction supports ECN if the counters show a correct amount of packets received for a valid and expected counter combination.
  
