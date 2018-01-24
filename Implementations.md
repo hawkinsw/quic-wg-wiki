@@ -86,6 +86,16 @@ Implementation of QUIC for NGINX
 - **Protocol IDs:** `0xff000007`
 - **Public server:** TBD
 
+### Pandora
+
+Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.
+
+- **Language:** C
+- **Version:** draft-08 (mostly)
+- **Roles:** library with minimal client, server
+- **Handshake:** TLS -22 (using picotls)
+- **Protocol IDs:** `0xff000008`
+- **Public server:** not yet
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
@@ -211,13 +221,3 @@ Stellite project is a client library and server application that offers an easy 
 - **Protocol IDs:**
 - **Public server:**
 
-### Pandora
-
-Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.
-
-- **Language:** C
-- **Version:** draft-08 (mostly)
-- **Roles:** library with minimal client, server
-- **Handshake:** QUIC Crypto, TLS -22 (using picotls)
-- **Protocol IDs:** `0xff000008`
-- **Public server:** not yet
