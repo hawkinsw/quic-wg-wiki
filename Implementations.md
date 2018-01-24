@@ -95,7 +95,7 @@ Client and server library for our experimenting with different QUIC applications
 - **Roles:** library with minimal client, server
 - **Handshake:** TLS -22 (using picotls)
 - **Protocol IDs:** `0xff000008`
-- **Public server:** not yet
+- **Public server:** pandora.cm.in.tum.de:4433 (the server log is accessible via http[s]://pandora.cm.in.tum.de/)
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
 A small implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3
