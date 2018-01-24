@@ -88,7 +88,7 @@ Implementation of QUIC for NGINX
 
 ### Pandora
 
-Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.
+Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.  Server setup still a bit shake; see also Pandora in the QUIC Slack channel
 
 - **Language:** C
 - **Version:** draft-08 (mostly)
