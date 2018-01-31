@@ -220,3 +220,14 @@ Stellite project is a client library and server application that offers an easy 
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
 - **Public server:**
+
+### [caddyserver](https://github.com/lucas-clemente/quic-go)
+
+Caddy 0.9 has experimental QUIC support, powered by lucas-clemente/quic-go. Read more about [caddyservers QUIC](https://github.com/mholt/caddy/wiki/QUIC) implementation and usage
+
+- **Language:** Go
+- **Version:** since 0.9 (experimental)
+- **Roles:** server
+- **Handshake:** QUIC Crypto (production)
+- **Protocol IDs:**
+- **Public server:**
