@@ -60,8 +60,8 @@ This capability check will verify that the path between the peers is free from i
 A lost 1st frame will be handled by QUICs retransmission logic, a retransmitted 1st frame should also have the ECT codepoint set.
 
 ## QUIC v1.0 limitation
-Initial capability exchange and acking with ECN information MUST be implemented. 
-After initial exchange the setting of ECT is OPTIONAL. If a sender sets the ECN field to ECT after the initial one the sender MUST implement a congestion response to ACKs indicating ECN-CE marked packets. It is expected that future QUIC profiles will define if ECN sender capability is mandated. 
+Initial capability check and acking with ECN information MUST be implemented. 
+After initial check the setting of ECT is OPTIONAL. If a sender sets the ECN field to ECT after the initial one the sender MUST implement a congestion response to ACKs indicating ECN-CE marked packets. It is expected that future QUIC profiles will define if ECN sender capability is mandated. 
    
 # ECN feedback
 The ECN feedback echoes the ECN marks back to the sender. The current assumption is that the ECN feedback should be in the same frame as the ACK. The main reason behind this is that it simplifies further processing in the congestion control and error recovery. A dedicated ACK_ECN frame should be used.
@@ -139,7 +139,8 @@ The following text on the ACK_ECN frame is suggested to be included in the trans
 
 8.16++.  ACK_ECN Frame
 
-The ACK_ECN frame is used to convey ACKs when the ECN capability exchange concludes that ECN should be used for the given connection. The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
+A QUIC connection MUST keep counters per ECN codepoint for the number of packets received having that ECN codepoint in the IP header. If the header is not readable from the application the codepoint 00 MUST be assumed. 
+The ACK_ECN frame is used to echo these counters back to the sender of these packets, which will use them for congestion control of that connection. The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
 
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -182,13 +183,13 @@ The receiver side should implement 3 64 bit counters that are copied to the ECN 
 
 Duplicate packets SHOULD NOT increment the counters
 
-## Transport draft: ECN capability exchange 
+## Transport draft: ECN capability check
 
-The following text on ECN capability exchange is suggested to be included in the transport draft
+The following text on ECN capability check is suggested to be included in the transport draft
 
-7.X ECN capability exchange
+7.X ECN capability check
 
-The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet, containing the 1st frame, SHOULD set the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE. 
+The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability check in which the first packet, containing the 1st frame [is this a necessary condition, or can this be removed?], SHOULD set the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE. 
 
 A retransmitted 1st frame SHOULD also have the ECT codepoint set 
 [ED note. Not full agreement in the design team, an option is that the ECT code point is not set for the retransmitted 1st frame, ECT black holes are still a theoretical possibility even though recent studies have indicated that they are very rare, it is for instance more likely that the 1st packet is dropped due to a UDP black hole] 
@@ -205,24 +206,24 @@ ECN capability check is deemed successful if the verification above yields a pos
 
 ECN capability should be verified at connection migration, this to verify that both endpoints support ECN and that the path is free from ECN bleaching. An additonal section is suggested in the transport draft.
 
-7.7.3.  ECN capability exchange for Migrated Connection
+7.7.3.  ECN capability check for Migrated Connection
 Connection migration requires that ECN capability is verified again. 
 The ECN capability as indicated in section 7.X should be repeated when a connection is migrated. This verifies that the endpoints are ECN capable and that the ECN bits are not bleached along the new path.
 There are two unique cases:
-1. ECN capability exchange successful at initial connection setup
-2. ECN capability exchange failed at initial connection setup
+1. ECN capability check successful at initial connection setup
+2. ECN capability check failed at initial connection setup
 
-Case 1 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.Case 2 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. 
+Case 1 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off. Case 2 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. 
 The two cases are descibed more in detail below. 
-[ED note.. unsure is a new connection really istantiated at connection migration ?] Connection migration has impact on the number of reported CE marked packets. A new counter is instantiated at the receiver which starts from zero. The congestion control algorithm will then see that the number of CE marked packets will decrease in combination with that the feedback relates to the new path, such changes in the CE counter values are not to be interpreted as congestion. As a general rule, decreased values in the CE counter values (due to for instance packet reordering that affects the ordering of the ACK_ECN frames.
+[ED note.. unsure is a new connection really istantiated at connection migration ?] Connection migration has impact on the number of reported CE marked packets. A new connection state with new congestion control state and ECN counters is instantiated at the sender and receiver. The ECN counters MUST start from zero again.
 
-7.7.3.1 Case 1, ECN capability exchange successful at initial connection setup
+7.7.3.1 Case 1, ECN capability check successful at initial connection setup
 
-IP packets continue to be transmitted with the applicable ECT code point set. One possible issue is that ECN does not work along the new path, either because of ECN bleaching in the network or because of OS network stack issues. This error case will manifest itself in that the ECT and CE counters do not increase as much as they should. The sender detects this and consequently ECN capability is disabled. The trigger condition for a successful ECN capability exchange is the same as for the intial ECN capability exchange. 
+IP packets continue to be transmitted with the applicable ECT code point set. One possible issue is that ECN does not work along the new path, either because of ECN bleaching in the network or because of OS network stack issues. This error case will manifest itself in that the ECT and CE counters do not increase as much as they should. The sender detects this and consequently ECN capability is disabled. The trigger condition for a successful ECN capability check is the same as for the intial ECN capability check. 
 
-7.7.3.2 Case 2, ECN capability exchange failed at initial connection setup
+7.7.3.2 Case 2, ECN capability check failed at initial connection setup
 
-The applicable ECT codepoint is set in the IP packets along the new connection and the ECN capability exchange as outlined in section 7.x is initiated.
+The applicable ECT codepoint is set in the IP packets along the new connection and the ECN capability check as outlined in section 7.x is initiated.
 
 
 
