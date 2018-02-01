@@ -214,11 +214,11 @@ There are two unique cases:
 
 Case 1 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.Case 2 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. 
 The two cases are descibed more in detail below. 
-Connection migration has impact on the number of reported CE marked packets. A new counter is instantiated at the receiver which starts from zero. The congestion control algorithm will then see that the number of CE marked packets will decrease in combination with that the feedback relates to the new path, such changes in the CE counter values are not to be interpreted as congestion. As a general rule, decreased values in the CE counter values (due to for instance packet reordering that affects the ordering of the ACK_ECN frames.
+[ED note.. unsure is a new connection really istantiated at connection migration ?] Connection migration has impact on the number of reported CE marked packets. A new counter is instantiated at the receiver which starts from zero. The congestion control algorithm will then see that the number of CE marked packets will decrease in combination with that the feedback relates to the new path, such changes in the CE counter values are not to be interpreted as congestion. As a general rule, decreased values in the CE counter values (due to for instance packet reordering that affects the ordering of the ACK_ECN frames.
 
 7.7.3.1 Case 1, ECN capability exchange successful at initial connection setup
 
-IP packets continue to be transmitted with the applicable ECT code point set. One possible issue is that ECN does not work along the new path, either because of ECN bleaching in the network or because of OS network stack issues. This error case will manifest itself in that the ECT and CE counters do not increase. The sender detects this and consequently ECN capability is disabled. The trigger condition for a successful ECN capability exchange is the same as for the intial ECN capability exchange. 
+IP packets continue to be transmitted with the applicable ECT code point set. One possible issue is that ECN does not work along the new path, either because of ECN bleaching in the network or because of OS network stack issues. This error case will manifest itself in that the ECT and CE counters do not increase as much as they should. The sender detects this and consequently ECN capability is disabled. The trigger condition for a successful ECN capability exchange is the same as for the intial ECN capability exchange. 
 
 7.7.3.2 Case 2, ECN capability exchange failed at initial connection setup
 
