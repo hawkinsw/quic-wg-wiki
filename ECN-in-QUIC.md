@@ -190,7 +190,8 @@ The following text on ECN capability exchange is suggested to be included in the
 
 The capability check makes use of the ACK_ECN frame in section 8.16++. Each endpoint performs an ECN capability exchange in which the first packet, containing the 1st frame, SHOULD set the ECN bits in the IP header to either ECT(0) or ECT(1). The specification of the ECT(0) and ECT(1) is as per the guidelines in [ECN experiments](https://www.rfc-editor.org/info/rfc8311). Upon reception of the packet by the opposite peer, an ACK_ECN frame is transmitted back. This ACK_ECN frame indicates how many packets that are marked ECT(0), ECT(1) or CE. 
 
-A retransmitted 1st frame SHOULD also have the ECT codepoint set [ED note. Not full agreement in the design team, an option is that the ECT code point is not set for the retransmitted 1st frame, ECT black holes are still a theoretical possibility even though recent studies have indicated that they are very rare] 
+A retransmitted 1st frame SHOULD also have the ECT codepoint set 
+[ED note. Not full agreement in the design team, an option is that the ECT code point is not set for the retransmitted 1st frame, ECT black holes are still a theoretical possibility even though recent studies have indicated that they are very rare, it is for instance more likely that the 1st packet is dropped due to a UDP black hole] 
    
 The ACK_ECN frame will, when received, confirm that the path direction supports ECN if the counters show a correct amount of packets received for a valid and expected counter combination.
  
@@ -205,8 +206,14 @@ ECN capability check is deemed successful if the verification above yields a pos
 ECN capability should be verified at connection migration, this to verify that both endpoints support ECN and that the path is free from ECN bleaching. An additonal section is suggested in the transport draft.
 
 7.7.3.  ECN capability exchange for Migrated Connection
-
+Connection migration requires that ECN capability is verified again. 
 The ECN capability as indicated in section 7.X should be repeated when a connection is migrated. This verifies that the endpoints are ECN capable and that the ECN bits are not bleached along the new path.
+There are two unique cases:
+1. ECN capability exchange successful at initial connection setup
+2. ECN capability exchange failed at initial connection setup
+Case 1 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. Case 2 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.
+
+
 
 
 
