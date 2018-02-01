@@ -211,6 +211,7 @@ The ECN capability as indicated in section 7.X should be repeated when a connect
 There are two unique cases:
 1. ECN capability exchange successful at initial connection setup
 2. ECN capability exchange failed at initial connection setup
+
 Case 1 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. Case 2 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.
 The two cases are descibed more in detail below
 
