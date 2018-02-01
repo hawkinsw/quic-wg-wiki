@@ -212,7 +212,18 @@ There are two unique cases:
 1. ECN capability exchange successful at initial connection setup
 2. ECN capability exchange failed at initial connection setup
 Case 1 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. Case 2 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.
+7.7.3.  ECN capability exchange for Migrated Connection
+Connection migration requires that ECN capability is verified again. 
+The ECN capability as indicated in section 7.X should be repeated when a connection is migrated. This verifies that the endpoints are ECN capable and that the ECN bits are not bleached along the new path.
+There are two unique cases:
+1. ECN capability exchange successful at initial connection setup
+2. ECN capability exchange failed at initial connection setup
+Case 1 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. Case 2 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off.
+The two cases are descibed more in detail below
+7.7.3.1 Case 1, ECN capability exchange successful at initial connection setup
+IP packets continue to be transmitted with the applicable ECT code point set. 
 
+7.7.3.2 Case 2, ECN capability exchange failed at initial connection setup
 
 
 
