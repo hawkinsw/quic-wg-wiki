@@ -1,6 +1,8 @@
 Better test this early, so we don't have problems when doing interop tests.
 
-Let's assume that the PN encryption key is:
+Let's assume that the packet's payload is encrypted using AES GCM 128.
+
+Let's also assume that the PN encryption key is:
 ~~~
     static const uint8_t key[] = {
         0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
