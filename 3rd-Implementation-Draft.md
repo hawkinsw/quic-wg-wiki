@@ -1,4 +1,4 @@
-- Features in [2nd implementation draft](https://github.com/quicwg/base-drafts/wiki/Second-Implementation-Draft)
+- Features in [2nd implementation draft](https://github.com/quicwg/base-drafts/wiki/2nd-Implementation-Draft)
 
 - Update to draft-08 and TLS 1.3 -22
 
