@@ -1,4 +1,4 @@
-This document describes the next set of features to implement after we have reached the point of diminishing returns on the [First Implementation](https://github.com/quicwg/base-drafts/wiki/First-Implementation).
+This document describes the next set of features to implement after we have reached the point of diminishing returns on the [First Implementation](https://github.com/quicwg/base-drafts/wiki/1st-Implementation-Draft).
 
 The first implementation focused on the basic handshake. The second will add additional handshake features and support a rudimentary application to exercise the stream infrastructure.
 
