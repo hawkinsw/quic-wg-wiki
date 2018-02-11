@@ -68,10 +68,10 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
-- **Version:** draft-08
+- **Version:** draft-09
 - **Roles:** client, library, server
-- **Handshake:** TLSv1.3-22
-- **Protocol IDs:** `0xff000008`
+- **Handshake:** TLSv1.3-23
+- **Protocol IDs:** `0xff000009`
 - **Public server:** nghttp2.org:4433
 
 
