@@ -161,7 +161,7 @@ The following text on the ACK_ECN frame is suggested to be included in the trans
 
 A QUIC connection MUST keep counters for each ECN codepoint, recording the number of packets that were received with the corresponding ECN codepoint in the IP header. If the header is not readable from the application, the codepoint 00 MUST be assumed. 
 
-The ACK_ECN frame is used by the reeiver to echo the value of these counters back to the sender of these packets. This allows the sender to utilise these countyer values for congestion control. The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
+The ACK_ECN frame is used by the reeiver to echo the value of these counters back to the sender of these packets. This allows the sender to utilize these counter values for congestion control. The ACK_ECN frame contains all the elements of the ACK frame with the addition of an ECN block appended at the end.
 
      0                   1                   2                   3
      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
