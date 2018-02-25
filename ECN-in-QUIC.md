@@ -240,7 +240,7 @@ There are two unique cases:
 
 Case 1 can have different outcomes, either that ECN capability will continue, or that ECN capability is turned off. Case 2 means that ECN capability can be enabled after a connection even though it was disabled at the initial connection setup. 
 The two cases are descibed more in detail below. 
-[ED note.. unsure is a new connection really istantiated at connection migration ?] Connection migration has impact on the number of reported CE marked packets. A new connection state with new congestion control state and ECN counters is instantiated at the sender and receiver. The ECN counters MUST start from zero again.
+[ED note.. unsure is a new connection really instantiated at connection migration ?] Connection migration has impact on the number of reported CE marked packets. A new connection state with new congestion control state and ECN counters is instantiated at the sender and receiver. The ECN counters MUST start from zero again.
 
 7.7.3.1 Case 1, ECN capability check successful at initial connection setup
 
@@ -275,7 +275,7 @@ The function OnAckReceived() is modified to detect if it is an ACK frame or an A
         SetLossDetectionAlarm()
         // Detect if ACK_ECN frame indicates ECN marking
         if (ack is of type ACK_ECN):
-           OnPacketsMarked(ack.ce_counter, largest_acked_packet
+           OnPacketsMarked(ack.ce_counter)
 
 
 
