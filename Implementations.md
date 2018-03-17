@@ -80,11 +80,11 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 Implementation of QUIC for NGINX
 
 - **Language:** C
-- **Version:** draft-07 (but incomplete)
+- **Version:** draft-09
 - **Roles:** server
-- **Handshake:** TLSv1.3-21
-- **Protocol IDs:** `0xff000007`
-- **Public server:** TBD
+- **Handshake:** TLSv1.3-23
+- **Protocol IDs:** `0xff000009`
+- **Public server:** quic.tech:4433
 
 ### Pandora
 
