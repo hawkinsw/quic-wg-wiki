@@ -203,9 +203,9 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
 
 - **Language:** Go
-- **Version:** Q039 (production), draft-07 (experimental)
+- **Version:** Q039 (production), draft-10 (experimental)
 - **Roles:** client, library, server
-- **Handshake:** QUIC Crypto (production), TLS 1.3-21 (experimental)
+- **Handshake:** QUIC Crypto (production), TLS 1.3-22 (experimental)
 - **Protocol IDs:**
 - **Public server:** seemann.io:443 (Q039)
 
