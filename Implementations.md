@@ -1,4 +1,4 @@
-This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools).
+This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools). Current [interop status](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing); make sure you are looking at or editing the correct tab.
 
 Please add your implementation below. Keep sorted alphabetically. There are two sections, one for "IETF QUIC" and one for "Google QUIC".
 
