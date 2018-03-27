@@ -120,6 +120,18 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 - **Public server:** quant.eggert.org:4433 (Logs for last run at https://quant.eggert.org/log; all logs at https://quant.eggert.org/)
 
 
+### [QUICker](https://github.com/rmarx/quicker)
+
+QUICker is a NodeJS/TypeScript based QUIC implementation from the University of Hasselt, Belgium. NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support
+
+- **Language:** TypeScript
+- **Version:** draft-09
+- **Roles:** client,server, library
+- **Handshake:** TLS 1.3-23
+- **Protocol IDs:** `0xff000009`
+- **Public server:** quicker.edm.uhasselt.be:4433
+
+
 ### [quicly](https://github.com/h2o/quicly)
 
 QUIC protocol implementation for H2O server
