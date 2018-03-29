@@ -1,12 +1,101 @@
 In the early drafts, the clear text messages of Quic were protected by an FNV1A
 checksum. Draft-07 replaces that by AEAD encryption, in which the keys are derived
-from a version specific salt combined with the initial connection ID.
+from a version specific salt combined with the initial connection ID. Then draft-09
+changed some of tags associated with the derivation, and draft-10 both introduced
+a new salt and changed the key expansion process
 
 Early interop tests of draft-07 showed that a test vector for the key derivation
-would be useful. So, here is one.
+would be useful. They still are for the new versions. They were updated for
+draft-09, and now for draft-10.
 
-Some tags associated with this derivation have changed in draft -09. What follows
-is an updated test vector. The original -07 values are later in this document.
+# draft-10 Test Vectors
+## Connection parameters:
+
+The connection ID and version number used in the test vector are:
+~~~
+Initial connection ID: 0x8394c8f03e515708
+Version:               0xff00000a
+~~~
+This version number corresponds to draft-10, which says:
+~~~
+    handshake_salt = 0x9c108f98520a5c5c32968e950e8a2c5fe06d6c38
+
+    handshake_secret = HKDF-Extract(quic_version_1_salt,
+                                    client_connection_id)
+
+    client_handshake_secret =
+                       QHKDF-Expand(handshake_secret, "client hs",
+                                    Hash.length)
+    server_handshake_secret =
+                       QHKDF-Expand(handshake_secret, "server hs",
+                                    Hash.length)
+~~~
+## Computation of the cleartext secret
+
+The parameters to the computation are the quic_version1_salt, and the 
+initial connection ID, serialized as 8 bytes:
+~~~
+	0x83, 0x94, 0xc8, 0xf0, 0x3e, 0x51, 0x57, 0x08
+~~~
+The 32-byte handshake secret will be:
+~~~
+        0xa5, 0x72, 0xb0, 0x24, 0x5a, 0xf1, 0xed, 0xdf, 
+        0x5c, 0x61, 0xc6, 0xe3, 0xf7, 0xf9, 0x30, 0x4c, 
+        0xa6, 0x6b, 0xfb, 0x4c, 0xaa, 0xf7, 0x65, 0x67, 
+        0xd5, 0xcb, 0x8d, 0xd1, 0xdc, 0x4e, 0x82, 0x0b
+~~~
+## Computation of the client clear text secret:
+
+The label used as parameter to QHKDF expand the clear text secret and produce the
+client secret is 17 bytes long:
+~~~
+        0x00, 0x20, 0x0e, 0x51, 0x55, 0x49, 0x43, 0x20,
+        0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x20, 0x68,
+        0x73
+~~~
+The 32 bytes client clear text secret will be:
+~~~
+        0x83, 0x55, 0xf2, 0x1a, 0x3d, 0x8f, 0x83, 0xec,
+        0xb3, 0xd0, 0xf9, 0x71, 0x08, 0xd3, 0xf9, 0x5e,
+        0x0f, 0x65, 0xb4, 0xd8, 0xae, 0x88, 0xa0, 0x61,
+        0x1e, 0xe4, 0x9d, 0xb0, 0xb5, 0x23, 0x59, 0x1d
+~~~
+This will produce the following key and IV:
+~~~
+Client AEAD Key (16 bytes):
+        0x3a, 0xd0, 0x54, 0x2c, 0x4a, 0x85, 0x84, 0x74, 
+        0x00, 0x63, 0x04, 0x9e, 0x3b, 0x3c, 0xaa, 0xb2
+
+Client AEAD IV (12 bytes):
+        0xd1, 0xfd, 0x26, 0x05, 0x42, 0x75, 0x3a, 0xba, 
+        0x38, 0x58, 0x9b, 0xad
+~~~
+## Computation of the server clear text secret:
+
+The label used as parameter to HKDF expand the handshake secret and produce the
+server secret is 17 bytes long:
+~~~
+        0x00, 0x20, 0x0e, 0x51, 0x55, 0x49, 0x43, 0x20,
+        0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x68,
+        0x73 
+~~~
+The 32 bytes server handshake secret will be:
+~~~
+        0xf8, 0x0e, 0x57, 0x71, 0x48, 0x4b, 0x21, 0xcd, 
+        0xeb, 0xb5, 0xaf, 0xe0, 0xa2, 0x56, 0xa3, 0x17, 
+        0x41, 0xef, 0xe2, 0xb5, 0xc6, 0xb6, 0x17, 0xba,
+        0xe1, 0xb2, 0xf1, 0x5a, 0x83, 0x04, 0x83, 0xd6, 
+~~~
+This will produce the following key and IV:
+~~~
+Server AEAD key (16 bytes):
+        0xbe, 0xe4, 0xc2, 0x4d, 0x2a, 0xf1, 0x33, 0x80, 
+        0xa9, 0xfa, 0x24, 0xa5, 0xe2, 0xba, 0x2c, 0xff
+
+Server IV (12 bytes):
+        0x25, 0xb5, 0x8e, 0x24, 0x6d, 0x9e, 0x7d, 0x5f, 
+        0xfe, 0x43, 0x23, 0xfe
+~~~
 
 # draft-09 Test Vectors
 ## Connection parameters:
