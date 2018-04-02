@@ -125,10 +125,10 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 QUICker is a NodeJS/TypeScript based QUIC implementation from the University of Hasselt, Belgium. NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support
 
 - **Language:** TypeScript
-- **Version:** draft-09
+- **Version:** draft-10
 - **Roles:** client,server, library
 - **Handshake:** TLS 1.3-23
-- **Protocol IDs:** `0xff000009`
+- **Protocol IDs:** `0xff00000a`
 - **Public server:** quicker.edm.uhasselt.be:4433
 
 
