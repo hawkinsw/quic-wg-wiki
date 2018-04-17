@@ -4,7 +4,7 @@ Packet Number Encryption solves ossification issues caused by middle-boxes creat
 
 The packet header contain a Packet Number encoded on 8, 16 or 32 bits, representing the least significant bits of the 64 bit sequence number. According to #1079, encryption proceeds as follow:
 
-1) Format a clear text packet as <header including PN> and <payload>.
+1) Format a clear text packet as %60 header including PN> and <payload>.
 2) Encrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the entire header.
 3) Encrypt the PN, using part of the encrypted payload as a nonce.
 4) Send the packet as <header including encrypted PN>|<encrypted payload>|<AEAD checksum>
