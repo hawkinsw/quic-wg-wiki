@@ -132,7 +132,7 @@ Solution that use breakable algorithms do not provide linkability defense agains
 Here is the comparison table:
 
 |   | Linkability | Hardware | bytes overhead | CPU overhead | Crypto agile |
-+---+-------------+----------+----------------+--------------+--------------+
+|---|-------------|----------|----------------|--------------|--------------|
 | PR #1079| Protected | Hard | 0 | 1% | Yes |
 
 
