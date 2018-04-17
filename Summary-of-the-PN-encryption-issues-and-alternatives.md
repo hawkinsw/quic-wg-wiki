@@ -7,11 +7,11 @@ The packet header contain a Packet Number encoded on 8, 16 or 32 bits, represent
 1) Format a clear text packet as \<header including PN> and \<payload>.
 2) Encrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the entire header.
 3) Encrypt the PN, using part of the encrypted payload as a nonce.
-4) Send the packet as <header including encrypted PN>|<encrypted payload>|<AEAD checksum>
+4) Send the packet as \<header including encrypted PN>|\<encrypted payload>|\<AEAD checksum>
 
 Decryption follows the reverses steps:
 
-1) Receive the packet as <header including encrypted PN>|<encrypted payload>|<AEAD checksum>.
+1) Receive the packet as \<header including encrypted PN>|\<encrypted payload>|\<AEAD checksum>.
 2) Decrypt the PN, using part of the encrypted payload as a nonce.
 3) Expand the PN to a 64 bit sequence number, using the highest received packet number to provide the missing bits.
 4) Decrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the entire clear text header, including the decrypted PN.
@@ -38,14 +38,14 @@ These procedures have various degrees of benefits and difficulties.
 
 The alternative PN encryption would use the following steps:
 
-1) Format a clear text packet as <header including PN> and <payload>.
+1) Format a clear text packet as \<header including PN> and \<payload>.
 2) Encrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the first part of the header but not the PN.
 3) Encrypt the PN using a block cipher, or a light weight approximation of a block cipher. (Could be parallel with step 2)
-4) Send the packet as <header including encrypted PN>|<encrypted payload>|<AEAD checksum>
+4) Send the packet as \<header including encrypted PN>|\<encrypted payload>|\<AEAD checksum>
 
 Decryption follows the reverse steps:
 
-1) Receive the packet as <header including encrypted PN>|<encrypted payload>|<AEAD checksum>.
+1) Receive the packet as \<header including encrypted PN>|\<encrypted payload>|\<AEAD checksum>.
 2) Decrypt the PN using a block cipher.
 3) Expand the PN to a 64 bit sequence number, using the highest received packet number to provide the missing bits.
 4) Decrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the entire clear text header but not the decrypted PN.
@@ -71,13 +71,13 @@ The second issue with this approach is that numbers repeat. In the absence of an
 The additional nonce approach assumes that the packet format has been changed, to include an additional nonce in the header. With that approach, encryption would use the following steps:
 
 1) Pick a nonce for the packet and document it in the header;
-2) Format the clear text packet as <header including nonce> and <pn>|<payload>.
+2) Format the clear text packet as \<header including nonce> and \<pn>|\<payload>.
 3) Encrypt the concatenated PN and payload using AEAD, using the nonce in the header as a nonce, and authenticating the first part of the header, but maybe not the nonce.
-4) Send the packet as <header including encrypted nonce>|<encrypted PN and payload>|<AEAD checksum>
+4) Send the packet as \<header including encrypted nonce>|\<encrypted PN and payload>|\<AEAD checksum>
 
 Decryption follows the reverse steps:
 
-1) Receive the packet as <header including encrypted nonce>|<encrypted PN and payload>|<AEAD checksum>.
+1) Receive the packet as \<header including encrypted nonce>|\<encrypted PN and payload>|\<AEAD checksum>.
 2) Decrypt the payload using AEAD, using the nonce from the header, and authenticating the entire clear text header but not the decrypted PN.
 
 The advantage of the approach it its full compatibility with hardware encryption. The issues are the extra overhead of carrying a nonce, and the need to manage the nonce.
@@ -97,13 +97,13 @@ If we assume that a reasonable 64 bit cipher is available, we can improve on the
 sending 64 bit encrypted sequence numbers. The approach assumes that the packet format is changed to always encode the PN on 64 bits.With that approach, encryption would use the following steps:
 
 1) Encrypt the 64 bit sequence number.
-2) Format the packet as <header including encrypted-PN>|<payload>.
+2) Format the packet as \<header including encrypted-PN>|\<payload>.
 3) Encrypt the concatenated PN and payload using AEAD, using the encrypted-PN as a nonce, and authenticating the first part of the header, but maybe not the encrypted-PN.
-4) Send the packet as <header including encrypted-PN>|<encrypted payload>|<AEAD checksum>
+4) Send the packet as \<header including encrypted-PN>|\<encrypted payload>|\<AEAD checksum>
 
 Decryption follows the reverse steps:
 
-1) Receive the packet as <header including encrypted PN>|<payload>|<AEAD checksum>.
+1) Receive the packet as \<header including encrypted PN>|\<payload>|\<AEAD checksum>.
 2) Decrypt the payload using AEAD, using the encrypted PN from the header, and authenticating the entire clear text header but not the encrypted PN.
 3) Decrypt the encrypted PN to obtain the sequence number.
 
