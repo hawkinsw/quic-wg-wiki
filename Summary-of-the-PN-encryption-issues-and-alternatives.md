@@ -63,7 +63,9 @@ The first issue with that approach is that it requires encryption algorithms ope
 * Use the 32-bit cipher [IPCrypt](https://github.com/veorq/ipcrypt) which is also used for [encrypting DNS logs](https://github.com/PowerDNS/ipcipher) 
 * Or ask researchers to produce a more robust 32-bit cipher than IPCrypt.
 
-We can argue that the algorithm does not have to be as robust as AES. The main requirement is to prevent real time analysis of sequence numbers by middle-boxes. This is achieved as long as the encryption key cannot be retrieved in a short time by the middle-boxes. If they could do that, we would be once again on the path to ossification. XOR and simple obfuscation probably don't meet that goal, but IPCrypt probably does, and a more robust algorithm certainly would.
+We can argue that the algorithm does not have to be as robust as AES. The main requirement is to prevent real time analysis of sequence numbers by middle-boxes. This is achieved as long as the encryption key cannot be retrieved in a short time by the middle-boxes. If they could do that, we would be once again on the path to ossification. XOR and simple obfuscation probably don't meet that goal, but IPCrypt probably does, and a more robust algorithm certainly would. 
+
+On the other hand, this argument about accepting weak encryption only holds if we relax the requirement to defend against linkability. A pervasive monitor might collect CIDs and encrypted PNs that were being used, use an offline attack to break the encryption, and then use the encrypted PNs as a source to correlate CIDs to reconstruct a QUIC connection. IPcrypt is not really designed to protect against such attacks, but a stronger algorithm might.
 
 The second issue with this approach is that numbers repeat. In the absence of an external nonce, the same clear text PN is always encrypted as the same value. For example, if we used 8-bit numbers, the same sequence of 256 numbers would repeat again and again. This probably means that if we used this simple alternative encryption, we would have to use 32 bit PN, which would be OK as long as the connection does not send more than 2**32 packets -- or maybe fewer, since for example if 2**32 -1 packets have been sent the next number is very predictable. Longer connections would have to rotate the key after about 2*31 packets. This relatively "short rekey interval" is probably the worst problem of this approach.
 
@@ -108,7 +110,32 @@ Decryption follows the reverse steps:
 2) Decrypt the payload using AEAD, using the encrypted PN from the header, and authenticating the entire clear text header but not the encrypted PN.
 3) Decrypt the encrypted PN to obtain the sequence number.
 
-Like the nonce approach, this approach is well compatible with hardware encryption. It generates fewer byte overhead than the nonce approach, since the PN does not have to be repeated, although requiring 8 bytes for the PN is arguably 4 to 7 bytes more than the encodings on 4, 2 or 1 octet. It depends on a plausible 64-bit block cipher, such as for example [SPARX](https://www.cryptolux.org/index.php/SPARX), but we can apply the same qualification as when analyzing the alternative encryption approach: the algorithm does not need to be "fully unbreakable", it just need to be a sufficient deterrent against meddling by middle-boxes. The only issue left is the assumption that PN encryption or decryption is performed in software, which is probably necessary as long as we don't have hardware specialized for QUIC.
+Like the nonce approach, this approach is well compatible with hardware encryption. It generates fewer byte overhead than the nonce approach, since the PN does not have to be repeated, although requiring 8 bytes for the PN is arguably 4 to 7 bytes more than the encodings on 4, 2 or 1 octet. The only performance issue left is the assumption that PN encryption or decryption is performed in software, which is probably necessary as long as we don't have hardware specialized for QUIC.
+
+The solution depends on a plausible 64-bit block cipher, such as for example [SPARX](https://www.cryptolux.org/index.php/SPARX), but we can apply the same qualification as when analyzing the alternative encryption approach. If we relax the requirement to protect against linkability, the algorithm does not need to be "fully unbreakable", it just need to be a sufficient deterrent against meddling by middle-boxes. On the other hand, according to its designers, the SPARX cipher may well be strong enough.
+
+## Comparing the different solutions
+
+After reviewing the different solutions, we can draw a comparison base on the following criteria:
+
+ * Defense against linkability
+ * Support for hardware encryption
+ * Transmission overhead
+ * Software overhead
+ * Cryptographic agility
+
+The (#alternative-pn-encryption) and (#64bit-encrypted-pn) solutions rely on special purpose algorithms,
+which raises questions about crypto agility. #1179 has agility in sense that the corresponding CTR mode is used for encrypting the PN. OTOH, the two alternatives using a simple cipher are not agile. So we might need to define two types of simpler ciphers for PN encryption, if consider that privacy issues (like the one above) might arise in the future. These two alternatives will require adding a PN cryptographic algorithm negotiation to the handshake.
+
+Solution that use breakable algorithms do not provide linkability defense against a determined adversary. This is obvious for variations of (#alternative-pn-encryption) and (#64bit-encrypted-pn) that would use weak 32-bit or 64-bit cipher. There is a similar issue with the (#additional-nonce) approach, if the nonce is generated by encrypting a sequence number. If the encryption is weak, the adversaries can decrypt the nonce and use it for linkability in the same way as a sequence number. The cost of not defending against linkability is software complexity: each path will have to be managed as a separate connection, with separate encryption keys, independent sequence numbers, and independent management of acknowledgements.
+
+Here is the comparison table:
+
+|   | Linkability | Hardware | bytes overhead | CPU overhead | Crypto agile |
++---+-------------+----------+----------------+--------------+--------------+
+| PR #1079| Protected | Hard | 0 | 1% | Yes |
+
+
 
 
 
