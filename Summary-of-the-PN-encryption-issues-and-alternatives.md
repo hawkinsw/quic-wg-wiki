@@ -133,19 +133,19 @@ Solution that use breakable algorithms do not provide linkability defense agains
 
 Here is the comparison table:
 
-|         | Ossification | Linkability | Hardware | bytes overhead | CPU overhead | Crypto agile | Requires Rekeying |
+|         | Ossify| Link? | HW| bytes overhead | CPU overhead | Crypto agile | Requires Rekeying |
 |--------------|--------------|-------------|----------|----------------|--------------|--------------|--------------|
-| PR #1079| Protected | Protected | Hard | 0 | 1% | Yes | No |
+| PR #1079| OK | OK| Hard | 0 | 1% | Yes | No |
 ||||||||
 | Alternative PN ||||||||
-| (obfuscation)   | NO | Linkable | OK | 0 to 3 | \<\< 1% | N/A | Yes |
-| (weak algo)   | Protected | Linkable | OK | 0 to 3 | \< 1% | NO? | Yes |
-| (strong algo)   | Protected | Protected | OK | 0 to 3 | \< 1% | NO? | Yes |
+| (obfuscation)   | NO | NO| OK | 0 to 3 | \<\< 1% | N/A | Yes |
+| (weak algo)   | OK| NO| OK | 0 to 3 | \< 1% | NO? | Yes |
+| (strong algo)   | OK| OK| OK | 0 to 3 | \< 1% | NO? | Yes |
 |||||||
 | Additional nonce |||||||
-| (random byte) | Protected | Protected | OK | 16 | \< 1% | Yes | No |
-| (CTR encrypt) | Maybe | Protected | OK | 8 | \< 1% | Yes | No |
+| (random byte) | OK| OK| OK | 16 | \< 1% | Yes | No |
+| (CTR encrypt) | Maybe | OK| OK | 8 | \< 1% | Yes | No |
 |||||||
 | 64bit-encrypted-pn  |||||||
-| (weak algo)   |  NO | Protected | OK | 4 to 7 | \< 1% | NO? | No |
-| (strong algo)  | Protected | Protected | OK | 4 to 7 | \< 1% | NO? | No |
+| (weak algo)   |  NO | OK| OK | 4 to 7 | \< 1% | NO? | No |
+| (strong algo)  | OK| OK| OK | 4 to 7 | \< 1% | NO? | No |
