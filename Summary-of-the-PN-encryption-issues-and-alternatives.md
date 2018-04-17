@@ -16,11 +16,12 @@ Decryption follows the reverses steps:
 3) Expand the PN to a 64 bit sequence number, using the highest received packet number to provide the missing bits.
 4) Decrypt the payload using AEAD, using the full sequence number as a nonce, and authenticating the entire clear text header, including the decrypted PN.
 
-People have raised 3 issues with this proposal:
+Several issues have been raised about this proposal:
 
 1) The PN encryption consumes as much CPU as encrypting a 16 bit block, and thus adds a bit more than 1% to the CPU cost or encryption/decryption in a software implementation.
 2) The process requires two passes, fetching some output of the encryption to seed the PN encryption. This is problematic for hardware implementations that typically don't buffer the output for further access.
 3) Including the decrypted PN in the authenticated data requires some extra buffer handling during decryption, and is probably not necessary since the sequence number itself is used as a nonce.
+4) For small packet payloads (less than 16 bytes), the per packet encryption and decryption overhead could increase as much as 80% when using packet number encryption.
 
 The 3rd issue could be fixed by a simple change in PR #1079, so we will not further discuss it when reviewing alternative proposals.
 
