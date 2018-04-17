@@ -143,7 +143,7 @@ Here is the comparison table:
 | (strong algo)   | OK| OK| OK | 0 to 3 | \< 1% | NO? | Yes |
 |||||||
 | Additional nonce |||||||
-| (random byte) | OK| OK| OK | 16 | \< 1% | Yes | No |
+| (random bytes) | OK| OK| OK | 16 | \< 1% | Yes | No |
 | (CTR encrypt) | Maybe | OK| OK | 8 | \< 1% | Yes | No |
 |||||||
 | 64bit-encrypted-pn  |||||||
