@@ -118,6 +118,7 @@ The solution depends on a plausible 64-bit block cipher, such as for example [SP
 
 After reviewing the different solutions, we can draw a comparison base on the following criteria:
 
+ * Defense against ossification
  * Defense against linkability
  * Support for hardware encryption
  * Transmission overhead
@@ -131,10 +132,15 @@ Solution that use breakable algorithms do not provide linkability defense agains
 
 Here is the comparison table:
 
-|   | Linkability | Hardware | bytes overhead | CPU overhead | Crypto agile |
-|---|-------------|----------|----------------|--------------|--------------|
-| PR #1079| Protected | Hard | 0 | 1% | Yes |
-
+|         | Ossification | Linkability | Hardware | bytes overhead | CPU overhead | Crypto agile |
+|---------|--------------|-------------|----------|----------------|--------------|--------------|
+| PR #1079| Protected | Protected | Hard | 0 | 1% | Yes |
+|---------|-------------|----------|----------------|--------------|--------------|
+| Alternative PN |||||||
+| (obfuscation)   | NO | Linkable | OK | 0 to 3 | \<\< 1% | N/A |
+| (weak algo)   | Protected | Linkable | OK | 0 to 3 | \< 1% | NO? |
+| (strong algo)   | Protected | Protected | OK | 0 to 3 | \< 1% | NO? |
+|---------|-------------|----------|----------------|--------------|--------------|
 
 
 
