@@ -139,7 +139,7 @@ QUIC protocol implementation for H2O server
 - **Language:** C
 - **Version:** draft-09
 - **Roles:** client and server
-- **Handshake:** TLS 1.3-18
+- **Handshake:** TLS 1.3-23
 - **Protocol IDs:**
 - **Public server:** kazuhooku.com:4433
 
