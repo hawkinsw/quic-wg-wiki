@@ -67,7 +67,7 @@ We can argue that the algorithm does not have to be as robust as AES. The main r
 
 On the other hand, this argument about accepting weak encryption only holds if we relax the requirement to defend against linkability. A pervasive monitor might collect CIDs and encrypted PNs that were being used, use an offline attack to break the encryption, and then use the encrypted PNs as a source to correlate CIDs to reconstruct a QUIC connection. IPcrypt is not really designed to protect against such attacks, but a stronger algorithm might.
 
-The second issue with this approach is that numbers repeat. In the absence of an external nonce, the same clear text PN is always encrypted as the same value. For example, if we used 8-bit numbers, the same sequence of 256 numbers would repeat again and again. This probably means that if we used this simple alternative encryption, we would have to use 32 bit PN, which would be OK as long as the connection does not send more than 2**32 packets -- or maybe fewer, since for example if 2**32 -1 packets have been sent the next number is very predictable. Longer connections would have to rotate the key after about 2*31 packets. This relatively "short rekey interval" is probably the worst problem of this approach.
+The second issue with this approach is that numbers repeat. In the absence of an external nonce, the same clear text PN is always encrypted as the same value. For example, if we used 8-bit numbers, the same sequence of 256 numbers would repeat again and again. This probably means that if we used this simple alternative encryption, we would have to use 32 bit PN, which would be OK as long as the connection does not send more than 2<sup>32</sup> packets -- or maybe fewer, since for example if 2<sup>32</sup>-1 packets have been sent the next number is very predictable. Longer connections would have to rotate the key after about 2<sup>31</sup> packets. This relatively "short rekey interval" is probably the worst problem of this approach.
 
 ### Additional nonce
 
@@ -87,7 +87,7 @@ The advantage of the approach it its full compatibility with hardware encryption
 
 Nonce must be chosen so that they do not repeat over the lifetime of the connection, or at least over the life time of the key. We cannot use a simple sequence number, because the middle-boxes would be tempted to use this sequence number for creative algorithms leading to ossification. So we need to guarantee uniqueness in one of two ways:
  
-* Due to the birthday paradox, nonce can be statistically unique if at least twice longer than the longest sequence number use for a given set of keys -- 64 bit if sending fewer than 2**32 packets, 128 bits if we want to use the full 64 bit sequence numbers in QUIC.
+* Due to the birthday paradox, nonce can be statistically unique if at least twice longer than the longest sequence number use for a given set of keys -- 64 bit if sending fewer than 2<sup>32</sup> packets, 128 bits if we want to use the full 64 bit sequence numbers in QUIC.
 
 * Nonce can be guaranteed unique if they are encrypted sequence numbers. For example, encrypting the 64-bit sequence number would produce guaranteed unique nonce for the duration of the connection.
 
