@@ -137,7 +137,7 @@ QUICker is a NodeJS/TypeScript based QUIC implementation from the University of 
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-04
+- **Version:** draft-09
 - **Roles:** client and server
 - **Handshake:** TLS 1.3-18
 - **Protocol IDs:**
