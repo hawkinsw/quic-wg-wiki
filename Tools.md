@@ -17,6 +17,7 @@ Automated builds (macOS and Windows) for (odd-numbered) development versions: ht
 Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881
 
 To-do items for draft -11 completion:
+- [x] new short header flags, long header format https://code.wireshark.org/review/27009
 - [ ] packet coalescing
 - [ ] storing CID for reference in short header packet
 - [ ] connection tracking based on CID / connection migration
