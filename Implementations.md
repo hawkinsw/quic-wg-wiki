@@ -77,13 +77,13 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 
 ### ngx_quic
 
-Implementation of QUIC for NGINX
+Implementation of QUIC for NGINX from Cloudflare
 
 - **Language:** C
-- **Version:** draft-09
+- **Version:** draft-10
 - **Roles:** server
 - **Handshake:** TLSv1.3-23
-- **Protocol IDs:** `0xff000009`
+- **Protocol IDs:** `0xff00000a`
 - **Public server:** quic.tech:4433
 
 ### Pandora
