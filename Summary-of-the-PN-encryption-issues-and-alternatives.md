@@ -59,12 +59,13 @@ The advantages of this approach are:
 The first issue with that approach is that it requires encryption algorithms operating on short blocks, since the PN can be encoded on 8, 16 or 32 bits. Such algorithms are potentially weaker than mainline algorithms like AES or ChaCha20. Some propositions included:
 
 * Simple XOR
+* Simple offset
 * Using a simple obfuscation like the [Fisher Yates shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)
 * Use the 32-bit cipher [IPCrypt](https://github.com/veorq/ipcrypt) which is also used for [encrypting DNS logs](https://github.com/PowerDNS/ipcipher) 
 * Use a 32-bit variant of [Speck](https://en.wikipedia.org/wiki/Speck_(cipher)), a light-weight cipher proposed by the NSA
 * Or ask researchers to produce a more robust 32-bit cipher than IPCrypt.
 
-We can argue that the algorithm does not have to be as robust as AES. The main requirement is to prevent real time analysis of sequence numbers by middle-boxes. This is achieved as long as the encryption key cannot be retrieved in a short time by the middle-boxes. If they could do that, we would be once again on the path to ossification. XOR and simple obfuscation probably don't meet that goal, but IPCrypt and Speck probably do, and a more robust algorithm certainly would. 
+We can argue that the algorithm does not have to be as robust as AES. The main requirement is to prevent real time analysis of sequence numbers by middle-boxes. This is achieved as long as the encryption key cannot be retrieved in a short time by the middle-boxes. If they could do that, we would be once again on the path to ossification. XOR, simple offset and simple obfuscation probably don't meet that goal, but IPCrypt and Speck probably do, and a more robust algorithm certainly would. 
 
 On the other hand, this argument about accepting weak encryption only holds if we relax the requirement to defend against linkability. A pervasive monitor might collect CIDs and encrypted PNs that were being used, use an offline attack to break the encryption, and then use the encrypted PNs as a source to correlate CIDs to reconstruct a QUIC connection. IPcrypt is not really designed to protect against such attacks, but a stronger algorithm might. Doubts have also been raised about Speck, due to its origin in the NSA.
 
