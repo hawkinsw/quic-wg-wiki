@@ -6,7 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -11 | | | WIP (under review) |
+ | -11 | v2.9.0rc0-270-g5d69e82ace | | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | git master |
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
@@ -20,8 +20,8 @@ Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:m
 To-do items for draft -11 completion:
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
 - [ ] packet coalescing
-- [ ] storing CID for reference in short header packet https://code.wireshark.org/review/27098
-- [ ] connection tracking based on CID / connection migration https://code.wireshark.org/review/27068
+- [x] storing CID for reference in short header packet https://code.wireshark.org/review/27098
+- [x] connection tracking based on CID / connection migration https://code.wireshark.org/review/27068
 - [ ] update NEW_CONNECTION_ID dissection
 
 <sup>1</sup> Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
