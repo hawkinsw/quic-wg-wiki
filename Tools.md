@@ -6,8 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -11 | v2.9.0rc0-270-g5d69e82ace | | +Connection migration (untested) |
- | -10 | v2.9.0rc0-200-g88435354c0 | git master |
+ | -11 | v2.9.0rc0-270-g5d69e82ace | | +Connection migration (untested), WIP |
+ | -10 | v2.9.0rc0-200-g88435354c0 |
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
 
@@ -21,10 +21,15 @@ To-do items for draft -11 completion:
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
 - [ ] packet coalescing
 - [x] storing CID for reference in short header packet https://code.wireshark.org/review/27098
-- [x] connection tracking based on CID / connection migration https://code.wireshark.org/review/27068
-- [ ] update NEW_CONNECTION_ID dissection
+- [ ] update NEW_CONNECTION_ID dissection https://code.wireshark.org/review/27107
+- [ ] connection tracking based on CID / connection migration
+  - [x] Basic connection tracking https://code.wireshark.org/review/27068
+  - [ ] Use NEW_CONNECTION_ID hint (requires user to provide EXPORTER_SECRET keys)
+  - [ ] Testing with actual implementation
 
 <sup>1</sup> Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
 
 # QUIC Tracker
 [QUIC-Tracker](https://quic-tracker.info.ucl.ac.be/) is a test suite for IETF-QUIC. It exchanges packets with IETF-QUIC implementations to verify whether an implementation conforms with the IETF specification. The test suite is consisting of several test scenarii. Each of them aims at testing a particular feature of the QUIC protocol. The test suite runs daily, and its results are available on its website.
+
+It currently supports QUIC draft-09 / TLS 1.3 draft-23.
