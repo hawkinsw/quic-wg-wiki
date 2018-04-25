@@ -144,6 +144,17 @@ QUIC protocol implementation for H2O server
 - **Public server:** kazuhooku.com:4433
 
 
+### [quicr](https://github.com/Ralith/quicr)
+
+Rust implementation with a pure state machine and futures-based async I/O. TLS provided by OpenSSL.
+
+- **Language:** Rust
+- **Version:** draft-11
+- **Roles:** library, client, server
+- **Handshake:** TLS 1.3-28
+- **Protocol IDs:** `0xff00000b`
+- **Public server:**
+
 ### Winquic
 
 Winquic is an implementation of QUIC on Windows.
