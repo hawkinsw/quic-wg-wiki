@@ -19,9 +19,11 @@ Decryption follows the reverses steps:
 Several issues have been raised about this proposal:
 
 1) The PN encryption consumes as much CPU as encrypting a 16 bit block, and thus adds a bit more than 1% to the CPU cost or encryption/decryption in a software implementation.
-2) The process requires two passes, fetching some output of the encryption to seed the PN encryption. This is problematic for hardware implementations that typically don't buffer the output for further access.
+2) The process requires two passes, fetching some output of the encryption to seed the PN encryption. This is problematic for hardware implementations that typically don't buffer the output for further access. 
 3) Including the decrypted PN in the authenticated data requires some extra buffer handling during decryption, and is probably not necessary since the sequence number itself is used as a nonce.
 4) For small packet payloads (less than 16 bytes), the per packet encryption and decryption overhead could increase as much as 80% when using packet number encryption.
+
+The 2nd issue generated much of the discussion, but it is unclear that the issue is actually real. To quote from a recent message from a hardware developer to the QUIC WG list, "_After further review, it looks like a hardware offload can implement the PNE at a small cost. The implementation can modify current HW crypto accelerators to support encrypting a buffer in the first pass and then encrypting packet number in the 2nd pass as already discussed on this thread. The exact requirement (header checksum, packet length encoding) is still in flux so there may be some small variations depending on the accelerator and final algorithm chosen for PNE. Future offload designs can do more to further reduce the overhead._"
 
 The 3rd issue could be fixed by a simple change in PR #1079, so we will not further discuss it when reviewing alternative proposals.
 
@@ -137,7 +139,7 @@ Here is the comparison table:
 
 |         | Ossify| Link? | HW | bytes overhead | CPU overhead | Crypto agile | Requires Rekeying |
 |--------------|--------------|-------------|----------|----------------|--------------|--------------|--------------|
-| PR #1079| OK | OK | Hard | 0 | 1% | Yes | No |
+| PR #1079| OK | OK | OK | 0 | 1% | Yes | No |
 ||||||||
 | Alternative PN ||||||||
 | (obfuscation)   | NO | NO | OK | 0 to 3 | \<\< 1% | N/A | Yes |
