@@ -20,7 +20,7 @@ Ordering is by total frequency of the header's occurrence in the archive pass (b
 | 14 | content-type | application/x-javascript |
 | 15 | server |  |
 | 16 | user-agent |  |
-| 17 | accept | */* |
+| 17 | accept | \*/\* |
 | 18 | cache-control | max-age=0 |
 | 19 | cache-control | no-cache |
 | 20 | cache-control | max-age=2592000 |
@@ -82,12 +82,12 @@ Ordering is by total frequency of the header's occurrence in the archive pass (b
 | 76 | x-powered-by |  |
 | 77 | via |  |
 | 78 | set-cookie |  |
-| 79 | access-control-allow-origin | * |
+| 79 | access-control-allow-origin | \* |
 | 80 | x-content-type-options | nosniff |
 | 81 | access-control-allow-headers | content-type |
 | 82 | access-control-allow-headers | cache-control |
 | 83 | access-control-allow-headers | x-requested-with |
-| 84 | access-control-allow-headers | * |
+| 84 | access-control-allow-headers | \* |
 | 85 | access-control-allow-headers | origin, x-requested-with, content-type, accept |
 | 86 | access-control-allow-headers | dnt,x-customheader,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
 | 87 | access-control-allow-headers | dnt,x-mx-reqtoken,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
@@ -100,7 +100,7 @@ Ordering is by total frequency of the header's occurrence in the archive pass (b
 | 94 | age | 0 |
 | 95 | x-frame-options | sameorigin |
 | 96 | x-frame-options | deny |
-| 97 | timing-allow-origin | * |
+| 97 | timing-allow-origin | \* |
 | 98 | access-control-expose-headers | content-length |
 | 99 | access-control-allow-credentials | TRUE |
 | 100 | access-control-allow-credentials | FALSE |
