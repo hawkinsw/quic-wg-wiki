@@ -54,62 +54,70 @@ Ordering is by total frequency of the header's occurrence in the archive pass (b
 | 48    | :status                          | 421                                                                                                    |
 | 49    | :status                          | 500                                                                                                    |
 | 50    | :status                          | 503                                                                                                    |
-| 51    | p3p                              |                                                                                                        |
-| 52    | last-modified                    |                                                                                                        |
-| 53    | content-encoding                 | gzip                                                                                                   |
-| 54    | content-encoding                 | br                                                                                                     |
-| 55    | host                             |                                                                                                        |
-| 56    | expires                          |                                                                                                        |
-| 57    | accept-ranges                    | bytes                                                                                                  |
-| 58    | cookie                           |                                                                                                        |
-| 59    | etag                             |                                                                                                        |
-| 60    | alt-svc                          | clear                                                                                                  |
-| 61    | x-xss-protection                 | 1; mode=block                                                                                          |
-| 62    | pragma                           | no-cache                                                                                               |
-| 63    | pragma                           | public                                                                                                 |
-| 64    | x-powered-by                     |                                                                                                        |
-| 65    | via                              |                                                                                                        |
-| 66    | set-cookie                       |                                                                                                        |
-| 67    | access-control-allow-origin      | *                                                                                                      |
-| 68    | x-content-type-options           | nosniff                                                                                                |
-| 69    | access-control-allow-headers     | content-type                                                                                           |
-| 70    | access-control-allow-headers     | cache-control                                                                                          |
-| 71    | access-control-allow-headers     | x-requested-with                                                                                       |
-| 72    | access-control-allow-headers     | *                                                                                                      |
-| 73    | access-control-allow-headers     | origin, x-requested-with, content-type, accept                                                         |
-| 74    | access-control-allow-headers     | dnt,x-customheader,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
-| 75    | access-control-allow-headers     | dnt,x-mx-reqtoken,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type  |
-| 76    | access-control-allow-methods     | options                                                                                                |
-| 77    | access-control-allow-methods     | get                                                                                                    |
-| 78    | access-control-allow-methods     | get, post, options                                                                                     |
-| 79    | access-control-allow-methods     | get, head, options                                                                                     |
-| 80    | access-control-allow-methods     | get, options                                                                                           |
-| 81    | origin                           |                                                                                                        |
-| 82    | age                              | 0                                                                                                      |
-| 83    | x-frame-options                  | sameorigin                                                                                             |
-| 84    | x-frame-options                  | deny                                                                                                   |
-| 85    | timing-allow-origin              | *                                                                                                      |
-| 86    | access-control-expose-headers    | content-length                                                                                         |
-| 87    | access-control-allow-credentials | TRUE                                                                                                   |
-| 88    | access-control-allow-credentials | FALSE                                                                                                  |
-| 89    | expect-ct                        |                                                                                                        |
-| 90    | content-security-policy          | script-src 'none'; object-src 'none'; base-uri 'none'                                                  |
-| 91    | location                         |                                                                                                        |
-| 92    | transfer-encoding                | chunked                                                                                                |
-| 93    | upgrade-insecure-requests        | 1                                                                                                      |
-| 94    | link                             |                                                                                                        |
-| 95    | content-disposition              | attachment; filename="f.txt"                                                                           |
-| 96    | x-served-by                      |                                                                                                        |
-| 97    | x-requested-with                 | xmlhttprequest                                                                                         |
-| 98    | access-control-request-headers   | content-type                                                                                           |
-| 99    | access-control-request-headers   | x-requested-with                                                                                       |
-| 100   | access-control-request-method    | post                                                                                                   |
-| 101   | access-control-request-method    | get                                                                                                    |
-| 102   | range                            | bytes=0-                                                                                               |
-| 103   | if-modified-since                |                                                                                                        |
-| 104   | purpose                          | prefetch                                                                                               |
-| 105   | if-none-match                    |                                                                                                        |
-| 106   | if-range                         |                                                                                                        |
-| 107   | authorization                    |                                                                                                        |
-| 108   | x-csrf-token                     | null                                                                                                   |
-| 109   | x-csrf-token                     | undefined                                                                                              |
+| 51    | :method                          | GET                                                                                                    |
+| 52    | :method                          | HEAD                                                                                                   |
+| 53    | :method                          | POST                                                                                                   |
+| 54    | :method                          | PUT                                                                                                    |
+| 55    | :method                          | DELETE                                                                                                 |
+| 56    | :method                          | CONNECT                                                                                                |
+| 57    | :method                          | OPTIONS                                                                                                |
+| 58    | :method                          | TRACE                                                                                                  |
+| 59    | p3p                              |                                                                                                        |
+| 60    | last-modified                    |                                                                                                        |
+| 61    | content-encoding                 | gzip                                                                                                   |
+| 62    | content-encoding                 | br                                                                                                     |
+| 63    | host                             |                                                                                                        |
+| 64    | expires                          |                                                                                                        |
+| 65    | accept-ranges                    | bytes                                                                                                  |
+| 66    | cookie                           |                                                                                                        |
+| 67    | etag                             |                                                                                                        |
+| 68    | alt-svc                          | clear                                                                                                  |
+| 69    | x-xss-protection                 | 1; mode=block                                                                                          |
+| 70    | pragma                           | no-cache                                                                                               |
+| 71    | pragma                           | public                                                                                                 |
+| 72    | x-powered-by                     |                                                                                                        |
+| 73    | via                              |                                                                                                        |
+| 74    | set-cookie                       |                                                                                                        |
+| 75    | access-control-allow-origin      | *                                                                                                      |
+| 76    | x-content-type-options           | nosniff                                                                                                |
+| 77    | access-control-allow-headers     | content-type                                                                                           |
+| 78    | access-control-allow-headers     | cache-control                                                                                          |
+| 79    | access-control-allow-headers     | x-requested-with                                                                                       |
+| 80    | access-control-allow-headers     | *                                                                                                      |
+| 81    | access-control-allow-headers     | origin, x-requested-with, content-type, accept                                                         |
+| 82    | access-control-allow-headers     | dnt,x-customheader,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
+| 83    | access-control-allow-headers     | dnt,x-mx-reqtoken,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type  |
+| 84    | access-control-allow-methods     | options                                                                                                |
+| 85    | access-control-allow-methods     | get                                                                                                    |
+| 86    | access-control-allow-methods     | get, post, options                                                                                     |
+| 87    | access-control-allow-methods     | get, head, options                                                                                     |
+| 88    | access-control-allow-methods     | get, options                                                                                           |
+| 89    | origin                           |                                                                                                        |
+| 90    | age                              | 0                                                                                                      |
+| 91    | x-frame-options                  | sameorigin                                                                                             |
+| 92    | x-frame-options                  | deny                                                                                                   |
+| 93    | timing-allow-origin              | *                                                                                                      |
+| 94    | access-control-expose-headers    | content-length                                                                                         |
+| 95    | access-control-allow-credentials | TRUE                                                                                                   |
+| 96    | access-control-allow-credentials | FALSE                                                                                                  |
+| 97    | expect-ct                        |                                                                                                        |
+| 98    | content-security-policy          | script-src 'none'; object-src 'none'; base-uri 'none'                                                  |
+| 99    | location                         |                                                                                                        |
+| 100   | transfer-encoding                | chunked                                                                                                |
+| 101   | upgrade-insecure-requests        | 1                                                                                                      |
+| 102   | link                             |                                                                                                        |
+| 103   | content-disposition              | attachment; filename="f.txt"                                                                           |
+| 104   | x-served-by                      |                                                                                                        |
+| 105   | x-requested-with                 | xmlhttprequest                                                                                         |
+| 106   | access-control-request-headers   | content-type                                                                                           |
+| 107   | access-control-request-headers   | x-requested-with                                                                                       |
+| 108   | access-control-request-method    | post                                                                                                   |
+| 109   | access-control-request-method    | get                                                                                                    |
+| 110   | range                            | bytes=0-                                                                                               |
+| 111   | if-modified-since                |                                                                                                        |
+| 112   | purpose                          | prefetch                                                                                               |
+| 113   | if-none-match                    |                                                                                                        |
+| 114   | if-range                         |                                                                                                        |
+| 115   | authorization                    |                                                                                                        |
+| 116   | x-csrf-token                     | null                                                                                                   |
+| 117   | x-csrf-token                     | undefined                                                                                              |
