@@ -153,7 +153,7 @@ Rust implementation with a pure state machine and futures-based async I/O. TLS p
 - **Roles:** library, client, server
 - **Handshake:** TLS 1.3-28
 - **Protocol IDs:** `0xff00000b`
-- **Public server:**
+- **Public server:** ralith.com:4433
 
 ### Winquic
 
