@@ -117,7 +117,7 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 - **Roles:** client, library, server
 - **Handshake:** TLS1.3-28
 - **Protocol IDs:** `0xff00000b`
-- **Public server:** quant.eggert.org:4433 (Logs for last run at https://quant.eggert.org/log; all logs at https://quant.eggert.org/)
+- **Public server:** quant.eggert.org:4433 (see [wiki](https://github.com/NTAP/quant/wiki) for description)
 
 
 ### [QUICker](https://github.com/rmarx/quicker)
