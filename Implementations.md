@@ -1,6 +1,6 @@
 This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools). Current [interop status](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing); make sure you are looking at or editing the correct tab.
 
-Please add your implementation below. Keep sorted alphabetically. There are two sections, one for "IETF QUIC" and one for "Google QUIC".
+Please add your implementation below. Keep sorted alphabetically. There are two sections, one for "IETF QUIC" (including HTTP/QUIC), and one for "Google QUIC".
 
 ## IETF QUIC
 
@@ -63,6 +63,16 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 - **Protocol IDs:** `0xff000009` 
 - **Public server:** fb.mvfst.net:4433
 
+### [nghq](https://github.com/bbc/nghq)
+nghq implements the HTTP over QUIC mapping atop ngtcp2.
+
+- **Language:** C
+- **Trransport Version:** draft-09
+- **HTTP/QUIC Version:** draft-09
+- **Roles:** client, library, server
+- **Handshake:** TBD
+- **Protocol IDs:** TBD
+- **Public server:** TBD
 
 ### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
@@ -165,7 +175,6 @@ Winquic is an implementation of QUIC on Windows.
 - **Handshake:** TLS 1.3-28
 - **Protocol IDs:** `0xff00000b`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
-
 
 ## Google QUIC
 
