@@ -3,124 +3,124 @@ Ordering is by total frequency of the header's occurrence in the archive pass (b
 
 | Index | Name                             | Value                                                                                                  |
 | ----- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 0 | content-type | application/x-www-form-urlencoded |
-| 1 | content-type | image/jpeg |
-| 2 | content-type | text/plain;charset=utf-8 |
-| 3 | content-type | image/png |
-| 4 | content-type | text/plain |
-| 5 | content-type | application/json |
-| 6 | content-type | application/x-www-form-urlencoded; charset=utf-8 |
-| 7 | content-type | image/gif |
-| 8 | content-type | text/html; charset=utf-8 |
-| 9 | content-type | application/javascript |
-| 10 | content-type | text/css |
-| 11 | content-type | text/javascript |
-| 12 | content-type | application/json; charset=utf-8 |
-| 13 | content-type | text/javascript; charset=utf-8 |
-| 14 | content-type | application/x-javascript |
-| 15 | server |  |
-| 16 | user-agent |  |
-| 17 | accept | \*/\* |
-| 18 | cache-control | max-age=0 |
-| 19 | cache-control | no-cache |
-| 20 | cache-control | max-age=2592000 |
-| 21 | cache-control | public, max-age=31536000 |
-| 22 | cache-control | no-cache, no-store, must-revalidate |
-| 23 | cache-control | max-age=604800 |
-| 24 | accept-encoding | gzip, deflate, br |
-| 25 | accept-encoding | gzip, deflate |
-| 26 | vary | accept-encoding |
-| 27 | vary | origin |
-| 28 | vary | accept-encoding,user-agent |
-| 29 | vary | accept |
-| 30 | accept-language |  |
-| 31 | date |  |
-| 32 | referer |  |
-| 33 | content-length | 0 |
-| 34 | strict-transport-security | max-age=31536000 |
-| 35 | strict-transport-security | max-age=10886400; includesubdomains; preload |
-| 36 | strict-transport-security | max-age=31536000; includesubdomains |
-| 37 | strict-transport-security | max-age=31536000; includesubdomains; preload |
-| 38 | :status | 100 |
-| 39 | :status | 103 |
-| 40 | :status | 200 |
-| 41 | :status | 204 |
-| 42 | :status | 206 |
-| 43 | :status | 302 |
-| 44 | :status | 304 |
-| 45 | :status | 400 |
-| 46 | :status | 403 |
-| 47 | :status | 404 |
-| 48 | :status | 421 |
-| 49 | :status | 500 |
-| 50 | :status | 503 |
-| 51 | :method | GET |
-| 52 | :method | HEAD |
-| 53 | :method | POST |
-| 54 | :method | PUT |
-| 55 | :method | DELETE |
-| 56 | :method | CONNECT |
-| 57 | :method | OPTIONS |
-| 58 | :scheme | http |
-| 59 | :scheme | https |
-| 60 | :path | / |
-| 61 | :path | /index.html |
-| 62 | :authority |  |
-| 63 | p3p |  |
-| 64 | last-modified |  |
-| 65 | content-encoding | gzip |
-| 66 | content-encoding | br |
-| 67 | host |  |
-| 68 | expires |  |
-| 69 | accept-ranges | bytes |
-| 70 | cookie |  |
-| 71 | etag |  |
-| 72 | alt-svc | clear |
-| 73 | x-xss-protection | 1; mode=block |
-| 74 | pragma | no-cache |
-| 75 | pragma | public |
-| 76 | x-powered-by |  |
-| 77 | via |  |
-| 78 | set-cookie |  |
-| 79 | access-control-allow-origin | \* |
-| 80 | x-content-type-options | nosniff |
-| 81 | access-control-allow-headers | content-type |
-| 82 | access-control-allow-headers | cache-control |
-| 83 | access-control-allow-headers | x-requested-with |
-| 84 | access-control-allow-headers | \* |
-| 85 | access-control-allow-headers | origin, x-requested-with, content-type, accept |
-| 86 | access-control-allow-headers | dnt,x-customheader,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
-| 87 | access-control-allow-headers | dnt,x-mx-reqtoken,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
-| 88 | access-control-allow-methods | options |
-| 89 | access-control-allow-methods | get |
-| 90 | access-control-allow-methods | get, post, options |
-| 91 | access-control-allow-methods | get, head, options |
-| 92 | access-control-allow-methods | get, options |
-| 93 | origin |  |
-| 94 | age | 0 |
-| 95 | x-frame-options | sameorigin |
-| 96 | x-frame-options | deny |
-| 97 | timing-allow-origin | \* |
-| 98 | access-control-expose-headers | content-length |
-| 99 | access-control-allow-credentials | TRUE |
-| 100 | access-control-allow-credentials | FALSE |
-| 101 | expect-ct |  |
-| 102 | content-security-policy | script-src 'none'; object-src 'none'; base-uri 'none' |
-| 103 | location |  |
-| 104 | transfer-encoding | chunked |
-| 105 | upgrade-insecure-requests | 1 |
-| 106 | link |  |
-| 107 | content-disposition | attachment; filename="f.txt" |
-| 108 | x-served-by |  |
-| 109 | x-requested-with | xmlhttprequest |
-| 110 | access-control-request-headers | content-type |
-| 111 | access-control-request-headers | x-requested-with |
-| 112 | access-control-request-method | post |
-| 113 | access-control-request-method | get |
-| 114 | range | bytes=0- |
-| 115 | if-modified-since |  |
-| 116 | purpose | prefetch |
-| 117 | if-none-match |  |
+| 0 | :path | / |
+| 1 | referer | |
+| 2 | content-length | 0 |
+| 3 | accept-encoding | gzip, deflate, br |
+| 4 | accept-language |  |
+| 5 | date |  |
+| 6 | last-modified |  |
+| 7 | :authority |  |
+| 8 | expires |  |
+| 9 | cookie |  |
+| 10 | etag |  |
+| 11 | location |  |
+| 12 | if-modified-since |  |
+| 13 | if-none-match |  |
+| 14 | set-cookie |  |
+| 15 | link |  |
+| 16 | content-disposition | attachment; filename="f.txt" |
+| 17 | range | bytes=0- |
+| 18 | :scheme | https |
+| 19 | :scheme | http |
+| 20 | :status | 200 |
+| 21 | :status | 304 |
+| 22 | :path | /index.html |
+| 23 | :method | GET |
+| 24 | :method | HEAD |
+| 25 | :method | POST |
+| 26 | :method | PUT |
+| 27 | :method | DELETE |
+| 28 | :method | CONNECT |
+| 29 | :method | OPTIONS |
+| 30 | content-type | application/x-www-form-urlencoded |
+| 31 | content-type | image/jpeg |
+| 32 | content-type | text/plain;charset=utf-8 |
+| 33 | content-type | image/png |
+| 34 | content-type | text/plain |
+| 35 | content-type | application/json |
+| 36 | content-type | application/x-www-form-urlencoded; charset=utf-8 |
+| 37 | content-type | image/gif |
+| 38 | content-type | text/html; charset=utf-8 |
+| 39 | content-type | application/javascript |
+| 40 | content-type | text/css |
+| 41 | content-type | text/javascript |
+| 42 | content-type | application/json; charset=utf-8 |
+| 43 | content-type | text/javascript; charset=utf-8 |
+| 44 | content-type | application/x-javascript |
+| 45 | server |  |
+| 46 | user-agent |  |
+| 47 | accept | */* |
+| 48 | cache-control | max-age=0 |
+| 49 | cache-control | no-cache |
+| 50 | cache-control | max-age=2592000 |
+| 51 | cache-control | public, max-age=31536000 |
+| 52 | cache-control | no-cache, no-store, must-revalidate |
+| 53 | cache-control | max-age=604800 |
+| 54 | accept-encoding | gzip, deflate |
+| 55 | vary | accept-encoding |
+| 56 | vary | origin |
+| 57 | vary | accept-encoding,user-agent |
+| 58 | vary | accept |
+| 59 | strict-transport-security | max-age=31536000 |
+| 60 | strict-transport-security | max-age=10886400; includesubdomains; preload |
+| 61 | strict-transport-security | max-age=31536000; includesubdomains |
+| 62 | strict-transport-security | max-age=31536000; includesubdomains; preload |
+| 63 | :status | 100 |
+| 64 | :status | 103 |
+| 65 | :status | 204 |
+| 66 | :status | 206 |
+| 67 | :status | 302 |
+| 68 | :status | 400 |
+| 69 | :status | 403 |
+| 70 | :status | 404 |
+| 71 | :status | 421 |
+| 72 | :status | 500 |
+| 73 | :status | 503 |
+| 74 | p3p |  |
+| 75 | content-encoding | gzip |
+| 76 | content-encoding | br |
+| 77 | accept-ranges | bytes |
+| 78 | alt-svc | clear |
+| 79 | x-xss-protection | 1; mode=block |
+| 80 | host |  |
+| 81 | pragma | no-cache |
+| 82 | pragma | public |
+| 83 | x-powered-by |  |
+| 84 | via |  |
+| 85 | access-control-allow-origin | * |
+| 86 | x-content-type-options | nosniff |
+| 87 | access-control-allow-headers | content-type |
+| 88 | access-control-allow-headers | cache-control |
+| 89 | access-control-allow-headers | x-requested-with |
+| 90 | access-control-allow-headers | * |
+| 91 | access-control-allow-headers | origin, x-requested-with, content-type, accept |
+| 92 | access-control-allow-headers | dnt,x-customheader,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
+| 93 | access-control-allow-headers | dnt,x-mx-reqtoken,keep-alive,user-agent,x-requested-with,if-modified-since,cache-control,content-type |
+| 94 | access-control-allow-methods | options |
+| 95 | access-control-allow-methods | get |
+| 96 | access-control-allow-methods | get, post, options |
+| 97 | access-control-allow-methods | get, head, options |
+| 98 | access-control-allow-methods | get, options |
+| 99 | origin |  |
+| 100 | age | 0 |
+| 101 | x-frame-options | sameorigin |
+| 102 | x-frame-options | deny |
+| 103 | timing-allow-origin | * |
+| 104 | access-control-expose-headers | content-length |
+| 105 | access-control-allow-credentials | TRUE |
+| 106 | access-control-allow-credentials | FALSE |
+| 107 | expect-ct |  |
+| 108 | content-security-policy | script-src 'none'; object-src 'none'; base-uri 'none' |
+| 109 | transfer-encoding | chunked |
+| 110 | upgrade-insecure-requests | 1 |
+| 111 | x-served-by |  |
+| 112 | x-requested-with | xmlhttprequest |
+| 113 | access-control-request-headers | content-type |
+| 114 | access-control-request-headers | x-requested-with |
+| 115 | access-control-request-method | post |
+| 116 | access-control-request-method | get |
+| 117 | purpose | prefetch |
 | 118 | if-range |  |
 | 119 | authorization |  |
 | 120 | x-csrf-token | null |
