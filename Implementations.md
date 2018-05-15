@@ -29,6 +29,18 @@ QUIC implementation in Apache Traffic Server
 - **Public server:** quic.ogre.com:4433
 
 
+### f5
+
+QUIC implementation in F5 TMOS
+
+- **Language:** C
+- **Version:** draft-11
+- **Roles:** Server
+- **Handshake:** TLS 1.3-28
+- **Protocol IDs:** `0xff00000b`
+- **Public server:** 208.85.208.226:4433
+
+
 ### [minq](https://www.github.com/ekr/minq)
 
 Minimal QUIC implementation with emphasis on readability and simplicity. Very un-baked but will track the emerging document. Library plus test programs.
