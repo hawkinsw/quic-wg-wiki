@@ -1,10 +1,10 @@
 This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools). Current [interop status](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing); make sure you are looking at or editing the correct tab.
 
-Please add your implementation below. Keep sorted alphabetically. There are two sections, one for "IETF QUIC" (including HTTP/QUIC), and one for "Google QUIC".
+Please add your implementation below. Keep sorted alphabetically. There are three sections, one for "IETF QUIC Transport", one for "IETF HTTP over QUIC", and one for "Google QUIC". Entries may appear in multiple sections e.g. where a stack provides both IETF Transport and HTTP over QUIC.
 
 ## IETF QUIC
 
-The following stacks implement the IETF versions of QUIC.
+The following stacks implement the IETF versions of QUIC Transport. They may include an application layer mapping other than IETF HTTP over QUIC e.g. HTTP/0.9
 
 ### AppleQUIC
 
@@ -74,17 +74,6 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 - **Handshake:** TLS 1.3-23
 - **Protocol IDs:** `0xff000009` 
 - **Public server:** fb.mvfst.net:4433
-
-### [nghq](https://github.com/bbc/nghq)
-nghq implements the HTTP over QUIC mapping atop ngtcp2.
-
-- **Language:** C
-- **Trransport Version:** draft-09
-- **HTTP/QUIC Version:** draft-09
-- **Roles:** client, library, server
-- **Handshake:** TBD
-- **Protocol IDs:** TBD
-- **Public server:** TBD
 
 ### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
@@ -187,6 +176,20 @@ Winquic is an implementation of QUIC on Windows.
 - **Handshake:** TLS 1.3-28
 - **Protocol IDs:** `0xff00000b`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
+
+## IETF HTTP over QUIC
+
+The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
+
+### [nghq](https://github.com/bbc/nghq)
+nghq implements the HTTP over QUIC mapping atop ngtcp2.
+
+- **Language:** C
+- **Transport library:** ngtcp2
+- **HTTP over QUIC Version:** draft-09
+- **Roles:** multicast receiver, multicast sender, library
+- **Handshake:** TBD
+- **Public server:** TBD
 
 ## Google QUIC
 
