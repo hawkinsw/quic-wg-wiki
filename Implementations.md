@@ -187,7 +187,7 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 - **Language:** C
 - **Transport library:** ngtcp2
 - **HTTP over QUIC Version:** draft-09
-- **Roles:** multicast receiver, multicast sender, library
+- **Roles:** library, (non-IETF roles: multicast receiver, multicast sender)
 - **Handshake:** TBD
 - **Public server:** TBD
 
