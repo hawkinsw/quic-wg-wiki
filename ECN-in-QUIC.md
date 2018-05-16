@@ -43,7 +43,7 @@ The ECN capability check serves to:
 1. Verify that the OS stack at the receiving endpoint can read from the ECN field in the IP header.  
 2. Initially test that ECN works over the used e2e network path.
 
-The ECN capability check starts with the first packet that is transmitted from each endpoint along a new path. This first packet sets the ECT field in the IP header to a avlue of ECT(0) or ECT(1).  The ECN capability check can be successful in one direction, but not in the other (for instance due to ECN bleaching [RFC8087](https://tools.ietf.org/html/rfc8087) in one direction). This could result in ECN only being used in one of the directions.
+The ECN capability check starts with the first packet that is transmitted from each endpoint along a new path. This first packet sets the ECT field in the IP header to a value of ECT(0) or ECT(1).  The ECN capability check can be successful in one direction, but not in the other (for instance due to ECN bleaching [RFC8087](https://tools.ietf.org/html/rfc8087) in one direction). This could result in ECN only being used in one of the directions.
 
      ---------                                  ---------
      |       |---- 1st packet with ECT set ---->|       |
