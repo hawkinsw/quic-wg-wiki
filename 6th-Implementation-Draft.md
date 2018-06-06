@@ -1,3 +1,1 @@
-Same as 5th draft for the tests, but implementing draft-12 and pr #1349.
-Not really an official test target, but since many implementations are doing it..
-Also, it allows us to test Packet Number Encryption, which is kind of a big deal.
+Same as 5th draft for the tests, but implementing draft-12 and [PR #1389](https://github.com/quicwg/base-drafts/pull/1389).
