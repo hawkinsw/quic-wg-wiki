@@ -243,18 +243,6 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 - **Public server:**
 
 
-### [proto-quic](https://github.com/google/proto-quic)
-
-`proto-quic` is intended as a standalone library for QUIC. It contains the subset of Chromium code and dependencies require for QUIC so folks can use the Chromium code without depending on all of Chromium. It is intended to be a cross-platform library, but will only support the set (or a strict subset) of platforms which Chromium already supports.
-
-- **Language:** C++
-- **Version:**
-- **Roles:** library
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
-
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
 A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
