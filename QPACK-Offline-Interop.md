@@ -1,5 +1,3 @@
-# QPACK Offline Interop
-
 To interop QPACK without a functional QUIC transport, a sequence of HTTP requests or responses can be encoded and serialized to a file.  The file can be decoded by another implementation and compared to the original sequence to verify interop.
 
 Because the QPACK Decoder’s output is normally part of the input to the QPACK encoder via the decoder stream, offline interop requires making assumptions about the decoder’s behavior.  Two modes are possible: 
