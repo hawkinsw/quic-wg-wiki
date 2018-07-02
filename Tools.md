@@ -6,6 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -13 | | | TODO |
+ | -12 | | | TODO |
  | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested), WIP |
  | -10 | v2.9.0rc0-200-g88435354c0 |
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
@@ -17,9 +19,33 @@ Automated builds (macOS and Windows) for (odd-numbered) development versions: ht
 Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
 
+To-do items for draft -13 completion:
+- [ ] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
+- [ ] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header.
+- [ ] New transport parameter: disable\_migration (9)
+- [ ] Stateless Reset packet format change (due to short header type changes)
+- [ ] CONNECTION\_CLOSE: gains new Frame Type (i) field.
+- [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
+- [ ] New frame type: NEW\_TOKEN (0x19)
+- [ ] New frame type: ACK\_ECN (0x20)
+- [ ] New QUIC Frame Type Registry with IANA
+- [ ] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7)
+- [ ] New error type: INVALID_MIGRATION (0xC)
+- [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX)
+- [ ] TLS extension number change: quic_transport_parameter(26) -> 0xffa5
+
+To-do items for draft -12 completion:
+- [ ] Short packet: two type bits -> reserved
+- [ ] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach.
+- [ ] 7, 14, 30-bit variable length packet numbers
+- [ ] Retry Packet - Packet Number MUST be 0. (but subject to change?)
+- [ ] New transport parameter: preferred\_address (4)
+- [ ] Server's Preferred Address (connection migration related)
+- [ ] STREAM frames can now be empty.
+
 To-do items for draft -11 completion:
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
-- [ ] packet coalescing
+- [ ] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored.
 - [x] storing CID for reference in short header packet https://code.wireshark.org/review/27098
 - [x] update NEW_CONNECTION_ID dissection https://code.wireshark.org/review/27107
 - [ ] connection tracking based on CID / connection migration
