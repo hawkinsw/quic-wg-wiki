@@ -3,10 +3,9 @@
   * PN Encryption (from -12) but fixed in -13
 
 * Additional -13 features
-** Retry
-** ACK_ECN
-** Symmetric stateless reset
+  * Retry 
+  * ACK_ECN
+  *Symmetric stateless reset
 
-* HQ
-** Do any HTTP request
+* HQ: Do any HTTP request at all
 
