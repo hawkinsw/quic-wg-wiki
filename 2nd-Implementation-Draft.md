@@ -6,7 +6,7 @@ The first implementation focused on the basic handshake. The second will add add
 
 # New Features in this Implementation
 
-* Critical shortcomings of the [First Implementation Draft](https://github.com/quicwg/base-drafts/wiki/First-Implementation). None have been identified to date.
+* Critical shortcomings of the [First Implementation Draft](1st-Implementation-Draft). None have been identified to date.
 
 * Further revisions to mechanisms in the First Implementation Draft (e.g. changes to the public header format, connection close).
 
