@@ -1,3 +1,5 @@
+* Record interop results at [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=547947849)
+
 * Update to draft-13 (TLS 1.3-28). Idea here is just to demonstrate the previous functionality with -13. 
   * QUIC TLS Record (Stream 0 DT changes)
   * PN Encryption (from -12) but fixed in -13
