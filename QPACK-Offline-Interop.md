@@ -11,7 +11,7 @@ The encoder program consumes a list of header sets from a QIF file and produces 
 
 ## The QIF Format
 
-QIF stands for _QPACK Interop Format_.  It is meant to be easy to parse, write, and compare.  The QIF format is plain text.  Each header field in on a separate line,# with name and value separated by the TAB character.  An empty line signifies the end of a header set.  Lines beginning with '#' are ignored.  Example:
+QIF stands for _QPACK Interop Format_.  It is meant to be easy to parse, write, and compare.  The QIF format is plain text.  Each header field in on a separate line, with name and value separated by the TAB character.  An empty line signifies the end of a header set.  Lines beginning with `#` are ignored.  Example:
 
 ```
 # I am a QIF file
