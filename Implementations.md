@@ -252,7 +252,7 @@ A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto (production), TLS 1.3-22 (experimental)
 - **Protocol IDs:**
-- **Public server:** seemann.io:443 (Q039)
+- **Public server:** seemann.io:443 (Q039), [henrock.net:443](https://henrock.net) (Q039, Q042 & Q043)
 
 
 ### [stellite](https://github.com/line/stellite)
@@ -275,4 +275,4 @@ Caddy 0.9 has experimental QUIC support, powered by lucas-clemente/quic-go. Read
 - **Roles:** server
 - **Handshake:** QUIC Crypto (production)
 - **Protocol IDs:**
-- **Public server:**
+- **Public server:** [henrock.net:443](https://henrock.net) (Q039, Q042 & Q043)
