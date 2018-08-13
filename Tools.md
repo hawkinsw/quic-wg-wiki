@@ -58,4 +58,4 @@ To-do items for draft -11 completion:
 # QUIC Tracker
 [QUIC-Tracker](https://quic-tracker.info.ucl.ac.be/) is a test suite for IETF-QUIC. It exchanges packets with IETF-QUIC implementations to verify whether an implementation conforms with the IETF specification. The test suite is consisting of several test scenarii. Each of them aims at testing a particular feature of the QUIC protocol. The test suite runs daily, and its results are available on its website.
 
-It currently supports QUIC draft-11 / TLS 1.3 draft-28.
+It currently supports QUIC draft-13 / TLS 1.3 draft-28.
