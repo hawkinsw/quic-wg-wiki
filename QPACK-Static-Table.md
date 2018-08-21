@@ -1,3 +1,5 @@
+*NB: This page reflects early thinking on a new QPACK static table. The below text was formed up into [Pull Request #1355](https://github.com/quicwg/base-drafts/pull/1355), additional discussion took place on [Issue #904](https://github.com/quicwg/base-drafts/issues/904)*
+
 Based on queries from HTTP Archive via Google BigQuery, removing some vendor-proprietary and non-HQ-compatible headers, and adding a few things that wouldn't have been seen in an Archive pass, here's a first pass at an updated static table.
 Ordering is by total frequency of the header's occurrence in the archive pass (both requests and responses), and ordering of values is by percentage of responses.  Values are included if they make up more than 5% of the occurrences of that header, minus headers or values that appear to be vendor-specific (user-agent, youtube-client-id, etc.), plus a few (extra status codes, for example).
 
