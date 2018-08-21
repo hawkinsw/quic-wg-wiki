@@ -53,7 +53,7 @@ The encoder and decoder must use the same parameters in order to be interoperabl
 
 1. Dynamic Table Size - the size (in bytes) of the shared dynamic table
 2. Max blocked streams - maximum number of blocked streams that the decoder allows
-3. Acknowledgement Mode - immediate or none
+3. Acknowledgement Mode - immediate(1) or none(0)
 
 ## Encoder Output / Decoder Input
 
