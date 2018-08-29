@@ -1,6 +1,6 @@
 This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools). Current [interop status](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing); make sure you are looking at or editing the correct tab.
 
-Please add your implementation below. Keep sorted alphabetically. There are three sections, one for "IETF QUIC Transport", one for "IETF HTTP over QUIC", and one for "Google QUIC". Entries may appear in multiple sections e.g. where a stack provides both IETF Transport and HTTP over QUIC.
+Please add your implementation below. Keep sorted alphabetically. There are three sections, one for "IETF QUIC Transport", one for "IETF HTTP over QUIC", one for "QPACK", and one for "Google QUIC". Entries may appear in multiple sections e.g. where a stack provides both IETF Transport and HTTP over QUIC.
 
 ## IETF QUIC
 
@@ -212,6 +212,13 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 - **Roles:** library, (non-IETF roles: multicast receiver, multicast sender)
 - **Handshake:** TBD
 - **Public server:** TBD
+
+## QPACK
+
+### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
+
+- **Language:** C
+- **Version:** [-02](https://tools.ietf.org/html/draft-ietf-quic-qpack-02)
 
 ## Google QUIC
 
