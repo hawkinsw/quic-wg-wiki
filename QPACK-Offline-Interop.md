@@ -47,6 +47,8 @@ cache-control   no-cache
 
 One can create QIF files manually using a text editor.  An easier way to get a bunch of real-life headers is to record a web session as an HTTP Archive (HAR) and then convert the HAR to a QIF file using the [har2qif.pl tool](https://github.com/litespeedtech/ls-qpack/blob/master/tools/har2qif.pl).
 
+There is a [qifs repository](https://github.com/qpackers/qifs) that contains a corpus of ready-to-use QIF files.
+
 ## Parameters
 
 The encoder and decoder must use the same parameters in order to be interoperable.  The parameters are:
