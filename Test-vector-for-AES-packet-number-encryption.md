@@ -11,7 +11,7 @@ Let's also assume that the PN encryption key is:
 And that the packet received from the network is:
 ~~~
     static const uint8_t packet_encrypted_pn[] = {
-        0x5d,
+        0x30,
         0x80, 0x6d, 0xbb, 0xb5,
         0x6b, 0xc1, 0xbe, 0xe2, 0x2e, 0x40, 0x9f, 0x96,
         0xe9, 0x3d, 0x7e, 0x11, 0x73, 0x93, 0x17, 0x2a,
@@ -19,7 +19,10 @@ And that the packet received from the network is:
         0x88, 0x55
     };
 ~~~
-The first byte indicates that the C_ID is absent, and that the PN number is 4 bytes long. The PN value in the packet is encrypted. From the packet, we can extract the sample:
+The first byte indicates that it is a short header. This connection does not use connection
+IDs.
+
+The PN value in the packet is encrypted. From the packet, we can extract the sample:
 ~~~
     static const uint8_t sample[] = {
         0x6b, 0xc1, 0xbe, 0xe2, 0x2e, 0x40, 0x9f, 0x96,
