@@ -50,7 +50,7 @@ LiteSpeed QUIC client library.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, TLS 1.3-28
 - **Protocol IDs:** `0xff00000c`
-- **Public server:** 159.203.94.96:1234
+- **Public server:** 159.203.94.96:1234 for ID-12, www.litespeedtech.com:443 for GQUIC
 
 
 ### [minq](https://www.github.com/ekr/minq)
