@@ -7,9 +7,9 @@
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
  | -13 | | | TODO |
- | -12 | | | TODO |
+ | -12 | | | WIP |
  | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested), WIP |
- | -10 | v2.9.0rc0-200-g88435354c0 |
+ | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
 
@@ -45,7 +45,7 @@ To-do items for draft -12 completion:
 
 To-do items for draft -11 completion:
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
-- [ ] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored.
+- [x] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored. https://code.wireshark.org/review/29607
 - [x] storing CID for reference in short header packet https://code.wireshark.org/review/27098
 - [x] update NEW_CONNECTION_ID dissection https://code.wireshark.org/review/27107
 - [ ] connection tracking based on CID / connection migration
