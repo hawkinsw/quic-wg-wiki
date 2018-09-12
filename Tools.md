@@ -7,7 +7,7 @@
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
  | -14 | | | TODO |
- | -13 | | | TODO |
+ | -13 | | | WIP |
  | -12 | | | WIP |
  | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
@@ -24,12 +24,14 @@ To-do items for draft -14 completion:
 - read the spec
 
 To-do items for draft -13 completion:
-- [ ] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
-- [ ] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header.
+- [x] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
+- [x] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header. https://code.wireshark.org/review/29641
 - [ ] New transport parameter: disable\_migration (9)
 - [ ] Stateless Reset packet format change (due to short header type changes)
 - [ ] CONNECTION\_CLOSE: gains new Frame Type (i) field.
 - [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
+  - [x] Recognize CRYPTO frame. https://code.wireshark.org/review/29642
+  - [ ] Process TLS handshake/alert messages using QUIC as framing and protection layer.
 - [ ] New frame type: NEW\_TOKEN (0x19)
 - [ ] New frame type: ACK\_ECN (0x20)
 - [ ] New QUIC Frame Type Registry with IANA
