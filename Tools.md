@@ -6,9 +6,10 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -14 | | | TODO |
  | -13 | | | TODO |
  | -12 | | | WIP |
- | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested), WIP |
+ | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
@@ -18,6 +19,9 @@ To enable payload decryption, the TLS Exporter secret is required which must be 
 Automated builds (macOS and Windows) for (odd-numbered) development versions: https://www.wireshark.org/download/automated/  
 Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
+
+To-do items for draft -14 completion:
+- read the spec
 
 To-do items for draft -13 completion:
 - [ ] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
@@ -36,8 +40,8 @@ To-do items for draft -13 completion:
 
 To-do items for draft -12 completion:
 - [ ] Short packet: two type bits -> reserved
-- [ ] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach.
-- [ ] 7, 14, 30-bit variable length packet numbers
+- [x] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach. https://code.wireshark.org/review/29637
+- [x] 7, 14, 30-bit variable length packet numbers https://code.wireshark.org/review/29637
 - [ ] Retry Packet - Packet Number MUST be 0. (but subject to change?)
 - [ ] New transport parameter: preferred\_address (4)
 - [ ] Server's Preferred Address (connection migration related)
@@ -45,7 +49,7 @@ To-do items for draft -12 completion:
 
 To-do items for draft -11 completion:
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
-- [x] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored. https://code.wireshark.org/review/29607
+- [x] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored. https://code.wireshark.org/review/29607 (framing only, decryption of multiple messages is incomplete)
 - [x] storing CID for reference in short header packet https://code.wireshark.org/review/27098
 - [x] update NEW_CONNECTION_ID dissection https://code.wireshark.org/review/27107
 - [ ] connection tracking based on CID / connection migration
