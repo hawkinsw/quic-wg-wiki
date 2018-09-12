@@ -34,3 +34,5 @@ Using that sample to construct IV as specified, the PN should decrypt to:
         0xba, 0xba, 0xc0, 0x01
     };
 ~~~
+
+As `(clear_pn[0] >> 6) == 2`, the actual length is 2 (see [Table 2: Packet Number Encodings for Packet Headers](https://tools.ietf.org/html/draft-ietf-quic-transport-12#page-19)). Therefore `0xc0, 0x01` must be ignored and the actual packet number is `0xbaba`.
