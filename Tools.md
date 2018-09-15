@@ -8,8 +8,8 @@
  | -- | -- | -- | -- |
  | -14 | | | TODO |
  | -13 | | | WIP |
- | -12 | | | WIP |
- | -11 | v2.9.0rc0-291-gee3bc52192 | | +Connection migration (untested) |
+ | -12 | v2.9.0rc0-1816-g81710c7d3c | | WIP |
+ | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
@@ -41,7 +41,7 @@ To-do items for draft -13 completion:
 - [ ] TLS extension number change: quic_transport_parameter(26) -> 0xffa5
 
 To-do items for draft -12 completion:
-- [ ] Short packet: two type bits -> reserved
+- [x] Short packet: two type bits -> reserved. https://code.wireshark.org/review/29668
 - [x] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach. https://code.wireshark.org/review/29637
 - [x] 7, 14, 30-bit variable length packet numbers https://code.wireshark.org/review/29637
 - [ ] Retry Packet - Packet Number MUST be 0. (but subject to change?)
