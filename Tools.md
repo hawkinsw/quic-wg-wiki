@@ -14,7 +14,14 @@
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
 
-To enable payload decryption, the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
+To enable payload decryption (<= draft -12), the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
+
+Since draft -13, the `HKDF-Expand-Label` traffic secrets using the `quic ` label are required. The TLS key log file follows the TLS 1.3 labels. Every line follows the format `<label> <ClientRandom> <TrafficSecret>` where `<label>` is one of:
+`QUIC_CLIENT_EARLY_TRAFFIC_SECRET`, 
+`QUIC_CLIENT_HANDSHAKE_TRAFFIC_SECRET`, 
+`QUIC_SERVER_HANDSHAKE_TRAFFIC_SECRET`, 
+`QUIC_CLIENT_TRAFFIC_SECRET_0`, 
+`QUIC_SERVER_TRAFFIC_SECRET_0`.
 
 Automated builds (macOS and Windows) for (odd-numbered) development versions: https://www.wireshark.org/download/automated/  
 Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
@@ -35,7 +42,7 @@ To-do items for draft -13 completion:
 - [ ] CONNECTION\_CLOSE: gains new Frame Type (i) field.
 - [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
   - [x] Recognize CRYPTO frame. https://code.wireshark.org/review/29642
-  - [ ] Process TLS handshake/alert messages using QUIC as framing and protection layer.
+  - [x] Process TLS handshake/alert messages using QUIC as framing and protection layer. https://code.wireshark.org/review/29677
 - [ ] New frame type: NEW\_TOKEN (0x19)
 - [ ] New frame type: ACK\_ECN (0x20)
 - [ ] New QUIC Frame Type Registry with IANA
