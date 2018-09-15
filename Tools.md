@@ -26,7 +26,7 @@ To-do items for draft -14 completion:
 To-do items for draft -13 completion:
 - [x] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
 - [x] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header. https://code.wireshark.org/review/29641
-- [ ] New transport parameter: disable\_migration (9)
+- [x] New transport parameter: disable\_migration (9) https://code.wireshark.org/review/29674 
 - [ ] Stateless Reset packet format change (due to short header type changes)
 - [ ] CONNECTION\_CLOSE: gains new Frame Type (i) field.
 - [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
@@ -38,14 +38,14 @@ To-do items for draft -13 completion:
 - [ ] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7)
 - [ ] New error type: INVALID_MIGRATION (0xC)
 - [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX)
-- [ ] TLS extension number change: quic_transport_parameter(26) -> 0xffa5
+- [x] TLS extension number change: quic_transport_parameter(26) -> 0xffa5 https://code.wireshark.org/review/29673 
 
 To-do items for draft -12 completion:
 - [x] Short packet: two type bits -> reserved. https://code.wireshark.org/review/29668
 - [x] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach. https://code.wireshark.org/review/29637
 - [x] 7, 14, 30-bit variable length packet numbers https://code.wireshark.org/review/29637
 - [ ] Retry Packet - Packet Number MUST be 0. (but subject to change?)
-- [ ] New transport parameter: preferred\_address (4)
+- [x] New transport parameter: preferred\_address (4) https://code.wireshark.org/review/29671
 - [ ] Server's Preferred Address (connection migration related)
 - [ ] STREAM frames can now be empty.
 
