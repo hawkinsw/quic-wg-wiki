@@ -22,6 +22,10 @@ Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:m
 
 To-do items for draft -14 completion:
 - read the spec
+- tranport parameter rename :  initial\_max\_stream\_data\_bidi\ =>  initial\_max\_stream\_data\_bidi\_local (0)
+- New transport parameter: initial\_max\_stream\_data\_bidi\_remote (10)
+- New transport parameter: initial\_max\_stream\_data\_uni (11)
+- [ ] ACK\_ECN Change value (0x20) => (0x1a)
 
 To-do items for draft -13 completion:
 - [x] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
