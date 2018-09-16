@@ -28,11 +28,11 @@ Upstream bug: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
 
 To-do items for draft -14 completion:
-- read the spec
-- [ ] tranport parameter rename :  initial\_max\_stream\_data\_bidi\ =>  initial\_max\_stream\_data\_bidi\_local (0)
-- [ ] New transport parameter: initial\_max\_stream\_data\_bidi\_remote (10)
-- [ ] New transport parameter: initial\_max\_stream\_data\_uni (11)
+- [ ] Retry Packet: completely changed
+- [ ] New frame type: APPLICATION\_CLOSE (separated from CONNECTION\_CLOSE)
 - [ ] ACK\_ECN Change value (0x20) => (0x1a)
+- [ ] Remove error code: UNSOLICITED\_PATH\_RESPONSE
+- [ ] Split initial\_max\_stream\_data (0) into initial\_max\_stream\_data\_bidi\_local (0), initial\_max\_stream\_data\_bidi\_remote (10), initial\_max\_stream\_data\_uni (11)
 
 To-do items for draft -13 completion:
 - [x] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
