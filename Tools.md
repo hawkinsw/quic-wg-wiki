@@ -6,8 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -14 | | | WIP. Retry packet dissection under review. |
- | -13 | v2.9.0rc0-1818-g63743a3733 | | WIP. Initial packet dissection done.<br>Further decryption patch under review (see below) |
+ | -14 |  | | WIP. Retry packet dissection under review.<br>(compatible with -13 decryption) |
+ | -13 | v2.9.0rc0-1850-g2fd42045f5 | | WIP. Decryption updated. |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | | WIP |
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
@@ -35,12 +35,13 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial).
 - [ ] TLS 1.3 handshake fragmentation over multiple packets.
 - [ ] Key Update: verify decrypted result before switching cipher.
+- [ ] Connection migration: test it.
 - [ ] ...
 </details>
 
 <details><summary>To-do items for draft -14 completion</summary>
 
-- [x] Retry Packet: completely changed. https://code.wireshark.org/review/29687
+- [x] Retry Packet: completely changed. https://code.wireshark.org/review/29689
 - [ ] New frame type: APPLICATION\_CLOSE (separated from CONNECTION\_CLOSE)
 - [ ] ACK\_ECN Change value (0x20) => (0x1a)
 - [ ] Remove error code: UNSOLICITED\_PATH\_RESPONSE
@@ -87,7 +88,6 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] connection tracking based on CID / connection migration
   - [x] Basic connection tracking https://code.wireshark.org/review/27068
   - [ ] Use NEW_CONNECTION_ID hint (requires user to provide EXPORTER_SECRET keys)
-  - [ ] Testing with actual implementation
 </details>
 
 
