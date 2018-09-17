@@ -54,16 +54,16 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header. https://code.wireshark.org/review/29641
 - [x] New transport parameter: disable\_migration (9) https://code.wireshark.org/review/29674 
 - [ ] Stateless Reset packet format change (due to short header type changes)
-- [ ] CONNECTION\_CLOSE: gains new Frame Type (i) field.
+- [x] CONNECTION\_CLOSE: gains new Frame Type (i) field. https://code.wireshark.org/review/29698 
 - [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
   - [x] Recognize CRYPTO frame. https://code.wireshark.org/review/29642
   - [x] Process TLS handshake/alert messages using QUIC as framing and protection layer. https://code.wireshark.org/review/29677
 - [x] Retry Packet: no longer carries a TLS HRR, see [4.4.2](https://tools.ietf.org/html/draft-ietf-quic-transport-13#section-4.4.2). https://code.wireshark.org/review/29687
-- [ ] New frame type: NEW\_TOKEN (0x19)
-- [ ] New frame type: ACK\_ECN (0x20)
+- [x] New frame type: NEW\_TOKEN (0x19) https://code.wireshark.org/review/29699 
+- [x] New frame type: ACK\_ECN (0x20) https://code.wireshark.org/review/29699 
 - [ ] New QUIC Frame Type Registry with IANA
-- [ ] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7)
-- [ ] New error type: INVALID_MIGRATION (0xC)
+- [x] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7) https://code.wireshark.org/review/29700
+- [x] New error type: INVALID_MIGRATION (0xC) https://code.wireshark.org/review/29700
 - [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX)
 - [x] TLS extension number change: quic_transport_parameter(26) -> 0xffa5 https://code.wireshark.org/review/29673 
 </details>
