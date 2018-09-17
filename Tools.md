@@ -8,7 +8,7 @@
  | -- | -- | -- | -- |
  | -14 |  | | WIP. Retry packet dissection under review.<br>(compatible with -13 decryption) |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | | WIP. Decryption updated. |
- | -12 | v2.9.0rc0-1816-g81710c7d3c | | WIP |
+ | -12 | v2.9.0rc0-1816-g81710c7d3c | | DONE |
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
@@ -32,7 +32,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 ## Wireshark draft support
 <details><summary>General issues</summary>
 
-- [ ] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial).
+- [x] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial). https://code.wireshark.org/review/#/c/29691/
 - [ ] TLS 1.3 handshake fragmentation over multiple packets.
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [ ] Connection migration: test it.
@@ -68,15 +68,13 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] TLS extension number change: quic_transport_parameter(26) -> 0xffa5 https://code.wireshark.org/review/29673 
 </details>
 
-<details><summary>To-do items for draft -12 completion</summary>
+<details><summary>To-do items for draft -12 completion (more or less complete)</summary>
 
 - [x] Short packet: two type bits -> reserved. https://code.wireshark.org/review/29668
 - [x] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach. https://code.wireshark.org/review/29637
 - [x] 7, 14, 30-bit variable length packet numbers https://code.wireshark.org/review/29637
-- [ ] Retry Packet - Packet Number MUST be 0. (but subject to change?)
 - [x] New transport parameter: preferred\_address (4) https://code.wireshark.org/review/29671
-- [ ] Server's Preferred Address (connection migration related)
-- [ ] STREAM frames can now be empty.
+- [ ] Improve connection migration tracking: use Server's Preferred Address
 </details>
 
 <details><summary>To-do items for draft -11 completion (more or less complete and obsolete)</summary>
