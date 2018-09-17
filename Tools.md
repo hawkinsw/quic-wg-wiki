@@ -6,8 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -14 |  | | WIP. Retry packet dissection under review.<br>(compatible with -13 decryption) |
- | -13 | v2.9.0rc0-1850-g2fd42045f5 | | WIP. Decryption updated. |
+ | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Almost done. |
+ | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | | DONE |
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
@@ -33,6 +33,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 <details><summary>General issues</summary>
 
 - [x] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial). https://code.wireshark.org/review/#/c/29691/
+- [x] Bug: PKN encoded as more than 1 byte break decryption. https://code.wireshark.org/review/#/c/29704/
 - [ ] TLS 1.3 handshake fragmentation over multiple packets.
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [ ] Connection migration: test it.
@@ -48,27 +49,27 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Split initial\_max\_stream\_data (0) into initial\_max\_stream\_data\_bidi\_local (0), initial\_max\_stream\_data\_bidi\_remote (10), initial\_max\_stream\_data\_uni (11)
 </details>
 
-<details><summary>To-do items for draft -13 completion</summary>
+<details><summary>To-do items for draft -13 completion (more or less complete)</summary>
 
 - [x] Long header: "Payload Length" -> "Length" (length of following PKN + payload)
 - [x] Initial Packet: can now be sent by server as well, contains Token Length + Token fields following the normal long header. https://code.wireshark.org/review/29641
 - [x] New transport parameter: disable\_migration (9) https://code.wireshark.org/review/29674 
 - [ ] Stateless Reset packet format change (due to short header type changes)
 - [x] CONNECTION\_CLOSE: gains new Frame Type (i) field. https://code.wireshark.org/review/29698 
-- [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
+- [x] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
   - [x] Recognize CRYPTO frame. https://code.wireshark.org/review/29642
   - [x] Process TLS handshake/alert messages using QUIC as framing and protection layer. https://code.wireshark.org/review/29677
 - [x] Retry Packet: no longer carries a TLS HRR, see [4.4.2](https://tools.ietf.org/html/draft-ietf-quic-transport-13#section-4.4.2). https://code.wireshark.org/review/29687
 - [x] New frame type: NEW\_TOKEN (0x19) https://code.wireshark.org/review/29699 
 - [x] New frame type: ACK\_ECN (0x20) https://code.wireshark.org/review/29699 
-- [ ] New QUIC Frame Type Registry with IANA
+- [x] New QUIC Frame Type Registry with IANA. Verified matching.
 - [x] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7) https://code.wireshark.org/review/29700
 - [x] New error type: INVALID_MIGRATION (0xC) https://code.wireshark.org/review/29700
 - [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX)
 - [x] TLS extension number change: quic_transport_parameter(26) -> 0xffa5 https://code.wireshark.org/review/29673 
 </details>
 
-<details><summary>To-do items for draft -12 completion (more or less complete)</summary>
+<details><summary>To-do items for draft -12 completion (completed and obsolete)</summary>
 
 - [x] Short packet: two type bits -> reserved. https://code.wireshark.org/review/29668
 - [x] Packet number encryption (starts at zero, there is no special Initial Packet Number). Replaces previous "packet number gap" approach. https://code.wireshark.org/review/29637
@@ -77,7 +78,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Improve connection migration tracking: use Server's Preferred Address
 </details>
 
-<details><summary>To-do items for draft -11 completion (more or less complete and obsolete)</summary>
+<details><summary>To-do items for draft -11 completion (completed and obsolete)</summary>
 
 - [x] new short header flags, long header format https://code.wireshark.org/review/27009
 - [x] packet coalescing. Draft -12 clarifies: applies to short packet headers too; packets (within a datagram) with different DCID than the first packet should be ignored. https://code.wireshark.org/review/29607 (framing only, decryption of multiple messages is incomplete)
