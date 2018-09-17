@@ -6,8 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -14 | | | WIP |
- | -13 | | | WIP. Decryption patch under review (see TODO below) |
+ | -14 | | | WIP. Retry packet dissection under review. |
+ | -13 | v2.9.0rc0-1818-g63743a3733 | | WIP. Initial packet dissection done.<br>Further decryption patch under review (see below) |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | | WIP |
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
@@ -30,9 +30,17 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 <sup>1</sup>Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
 
 ## Wireshark draft support
+<details><summary>General issues</summary>
+
+- [ ] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial).
+- [ ] TLS 1.3 handshake fragmentation over multiple packets.
+- [ ] Key Update: verify decrypted result before switching cipher.
+- [ ] ...
+</details>
+
 <details><summary>To-do items for draft -14 completion</summary>
 
-- [ ] Retry Packet: completely changed
+- [x] Retry Packet: completely changed. https://code.wireshark.org/review/29687
 - [ ] New frame type: APPLICATION\_CLOSE (separated from CONNECTION\_CLOSE)
 - [ ] ACK\_ECN Change value (0x20) => (0x1a)
 - [ ] Remove error code: UNSOLICITED\_PATH\_RESPONSE
@@ -49,6 +57,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] New frame type: CRYPTO (0x18). Replaces "Stream 0" and changes how Initial Packet/Handshake are used.
   - [x] Recognize CRYPTO frame. https://code.wireshark.org/review/29642
   - [x] Process TLS handshake/alert messages using QUIC as framing and protection layer. https://code.wireshark.org/review/29677
+- [x] Retry Packet: no longer carries a TLS HRR, see [4.4.2](https://tools.ietf.org/html/draft-ietf-quic-transport-13#section-4.4.2). https://code.wireshark.org/review/29687
 - [ ] New frame type: NEW\_TOKEN (0x19)
 - [ ] New frame type: ACK\_ECN (0x20)
 - [ ] New QUIC Frame Type Registry with IANA
