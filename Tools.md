@@ -43,8 +43,8 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 
 - [x] Retry Packet: completely changed. https://code.wireshark.org/review/29689
 - [ ] New frame type: APPLICATION\_CLOSE (separated from CONNECTION\_CLOSE)
-- [ ] ACK\_ECN Change value (0x20) => (0x1a)
-- [ ] Remove error code: UNSOLICITED\_PATH\_RESPONSE
+- [x] ACK\_ECN Change value (0x20) => (0x1a)  https://code.wireshark.org/review/29702
+- [x] Remove error code: UNSOLICITED\_PATH\_RESPONSE https://code.wireshark.org/review/29703 
 - [ ] Split initial\_max\_stream\_data (0) into initial\_max\_stream\_data\_bidi\_local (0), initial\_max\_stream\_data\_bidi\_remote (10), initial\_max\_stream\_data\_uni (11)
 </details>
 
