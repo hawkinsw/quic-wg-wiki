@@ -102,11 +102,11 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 Implementation of QUIC for NGINX by Cloudflare
 
 - **Language:** C
-- **Version:** draft-13
+- **Version:** draft-14
 - **Roles:** server
-- **Handshake:** TLSv1.3-28
-- **Protocol IDs:** `0xff00000d`
-- **Public server:** quic.tech:4433
+- **Handshake:** TLSv1.3
+- **Protocol IDs:** `0xff00000e`
+- **Public server:** cloudflare-quic.com:443
 
 ### Pandora
 
