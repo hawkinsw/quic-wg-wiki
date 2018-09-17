@@ -8,7 +8,7 @@
  | -- | -- | -- | -- |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Almost done. |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
- | -12 | v2.9.0rc0-1816-g81710c7d3c | | DONE |
+ | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
@@ -32,8 +32,6 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 ## Wireshark draft support
 <details><summary>General issues</summary>
 
-- [x] Bug: Connection tracking breaks after Retry packet (observable due to decryption failure in subsequent Initial). https://code.wireshark.org/review/#/c/29691/
-- [x] Bug: PKN encoded as more than 1 byte break decryption. https://code.wireshark.org/review/#/c/29704/
 - [ ] TLS 1.3 handshake fragmentation over multiple packets.
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [ ] Connection migration: test it.
