@@ -35,6 +35,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] TLS 1.3 handshake fragmentation over multiple packets.
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [ ] Connection migration: test it.
+- [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] ...
 </details>
 
