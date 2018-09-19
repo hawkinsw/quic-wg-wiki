@@ -123,10 +123,10 @@ Client and server library for our experimenting with different QUIC applications
 A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD.
 
 - **Language:** C
-- **Version:** draft-11 (draft-09 and draft-10 available in separate branches on Github)
+- **Version:** draft-14
 - **Roles:** library and test tools, test client, test server
-- **Handshake:** TLS 1.3 draft 28 (also supports 26 and 27)
-- **Protocol IDs:** `0xff00000b` (`0xff000009` if compiling the draft-09 branch, or `0xff00000a in the draft-10 branch)
+- **Handshake:** TLS 1.3 (also supports 26, 27 and 28)
+- ** IDs:** `0xff00000e`
 - **Public server:** test.privateoctopus.com:4433
 
 
