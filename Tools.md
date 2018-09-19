@@ -63,7 +63,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] New QUIC Frame Type Registry with IANA. Verified matching.
 - [x] Renamed error: FRAME_FORMAT_ERROR -> FRAME_ENCODING_ERROR (0x7) https://code.wireshark.org/review/29700
 - [x] New error type: INVALID_MIGRATION (0xC) https://code.wireshark.org/review/29700
-- [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX)
+- [ ] Changed error definition: FRAME_ERROR -> CRYPTO_ERROR (0x1XX) https://code.wireshark.org/review/29740
 - [x] TLS extension number change: quic_transport_parameter(26) -> 0xffa5 https://code.wireshark.org/review/29673 
 </details>
 
