@@ -193,10 +193,10 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 Winquic is an implementation of QUIC on Windows.
 
 - **Language:** C
-- **Version:** draft-13 (+PR #1498, PR #1528)
+- **Version:** draft-14 & draft-13 (+PR #1498, PR #1528)
 - **Roles:** client, server
-- **Handshake:** TLS 1.3-28
-- **Protocol IDs:** `0xff00000d`
+- **Handshake:** TLS 1.3 RFC
+- **Protocol IDs:** `0xff00000e;0xff00000d`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
 ## IETF HTTP over QUIC
