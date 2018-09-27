@@ -271,7 +271,7 @@ A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto (production), TLS 1.3-23 (experimental)
 - **Protocol IDs:**
-- **Public server:** seemann.io:443 (Q039), [henrock.net:443](https://henrock.net) (Q039, Q042 & Q043)
+- **Public server:** seemann.io:443 (Q039), [henrock.net:443](https://henrock.net) (Q039, Q043 & Q044)
 
 
 ### [stellite](https://github.com/line/stellite)
