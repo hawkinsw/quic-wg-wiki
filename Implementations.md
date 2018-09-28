@@ -199,6 +199,17 @@ Winquic is an implementation of QUIC on Windows.
 - **Protocol IDs:** `0xff00000e;0xff00000d`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
+### [quic-go](https://github.com/lucas-clemente/quic-go)
+
+A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
+
+- **Language:** Go
+- **Version:** ~ draft-12, Q039, Q043, Q044
+- **Roles:** client, library, server
+- **Handshake:** TLS 1.3-23, QUIC Crypto
+- **Protocol IDs:**
+- **Public server:** -
+
 ## IETF HTTP over QUIC
 
 The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
@@ -267,7 +278,7 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
 
 - **Language:** Go
-- **Version:** Q039, Q043, Q043 (production), draft-12 (experimental)
+- **Version:** Q039, Q043, Q044 (production), draft-12 (experimental)
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto (production), TLS 1.3-23 (experimental)
 - **Protocol IDs:**
