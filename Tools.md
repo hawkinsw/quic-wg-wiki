@@ -39,6 +39,14 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] ...
 </details>
 
+<details><summary>To-do items for draft -15 completion </summary>
+
+- [ ] Merge ACK and ACK\_ECN
+- [ ] Add 2 transport parameters: max\_ack\_delay(12) and original\_connection\_id(13)
+- [ ] Remove sequence field from NEW\_CONNECTION\_ID
+- [ ] Add RETIRE\_CONNECTION\_ID type 
+</details>
+
 <details><summary>To-do items for draft -14 completion (completed)</summary>
 
 - [x] Retry Packet: completely changed. https://code.wireshark.org/review/29689
