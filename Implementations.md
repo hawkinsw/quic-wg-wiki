@@ -168,7 +168,7 @@ QUIC protocol implementation for H2O server
 
 ### [quicr](https://github.com/Ralith/quicr)
 
-Rust implementation with a pure state machine and futures-based async I/O. TLS provided by OpenSSL.
+Rust implementation with a pure state machine and futures-based async I/O. TLS provided by OpenSSL. Merged with Quinn (below).
 
 - **Language:** Rust
 - **Version:** draft-11
