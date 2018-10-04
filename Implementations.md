@@ -41,12 +41,12 @@ QUIC implementation in F5 TMOS
 - **Public server:** 208.85.208.226:4433
 
 
-### [lsquic](https://github.com/litespeedtech/lsquic-client/tree/201808291108-ietf-ID-12)
+### lsquic
 
 LiteSpeed QUIC client library.
 
 - **Language:**  C
-- **Version:** draft-12 plus PNE, Q035, Q039, Q043, and Q044.
+- **Version:** [Draft-12 plus PNE](https://github.com/litespeedtech/lsquic-client/tree/201808291108-ietf-ID-12), [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14) Q035, Q039, Q043, and Q044.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, TLS 1.3-28
 - **Protocol IDs:** `0xff00000c`
