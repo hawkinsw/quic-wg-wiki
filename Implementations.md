@@ -34,10 +34,10 @@ QUIC implementation in Apache Traffic Server
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-11
+- **Version:** draft-14
 - **Roles:** Server
-- **Handshake:** TLS 1.3-28
-- **Protocol IDs:** `0xff00000b`
+- **Handshake:** RFC 8446
+- **Protocol IDs:** `0xff00000e`
 - **Public server:** 208.85.208.226:4433
 
 
