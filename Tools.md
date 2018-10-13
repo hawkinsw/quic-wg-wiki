@@ -6,7 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Almost done. |
+ | -15 | | | TBD |
+ | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Done. |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
@@ -39,12 +40,12 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -15 completion </summary>
+<details><summary>To-do items for draft -15 completion</summary>
 
-- [ ] Merge ACK and ACK\_ECN
+- [ ] Merge ACK and ACK\_ECN. Renumbers ACK(0x0d) -> ACK(0x1b). (ECN is like ACK frame, but with ECN Section after it)
 - [ ] Add 2 transport parameters: max\_ack\_delay(12) and original\_connection\_id(13)
-- [ ] Move sequence field (after length) from NEW\_CONNECTION\_ID
-- [ ] Add RETIRE\_CONNECTION\_ID type 
+- [ ] NEW_CONNECTION_ID: move Sequence(i) field after CID Length field.
+- [ ] Add RETIRE\_CONNECTION\_ID(0x0d) type (NOTE: conflict with old ACK(0x0d)).
 </details>
 
 <details><summary>To-do items for draft -14 completion (completed)</summary>
