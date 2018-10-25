@@ -34,12 +34,20 @@ QUIC implementation in Apache Traffic Server
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-15
+- **Version:** draft-15 or -16
 - **Roles:** Server
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff00000f`
+- **Protocol IDs:** `0xff00000f` and `0xff000010`
 - **Public server:** 208.85.208.226:4433
 
+##f5_test
+Client implementation for internal test purposes
+
+- **Language:** Python
+- **Version:** draft-15
+- **Roles:** Client
+- **Handshake:** RFC 8446
+- **Protocol IDs:** `0xff00000f`
 
 ### lsquic
 
