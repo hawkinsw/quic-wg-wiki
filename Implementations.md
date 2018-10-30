@@ -54,11 +54,13 @@ Client implementation for internal test purposes
 LiteSpeed QUIC client library.
 
 - **Language:**  C
-- **Version:** [Draft-12 plus PNE](https://github.com/litespeedtech/lsquic-client/tree/201808291108-ietf-ID-12), [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14) Q035, Q039, Q043, and Q044.
+- **Version:** Draft-15, [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14) Q035, Q039, Q043, and Q044.
 - **Roles:** Client
-- **Handshake:** QUIC Crypto, TLS 1.3-28
-- **Protocol IDs:** `0xff00000c`
-- **Public server:** 159.65.253.210:1235 for ID-14, 159.65.253.210:1234 for ID-12, www.litespeedtech.com:443 for GQUIC
+- **Handshake:** QUIC Crypto, RFC 8446
+- **Protocol IDs:** `0xff00000f`, `0xff00000e`, `0xff00000c`
+- **Public server:** 159.65.253.210:1236 for ID-15, 159.65.253.210:1235 for ID-14, www.litespeedtech.com:443 for GQUIC
+
+- The ID-15 server supports HQ and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
 
 
 ### [minq](https://www.github.com/ekr/minq)
