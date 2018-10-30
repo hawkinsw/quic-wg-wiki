@@ -54,7 +54,7 @@ Client implementation for internal test purposes
 LiteSpeed QUIC client library.
 
 - **Language:**  C
-- **Version:** Draft-15, [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14) Q035, Q039, Q043, and Q044.
+- **Version:** [Draft-15](https://github.com/litespeedtech/lsquic-client/tree/201810301648-ietf-ID-15), [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14), Q035, Q039, Q043, and Q044.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff00000f`, `0xff00000e`, `0xff00000c`
