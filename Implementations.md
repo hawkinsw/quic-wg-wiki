@@ -58,7 +58,7 @@ LiteSpeed QUIC client library.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff00000f`, `0xff00000e`, `0xff00000c`
-- **Public server:** 159.65.253.210:1236 for ID-15, 159.65.253.210:1235 for ID-14, www.litespeedtech.com:443 for GQUIC
+- **Public server:** 159.65.253.210:4434 for ID-15, 159.65.253.210:4433 for ID-14, www.litespeedtech.com:443 for GQUIC
   - The ID-15 server supports HQ and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
 
 
