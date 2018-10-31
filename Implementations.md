@@ -8,7 +8,7 @@ The following stacks implement the IETF versions of QUIC Transport. They may inc
 
 ### AppleQUIC
 
-AppleQUIC is a test client and server implementation.  
+AppleQUIC is a client and server implementation.  
 
 - **Language:** C, Objective-C
 - **Version:** draft-15
