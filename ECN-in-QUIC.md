@@ -1,5 +1,5 @@
 # Introduction
-Explicit Congestion Notification ECN) support in transport protocols 
+Explicit Congestion Notification (ECN) support in transport protocols 
 is a fundamental feature that
 should be included in the QUIC specification as a mandatory element.
 ECN has the key benefit that it allows for non-destructive congestion
