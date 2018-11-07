@@ -220,7 +220,7 @@ Winquic is an implementation of QUIC on Windows.
 - **Version:** draft-15 & draft-16
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff000010;0xff00000f`
+- **Protocol IDs:** `0xff000010` and `0xff00000f`
 - **Public server:** msquic.westus.cloudapp.azure.com:4433
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
