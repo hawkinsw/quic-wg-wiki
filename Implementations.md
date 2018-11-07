@@ -165,15 +165,16 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 - **Protocol IDs:** `0xff00000f`
 - **Public server:** quic.tech:4433
 
-### [QUICker](https://github.com/rmarx/quicker)
+### [QUICker](https://github.com/rmarx/quicker/tree/draft-15)
 
-QUICker is a NodeJS/TypeScript based QUIC implementation from the University of Hasselt, Belgium. NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support
+QUICker is a NodeJS/TypeScript based QUIC implementation from the University of Hasselt, Belgium. 
+NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support-draft-15
 
 - **Language:** TypeScript
-- **Version:** draft-11
-- **Roles:** client,server, library
-- **Handshake:** TLS 1.3-28
-- **Protocol IDs:** `0xff00000b`
+- **Version:** draft-15
+- **Roles:** client,server,library
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0xff00000f`
 - **Public server:** quicker.edm.uhasselt.be:4433
 
 
