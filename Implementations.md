@@ -95,10 +95,10 @@ an iQUIC library meant to track standardization milestones.
 mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 
 - **Language:** C++
-- **Version:** draft-09
+- **Version:** draft-09, draft-15
 - **Roles:** client, server, library
-- **Handshake:** TLS 1.3-23
-- **Protocol IDs:** `0xff000009` 
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0xff000009`, `0xff00000f` 
 - **Public server:** fb.mvfst.net:4433
 
 ### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
