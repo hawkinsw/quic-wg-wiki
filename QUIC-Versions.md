@@ -18,6 +18,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0x5130343[0-9] | Google | Google QUIC 40 - 49 (Q040 - Q049) |
 | 0x51474f[0-255] | quic-go | "QGO" + [0-255]
 | 0xabcd000[0-f] | Microsoft | WinQuic |
+| 0xf10000[00-ff] | IETF | QUIC-LB |
 | 0xf123f0c[0-f] | Mozilla | MozQuic |
 | 0xfaceb00[0-f] | Facebook | mvfst |
 | 0xff000001 | IETF | draft-ietf-quic-transport-01 |
