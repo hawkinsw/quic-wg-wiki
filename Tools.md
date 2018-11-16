@@ -100,4 +100,4 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 # QUIC Tracker
 [QUIC-Tracker](https://quic-tracker.info.ucl.ac.be/) is a test suite for IETF-QUIC. It exchanges packets with IETF-QUIC implementations to verify whether an implementation conforms with the IETF specification. The test suite is consisting of several test scenarii. Each of them aims at testing a particular feature of the QUIC protocol. The test suite runs daily, and its results are available on its website.
 
-It currently supports QUIC draft-14 and TLS 1.3.
+It currently supports QUIC draft-15/16 and TLS 1.3.
