@@ -6,6 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -16 | | | TBD |
  | -15 | | | TBD |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Done. |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
@@ -39,6 +40,9 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] ...
 </details>
+
+<details><summary>To-do items for draft -16 completion</summary>
+- [ ] Add draft-16 to quic_versions_vals
 
 <details><summary>To-do items for draft -15 completion</summary>
 
