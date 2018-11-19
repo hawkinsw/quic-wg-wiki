@@ -45,7 +45,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Add draft-16 to quic_versions_vals
 </details>
 
-<details><summary>To-do items for draft -15 completion</summary>
+<details><summary>To-do items for draft -15 completion (completed)</summary>
 
 - [X] Merge ACK and ACK\_ECN. Renumbers ACK(0x0d) -> ACK(0x1b). (ECN is like ACK frame, but with ECN Section after it) https://code.wireshark.org/review/30420 https://code.wireshark.org/review/30491
 - [X] Add 2 transport parameters: max\_ack\_delay(12) and original\_connection\_id(13) https://code.wireshark.org/review/30418
