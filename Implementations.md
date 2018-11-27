@@ -59,7 +59,7 @@ LiteSpeed QUIC client library.
 - **Version:** [Draft-15](https://github.com/litespeedtech/lsquic-client/tree/201810301648-ietf-ID-15), [Draft-14](https://github.com/litespeedtech/lsquic-client/tree/201810041513-ietf-ID-14), Q035, Q039, Q043, and Q044.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, RFC 8446
-- **Protocol IDs:** `0xff00000f`, `0xff00000e`, `0xff00000c`
+- **Protocol IDs:** `0xff00000f`, `0xff000010`
 - **Public server:**
   - http3-test.litespeedtech.com:4433 and http3-test.litespeedtech.com:4434 (no stateless retry) for ID-15, ID-16, as well as Google QUIC versions Q035, Q039, Q043, and Q044
     - This server supports HQ and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
