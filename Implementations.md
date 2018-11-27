@@ -61,7 +61,7 @@ LiteSpeed QUIC client library.
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff00000f`, `0xff00000e`, `0xff00000c`
 - **Public server:**
-  - http3-test.litespeedtech.com:4434 for ID-15, ID-16, as well as Google QUIC versions Q035, Q039, Q043, and Q044
+  - http3-test.litespeedtech.com:4433 and http3-test.litespeedtech.com:4434 (no stateless retry) for ID-15, ID-16, as well as Google QUIC versions Q035, Q039, Q043, and Q044
     - This server supports HQ and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
