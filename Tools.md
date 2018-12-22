@@ -43,13 +43,13 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 </details>
 
 <details><summary>To-do items for draft -17 completion</summary>
+
 - [ ] Update initial salt
 - [ ] Update HDKF label ( "key" -> "quic key", "iv" -> "quic iv", "pn" -> "quic hp" (**h**eader **p**rotect))
 - [ ] Renumbered frames (and rename like STREAM_ID_BLOCKED -> STREAM_DATA_BLOCKED)
 - [ ] Renumbered transport parameters (TP) and use varints
 - [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!)
 - [ ] Update first byte (Short and Long Header)
-
 </details>
 
 <details><summary>To-do items for draft -16 completion</summary>
