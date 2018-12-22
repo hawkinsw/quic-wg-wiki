@@ -11,10 +11,10 @@ The following stacks implement the IETF versions of QUIC Transport. They may inc
 AppleQUIC is a client and server implementation.  
 
 - **Language:** C, Objective-C
-- **Version:** draft-15
+- **Version:** draft-17
 - **Roles:** Client, Server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff00000f`
+- **Protocol IDs:** `0xff000011`
 - **Public server:** 
 
 ### [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
