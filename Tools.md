@@ -6,8 +6,8 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -16 | | | TBD |
- | -15 | | | TBD |
+ | -16 | | | Compatible with -15 (no packet change) |
+ | -15 | v2.9.0rc0-2528-g9bd1c8f155| | Available on 2.9.0 |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Done. |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3
