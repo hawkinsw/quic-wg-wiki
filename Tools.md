@@ -6,6 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -17 | | |  |
  | -16 | | | Compatible with -15 (no packet change) |
  | -15 | v2.9.0rc0-2528-g9bd1c8f155| | Available on 2.9.0 |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Done. |
@@ -39,6 +40,16 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] ...
+</details>
+
+<details><summary>To-do items for draft -17 completion</summary>
+- [ ] Update initial salt
+- [ ] Update HDKF label ( "key" -> "quic key", "iv" -> "quic iv", "pn" -> "quic hp" (**h**eader **p**rotect))
+- [ ] Renumbered frames (and rename like STREAM_ID_BLOCKED -> STREAM_DATA_BLOCKED)
+- [ ] Renumbered transport parameters (TP) and use varints
+- [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!)
+- [ ] Update first byte (Short and Long Header)
+
 </details>
 
 <details><summary>To-do items for draft -16 completion</summary>
