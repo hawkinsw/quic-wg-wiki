@@ -42,6 +42,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 </details>
 
 <details><summary>To-do items for draft -16 completion</summary>
+
 - [ ] Add draft-16 to quic_versions_vals
 </details>
 
