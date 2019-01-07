@@ -139,7 +139,7 @@ A small(ish) implementation of QUIC in C, to explore the protocol and the API, f
 - **Version:** draft-17
 - **Roles:** library and test tools, test client, test server
 - **Handshake:** TLS 1.3 (also supports 26, 27 and 28) + support for QUIC extension (suppress EOED)
-- ** IDs:** `0xff000011`
+- **Protocol IDs:** `0xff000011`
 - **Public server:** test.privateoctopus.com:4433 (server log accessible at https://test.privateoctopus.com/)
 
 
