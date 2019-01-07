@@ -133,7 +133,7 @@ Client and server library for our experimenting with different QUIC applications
 - **Public server:** pandora.cm.in.tum.de:4433 (the server log is accessible via http[s]://pandora.cm.in.tum.de/)
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
-A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD.
+A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD/IOS.
 
 - **Language:** C
 - **Version:** draft-17
