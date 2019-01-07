@@ -6,11 +6,11 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -17 | | |  |
- | -16 | | | Compatible with -15 (no packet change) |
- | -15 | v2.9.0rc0-2528-g9bd1c8f155| | Available on 2.9.0 |
- | -14 | v2.9.0rc0-1858-g0aaaa49af3 | | Done. |
- | -13 | v2.9.0rc0-1850-g2fd42045f5 | | Decryption updated. |
+ | -17 | | | WIP |
+ | -16 | v2.9.1rc0-100-g0964b04ee3 | | Compatible with -15 (no packet change) |
+ | -15 | v2.9.0rc0-2528-g9bd1c8f155 | | Available on 2.9.0 |
+ | -14 | v2.9.0rc0-1858-g0aaaa49af3 | v2.9.1rc0-108-g075785bd20 | Done. |
+ | -13 | v2.9.0rc0-1850-g2fd42045f5 | v2.9.1rc0-100-g0964b04ee3 | Decryption updated. |
  | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
@@ -52,9 +52,9 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Update first byte (Short and Long Header)
 </details>
 
-<details><summary>To-do items for draft -16 completion</summary>
+<details><summary>To-do items for draft -16 completion (completed)</summary>
 
-- [ ] Add draft-16 to quic_versions_vals
+- [x] Add draft-16 to quic_versions_vals https://code.wireshark.org/review/31169
 </details>
 
 <details><summary>To-do items for draft -15 completion (completed)</summary>
