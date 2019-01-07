@@ -213,7 +213,7 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 
 ### Winquic
 
-Winquic is an implementation of QUIC on Windows.
+Winquic is Microsoft's QUIC client and server implementation.
 
 - **Language:** C
 - **Version:** draft-17
