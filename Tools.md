@@ -44,12 +44,13 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 
 <details><summary>To-do items for draft -17 completion</summary>
 
-- [ ] Update initial salt
-- [ ] Update HDKF label ( "key" -> "quic key", "iv" -> "quic iv", "pn" -> "quic hp" (**h**eader **p**rotect))
-- [ ] Renumbered frames (and rename like STREAM_ID_BLOCKED -> STREAM_DATA_BLOCKED)
-- [ ] Renumbered transport parameters (TP) and use varints
+- [ ] Update initial salt.
+- [ ] Update HDKF label ( "key" -> "quic key", "iv" -> "quic iv", "pn" -> "quic hp" (**h**eader **p**rotect)). Remove "quic " HKDF label, always use "tls13 " prefix for Initial.
+- [ ] Renumbered frames (and rename like BLOCKED -> DATA_BLOCKED, STREAM_BLOCKED -> STREAM_DATA_BLOCKED). https://code.wireshark.org/review/31405
+- [ ] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`).
 - [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!)
-- [ ] Update first byte (Short and Long Header)
+- [ ] Add Spin bit (short header), Stateless Reset reserved bytes changed.
+- [ ] Packet number protection -> Header protection. Packet number length 24 is now also possible.
 </details>
 
 <details><summary>To-do items for draft -16 completion (completed)</summary>
