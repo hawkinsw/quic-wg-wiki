@@ -44,10 +44,10 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 
 <details><summary>To-do items for draft -17 completion</summary>
 
-- [ ] Update PNE -> Header protection, update initial salt, update HKDF label. https://code.wireshark.org/review/31480
+- [x] Update PNE -> Header protection, update initial salt, update HKDF label. https://code.wireshark.org/review/31480
 - [ ] Renumbered frames (and rename like BLOCKED -> DATA_BLOCKED, STREAM_BLOCKED -> STREAM_DATA_BLOCKED). https://code.wireshark.org/review/31405
-- [ ] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`).
-- [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!)
+- [ ] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`). https://code.wireshark.org/review/#/c/31534/
+- [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!). https://code.wireshark.org/review/31405
 - [ ] Add Spin bit (short header), Stateless Reset reserved bytes changed.
 - [ ] Fix decryption after Key Update.
 </details>
