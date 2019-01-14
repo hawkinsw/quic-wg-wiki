@@ -51,6 +51,17 @@ Client implementation for internal test purposes
 - **Handshake:** RFC 8446
 - **Protocol IDs:** `0xff00000f`
 
+### [kwik](https://bitbucket.org/pjtr/kwik/)
+
+Kwik is an effort to implement a QUIC client (library) in Java.
+
+- **Language:** Java
+- **Version:** draft-14, draft-15, draft-16
+- **Roles:** client
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0xff00000d`, `0xff00000e`, `0xff00000f` 
+
+
 ### lsquic
 
 LiteSpeed QUIC client library.
