@@ -118,3 +118,8 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 [QUIC-Tracker](https://quic-tracker.info.ucl.ac.be/) is a test suite for IETF-QUIC. It exchanges packets with IETF-QUIC implementations to verify whether an implementation conforms with the IETF specification. The test suite is consisting of several test scenarii. Each of them aims at testing a particular feature of the QUIC protocol. The test suite runs daily, and its results are available on its website.
 
 It currently supports QUIC draft-15/16 and TLS 1.3.
+
+# qvalve
+
+[qvalve](https://github.com/NTAP/qvalve) can predictably impair QUIC flows, by dropping, reordering or duplicating individual packets and sequences of packets. It is a non-transparent UDP proxy that should be interposed between a QUIC client and a QUIC server.
+The behavior of qvalve is configured with rules specified in a simple language. 
