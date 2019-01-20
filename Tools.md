@@ -6,7 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -17 | v2.9.1rc0-332-ga0b9e8b652 | | WIP (see TODO table below). |
+ | -17 | v2.9.1rc0-332-ga0b9e8b652 | | 1RTT data decryption broken (see TODO table below). |
  | -16 | v2.9.1rc0-100-g0964b04ee3 | v2.9.1rc0-331-gf1fa8df324 | Compatible with -15 (no packet change) |
  | -15 | v2.9.0rc0-2528-g9bd1c8f155 | v2.9.1rc0-331-gf1fa8df324 | Available on 2.9.0 |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | v2.9.1rc0-108-g075785bd20 | Done. |
@@ -45,10 +45,13 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 <details><summary>To-do items for draft -17 completion</summary>
 
 - [x] Update PNE -> Header protection, update initial salt, update HKDF label. https://code.wireshark.org/review/31480
-- [ ] Renumbered frames (and rename like BLOCKED -> DATA_BLOCKED, STREAM_BLOCKED -> STREAM_DATA_BLOCKED). https://code.wireshark.org/review/31405
-- [ ] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`). https://code.wireshark.org/review/#/c/31534/
-- [ ] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!). https://code.wireshark.org/review/31405
+- [ ] Packet number decryption fixes. https://code.wireshark.org/review/31634
+- [ ] Fix 1RTT decryption issue (likely related to flag byte changes).
+- [x] Renumbered frames (and rename like BLOCKED -> DATA_BLOCKED, STREAM_BLOCKED -> STREAM_DATA_BLOCKED). https://code.wireshark.org/review/31405
+- [x] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`). https://code.wireshark.org/review/#/c/31534/
+- [x] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!). https://code.wireshark.org/review/31405
 - [ ] Add Spin bit (short header), Stateless Reset reserved bytes changed.
+- [ ] Proper display of unprotected long/short header bytes.
 - [ ] Fix decryption after Key Update.
 </details>
 
