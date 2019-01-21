@@ -39,6 +39,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
+- [ ] Stateless reset (format changed again in draft -17) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
 - [ ] ...
 </details>
 
@@ -48,9 +49,9 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] Packet number decryption fixes. https://code.wireshark.org/review/31634
 - [ ] Display unprotected short header bytes, fix 1RTT decryption (incl. KeyUpdate?, untested) https://code.wireshark.org/review/31637
 - [x] Renumbered frames (and rename like BLOCKED -> DATA_BLOCKED, STREAM_BLOCKED -> STREAM_DATA_BLOCKED). https://code.wireshark.org/review/31405
-- [x] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`). https://code.wireshark.org/review/#/c/31534/
+- [x] Renumbered transport parameters (TP) and use varints, rename `initial_max_bidi_streams` -> `initial_max_streams_bidi` (likewise for `uni`). https://code.wireshark.org/review/31534
 - [x] NEW_CONNECTION_ID: move Sequence(i) field before CID Length field... (revert draft-15 change!). https://code.wireshark.org/review/31405
-- [ ] Add Spin bit (short header), Stateless Reset reserved bytes changed.
+- [ ] Add Spin bit (short header) https://code.wireshark.org/review/31644
 - [ ] Display unprotected long header bytes. https://code.wireshark.org/review/31642
 </details>
 
