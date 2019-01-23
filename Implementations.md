@@ -222,6 +222,16 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 - **Protocol IDs:** `0xff000011`
 - **Public server:** ralith.com:4433
 
+### sora_quic
+
+QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
+
+- **Language:** Erlang/OTP
+- **Version:** draft-17
+- **Roles:** server,library
+- **Handshake:** TLS 1.3 (RFC 8446)
+- **Protocol IDs:** `0xff000011`
+
 ### Winquic
 
 Winquic is Microsoft's QUIC client and server implementation.
