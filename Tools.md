@@ -6,7 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -18 | | | |
+ | -18 | | | Patches ready for review. |
  | -17 | v2.9.1rc0-332-ga0b9e8b652 | | Done since v2.9.1rc0-456-g19630453bf |
  | -16 | v2.9.1rc0-100-g0964b04ee3 | v2.9.1rc0-331-gf1fa8df324 | Compatible with -15 (no packet change) |
  | -15 | v2.9.0rc0-2528-g9bd1c8f155 | v2.9.1rc0-331-gf1fa8df324 | Available on 2.9.0 |
@@ -46,10 +46,10 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 
 <details><summary>To-do items for draft -18 completion</summary>
 
-- [ ] Rename ACK Blocks to ACK Ranges, move First ACK Range field, rename ECN Section -> ECN Counters.
-- [ ] Rename 0-RTT Protected -> 0-RTT
-- [ ] Rename stream Final Offset -> Final Size; FINAL_OFFSET_ERROR -> FINAL_SIZE_ERROR
-- [ ] PreferredAdress: split ipVersion/ipAddress in ipv4Address/ipv4Port/ipv6Address/ipv6Port fields.
+- [ ] Rename ACK Blocks to ACK Ranges, move First ACK Range field, rename ECN Section -> ECN Counters. https://code.wireshark.org/review/31688
+- [ ] Rename 0-RTT Protected -> 0-RTT https://code.wireshark.org/review/31685
+- [ ] Rename stream Final Offset -> Final Size; FINAL_OFFSET_ERROR -> FINAL_SIZE_ERROR https://code.wireshark.org/review/31687
+- [ ] PreferredAdress: split ipVersion/ipAddress in ipv4Address/ipv4Port/ipv6Address/ipv6Port fields. https://code.wireshark.org/review/31689
 </details>
 
 <details><summary>To-do items for draft -17 completion (completed)</summary>
