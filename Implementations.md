@@ -165,7 +165,8 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 - **Protocol IDs:** `0xff000011`
 - **Public server:** quant.eggert.org:4433 (see [wiki](https://github.com/NTAP/quant/wiki) for description)
 
-### [quiche](https://github.com/ghedo/quiche)
+### [quiche](https://github.com/cloudflare/quiche)
+
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
 
 - **Language:** Rust
