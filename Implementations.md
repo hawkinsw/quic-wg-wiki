@@ -50,10 +50,10 @@ Note: This server does not typically send RETRY packets, but can do so on reques
 Client implementation for internal test purposes
 
 - **Language:** Python
-- **Version:** draft-15
+- **Version:** draft-17
 - **Roles:** Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff00000f`
+- **Protocol IDs:** `0xff000011`
 
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
 
