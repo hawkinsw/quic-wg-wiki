@@ -2,6 +2,10 @@ This wiki tracks known implementations of QUIC. See also our [Tools listing](Too
 
 Please add your implementation below. Keep sorted alphabetically. There are four sections, one for "IETF QUIC Transport", one for "IETF HTTP over QUIC", one for "QPACK", and one for "Google QUIC". Entries may appear in multiple sections e.g. where a stack provides both IETF Transport and HTTP over QUIC.
 
+## Note ##
+
+If you are working on a QUIC implementation, please consider joining the [QUIC Developers Slack Channel](https://quicdev.slack.com/). Also, if possible, please set up a public server and publish its details below, so others can try and interoperate with your code.
+
 ## IETF QUIC
 
 The following stacks implement the IETF versions of QUIC Transport. They may include an application layer mapping other than IETF HTTP over QUIC e.g. HTTP/0.9
