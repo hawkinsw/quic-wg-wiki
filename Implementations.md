@@ -242,11 +242,11 @@ QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 Winquic is Microsoft's QUIC client and server implementation.
 
 - **Language:** C
-- **Version:** draft-17
+- **Version:** draft-17, draft-18
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff000011`
-- **Public server:** msquic.westus.cloudapp.azure.com:4433
+- **Protocol IDs:** `0xff000011;0xff000012`
+- **Public server:** msquic.westus.cloudapp.azure.com:4433 (retry on 4434)
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
