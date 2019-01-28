@@ -30,8 +30,10 @@ QUIC implementation in Apache Traffic Server
 - **Roles:** Server, Client
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000011`
-- **Public server:** quic.ogre.com:4433
-
+- **Public server:** 
+  - quic.ogre.com:4433
+  - quic.ogre.com:4434 (Stateless Retry)
+  - https://quic.ogre.com/cgi-bin/quic_log.cgi (Debug logs)
 
 ### f5
 
