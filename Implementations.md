@@ -159,6 +159,16 @@ A small(ish) implementation of QUIC in C, to explore the protocol and the API, f
 - **Protocol IDs:** `0xff000011`
 - **Public server:** test.privateoctopus.com:4433 (server log accessible at https://test.privateoctopus.com/)
 
+### [spindump](https://github.com/EricssonResearch/spindump)
+The "Spindump" tool is a Unix command-line utility that can be used for latency monitoring in traffic passing through an interface. The tool performs passive, in-network monitoring. It is not a tool to monitor traffic content or metadata of individual connections, and indeed that is not possible in the Internet as most connections are encrypted. The tool looks at the characteristics of transport protocols, such as the QUIC Spin Bit, and attempts to derive information about round-trip times for individual connections or for the aggregate or average values. The tool supports TCP, QUIC, COAP, DNS, and ICMP traffic.
+
+- **Language:** C
+- **Version:** draft-16, draft-17
+- **Roles:** in-network tool
+- **Handshake:** QUIC only, does not peek into TLS or HTTP messaging inside
+- **Protocol IDs:** `0x00000001` `0xff000010`, `0xff000011`, `0x50435131`, etc.
+- **Public server:** n.a.
+
 
 ### [quant](https://github.com/NTAP/quant)
 
