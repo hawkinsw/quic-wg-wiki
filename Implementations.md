@@ -62,10 +62,10 @@ Client implementation for internal test purposes
 Kwik is an effort to implement a QUIC client (library) in Java.
 
 - **Language:** Java
-- **Version:** draft-14, draft-15, draft-16
+- **Version:** draft-14, draft-15, draft-16, draft-17
 - **Roles:** client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00000d`, `0xff00000e`, `0xff00000f` 
+- **Protocol IDs:** `0xff00000d`, `0xff00000e`, `0xff00000f`, `0xff000011`  
 
 
 ### lsquic
