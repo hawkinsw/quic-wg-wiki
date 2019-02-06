@@ -1,9 +1,8 @@
 * Record interop results at [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1965785440)
 
-* -18
+* -18 (v=ff000012)
 
-With draft-18 (v=ff000012), test the following features:
-
+## Core Features Tested
 
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
@@ -19,3 +18,6 @@ With draft-18 (v=ff000012), test the following features:
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
 |H3 | 3 | An H3 transaction succeeded |
 
+## Perf Features Tested
+
+(TODO)
