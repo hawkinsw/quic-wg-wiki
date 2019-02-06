@@ -8,8 +8,7 @@
 
 * Record interop results at [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1965785440)
 
-* List of implementations at [here]
-(https://github.com/quicwg/base-drafts/wiki/Implementations)
+* List of implementations at [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
 ## Core Features Tested
 
