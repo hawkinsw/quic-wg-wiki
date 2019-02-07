@@ -70,7 +70,7 @@ Kwik is an effort to implement a QUIC client (library) in Java.
 
 ### lsquic
 
-LiteSpeed QUIC client library.
+LiteSpeed QUIC client library.  Works on Linux, FreeBSD, MacOS, and Windows.
 
 - **Language:**  C
 - **Version:** [Draft-17](https://github.com/litespeedtech/lsquic-client/tree/201901031102-ietf-ID-17), Q035, Q039, Q043, and Q044.
