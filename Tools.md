@@ -135,3 +135,15 @@ It currently supports QUIC draft-15/16 and TLS 1.3.
 
 [qvalve](https://github.com/NTAP/qvalve) can predictably impair QUIC flows, by dropping, reordering or duplicating individual packets and sequences of packets. It is a non-transparent UDP proxy that should be interposed between a QUIC client and a QUIC server.
 The behavior of qvalve is configured with rules specified in a simple language. 
+
+# [spindump](https://github.com/EricssonResearch/spindump)
+The "Spindump" tool is a Unix command-line utility that can be used for latency monitoring in traffic passing through an interface. The tool performs passive, in-network monitoring. It is not a tool to monitor traffic content or metadata of individual connections, and indeed that is not possible in the Internet as most connections are encrypted. The tool looks at the characteristics of transport protocols, such as the QUIC Spin Bit, and attempts to derive information about round-trip times for individual connections or for the aggregate or average values. The tool supports TCP, QUIC, COAP, DNS, and ICMP traffic.
+
+- **Language:** C
+- **Version:** draft-16, draft-17
+- **Roles:** in-network tool
+- **Handshake:** QUIC only, does not peek into TLS or HTTP messaging inside
+- **Protocol IDs:** `0x00000001` `0xff000010`, `0xff000011`, `0x50435131`, etc.
+- **Public server:** n.a.
+
+
