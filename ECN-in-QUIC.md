@@ -126,10 +126,31 @@ ect is 1 for ECT(0) and 2 for ECT(1)
 
 At the receiver endpoint, it is necessary to use the recvmsg call with an extended struct to access to the ECN field. An example code snippet is found at [ECN in Linux] (https://gist.github.com/jirihnidek/95c369996a81be1b854e).
 
+### Using Ancillary Messages
+
+- IPv4:
+  - To set ECN value on outgoing packet, set cmsg_level to `IPPROTO_IP` and cmsg_type to `IP_TOS` and use an `int` value.
+  - To read ECN value:
+    - The socket must have socket option `IPPROTO_IP`, `IP_RECVTOS` set to 1.
+    - The ancillary message on level `IPPROTO_IP` and of type `IP_TOS` will contain an integer with the ECN.  You may need to mask off just the relevant two bites using `IPTOS_ECN_MASK`
+- IPv6:
+  - To set ECN value  on outgoing packet, set cmsg_level to `IPPROTO_IPV6` and cmsg_type to `IPV6_TCLASS` and use an `int` value.
+  - To read ECN value:
+    - The socket must have socket option `IPPROTO_IPV6`, `IP_RECVTCLASS` to set 1.
+    - The ancillary message on level `IPPROTO_IPV6` and of type `IP_TCLASS` will contain an integer with the ECN.  You may need to mask off just the relevant two bites using `IPTOS_ECN_MASK`
+
+What's interesting about IPv6 socket options is that they may not be documented in the Linux man pages.  In that case (or in any case), more details are available in [RFC 3542](https://tools.ietf.org/html/rfc3542).
+
 ## FreeBSD
 ECN functions the same as for Linux.
 
 Ref. Lars Eggert
+
+### Using Ancillary Messages
+
+The ancillary messages are the same for IPv6 as for Linux (see above).  For IPv4, there are two important differences:
+- The size of `IP_TOS` on FreeBSD is 1 byte (`unsigned char`), while on Linux it is an `int`.
+- When reading ancillary messages for ECN, the message type is `IP_TOS` on Linux, but `IP_RECVTOS` on FreeBSD.
 
 ## Microsoft Windows
 
