@@ -286,6 +286,11 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 - **Language:** C
 - **Version:** [-03](https://tools.ietf.org/html/draft-ietf-quic-qpack-03)
 
+### [nghttp3](https://github.com/ngtcp2/nghttp3)
+
+- **Language:** C
+- **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
+
 ## Google QUIC
 
 The following stacks implement the earlier Google versions of QUIC.
