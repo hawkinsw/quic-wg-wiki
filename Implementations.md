@@ -279,7 +279,7 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
 
 - **Language:** C
-- **Version:** [-03](https://tools.ietf.org/html/draft-ietf-quic-qpack-03)
+- **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
 
 ### f5
 
