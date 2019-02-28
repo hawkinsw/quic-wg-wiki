@@ -143,10 +143,10 @@ Implementation of QUIC for NGINX by Cloudflare
 Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.  Server setup still a bit shake; see also Pandora in the QUIC Slack channel
 
 - **Language:** C
-- **Version:** draft-08 (mostly)
+- **Version:** draft-17 (mostly)
 - **Roles:** library with minimal client, server
-- **Handshake:** TLS -22 (using picotls)
-- **Protocol IDs:** `0xff000008`
+- **Handshake:** TLSv1.3 (using picotls)
+- **Protocol IDs:** `0xff000011`
 - **Public server:** pandora.cm.in.tum.de:4433 (the server log is accessible via http[s]://pandora.cm.in.tum.de/)
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
