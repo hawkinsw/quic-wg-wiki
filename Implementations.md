@@ -40,13 +40,13 @@ QUIC implementation in Apache Traffic Server
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-15 or -16
+- **Version:** draft-18
 - **Roles:** Server, Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff00000f` and `0xff000010`
+- **Protocol IDs:** ``0xff000012`
 - **Public server:** 208.85.208.226:4433
 
-Note: This server does not typically send RETRY packets, but can do so on request.
+Note: This server always sends RETRY packets, but we can disable this on request.
 
 ### f5_test
 Client implementation for internal test purposes
