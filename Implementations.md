@@ -136,7 +136,7 @@ Implementation of QUIC for NGINX based on quiche by Cloudflare
 - **Roles:** server
 - **Handshake:** TLSv1.3 (RFC8446)
 - **Protocol IDs:** `0xff000012`
-- **Public server:** cloudflare-quic.com:443
+- **Public server:** cloudflare-quic.com:443 (HTTP/1.x)
 
 ### Pandora
 
@@ -179,7 +179,7 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
 - **Protocol IDs:** `0xff000012`
-- **Public server:** quic.tech:4433
+- **Public server:** quic.tech:4433 (HTTP/0.9) / quic.tech:8443 (HTTP/3)
 
 ### [QUICker](https://github.com/rmarx/quicker/tree/draft-15)
 
@@ -289,6 +289,11 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
 
 - **Language:** C
+- **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
+
+### [quiche](https://github.com/cloudflare/quiche)
+
+- **Language:** Rust
 - **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
 
 ## Google QUIC
