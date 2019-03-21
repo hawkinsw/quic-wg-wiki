@@ -233,10 +233,10 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 
 - **Language:** Erlang/OTP
-- **Version:** draft-17
+- **Version:** draft-19
 - **Roles:** server,library
 - **Handshake:** TLS 1.3 (RFC 8446)
-- **Protocol IDs:** `0xff000011`
+- **Protocol IDs:** `0xff000013`
 
 ### Winquic
 
