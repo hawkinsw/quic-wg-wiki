@@ -274,6 +274,16 @@ nghq implements the HTTP over QUIC mapping atop ngtcp2.
 - **Handshake:** TBD
 - **Public server:** TBD
 
+### [nghttp3](https://github.com/ngtcp2/nghttp3)
+nghttp3 is an implementation of HTTP/3 mapping over QUIC and QPACK in C.
+It does not depend on any particular QUIC transport implementation.
+
+- **Language:** C
+- **Transport library:** It does not depend on any particular QUIC transport library.
+- **HTTP over QUIC Version:** draft-19
+- **Roles:** library
+- **Public server:** TBD
+
 ## QPACK
 
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
