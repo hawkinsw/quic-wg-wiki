@@ -136,7 +136,7 @@ Implementation of QUIC for NGINX based on quiche by Cloudflare
 - **Roles:** server
 - **Handshake:** TLSv1.3 (RFC8446)
 - **Protocol IDs:** `0xff000012`
-- **Public server:** cloudflare-quic.com:443 (HTTP/1.x)
+- **Public server:** cloudflare-quic.com:443 (HTTP/3 only)
 
 ### Pandora
 
