@@ -199,11 +199,13 @@ NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tr
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-14
+- **Version:** draft-18
 - **Roles:** client and server
 - **Handshake:** TLS 1.3 (final)
 - **Protocol IDs:**
-- **Public server:** kazuhooku.com:4433
+- **Public server:**
+  - kazuhooku.com:4433 (HTTP/0.9)
+  - kazuhooku.com:8443 (HTTP/3)
 
 
 ### [quicr](https://github.com/Ralith/quicr)
