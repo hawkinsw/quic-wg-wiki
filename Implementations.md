@@ -284,7 +284,7 @@ It does not depend on any particular QUIC transport implementation.
 - **Transport library:** It does not depend on any particular QUIC transport library.
 - **HTTP over QUIC Version:** draft-19
 - **Roles:** library
-- **Public server:** TBD
+- **Public server:** nghttp2.org:4433
 
 ## QPACK
 
