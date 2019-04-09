@@ -164,11 +164,11 @@ A small(ish) implementation of QUIC in C, to explore the protocol and the API, f
 QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 implementation on top of the zero-copy [warpcore](https://github.com/NTAP/warpcore) userspace UDP/IPv4 stack for the [netmap](http://info.iet.unipi.it/~luigi/netmap/) packet I/O framework. (Also works over the standard Sockets API.)
 
 - **Language:** C11
-- **Version:** draft-18
+- **Version:** draft-19
 - **Roles:** client, library, server
 - **Handshake:** TLS1.3 final
-- **Protocol IDs:** `0xff000012`
-- **Public server:** quant.eggert.org:4433 (see [wiki](https://github.com/NTAP/quant/wiki) for description)
+- **Protocol IDs:** `0xff000013`
+- **Public server:** quant.eggert.org:4433 (and more, see [wiki](https://github.com/NTAP/quant/wiki) for description)
 
 ### [quiche](https://github.com/cloudflare/quiche)
 
