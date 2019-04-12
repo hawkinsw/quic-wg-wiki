@@ -37,7 +37,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 ## Wireshark draft support
 <details><summary>General issues</summary>
 
-- [ ] TLS 1.3 handshake fragmentation over multiple packets.
+- [ ] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
@@ -46,9 +46,10 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -19 completion</summary>
-- [ ] Change of Version Negotiation packet, removal of VERSION_NEGOTIATION_ERROR (0x9) error code.
-- [ ] Removal of QuicVersion fields in TransportParameters.
+<details><summary>To-do items for draft -19 completion (patches under review)</summary>
+
+- [ ] Removal of VERSION_NEGOTIATION_ERROR (0x9) error code.
+- [ ] Removal of QuicVersion fields in TransportParameters. https://code.wireshark.org/review/32833
 - [ ] idle_timeout (0x0001) was changed from seconds to milliseconds.
 </details>
 <details><summary>To-do items for draft -18 completion (completed)</summary>
