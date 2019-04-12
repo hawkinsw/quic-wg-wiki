@@ -6,6 +6,7 @@
 
  | draft | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -19 | | | WIP |
  | -18 | v2.9.1rc0-487-gd486593ce3 | | Done since v2.9.1rc0-500-g064a5c90ca |
  | -17 | v2.9.1rc0-332-ga0b9e8b652 | | Done since v2.9.1rc0-456-g19630453bf |
  | -16 | v2.9.1rc0-100-g0964b04ee3 | v2.9.1rc0-331-gf1fa8df324 | Compatible with -15 (no packet change) |
@@ -41,9 +42,15 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] Stateless reset (format changed again in draft -17) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
+- [ ] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14.
 - [ ] ...
 </details>
 
+<details><summary>To-do items for draft -19 completion</summary>
+- [ ] Change of Version Negotiation packet, removal of VERSION_NEGOTIATION_ERROR (0x9) error code.
+- [ ] Removal of QuicVersion fields in TransportParameters.
+- [ ] idle_timeout (0x0001) was changed from seconds to milliseconds.
+</details>
 <details><summary>To-do items for draft -18 completion (completed)</summary>
 
 - [x] Rename ACK Blocks to ACK Ranges, move First ACK Range field, rename ECN Section -> ECN Counters. https://code.wireshark.org/review/31688
