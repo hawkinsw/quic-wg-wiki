@@ -23,6 +23,7 @@
 |Stateless Retry | S | A handshake that includes a Retry packet completes successfully |
 
 ##Optional Features Tested
+
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
 |Migration | M | A new CID is offered to the peer, and it migrates the connection to it |
