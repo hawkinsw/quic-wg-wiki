@@ -43,7 +43,7 @@ QUIC implementation in F5 TMOS
 - **Version:** draft-20
 - **Roles:** Server, Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** ``0xff000012`
+- **Protocol IDs:** `0xff000014`
 - **ALPN:** `hq-20`, `h3-20`
 - **Public server:** 208.85.208.226:4433
 
