@@ -22,7 +22,7 @@
 |0-RTT | Z | 0-RTT data is being sent and acted on |
 |Stateless Retry | S | A handshake that includes a Retry packet completes successfully |
 
-##Optional Features Tested
+## Optional Features Tested
 
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
