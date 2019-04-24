@@ -21,6 +21,10 @@
 |Resumption | R | Connection is established using TLS Resume Ticket |
 |0-RTT | Z | 0-RTT data is being sent and acted on |
 |Stateless Retry | S | A handshake that includes a Retry packet completes successfully |
+
+##Optional Features Tested
+|Feature | code | details  |
+|--------------------|:---:|------------------------|
 |Migration | M | A new CID is offered to the peer, and it migrates the connection to it |
 |Rebinding | B | The client moves to a different address or port, and the server migrates to it |
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
