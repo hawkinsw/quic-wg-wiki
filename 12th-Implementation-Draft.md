@@ -24,6 +24,8 @@
 
 ## Optional Features Tested
 
+(Note that H3 and Key Update are not "optional" in the spec, but many implementations have chosen to defer them)
+
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
 |Migration | M | A new CID is offered to the peer, and it migrates the connection to it |
