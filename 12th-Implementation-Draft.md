@@ -29,4 +29,6 @@
 |ECN | E | Set ECT(0) on outgoing packets and verify that ACK frames with ECN information are received. (Note: test can fail if path bleaches ECN) |
 
 ## Perf Features Tested
+|Feature | code | details  |
+|--------------------|:---:|------------------------|
 |Throughput | T | Download objects named 5000000 and 10000000 on separate connections over both HTTP/2 and HTTP/3 (0.9 if H3 not available). Overall transfer time should be no worse than 10% slower than HTTP/2. |
