@@ -40,10 +40,11 @@ QUIC implementation in Apache Traffic Server
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-18
+- **Version:** draft-20
 - **Roles:** Server, Client
 - **Handshake:** RFC 8446
 - **Protocol IDs:** ``0xff000012`
+- **ALPN:** `hq-20`, `h3-20`
 - **Public server:** 208.85.208.226:4433
 
 Note: This server always sends RETRY packets, but we can disable this on request.
@@ -52,10 +53,11 @@ Note: This server always sends RETRY packets, but we can disable this on request
 Client implementation for internal test purposes
 
 - **Language:** Python
-- **Version:** draft-17
+- **Version:** draft-20
 - **Roles:** Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff000011`
+- **ALPN:** `hq-20`, `h3-20`
+- **Protocol IDs:** `0xff000014`
 
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
 
