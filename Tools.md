@@ -6,7 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -20 | | | Patches pending (wire compatible) |
+ | -20 | v3.1.0rc0-615-g28773689e0 | | Done. |
  | -19 | v3.1.0rc0-520-ga65f7f5838 / 3.0.2 | | Done. |
  | -18 | v2.9.1rc0-487-gd486593ce3 | | Done since v2.9.1rc0-500-g064a5c90ca |
  | -17 | v2.9.1rc0-332-ga0b9e8b652 | | Done since v2.9.1rc0-456-g19630453bf |
@@ -48,10 +48,10 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -20 completion (pending)</summary>
+<details><summary>To-do items for draft -20 completion (completed)</summary>
 
 - [ ] Stateless reset format has changed again. (It was not supported before anyway)
-- [ ] New transport error code: CRYPTO_BUFFER_EXCEEDED(0xD) https://code.wireshark.org/review/32961
+- [x] New transport error code: CRYPTO_BUFFER_EXCEEDED(0xD) https://code.wireshark.org/review/32961
 </details>
 
 <details><summary>To-do items for draft -19 completion (completed)</summary>
