@@ -2,12 +2,12 @@
 **This is a listing of tools for analysing, debugging and visualising QUIC (and potentially the HTTP mapping). See also the [Implementations listing](Implementations).**
 
 # Wireshark
-[Wireshark](https://wireshark.org/) has a GQUIC decoder<sup>1</sup> and IETF-QUIC decoder. HTTP analysis is possible via integration with the [HTTP/2 decoder](https://wiki.wireshark.org/HTTP2). To enable handshake/payload decryption, use a Wireshark version that matches the QUIC version:
+[Wireshark](https://wireshark.org/) has a GQUIC decoder<sup>1</sup> and IETF-QUIC decoder. ~~HTTP analysis is possible via integration with the [HTTP/2 decoder](https://wiki.wireshark.org/HTTP2).~~ http3 is not yet supported. To enable handshake/payload decryption, use a Wireshark version that matches the QUIC version:
 
- | draft | First Wireshark version | Last WS version | notes |
+ | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -20 | | TODO |
- | -19 | v3.1.0rc0-520-ga65f7f5838 | | Done. |
+ | -20 | | | Patches pending (wire compatible) |
+ | -19 | v3.1.0rc0-520-ga65f7f5838 / 3.0.2 | | Done. |
  | -18 | v2.9.1rc0-487-gd486593ce3 | | Done since v2.9.1rc0-500-g064a5c90ca |
  | -17 | v2.9.1rc0-332-ga0b9e8b652 | | Done since v2.9.1rc0-456-g19630453bf |
  | -16 | v2.9.1rc0-100-g0964b04ee3 | v2.9.1rc0-331-gf1fa8df324 | Compatible with -15 (no packet change) |
@@ -42,17 +42,16 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [ ] Key Update: verify decrypted result before switching cipher.
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
-- [ ] Stateless reset (format changed again in draft -17) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
+- [ ] Stateless reset (format changed again in draft -17 and -20) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
 - [ ] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14.
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -20 completion (incomplete)</summary>
+<details><summary>To-do items for draft -20 completion (pending)</summary>
 
-- [ ] Add Spin bit
-- [ ] Stateless reset format has changed again.
-- [ ] New transport error code: CRYPTO_BUFFER_EXCEEDED(0xD)
+- [ ] Stateless reset format has changed again. (It was not supported before anyway)
+- [ ] New transport error code: CRYPTO_BUFFER_EXCEEDED(0xD) https://code.wireshark.org/review/32961
 </details>
 
 <details><summary>To-do items for draft -19 completion (completed)</summary>
