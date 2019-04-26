@@ -177,10 +177,10 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
 
 - **Language:** Rust
-- **Version:** draft-18
+- **Version:** draft-19
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff000012`
+- **Protocol IDs:** `0xff000013`
 - **Public server:** quic.tech:4433 (HTTP/0.9) / quic.tech:8443 (HTTP/3)
 
 ### [QUICker](https://github.com/rmarx/quicker/tree/draft-15)
