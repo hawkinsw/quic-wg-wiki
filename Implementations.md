@@ -268,6 +268,16 @@ A QUIC implementation in Go.
 
 The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
 
+### [Flupke](https://bitbucket.org/pjtr/flupke)
+Flupke is a HTTP3 client build on top of Kwik. 
+
+- **Language:** Java
+- **Transport library:** [Kwik](https://bitbucket.org/pjtr/kwik)
+- **HTTP3 Version:** draft-19
+- **QUIC Verson:** draft-19
+- **Roles:** client library
+- **Public server:** n.a. (client only)
+
 ### [nghq](https://github.com/bbc/nghq)
 nghq implements the HTTP over QUIC mapping atop ngtcp2.
 
