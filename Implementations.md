@@ -33,7 +33,7 @@ QUIC implementation in Apache Traffic Server
 - **Public server:** 
   - quic.ogre.com:4433
   - quic.ogre.com:4434 (Stateless Retry)
-  - quic.ogre.com:4443 (Preferred Address 4434 -> 4433)
+  - quic.ogre.com:4443 (Preferred Address 4443 -> 4433)
   - https://quic.ogre.com/cgi-bin/quic_log.cgi (Debug logs)
 
 ### f5
