@@ -109,12 +109,12 @@ an iQUIC library meant to track standardization milestones.
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
 
-### mvfst
+### mvfst (https://github.com/facebookincubator/mvfst)
 
 mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 
 - **Language:** C++
-- **Version:** draft-09, draft-15
+- **Version:** draft-19
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000009`, `0xff00000f` 
