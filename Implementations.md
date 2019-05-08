@@ -356,7 +356,7 @@ Library which is made from sources and dependencies extracted from Chromium's QU
 LiteSpeed QUIC implementation for use with LiteSpeed server products.
 
 - **Language:**  C, C++
-- **Version:** Q035, Q039, Q043, and Q044.
+- **Version:** Q035, Q039, Q043, Q044, and Q046.
 - **Roles:** Server and Client.  The latter is available as an [open-source library](https://github.com/litespeedtech/lsquic-client).
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
