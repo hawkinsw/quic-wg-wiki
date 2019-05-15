@@ -10,6 +10,16 @@ If you are working on a QUIC implementation, please consider joining the [QUIC D
 
 The following stacks implement the IETF versions of QUIC Transport. They may include an application layer mapping other than IETF HTTP over QUIC e.g. HTTP/0.9
 
+### [aioquic](https://github.com/aiortc/aioquic)
+
+QUIC implementation using Python and asyncio.
+
+- **Language:** Python
+- **Version:** draft-20
+- **Roles:** client, server, library
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014` 
+
 ### AppleQUIC
 
 AppleQUIC is a client and server implementation.  
