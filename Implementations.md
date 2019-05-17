@@ -18,7 +18,7 @@ QUIC implementation using Python and asyncio.
 - **Version:** draft-20
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014` 
+- **Protocol IDs:** `0xff000013`, `0xff000014` 
 - **Public server:** quic.aiortc.org:4433 (HTTP/0.9)
 
 ### AppleQUIC
