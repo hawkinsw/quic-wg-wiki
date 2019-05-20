@@ -24,12 +24,13 @@ Automated builds (macOS and Windows) for (odd-numbered) development versions: ht
 Upstream bug (with sample captures/keys): https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
 
-For payload decryption (>= draft -13), the QUIC traffic secrets are required. The TLS key log file follows the TLS 1.3 labels (with `QUIC_` prepended). Every line follows the format `<label> <ClientRandom> <TrafficSecret>` where `<label>` is one of:
-`QUIC_CLIENT_EARLY_TRAFFIC_SECRET`, 
-`QUIC_CLIENT_HANDSHAKE_TRAFFIC_SECRET`, 
-`QUIC_SERVER_HANDSHAKE_TRAFFIC_SECRET`, 
-`QUIC_CLIENT_TRAFFIC_SECRET_0`, 
-`QUIC_SERVER_TRAFFIC_SECRET_0`. Example: https://github.com/ngtcp2/ngtcp2/pull/84
+For payload decryption (>= draft -13), the QUIC traffic secrets are required. The TLS key log file follows the TLS 1.3 labels. Every line follows the format `<label> <ClientRandom> <TrafficSecret>` where `<label>` is one of:
+`CLIENT_EARLY_TRAFFIC_SECRET`, 
+`CLIENT_HANDSHAKE_TRAFFIC_SECRET`, 
+`SERVER_HANDSHAKE_TRAFFIC_SECRET`, 
+`CLIENT_TRAFFIC_SECRET_0`, 
+`SERVER_TRAFFIC_SECRET_0`. Example: https://github.com/ngtcp2/ngtcp2/pull/84
+NOTE: The `QUIC_` prefix has been dropped in v3.1.0rc0-836-gcc50ec3634
 
 For payload decryption (<= draft -12), the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
 
@@ -39,11 +40,12 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 <details><summary>General issues</summary>
 
 - [ ] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
-- [ ] Key Update: verify decrypted result before switching cipher.
+- [x] Key Update: verify decrypted result before switching cipher. https://code.wireshark.org/review/33279
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] Stateless reset (format changed again in draft -17 and -20) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
-- [ ] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14.
+- [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
+- [ ] Stream reassembly support (maybe even Follow QUIC Stream like Follow TCP Stream?)
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [ ] ...
 </details>
