@@ -159,7 +159,7 @@ The behavior of qvalve is configured with rules specified in a simple language.
 The "Spindump" tool is a Unix command-line utility that can be used for latency monitoring in traffic passing through an interface. The tool performs passive, in-network monitoring. It is not a tool to monitor traffic content or metadata of individual connections, and indeed that is not possible in the Internet as most connections are encrypted. The tool looks at the characteristics of transport protocols, such as the QUIC Spin Bit, and attempts to derive information about round-trip times for individual connections or for the aggregate or average values. The tool supports TCP, QUIC, COAP, DNS, and ICMP traffic.
 
 - **Language:** C
-- **Version:** draft-16, draft-17
+- **Version:** google QUIC, draft-16, draft-17, draft-18, draft-19, draft-20
 - **Roles:** in-network tool
 - **Handshake:** QUIC only, does not peek into TLS or HTTP messaging inside
 - **Protocol IDs:** `0x00000001` `0xff000010`, `0xff000011`, `0x50435131`, etc.
