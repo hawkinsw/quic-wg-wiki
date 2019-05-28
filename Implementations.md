@@ -64,16 +64,6 @@ QUIC implementation in F5 TMOS
 
 Note: This server always sends RETRY packets, but we can disable this on request.
 
-### f5_test
-Client implementation for internal test purposes
-
-- **Language:** Python
-- **Version:** draft-20
-- **Roles:** Client
-- **Handshake:** RFC 8446
-- **ALPN:** `hq-20`, `h3-20`
-- **Protocol IDs:** `0xff000014`
-
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
 
 Kwik is a QUIC client (library) in Java.
