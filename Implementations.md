@@ -308,7 +308,7 @@ It does not depend on any particular QUIC transport implementation.
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
 
 - **Language:** C
-- **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
+- **Version:** [-08](https://tools.ietf.org/html/draft-ietf-quic-qpack-08)
 
 ### f5
 
