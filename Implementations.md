@@ -231,10 +231,10 @@ Rust implementation with a pure state machine and futures-based async I/O. TLS p
 Rust implementation based on tokio/futures, using rustls for TLS.
 
 - **Language:** Rust
-- **Version:** draft-17
+- **Version:** draft-20
 - **Roles:** library, client, server
-- **Handshake:** TLS 1.3 (final)
-- **Protocol IDs:** `0xff000011`
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0xff000014`
 - **Public server:** ralith.com:4433
 
 ### sora_quic
