@@ -32,7 +32,7 @@ For payload decryption (>= draft -13), the QUIC traffic secrets are required. Th
 `SERVER_TRAFFIC_SECRET_0`. Example: https://github.com/ngtcp2/ngtcp2/pull/84
 NOTE: The `QUIC_` prefix has been dropped in v3.1.0rc0-836-gcc50ec3634
 
-For payload decryption (<= draft -12), the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
+For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
 
 <sup>1</sup>Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
 
@@ -47,6 +47,7 @@ For payload decryption (<= draft -12), the TLS Exporter secret is required which
 - [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
 - [ ] Stream reassembly support (maybe even Follow QUIC Stream like Follow TCP Stream?)
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
+- [ ] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
 </details>
 
