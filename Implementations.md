@@ -60,7 +60,7 @@ QUIC implementation in F5 TMOS
 - **Handshake:** RFC 8446
 - **Protocol IDs:** `0xff000014`
 - **ALPN:** `hq-20`, `h3-20`
-- **Public server:** 208.85.208.226:4433
+- **Public server:** 204.134.187.194:4433
 
 Note: This server always sends RETRY packets, but we can disable this on request.
 
