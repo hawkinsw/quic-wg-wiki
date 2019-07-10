@@ -7,9 +7,9 @@ finally, draft-17 changed the salt, the KDF function, and the labels.
 
 Early interop tests of draft-07 showed that a test vector for the key derivation
 would be useful. They still are for the new versions. They were updated for
-draft-09, draft-10, draft-14, and now for draft-17.
+draft-09, draft-10, draft-14, draft-17, and now draft-21.
 
-#draft-21 Test Vectors
+# draft-21 Test Vectors
 ## Connection parameters:
 
 The connection ID used in the test vector is:
