@@ -51,6 +51,13 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] ...
 </details>
 
+<details><summary>To-do items for draft -21/-22 completion</summary>
+
+- [ ] DCID and SCID Len use 8 bits (and now SCID len is before SCID)
+- [ ] New initial salt
+- [ ] New TP:  active_connection_id_limit (0x000e)
+</details>
+
 <details><summary>To-do items for draft -20 completion (completed)</summary>
 
 - [ ] Stateless reset format has changed again. (It was not supported before anyway)
