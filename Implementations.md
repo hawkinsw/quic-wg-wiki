@@ -193,17 +193,18 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 - **Protocol IDs:** `0xff000014`
 - **Public server:** quic.tech:4433 (HTTP/0.9) / quic.tech:8443 (HTTP/3)
 
-### [QUICker](https://github.com/rmarx/quicker/tree/draft-15)
+### [QUICker](https://github.com/rmarx/quicker)
 
-QUICker is a NodeJS/TypeScript based QUIC implementation from the University of Hasselt, Belgium. 
-NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support-draft-15
+QUICker is a NodeJS/TypeScript based QUIC and HTTP/3 implementation from the University of Hasselt, Belgium. 
+NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support-draft-18
+Live logs available at https://quic.edm.uhasselt.be/quicker/logs/
 
 - **Language:** TypeScript
-- **Version:** draft-15
+- **Version:** draft-20
 - **Roles:** client,server,library
-- **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00000f`
-- **Public server:** quicker.edm.uhasselt.be:4433
+- **Handshake:** TLS 1.3 (RFC8446)
+- **Protocol IDs:** `0xff000014`
+- **Public server:** quicker.edm.uhasselt.be:4433 (both HTTP/0.9 and HTTP/3 based on ALPN)
 
 
 ### [quicly](https://github.com/h2o/quicly)
