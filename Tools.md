@@ -10,8 +10,8 @@
  | -21 | v3.1.0rc0-1288-gbafe354 | | Done |
  | -20 | v3.1.0rc0-615-g28773689e0 | v3.1.0rc0-1286-gb2a437e | Done. |
  | -19 | v3.1.0rc0-520-ga65f7f5838 / 3.0.2 | v3.1.0rc0-1286-gb2a437e | Done. |
- | -18 | v2.9.1rc0-487-gd486593ce3 | v3.1.0rc0-1286-gb2a437e | Done since v2.9.1rc0-500-g064a5c90ca |
- | -17 | v2.9.1rc0-332-ga0b9e8b652 | v3.1.0rc0-1286-gb2a437e | Done since v2.9.1rc0-456-g19630453bf |
+ | -18 | v2.9.1rc0-487-gd486593ce3 | v3.1.0rc0-1285-g954b958aa1 | Done since v2.9.1rc0-500-g064a5c90ca |
+ | -17 | v2.9.1rc0-332-ga0b9e8b652 | v3.1.0rc0-1285-g954b958aa1 | Done since v2.9.1rc0-456-g19630453bf |
  | -16 | v2.9.1rc0-100-g0964b04ee3 | v2.9.1rc0-331-gf1fa8df324 | Compatible with -15 (no packet change) |
  | -15 | v2.9.0rc0-2528-g9bd1c8f155 | v2.9.1rc0-331-gf1fa8df324 | Available on 2.9.0 |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | v2.9.1rc0-108-g075785bd20 | Done. |
