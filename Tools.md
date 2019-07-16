@@ -6,8 +6,8 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -22 | | | WIP |
- | -21 | | | WIP |
+ | -22 | | | Patches pending review |
+ | -21 | | | Patches pending review |
  | -20 | v3.1.0rc0-615-g28773689e0 | | Done. |
  | -19 | v3.1.0rc0-520-ga65f7f5838 / 3.0.2 | | Done. |
  | -18 | v2.9.1rc0-487-gd486593ce3 | | Done since v2.9.1rc0-500-g064a5c90ca |
@@ -53,18 +53,17 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -21/-22 completion</summary>
+<details><summary>To-do items for draft -22 completion</summary>
 
-- [ ] Long Header/VN: DCIL(4) + SCIL(4) + DCID(0/32..144) + SCID(...) -> DCIL(8) + DCID(0..2040) + SCIL(8) + SCID(...)
+- [ ] Long Header/VN: DCIL(4) + SCIL(4) + DCID(0/32..144) + SCID(...) -> DCIL(8) + DCID(0..2040) + SCIL(8) + SCID(...) https://code.wireshark.org/review/33961
 </details>
 
 <details><summary>To-do items for draft -21 completion</summary>
 
-- [ ] New initial salt: 0x7fbcdb0e7c66bbe9193a96cd21519ebd7a02644a
-- [ ] Remove AEAD_AES_256_CCM
-- [ ] New TP: active_connection_id_limit (0x000e)
-- [ ] CONNECTION_CLOSE/STOP_SENDING/RESET_STREAM frame: error code 16-bit -> variable length integer (max 62-bit)
-- [ ] NEW_CONNECTION_FRAME: new Retire Prior To (i) field after Sequence Number (i)
+- [ ] New initial salt: 0x7fbcdb0e7c66bbe9193a96cd21519ebd7a02644a https://code.wireshark.org/review/33959
+- [ ] New TP: active_connection_id_limit (0x000e) https://code.wireshark.org/review/33959
+- [ ] CONNECTION_CLOSE/STOP_SENDING/RESET_STREAM frame: error code 16-bit -> variable length integer (max 62-bit) https://code.wireshark.org/review/33960
+- [ ] NEW_CONNECTION_FRAME: new Retire Prior To (i) field after Sequence Number (i) https://code.wireshark.org/review/33959
 </details>
 
 <details><summary>To-do items for draft -20 completion (completed)</summary>
