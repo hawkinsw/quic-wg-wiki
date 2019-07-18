@@ -2,9 +2,9 @@
 
 * QUIC Version draft-22 (vn=**ff000016**)
 
-* HTTP 3 (ALPN=**h3-20**)
+* HTTP 3 (ALPN=**h3-22**)
 
-* HTTP 0.9/1.1 (ALPN=**hq-20**)
+* HTTP 0.9/1.1 (ALPN=**hq-22**)
 
 * Record interop results at [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1965785440)
 
