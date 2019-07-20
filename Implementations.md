@@ -350,17 +350,17 @@ Work-in-progress QUIC implementation for Go. This is based on libquic library.
 - **Public server:**
 
 
-### [libquic](https://github.com/devsisters/libquic/)
+### [Chromium](https://www.chromium.org/quic/playing-with-quic)
 
-Library which is made from sources and dependencies extracted from Chromium's QUIC Implementation with a few modifications and patches to minimize dependencies needed to build QUIC library.
+Chromium's QUIC Implementation.
 
 - **Language:**  C, C++
-- **Version:** Q030, Q031, Q032, Q033, Q033, Q034, Q035, Q036.
-- **Roles:** library
-- **Handshake:** QUIC Crypto
-- **Protocol IDs:**
-- **Public server:**
-
+- **Version:** Q039, Q043, Q046, draft-22.
+- **Roles:** library, client, server
+- **Handshake:** QUIC Crypto, TLS
+- **Protocol IDs:** `0xff000016`
+- **ALPN:** `h3-22`
+- **Public server:** https://quic.rocks:4433/
 
 
 ### [lsquic](https://www.litespeedtech.com/products)
