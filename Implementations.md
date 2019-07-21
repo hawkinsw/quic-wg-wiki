@@ -271,7 +271,7 @@ Winquic is Microsoft's QUIC client and server implementation.
 A QUIC implementation in Go.
 
 - **Language:** Go
-- **Version:** draft-18, draft-19
+- **Version:** draft-22
 - **Roles:** client, library, server
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:**
