@@ -361,6 +361,7 @@ Chromium's QUIC Implementation.
 - **Protocol IDs:** `0xff000016`
 - **ALPN:** `h3-22`
 - **Public server:** https://quic.rocks:4433/
+- **Entry in Interop Matrix:** ~gQUIC
 
 
 ### [lsquic](https://www.litespeedtech.com/products)
