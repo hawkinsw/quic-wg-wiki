@@ -20,7 +20,7 @@ Servers generate their Connection IDs, but numerous trusted devices it the path 
 
 * **Main contact:** Martin Duke, martin.h.duke@gmail.com
 * **Forum:** There is a google group. Email Martin to join.
-* **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]]
+* **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]], https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
 
 ### Other proposals
 
