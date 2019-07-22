@@ -1,6 +1,6 @@
 # QUIC-Related IETF Activities and Proposals 
 
-This page collects information about the various QUIC-related proposals and activities happening or proposals in the wider IETF space. Please add to this list and update the various items as needed. Feel free to use the given template:
+This page collects information about the various QUIC-related proposals and activities happening or proposed for the wider IETF space. Please add to this list and update the various items as needed. Feel free to use the given template:
 
 ```
 ### Short Activity/Proposal Title
