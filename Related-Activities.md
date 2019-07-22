@@ -22,6 +22,16 @@ Servers generate their Connection IDs, but numerous trusted devices it the path 
 * **Forum:** There is a google group. Email Martin to join.
 * **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]], https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
 
+### Datagram Payloads
+
+Some applications, particularly those that need to transmit real-time data, prefer to transmit data unreliably. These applications can build directly upon UDP as a transport, and can add security with DTLS. Extending QUIC to support transmitting unreliable application data would provide another option for secure datagrams, with the added benefit of sharing a cryptographic and authentication context used for reliable streams.
+
+This proposal defines DATAGRAM QUIC frame types, which carry application data without requiring retransmissions.
+
+* **Main contact:** Tommy Pauly, tpauly@apple.com
+* **Forum:** datagram channel in QUIC slack, or QUIC email list.
+* **Materials:** https://github.com/tfpauly/draft-pauly-quic-datagram
+
 ### qlog logging format and associated tooling and visualizations
 qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations would output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported (partially) by quicker, lsquic, mvfst, quant and aioquic. 
 
@@ -32,7 +42,6 @@ qlog is a proposal for a flexible, interoperable endpoint logging format/schema 
 ### Other proposals
 
 * MASQUE
-* datagram
 * media
 * multipath
 * lossbits
@@ -45,4 +54,3 @@ qlog is a proposal for a flexible, interoperable endpoint logging format/schema 
 
 
 ## Historic Proposals
-
