@@ -6,7 +6,7 @@ This page collects information about the various QUIC-related proposals and acti
 ### Short Activity/Proposal Title
 A sentence or three on what this is about and how it relates to the chartered QUIC work in the IETF.
 * **Main contact:** Names and email addresses of a small number of main contacts.
-* **Forum:** Mailing list, Slack channel, etc. for interested parties to learn more and join he effort.
+* **Forum:** Mailing list, Slack channel, etc. for interested parties to learn more and join the effort.
 * **Materials:** GitHub repo, I-Ds, papers, etc. Links to relevant material.
 ```
 
