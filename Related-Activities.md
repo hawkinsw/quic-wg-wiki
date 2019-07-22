@@ -39,12 +39,22 @@ qlog is a proposal for a flexible, interoperable endpoint logging format/schema 
 * **Forum:** qlog@ietf.org, #qlog in the QUIC slack, github issues on the repo (see below)
 * **Materials:** https://github.com/quiclog, https://tools.ietf.org/html/draft-marx-qlog-main-schema-00, https://tools.ietf.org/html/draft-marx-qlog-event-definitions-quic-h3-00, https://quic.edm.uhasselt.be, https://quic.edm.uhasselt.be/qtr-to-qlog/
 
+### Loss Bits
+
+Packet loss detection and localization is critical to operating networks.  Using two loss bits, preferably in QUIC header, allows passive observers to identify, measure, and localize loss as upstream or downstream of the observer.  The proposal is supported by a real world implementation with data derived from actual end-user connections in a number of countries.
+
+* **Main contacts:** Lubashev, Igor <ilubashe@akamai.com>; Alexandre Ferrieux <alexandre.ferrieux@orange.com>; Isabelle Hamchaoui <isabelle.hamchaoui@orange.com>
+* **Forum:** github issues on the repo (see below); TBD for mailing list (ETA: Wednesday)
+* **Materials:**
+** GitHub: https://github.com/igorlord/draft-ferrieuxhamchaoui-tsvwg-lossbits
+** I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
+** Slides: TBD (ETA: Friday)
+
 ### Other proposals
 
 * MASQUE
 * media
 * multipath
-* lossbits
 * auth handshake
 * 0rtt-bdp
 * multicast 
