@@ -50,13 +50,20 @@ Packet loss detection and localization is critical to operating networks.  Using
   * I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
   * Slides: TBD (ETA: Friday)
 
+### 0rtt-bdp
+This memo discusses a solution where the client is informed about path parameters: both the client and the server can contribute to the reduction of the time-to-service for subsequent connections.
+* **Main contact:** Nicolas Kuhn (nicolas.kuhn@cnes.fr), Emile Stephan (emile.stephan@orange.com), Gorry Fairhurst (gorry@erg.abdn.ac.uk)
+* **Forum:** github issues on the repo (see below); QUIC mailing list
+* **Materials:** 
+  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP/tree/master/draft-quic-0rtt-bdp
+  * I-D: https://datatracker.ietf.org/doc/draft-kuhn-quic-0rtt-bdp/ 
+
 ### Other proposals
 
 * MASQUE
 * media
 * multipath
 * auth handshake
-* 0rtt-bdp
 * multicast 
 * satellite / etosat
 * FEC
