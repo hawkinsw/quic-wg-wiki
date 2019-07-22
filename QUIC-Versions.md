@@ -23,6 +23,6 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0xf10000[00-ff] | IETF | QUIC-LB |
 | 0xf123f0c[0-f] | Mozilla | MozQuic |
 | 0xfaceb00[0-f] | Facebook | mvfst |
-| 0xff000000-ffffff] | IETF | draft-ietf-quic-transport-xx |
+| 0xff[000000-ffffff] | IETF | draft-ietf-quic-transport-xx |
 | 0xf0f0f0f[0-f] | ETH Zürich | Measurability experiments |
 | 0xf0f0f1f[0-f] | Telecom Italia | Measurability experiments |
