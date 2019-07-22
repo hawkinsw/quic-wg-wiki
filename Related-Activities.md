@@ -67,9 +67,17 @@ This memo identifies the characteristics of a SATCOM link that impact the operat
   * GitHub : https://github.com/NicoKos/QUIC_HIGH_BDP
   * I-D: https://tools.ietf.org/html/draft-kuhn-quic-4-sat-00
 
+### MASQUE
+MASQUE is a mechanism that allows co-locating and obfuscating networking applications behind an HTTPS web server. The currently prevalent use-case is to allow running a proxy or VPN server that is indistinguishable from an HTTPS server to any unauthenticated observer. The proxy will be aware of QUIC and will be able to proxy QUIC by having the client and proxy collaborate.
+
+* **Main contact:** David Schinazi <dschinazi.ietf@gmail.com>
+* **Forum:** MASQUE IETF mailing list <masque@ietf.org>
+* **Materials:**
+  * I-D: https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html
+  * GitHub: https://github.com/DavidSchinazi/masque-drafts
+
 ### Other proposals
 
-* MASQUE
 * media
 * multipath
 * auth handshake
