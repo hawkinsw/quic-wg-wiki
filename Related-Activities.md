@@ -46,9 +46,9 @@ Packet loss detection and localization is critical to operating networks.  Using
 * **Main contacts:** Lubashev, Igor <ilubashe@akamai.com>; Alexandre Ferrieux <alexandre.ferrieux@orange.com>; Isabelle Hamchaoui <isabelle.hamchaoui@orange.com>
 * **Forum:** github issues on the repo (see below); TBD for mailing list (ETA: Wednesday)
 * **Materials:**
-** GitHub: https://github.com/igorlord/draft-ferrieuxhamchaoui-tsvwg-lossbits
-** I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
-** Slides: TBD (ETA: Friday)
+  * GitHub: https://github.com/igorlord/draft-ferrieuxhamchaoui-tsvwg-lossbits
+  * I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
+  * Slides: TBD (ETA: Friday)
 
 ### Other proposals
 
