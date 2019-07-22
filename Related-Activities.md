@@ -51,12 +51,21 @@ Packet loss detection and localization is critical to operating networks.  Using
   * Slides: TBD (ETA: Friday)
 
 ### 0rtt-bdp
+
 This memo discusses a solution where the client is informed about path parameters: both the client and the server can contribute to the reduction of the time-to-service for subsequent connections.
 * **Main contact:** Nicolas Kuhn (nicolas.kuhn@cnes.fr), Emile Stephan (emile.stephan@orange.com), Gorry Fairhurst (gorry@erg.abdn.ac.uk)
 * **Forum:** github issues on the repo (see below); QUIC mailing list
 * **Materials:** 
-  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP/tree/master/draft-quic-0rtt-bdp
+  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP/draft-quic-0rtt-bdp
   * I-D: https://datatracker.ietf.org/doc/draft-kuhn-quic-0rtt-bdp/ 
+
+### satellite / etosat
+This memo identifies the characteristics of a SATCOM link that impact the operation of the QUIC transport protocol and proposes best current practice to ensure acceptable protocol performance.
+* **Main contact:** Nicolas Kuhn (nicolas.kuhn@cnes.fr), Gorry Fairhurst (gorry@erg.abdn.ac.uk), John Border (border@hns.com) and Emile Stephan (emile.stephan@orange.com)
+* **Forum:** github issues on the repo (see below); QUIC mailing list
+* **Materials:** 
+  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP/draft-quic-4-sat
+  * I-D: https://tools.ietf.org/html/draft-kuhn-quic-4-sat-00
 
 ### Other proposals
 
