@@ -22,6 +22,13 @@ Servers generate their Connection IDs, but numerous trusted devices it the path 
 * **Forum:** There is a google group. Email Martin to join.
 * **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]], https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
 
+### qlog logging format and associated tooling and visualizations
+qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations would output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported (partially) by quicker, lsquic, mvfst, quant and aioquic. 
+
+* **Main contact:** robin.marx@uhasselt.be
+* **Forum:** qlog@ietf.org, #qlog in the QUIC slack, github issues on the repo (see below)
+* **Materials:** https://github.com/quiclog, https://tools.ietf.org/html/draft-marx-qlog-main-schema-00, https://tools.ietf.org/html/draft-marx-qlog-event-definitions-quic-h3-00, https://quic.edm.uhasselt.be, https://quic.edm.uhasselt.be/qtr-to-qlog/
+
 ### Other proposals
 
 * MASQUE
@@ -34,7 +41,6 @@ Servers generate their Connection IDs, but numerous trusted devices it the path 
 * multicast 
 * satellite / etosat
 * FEC
-* qlog
 * quic-network-sim
 
 
