@@ -13,11 +13,18 @@ A sentence or three on what this is about and how it relates to the chartered QU
 ## Active Proposals
 
 Below is a (not necessarily complete) list of things the chairs are aware of at the moment. Whoever feels in charge for one of the items below should feel free to create an entry (using the template) in this section, and then remove the bullet item from the list:
+### QUIC-LB
+
+Servers generate their Connection IDs, but numerous trusted devices it the path (load balancers, DDOS boxes, crypto offload, local switch disaggregators) need access to some of the encoded data in those CIDs, while that same data is opaque to untrusted observers. QUIC-LB defines multiple encoding strategies to allow this cooperation between servers and trusted intermediaries.
+
+* **Main contact:** Martin Duke, martin.h.duke@gmail.com
+* **Forum:** There is a google group. Email Martin to join.
+* **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]]
+
 * MASQUE
 * datagram
 * media
 * multipath
-* LB
 * lossbits
 * auth handshake
 * 0rtt-bdp
