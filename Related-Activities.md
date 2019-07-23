@@ -107,7 +107,9 @@ Multipath is an extension enabling QUIC to make use of several network paths con
   * GitHub: https://github.com/qdeconinck/draft-deconinck-multipath-quic
   * Blog: https://multipath-quic.org
 
-### Other proposals
+## Other Proposals
+
+Please create more detailed sections for these above.
 
 * media
 * auth handshake
