@@ -19,8 +19,10 @@ Below is a (not necessarily complete) list of things the chairs are aware of at 
 Servers generate their Connection IDs, but numerous trusted devices it the path (load balancers, DDOS boxes, crypto offload, local switch disaggregators) need access to some of the encoded data in those CIDs, while that same data is opaque to untrusted observers. QUIC-LB defines multiple encoding strategies to allow this cooperation between servers and trusted intermediaries.
 
 * **Main contact:** Martin Duke, martin.h.duke@gmail.com
-* **Forum:** There is a google group. Email Martin to join.
-* **Materials:** [[https://github.com/martinduke/draft-duke-quic-load-balancers]], https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
+* **Forum:** There is a Google group. Email Martin to join.
+* **Materials:**
+  * https://github.com/martinduke/draft-duke-quic-load-balancers
+  * https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
 
 ### Datagram Payloads
 
@@ -29,7 +31,7 @@ Some applications, particularly those that need to transmit real-time data, pref
 This proposal defines DATAGRAM QUIC frame types, which carry application data without requiring retransmissions.
 
 * **Main contact:** Tommy Pauly, tpauly@apple.com
-* **Forum:** datagram channel in QUIC slack, or QUIC email list.
+* **Forum:** #datagram channel in QUIC slack, or QUIC email list.
 * **Materials:** https://github.com/tfpauly/draft-pauly-quic-datagram
 
 ### qlog logging format and associated tooling and visualizations
@@ -37,14 +39,24 @@ qlog is a proposal for a flexible, interoperable endpoint logging format/schema 
 
 * **Main contact:** Robin Marx, robin.marx@uhasselt.be
 * **Forum:** qlog@ietf.org, #qlog in the QUIC slack, github issues on the repo (see below)
-* **Materials:** https://github.com/quiclog, https://tools.ietf.org/html/draft-marx-qlog-main-schema-00, https://tools.ietf.org/html/draft-marx-qlog-event-definitions-quic-h3-00, https://quic.edm.uhasselt.be, https://quic.edm.uhasselt.be/qtr-to-qlog/
+* **Materials:**
+  * https://github.com/quiclog
+  * https://tools.ietf.org/html/draft-marx-qlog-main-schema
+  * https://tools.ietf.org/html/draft-marx-qlog-event-definitions-quic-h3
+  * https://quic.edm.uhasselt.be
+  * https://quic.edm.uhasselt.be/qtr-to-qlog/
 
 ### Loss Bits
 
 Packet loss detection and localization is critical to operating networks.  Using two loss bits, preferably in QUIC header, allows passive observers to identify, measure, and localize loss as upstream or downstream of the observer.  The proposal is supported by a real world implementation with data derived from actual end-user connections in a number of countries.
 
-* **Main contacts:** Lubashev, Igor <ilubashe@akamai.com>; Alexandre Ferrieux <alexandre.ferrieux@orange.com>; Isabelle Hamchaoui <isabelle.hamchaoui@orange.com>
-* **Forum:** github issues on the repo (see below); TBD for mailing list (ETA: Wednesday)
+* **Main contacts:** 
+  * Lubashev, Igor <ilubashe@akamai.com>
+  * Alexandre Ferrieux <alexandre.ferrieux@orange.com>
+  * Isabelle Hamchaoui <isabelle.hamchaoui@orange.com>
+* **Forum:**
+  * github issues on the repo (see below)
+  * TBD for mailing list (ETA: Wednesday)
 * **Materials:**
   * GitHub: https://github.com/igorlord/draft-ferrieuxhamchaoui-tsvwg-lossbits
   * I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
@@ -53,18 +65,25 @@ Packet loss detection and localization is critical to operating networks.  Using
 ### 0rtt-bdp
 
 This memo discusses a solution where the client is informed about path parameters: both the client and the server can contribute to the reduction of the time-to-service for subsequent connections.
-* **Main contact:** Nicolas Kuhn (nicolas.kuhn@cnes.fr), Emile Stephan (emile.stephan@orange.com), Gorry Fairhurst (gorry@erg.abdn.ac.uk)
+* **Main contact:**
+  * Nicolas Kuhn (nicolas.kuhn@cnes.fr)
+  * Emile Stephan (emile.stephan@orange.com)
+  * Gorry Fairhurst (gorry@erg.abdn.ac.uk)
 * **Forum:** QUIC mailing list or GitHub issues on the repo
 * **Materials:** 
-  * GitHub : https://github.com/NicoKos/QUIC_HIGH_BDP
+  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP
   * I-D: https://datatracker.ietf.org/doc/draft-kuhn-quic-0rtt-bdp/ 
 
 ### satellite / etosat
 This memo identifies the characteristics of a SATCOM link that impact the operation of the QUIC transport protocol and proposes best current practice to ensure acceptable protocol performance.
-* **Main contact:** Nicolas Kuhn (nicolas.kuhn@cnes.fr), Gorry Fairhurst (gorry@erg.abdn.ac.uk), John Border (border@hns.com) and Emile Stephan (emile.stephan@orange.com)
+* **Main contact:** 
+  * Nicolas Kuhn (nicolas.kuhn@cnes.fr)
+  * Gorry Fairhurst (gorry@erg.abdn.ac.uk)
+  * John Border (border@hns.com)
+  * Emile Stephan (emile.stephan@orange.com)
 * **Forum:** QUIC mailing list or GitHub issues on the repo
 * **Materials:** 
-  * GitHub : https://github.com/NicoKos/QUIC_HIGH_BDP
+  * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP
   * I-D: https://tools.ietf.org/html/draft-kuhn-quic-4-sat-00
 
 ### MASQUE
@@ -79,7 +98,9 @@ MASQUE is a mechanism that allows co-locating and obfuscating networking applica
 ### Multipath
 Multipath is an extension enabling QUIC to make use of several network paths concurrently over a single connection. The two main use-cases are bandwidth aggregation and network resiliency.
 
-* **Main contact:** Quentin De Coninck <quentin.deconinck@uclouvain.be>, Olivier Bonaventure <olivier.bonaventure@uclouvain.be>
+* **Main contact:**
+  * Quentin De Coninck <quentin.deconinck@uclouvain.be>
+  * Olivier Bonaventure <olivier.bonaventure@uclouvain.be>
 * **Forum:** TBD
 * **Materials:**
   * I-D: https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/
