@@ -32,7 +32,9 @@ This proposal defines DATAGRAM QUIC frame types, which carry application data wi
 
 * **Main contact:** Tommy Pauly, tpauly@apple.com
 * **Forum:** #datagram channel in QUIC slack, or QUIC email list.
-* **Materials:** https://github.com/tfpauly/draft-pauly-quic-datagram
+* **Materials:** 
+  * https://github.com/tfpauly/draft-pauly-quic-datagram
+  * https://tools.ietf.org/html/draft-pauly-quic-datagram-03
 
 ### qlog logging format and associated tooling and visualizations
 qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations would output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported (partially) by quicker, lsquic, mvfst, quant and aioquic. 
