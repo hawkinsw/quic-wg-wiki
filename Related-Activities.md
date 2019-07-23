@@ -112,7 +112,6 @@ Multipath is an extension enabling QUIC to make use of several network paths con
 * media
 * auth handshake
 * multicast 
-* satellite / etosat
 * FEC
 * quic-network-sim
 
