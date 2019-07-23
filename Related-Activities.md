@@ -24,7 +24,7 @@ Servers generate their Connection IDs, but numerous trusted devices it the path 
   * https://github.com/martinduke/draft-duke-quic-load-balancers
   * https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
 
-### Datagram Payloads
+### Datagram Frames
 
 Some applications, particularly those that need to transmit real-time data, prefer to transmit data unreliably. These applications can build directly upon UDP as a transport, and can add security with DTLS. Extending QUIC to support transmitting unreliable application data would provide another option for secure datagrams, with the added benefit of sharing a cryptographic and authentication context used for reliable streams.
 
