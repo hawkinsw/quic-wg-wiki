@@ -76,10 +76,19 @@ MASQUE is a mechanism that allows co-locating and obfuscating networking applica
   * I-D: https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html
   * GitHub: https://github.com/DavidSchinazi/masque-drafts
 
+### Multipath
+Multipath is an extension enabling QUIC to make use of several network paths concurrently over a single connection. The two main use-cases are bandwidth aggregation and network resiliency.
+
+* **Main contact:** Quentin De Coninck <quentin.deconinck@uclouvain.be>, Olivier Bonaventure <olivier.bonaventure@uclouvain.be>
+* **Forum:** TBD
+* **Materials:**
+  * I-D: https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/
+  * GitHub: https://github.com/qdeconinck/draft-deconinck-multipath-quic
+  * Blog: https://multipath-quic.org
+
 ### Other proposals
 
 * media
-* multipath
 * auth handshake
 * multicast 
 * satellite / etosat
