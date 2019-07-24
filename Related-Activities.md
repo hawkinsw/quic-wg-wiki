@@ -58,7 +58,7 @@ Packet loss detection and localization is critical to operating networks.  Using
   * Isabelle Hamchaoui <isabelle.hamchaoui@orange.com>
 * **Forum:**
   * github issues on the repo (see below)
-  * TBD for mailing list (ETA: Wednesday)
+  * ietf-loss-bits@googlegroups.com (ietf-loss-bits Google Group)
 * **Materials:**
   * GitHub: https://github.com/igorlord/draft-ferrieuxhamchaoui-tsvwg-lossbits
   * I-D: https://tools.ietf.org/html/draft-ferrieuxhamchaoui-tsvwg-lossbits
