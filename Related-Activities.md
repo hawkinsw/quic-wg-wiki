@@ -66,7 +66,7 @@ Packet loss detection and localization is critical to operating networks.  Using
 
 ### 0rtt-bdp
 
-This memo discusses a solution where the client is informed about path parameters: both the client and the server can contribute to the reduction of the time-to-service for subsequent connections.
+This memo discusses a solution where the client is informed about path parameters: both the client and the server can contribute to the reduction of the time-to-service for subsequent connections. The information can not be seen within the network and is only known at the client and server levels.
 * **Main contact:**
   * Nicolas Kuhn (nicolas.kuhn@cnes.fr)
   * Emile Stephan (emile.stephan@orange.com)
