@@ -80,12 +80,12 @@ Kwik is a QUIC client (library) in Java.
 LiteSpeed QUIC client library.  Works on Linux, FreeBSD, MacOS, and Windows.
 
 - **Language:**  C
-- **Version:** [Draft-20](https://github.com/litespeedtech/lsquic-client/tree/201904301637-ietf-ID-20), Q035, Q039, Q043, Q044, and Q046.
+- **Version:** Draft-22, Q039, Q043, and Q046.
 - **Roles:** Client
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff000014`
 - **Public server:**
-  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-20 as well as Google QUIC versions Q035, Q039, Q043, Q044, and Q046
+  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-22 as well as Google QUIC versions Q039, Q043, and Q046
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
