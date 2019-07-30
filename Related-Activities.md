@@ -36,6 +36,16 @@ This proposal defines DATAGRAM QUIC frame types, which carry application data wi
   * https://github.com/tfpauly/draft-pauly-quic-datagram
   * https://tools.ietf.org/html/draft-pauly-quic-datagram
 
+### quic-network-simulator
+
+The QUIC Network Simulator is a [ns-3](https://www.nsnam.org/)-based network simulator that allows performance measurements of QUIC implementations under various network conditions. The docker-based setup can be used to run different implementations on the client and the server side. An important use case is running QUIC and TCP traffic across the same link.
+
+* **Main contacts:** 
+  * Marten Seemann <martenseemann@gmail.com>
+  * Jana Iyengar <jri.ietf@gmail.com>
+* **Forum**: #quic-network-sim in the QUIC slack, Github issues on the repo (see below)
+* **Materials:** https://github.com/marten-seemann/quic-network-simulator/
+
 ### qlog logging format and associated tooling and visualizations
 qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations would output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported (partially) by quicker, lsquic, mvfst, quant and aioquic. 
 
@@ -117,7 +127,6 @@ Please create more detailed sections for these above.
 * auth handshake
 * multicast 
 * FEC
-* quic-network-sim
 
 
 ## Historic Proposals
