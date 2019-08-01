@@ -315,8 +315,10 @@ It does not depend on any particular QUIC transport implementation.
 
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
 
+A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanilla C.  Bindings are available for [Go](https://github.com/mpiraux/ls-qpack-go), [Python](https://github.com/aiortc/pylsqpack), and [TypeScript](https://github.com/rmarx/quicker/tree/draft-20/src/http/http3/common/qpack).
+
 - **Language:** C
-- **Version:** [-08](https://tools.ietf.org/html/draft-ietf-quic-qpack-08)
+- **Version:** [-09](https://tools.ietf.org/html/draft-ietf-quic-qpack-09)
 
 ### f5
 
