@@ -69,10 +69,10 @@ Note: This server always sends RETRY packets, but we can disable this on request
 Kwik is a QUIC client (library) in Java.
 
 - **Language:** Java
-- **Version:** draft-17, draft-18, draft-19, draft-20
+- **Version:** draft-17, draft-18, draft-19, draft-20, draft-22
 - **Roles:** client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014`     
+- **Protocol IDs:** `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014`, `0xff000016`    
 
 
 ### lsquic
@@ -286,8 +286,8 @@ Flupke is a HTTP3 client build on top of Kwik.
 
 - **Language:** Java
 - **Transport library:** [Kwik](https://bitbucket.org/pjtr/kwik)
-- **HTTP3 Version:** draft-20
-- **QUIC Verson:** draft-20
+- **HTTP3 Version:** draft-22
+- **QUIC Verson:** draft-22
 - **Roles:** client library
 - **Public server:** n.a. (client only)
 
