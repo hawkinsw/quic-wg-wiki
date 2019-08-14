@@ -119,6 +119,21 @@ Multipath is an extension enabling QUIC to make use of several network paths con
   * GitHub: https://github.com/qdeconinck/draft-deconinck-multipath-quic
   * Blog: https://multipath-quic.org
 
+### WebTransport
+
+WebTransport is a framework for bidirectional communications between web applications and servers.  It provides, among other things, QuicTransport, an API that allows webapps to create a direct QUIC connection to a valid remote server.
+
+* **Main contact:**
+  * Victor Vasiliev <vasilvv@google.com>
+  * David Schinazi <dschinazi.ietf@gmail.com>
+* **Forum:** https://www.ietf.org/mailman/listinfo/webtransport
+* **Materials:**
+  * https://tools.ietf.org/html/draft-vvv-webtransport-overview
+  * https://tools.ietf.org/html/draft-vvv-webtransport-quic
+  * https://github.com/WICG/web-transport/blob/master/explainer.md
+  * https://wicg.github.io/web-transport/
+
+
 ## Other Proposals
 
 Please create more detailed sections for these above.
