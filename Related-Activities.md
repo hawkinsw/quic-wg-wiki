@@ -133,6 +133,19 @@ WebTransport is a framework for bidirectional communications between web applica
   * https://github.com/WICG/web-transport/blob/master/explainer.md
   * https://wicg.github.io/web-transport/
 
+### Pluginized QUIC
+
+Pluginized QUIC is a framework that enables QUIC clients and servers to dynamically exchange protocol plugins that extend the protocol on a per-connection basis.
+
+* **Main contact:** 
+  * Quentin De Coninck <quentin.deconinck@uclouvain.be>
+  * François Michel <francois.michel@uclouvain.be>
+  * Maxime Piraux <maxime.piraux@uclouvain.be>
+  * Olivier Bonaventure <olivier.bonaventure@uclouvain.be>
+* **Forum:** TBD
+* **Materials:**
+  * https://pquic.org/
+  * https://github.com/p-quic/
 
 ## Other Proposals
 
