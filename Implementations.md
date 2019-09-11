@@ -75,13 +75,13 @@ Kwik is a QUIC client (library) in Java.
 - **Protocol IDs:** `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014`, `0xff000016`    
 
 
-### lsquic
+### [lsquic](https://github.com/litespeedtech/lsquic)
 
-LiteSpeed QUIC client library.  Works on Linux, FreeBSD, MacOS, and Windows.
+LiteSpeed QUIC library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
 - **Version:** Draft-22, Q039, Q043, and Q046.
-- **Roles:** Client
+- **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff000016`
 - **Public server:**
@@ -371,8 +371,8 @@ Chromium's QUIC Implementation.
 LiteSpeed QUIC implementation for use with LiteSpeed server products.
 
 - **Language:**  C, C++
-- **Version:** Q035, Q039, Q043, Q044, and Q046.
-- **Roles:** Server and Client.  The latter is available as an [open-source library](https://github.com/litespeedtech/lsquic-client).
+- **Version:** Q039, Q043, and Q046.
+- **Roles:** Server and Client.  Both are available as an [open-source library](https://github.com/litespeedtech/lsquic).  Alternatively, use the full-featured web server: [OpenLiteSpeed](https://openlitespeed.org/).
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
 - **Public server:**
