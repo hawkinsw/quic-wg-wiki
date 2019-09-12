@@ -255,9 +255,9 @@ QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 - **Handshake:** TLS 1.3 (RFC 8446)
 - **Protocol IDs:** `0xff000013`
 
-### Winquic
+### Msquic
 
-Winquic is Microsoft's QUIC client and server implementation.
+Msquic is Microsoft's QUIC client and server implementation.
 
 - **Language:** C
 - **Version:** draft-22
