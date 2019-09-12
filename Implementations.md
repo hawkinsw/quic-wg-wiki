@@ -19,7 +19,6 @@ QUIC implementation using Python and asyncio.
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000017`, `0xff000016`
-- **ALPN:** `h3-23`, `h3-22`, `hq-23`, `hq-22`
 - **Public server:**
   - quic.aiortc.org:4433
   - quic.aiortc.org:4434 (Stateless Retry)
