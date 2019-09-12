@@ -53,9 +53,11 @@ There is a [qifs repository](https://github.com/qpackers/qifs) that contains a c
 
 The encoder and decoder must use the same parameters in order to be interoperable.  The parameters are:
 
-1. Dynamic Table Size - the size (in bytes) of the shared dynamic table
+1. Maximum Dynamic Table Capacity - the maximum allowed capacity of the shared dynamic table in bytes
 2. Max blocked streams - maximum number of blocked streams that the decoder allows
 3. Acknowledgement Mode - immediate(1) or none(0)
+
+For historical reasons, the initial dynamic table capacity is the maximum dynamic table capacity.
 
 ## Encoder Output / Decoder Input
 
