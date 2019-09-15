@@ -6,6 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -23 | | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60| | Done |
  | -21 | v3.1.0rc0-1288-gbafe354 | | Done |
  | -20 | v3.1.0rc0-615-g28773689e0 / 3.0.2 | 3.0.x / v3.1.0rc0-1286-gb2a437e | Done. |
@@ -51,6 +52,14 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
+</details>
+
+<details><summary>To-do items for draft -23 completion</summary>
+
+- [ ] Update initial Salt https://code.wireshark.org/review/34517 
+- [ ] Rename TP (disable_migration => disable_active_migration) https://code.wireshark.org/review/34517
+- [ ] Remove INVALID_MIGRATION error codeh ttps://code.wireshark.org/review/34517
+- [ ] There is now Reserved TP ( When TP = 31 * N + 27)
 </details>
 
 <details><summary>To-do items for draft -22 completion (completed)</summary>
