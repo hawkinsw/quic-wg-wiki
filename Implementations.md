@@ -138,10 +138,10 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 Implementation of QUIC for NGINX based on quiche by Cloudflare
 
 - **Language:** C
-- **Version:** draft-20
+- **Version:** draft-22
 - **Roles:** server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff000014`
+- **Protocol IDs:** `0xff000016`
 - **Public server:** cloudflare-quic.com:443 (HTTP/3 only)
 
 ### Pandora
@@ -188,10 +188,10 @@ QUANT is a general transport library and does *NOT* implement H3.
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
 
 - **Language:** Rust
-- **Version:** draft-20
+- **Version:** draft-23
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff000014`
+- **Protocol IDs:** `0xff000017`
 - **Public server:** quic.tech:4433 (HTTP/0.9) / quic.tech:8443 (HTTP/3)
 
 ### [QUICker](https://github.com/rmarx/quicker)
