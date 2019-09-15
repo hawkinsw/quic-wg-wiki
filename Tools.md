@@ -41,7 +41,7 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 ## Wireshark draft support
 <details><summary>General issues</summary>
 
-- [ ] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
+- [x] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
 - [x] Key Update: verify decrypted result before switching cipher. https://code.wireshark.org/review/33279
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
@@ -49,7 +49,7 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
 - [ ] Stream reassembly support (maybe even Follow QUIC Stream like Follow TCP Stream?)
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
-- [ ] 0-RTT decryption support https://code.wireshark.org/review/33695
+- [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
 </details>
 
