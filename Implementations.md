@@ -164,10 +164,10 @@ pandora.cm.in.tum.de:4433 (the server log is accessible via http[s]://pandora.cm
 A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD/IOS.
 
 - **Language:** C
-- **Version:** draft-20/22 (but not 21)
+- **Version:** draft-22/23
 - **Roles:** library and test tools, test client, test server
 - **Handshake:** TLS 1.3 (also supports 26, 27 and 28) + support for QUIC extension (suppress EOED)
-- **Protocol IDs:** `0xff000014`, `0xff000016`
+- **Protocol IDs:** `0xff000016`, `0xff000017`
 - **Public server:** test.privateoctopus.com:4433 (server log accessible at https://test.privateoctopus.com/)
 
 ### [quant](https://github.com/NTAP/quant)
