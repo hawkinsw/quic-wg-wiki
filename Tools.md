@@ -6,8 +6,8 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -23 | | | Done |
- | -22 | v3.1.0rc0-1289-g3967f60| | Done |
+ | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
+ | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
  | -21 | v3.1.0rc0-1288-gbafe354 | | Done |
  | -20 | v3.1.0rc0-615-g28773689e0 / 3.0.2 | 3.0.x / v3.1.0rc0-1286-gb2a437e | Done. |
  | -19 | v3.1.0rc0-520-ga65f7f5838 / 3.0.2 | 3.0.x / v3.1.0rc0-1286-gb2a437e | Done. |
