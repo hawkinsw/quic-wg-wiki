@@ -82,7 +82,7 @@ LiteSpeed QUIC library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key 
 - **Version:** Draft-23, Q039, Q043, and Q046.
 - **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
-- **Protocol IDs:** `0xff000016`
+- **Protocol IDs:** `0xff000017`
 - **Public server:**
   - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-22 as well as Google QUIC versions Q039, Q043, and Q046
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
