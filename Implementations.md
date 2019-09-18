@@ -79,7 +79,7 @@ Kwik is a QUIC client (library) in Java.
 LiteSpeed QUIC library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
-- **Version:** Draft-22, Q039, Q043, and Q046.
+- **Version:** Draft-23, Q039, Q043, and Q046.
 - **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff000016`
@@ -317,7 +317,7 @@ It does not depend on any particular QUIC transport implementation.
 A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanilla C.  Bindings are available for [Go](https://github.com/mpiraux/ls-qpack-go), [Python](https://github.com/aiortc/pylsqpack), and [TypeScript](https://github.com/rmarx/quicker/tree/draft-20/src/http/http3/common/qpack).
 
 - **Language:** C
-- **Version:** [-09](https://tools.ietf.org/html/draft-ietf-quic-qpack-09)
+- **Version:** [-10](https://tools.ietf.org/html/draft-ietf-quic-qpack-10)
 
 ### f5
 
