@@ -310,6 +310,16 @@ It does not depend on any particular QUIC transport implementation.
 - **Roles:** library
 - **Public server:** nghttp2.org:4433
 
+### [proxygen](https://github.com/facebook/proxygen)
+proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the transport.
+
+- **Language:** C++
+- **Transport library:** MVFST
+- **HTTP over QUIC Version:** draft-22
+- **Roles:** library, sample server/client
+- **Public server:** fb.mvfst.net:4433, facebook.com:443
+
+
 ## QPACK
 
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
@@ -333,6 +343,12 @@ A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanil
 
 - **Language:** Rust
 - **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
+
+### [proxygen](https://github.com/facebook/proxygen)
+
+- **Language:** C++
+- **Version:** [-10](https://tools.ietf.org/html/draft-ietf-quic-qpack-10)
+
 
 ## Google QUIC
 
