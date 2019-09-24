@@ -112,6 +112,18 @@ an iQUIC library meant to track standardization milestones.
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
 
+### MsQuic
+
+MsQuic is Microsoft's QUIC client and server implementation.
+
+- **Language:** C
+- **Version:** draft-23
+- **Roles:** client, server
+- **Handshake:** TLS 1.3 RFC
+- **Protocol IDs:** `0xff000017`
+- **Public server:** quic.westus.cloudapp.azure.com:4433 (retry on 4434)
+
+
 ### [mvfst](https://github.com/facebookincubator/mvfst)
 
 mvfst (pronounced move fast) is an implementation of QUIC by Facebook
@@ -253,17 +265,6 @@ QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 - **Roles:** server,library
 - **Handshake:** TLS 1.3 (RFC 8446)
 - **Protocol IDs:** `0xff000013`
-
-### Msquic
-
-Msquic is Microsoft's QUIC client and server implementation.
-
-- **Language:** C
-- **Version:** draft-22
-- **Roles:** client, server
-- **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff000016`
-- **Public server:** quic.westus.cloudapp.azure.com:4433 (retry on 4434)
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
