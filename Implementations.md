@@ -373,11 +373,11 @@ Work-in-progress QUIC implementation for Go. This is based on libquic library.
 Chromium's QUIC Implementation.
 
 - **Language:**  C, C++
-- **Version:** Q039, Q043, Q046, draft-22.
+- **Version:** Q039, Q043, Q046, draft-23.
 - **Roles:** library, client, server
 - **Handshake:** QUIC Crypto, TLS
-- **Protocol IDs:** `0xff000016`
-- **ALPN:** `h3-22`
+- **Protocol IDs:** `0xff000017`
+- **ALPN:** `h3-23`
 - **Public server:** https://quic.rocks:4433/
 - **Entry in Interop Matrix:** ~gQUIC
 
