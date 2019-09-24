@@ -112,7 +112,7 @@ an iQUIC library meant to track standardization milestones.
 - **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
 
 
-### MsQuic
+### msquic
 
 Microsoft's general purpose QUIC implementation.
 
