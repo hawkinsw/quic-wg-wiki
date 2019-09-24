@@ -114,7 +114,7 @@ an iQUIC library meant to track standardization milestones.
 
 ### MsQuic
 
-MsQuic is Microsoft's QUIC client and server implementation.
+Microsoft's general purpose QUIC implementation.
 
 - **Language:** C
 - **Version:** draft-23
