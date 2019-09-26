@@ -20,7 +20,7 @@ QUIC implementation using Python and asyncio.
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000017`, `0xff000016`
 - **Public server:**
-  - quic.aiortc.org:4433
+  - quic.aiortc.org:443
   - quic.aiortc.org:4434 (Stateless Retry)
 
 ### AppleQUIC
