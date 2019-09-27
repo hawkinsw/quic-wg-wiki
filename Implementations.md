@@ -39,10 +39,10 @@ AppleQUIC is a client and server implementation.
 QUIC implementation in Apache Traffic Server
 
 - **Language:** C++
-- **Version:** draft-22
+- **Version:** draft-23
 - **Roles:** Server, Client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000016`
+- **Protocol IDs:** `0xff000017`
 - **Public server:** 
   - quic.ogre.com:4433
   - quic.ogre.com:4434 (Stateless Retry)
