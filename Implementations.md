@@ -88,19 +88,6 @@ LiteSpeed QUIC library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key 
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
-
-### [minq](https://www.github.com/ekr/minq)
-
-Minimal QUIC implementation with emphasis on readability and simplicity. Very un-baked but will track the emerging document. Library plus test programs.
-
-- **Language:** Go
-- **Version:** draft-11 (almost)
-- **Roles:** client and server
-- **Handshake:** TLS 1.3-28 (with https://github.com/bifurcation/mint/pull/196)
-- **Protocol IDs:** `0xff00000b`
-- **Public server:** minq.dev.mozaws.net:4433, logs available at https://minq.dev.mozaws.net:3000/<client-connection-id-hex>
-
-
 ### [mozquic](https://github.com/mcmanus/mozquic)
 an iQUIC library meant to track standardization milestones.
 
