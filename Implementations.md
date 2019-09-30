@@ -266,16 +266,6 @@ Flupke is a HTTP3 client build on top of Kwik.
 - **Roles:** client library
 - **Public server:** n.a. (client only)
 
-### [nghq](https://github.com/bbc/nghq)
-nghq implements the HTTP over QUIC mapping atop ngtcp2.
-
-- **Language:** C
-- **Transport library:** ngtcp2
-- **HTTP over QUIC Version:** draft-09
-- **Roles:** library, (non-IETF roles: multicast receiver, multicast sender)
-- **Handshake:** TBD
-- **Public server:** TBD
-
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
 nghttp3 is an implementation of HTTP/3 mapping over QUIC and QPACK in C.
 It does not depend on any particular QUIC transport implementation.
