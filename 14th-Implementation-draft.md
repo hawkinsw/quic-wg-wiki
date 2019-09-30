@@ -34,7 +34,7 @@
 |H3 | 3 | An H3 transaction succeeded |
 |Spin | P | A connection with the spin succeeds and the bit is spinning |
 |ECN | E | Set ECT(0) on outgoing packets and verify that ACK frames with ECN information are received. (Note: test can fail if path bleaches ECN) |
-|Logging | L | There is some form of **structured** logging available from the implementation (e.g., qlog, quic-trace) |
+|Logging | L | There is some form of **structured** logging available from both the implementations (e.g., qlog, quic-trace) |
 
 ## Perf Features Tested
 |Feature | code | details  |
