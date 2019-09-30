@@ -233,18 +233,6 @@ QUIC protocol implementation for H2O server
   - kazuhooku.com:4433 (HTTP/0.9)
   - kazuhooku.com:8443 (HTTP/3)
 
-
-### [quicr](https://github.com/Ralith/quicr)
-
-Rust implementation with a pure state machine and futures-based async I/O. TLS provided by OpenSSL. Merged with Quinn (below).
-
-- **Language:** Rust
-- **Version:** draft-11
-- **Roles:** library, client, server
-- **Handshake:** TLS 1.3-28
-- **Protocol IDs:** `0xff00000b`
-- **Public server:** ralith.com:4433
-
 ### [Quinn](https://github.com/djc/quinn)
 
 Rust implementation based on tokio/futures, using rustls for TLS.
