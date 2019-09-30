@@ -16,7 +16,7 @@ The connection ID used in the test vector is:
 ~~~
 0xc654efd8a31b4792
 ~~~
-This version number corresponds to draft-21, which says:
+This version number corresponds to draft-23, which says:
 ~~~
 
    initial_salt = c3eef712c72ebb5a11a7d2432bb46365bef9f502
