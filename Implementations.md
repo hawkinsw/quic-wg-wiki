@@ -391,4 +391,4 @@ Caddy 0.9 has experimental QUIC support, powered by lucas-clemente/quic-go. Read
 - **Roles:** server
 - **Handshake:** QUIC Crypto (production)
 - **Protocol IDs:**
-- **Public server:** [hnrk.io:443](https://hnrk.io) (Q039, Q043 & Q044)
+- **Public server:** 
