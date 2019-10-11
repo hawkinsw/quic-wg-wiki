@@ -2,7 +2,7 @@ To interop QPACK without a functional QUIC transport, a sequence of HTTP request
 
 Because the QPACK Decoder’s output is normally part of the input to the QPACK encoder via the decoder stream, offline interop requires making assumptions about the decoder’s behavior.  Two modes are possible: 
 
-1. Immediate acknowledgement - the encoder assumes that the decoder acknowledges all header blocks immediately after they are encoded.
+1. Immediate acknowledgement - the encoder assumes that the decoder acknowledges insertions into the dynamic table as soon as header block is sent.
 2. No acknowledgement - the encoder treats all header blocks as unacknowledged
 
 ## Interop Overview
