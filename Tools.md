@@ -54,12 +54,12 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -23 completion</summary>
+<details><summary>To-do items for draft -23 completion (completed)</summary>
 
-- [ ] Update initial Salt https://code.wireshark.org/review/34517 
-- [ ] Rename TP (disable_migration => disable_active_migration) https://code.wireshark.org/review/34517
-- [ ] Remove INVALID_MIGRATION error codeh ttps://code.wireshark.org/review/34517
-- [ ] There is now Reserved TP ( When TP = 31 * N + 27)
+- [x] Update initial Salt https://code.wireshark.org/review/34517 
+- [x] Rename TP (disable_migration => disable_active_migration) https://code.wireshark.org/review/34517
+- [x] Remove INVALID_MIGRATION error code https://code.wireshark.org/review/34517
+- [X] There is now Reserved TP ( When TP = 31 * N + 27) https://code.wireshark.org/review/c/34701/
 </details>
 
 <details><summary>To-do items for draft -22 completion (completed)</summary>
