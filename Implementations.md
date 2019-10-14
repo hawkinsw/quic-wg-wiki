@@ -88,17 +88,6 @@ LiteSpeed QUIC library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key 
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
-### [mozquic](https://github.com/mcmanus/mozquic)
-an iQUIC library meant to track standardization milestones.
-
-- **Language:** c++ with C interface
-- **Version:**  -06
-- **Roles:** library, client, server
-- **Handshake:**   TLS 1.3-21 or -2
-- **Protocol IDs:** `0xff000005` and `0xf123f0c5` and `0xff000006` hq-05
-- **Public server:** mozquic.ducksong.com 4433 and 4434 (4434 does server stateless retry validations). more info at https://github.com/mcmanus/mozquic/wiki/Endpoint-mozquic.ducksong.com-port-4433
-
-
 ### msquic
 
 Microsoft's general purpose QUIC implementation.
@@ -121,6 +110,16 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000016` 
 - **Public server:** fb.mvfst.net:4433
+
+### [Neqo](https://github.com/mozilla/neqo)
+Mozilla/Firefox QUIC and HTTP3 implementation.
+
+- **Language:** Rust
+- **Version:**  draft-27
+- **Roles:** library, client, server (server needs work)
+- **Handshake:**   TLS 1.3
+- **Protocol IDs:** `0xff000017` h3-23
+- **Public server:** coming soon
 
 ### [ngtcp2](https://github.com/ngtcp2/ngtcp2)
 ngtcp2 project is an effort to implement IETF QUIC protocol
