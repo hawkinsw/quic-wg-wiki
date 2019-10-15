@@ -115,7 +115,7 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 Mozilla/Firefox QUIC and HTTP3 implementation.
 
 - **Language:** Rust
-- **Version:**  draft-27
+- **Version:**  draft-23
 - **Roles:** library, client, server (server needs work)
 - **Handshake:**   TLS 1.3
 - **Protocol IDs:** `0xff000017` h3-23
