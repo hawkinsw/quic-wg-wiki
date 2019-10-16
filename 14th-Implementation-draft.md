@@ -21,6 +21,7 @@
 |Resumption | R | Connection is established using TLS Resume Ticket |
 |0-RTT | Z | 0-RTT data is being sent and acted on |
 |Stateless Retry | S | A handshake that includes a Retry packet completes successfully |
+|Quantum Ready | Q | A handshake including the quantum readiness test TP completed successfully (see Quantum Readiness test on Wiki) |
 
 ## Optional Features Tested
 
