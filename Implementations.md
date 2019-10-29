@@ -105,7 +105,7 @@ Microsoft's general purpose QUIC implementation.
 mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 
 - **Language:** C++
-- **Version:** draft-22
+- **Version:** draft-23
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000016` 
