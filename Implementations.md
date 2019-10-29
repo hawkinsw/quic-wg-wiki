@@ -278,7 +278,7 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 
 - **Language:** C++
 - **Transport library:** MVFST
-- **HTTP over QUIC Version:** draft-22
+- **HTTP over QUIC Version:** draft-23
 - **Roles:** library, sample server/client
 - **Public server:** fb.mvfst.net:4433, facebook.com:443
 
