@@ -147,6 +147,19 @@ Pluginized QUIC is a framework that enables QUIC clients and servers to dynamica
   * https://pquic.org/
   * https://github.com/p-quic/
 
+### Performance Enhancement on Mobile networks 
+
+QUIC as a substrate draft (https://datatracker.ietf.org/doc/draft-kuehlewind-quic-substrate/) describes potential use cases where a QUIC proxy is expected in the path between client and server. One of the endpoint (likely the client) is expected to  be directly connected to the QUIC proxy.  This allows endpoints to make explicit decisions about the services they request from the proxies. For example - the access network ( e.g. mobile networks) have often different characteristics than rest of path on the Internet. In order to use the mobile network capacity efficiently, congestion control would need to be optimized differently. A QUIC proxy solution, similar as also proposed for MASQUE, could either assist the endpoint with additional information about the mobile link or enable different congestion control on an outer QUIC connection between that covers the mobile link only. 
+
+* **Main contact:** 
+   * Marcus Ihlar <marcus.ihlar@ericsson.com>
+   * Mirja Kuehlewind <mirja.kuehlewind@ericsson.com>
+   * Zaheduzzaman Sarker <zaheduzzaman.sarker@ericsson.com>
+* **Forum:** maque@ietf.org, or etosat@ietf.org for discussion regarding performance enhancements for challenging links
+* **Materials:**
+  * https://datatracker.ietf.org/doc/draft-kuehlewind-quic-substrate/
+
+
 ## Other Proposals
 
 Please create more detailed sections for these above.
