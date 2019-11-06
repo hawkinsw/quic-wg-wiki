@@ -6,7 +6,7 @@
 
 * HTTP 0.9/1.1 (ALPN=**hq-24**)
 
-* Record interop results [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1510984897)
+* Record interop results [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=117825384)
 
 * List of implementations [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
