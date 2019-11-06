@@ -6,6 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -24 | | WIP |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
  | -21 | v3.1.0rc0-1288-gbafe354 | | Done |
@@ -52,6 +53,12 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
+</details>
+
+<details><summary>To-do items for draft -24 completion</summary>
+
+- [ ] Forbid empty NEW_TOKEN frames.
+- [ ] Client Hello can span multiple packets, need to check whether this is correctly implemented.
 </details>
 
 <details><summary>To-do items for draft -23 completion (completed)</summary>
