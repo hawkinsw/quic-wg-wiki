@@ -15,10 +15,10 @@ The following stacks implement the IETF versions of QUIC Transport. They may inc
 QUIC implementation using Python and asyncio.
 
 - **Language:** Python
-- **Version:** draft-23
+- **Version:** draft-24
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000017`, `0xff000016`
+- **Protocol IDs:** `0xff000018`, `0xff000017`
 - **Public server:**
   - quic.aiortc.org:443
   - quic.aiortc.org:4434 (Stateless Retry)
