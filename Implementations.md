@@ -188,7 +188,7 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
 - **Protocol IDs:** `0xff000017`
-- **Public server:** quic.tech:4433 (HTTP/0.9) / quic.tech:8443 (HTTP/3)
+- **Public server:** quic.tech:4433 (HTTP/0.9 + 0-RTT) / quic.tech:8443 (HTTP/3 + 0-RTT) / quic.tech:8444 (HTTP/3 + Retry)
 
 ### [QUICker](https://github.com/rmarx/quicker)
 
