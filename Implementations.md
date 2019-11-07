@@ -290,7 +290,7 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanilla C.  Bindings are available for [Go](https://github.com/mpiraux/ls-qpack-go), [Python](https://github.com/aiortc/pylsqpack), and [TypeScript](https://github.com/rmarx/quicker/tree/draft-20/src/http/http3/common/qpack).
 
 - **Language:** C
-- **Version:** [-10](https://tools.ietf.org/html/draft-ietf-quic-qpack-10)
+- **Version:** [-11](https://tools.ietf.org/html/draft-ietf-quic-qpack-11)
 
 ### f5
 
