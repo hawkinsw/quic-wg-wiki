@@ -57,6 +57,7 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 
 <details><summary>To-do items for draft -24 completion</summary>
 
+- [ ] New "quic ku" label for Key Update https://github.com/quicwg/base-drafts/commit/85db1f7181
 - [ ] Forbid empty NEW_TOKEN frames.
 - [ ] Client Hello can span multiple packets, need to check whether this is correctly implemented.
 </details>
