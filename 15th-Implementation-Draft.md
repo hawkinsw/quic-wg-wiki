@@ -31,6 +31,7 @@
 |--------------------|:---:|------------------------|
 |Migration | M | A new CID is offered to the peer, and it migrates the connection to it |
 |Rebinding | B | The client moves to a different address or port, and the server migrates to it |
+|IP Mobility | I | The client moves to a different IP address (and/or address family), and the server migrates with it |
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
 |H3 | 3 | An H3 transaction succeeded |
 |Spin | P | A connection with the spin succeeds and the bit is spinning |
