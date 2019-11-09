@@ -361,11 +361,11 @@ LiteSpeed QUIC implementation for use with LiteSpeed server products.
 A QUIC implementation in Go. It has interop with Google QUIC (Chrome + GFE), and experimental support for IETF QUIC.
 
 - **Language:** Go
-- **Version:** Q039, Q043, Q044
+- **Version:** Q039, Q043, Q044, h3-23
 - **Roles:** client, library, server
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
-- **Public server:** seemann.io:443 (Q039), [hnrk.io:443](https://hnrk.io) (Q039, Q043 & Q044)
+- **Public server:** seemann.io:443 (Q039)
 
 
 ### [stellite](https://github.com/line/stellite)
@@ -381,11 +381,11 @@ Stellite project is a client library and server application that offers an easy 
 
 ### [caddyserver](https://github.com/lucas-clemente/quic-go)
 
-Caddy 0.9 has experimental QUIC support, powered by lucas-clemente/quic-go. Read more about [caddyservers QUIC](https://github.com/mholt/caddy/wiki/QUIC) implementation and usage
+Caddy v2 master has experimental HTTP/3 support, powered by [lucas-clemente/quic-go](https://github.com/lucas-clemente/quic-go).
 
 - **Language:** Go
-- **Version:** since 0.9 (experimental)
+- **Version:** since v2 (experimental)
 - **Roles:** server
 - **Handshake:** QUIC Crypto (production)
 - **Protocol IDs:**
-- **Public server:** 
+- **Public server:** hnrk.io:443 (h3-23)
