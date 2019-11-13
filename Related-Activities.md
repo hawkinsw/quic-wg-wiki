@@ -18,7 +18,9 @@ Below is a (not necessarily complete) list of things the chairs are aware of at 
 
 Servers generate their Connection IDs, but numerous trusted devices it the path (load balancers, DDOS boxes, crypto offload, local switch disaggregators) need access to some of the encoded data in those CIDs, while that same data is opaque to untrusted observers. QUIC-LB defines multiple encoding strategies to allow this cooperation between servers and trusted intermediaries.
 
-* **Main contact:** Martin Duke, martin.h.duke@gmail.com
+* **Main contacts:** 
+  * Martin Duke, martin.h.duke@gmail.com
+  * Nick Banks, nibanks@microsoft.com
 * **Forum:** There is a Google group. Email Martin to join.
 * **Materials:**
   * https://github.com/martinduke/draft-duke-quic-load-balancers
