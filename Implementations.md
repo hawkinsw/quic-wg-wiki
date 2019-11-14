@@ -268,14 +268,11 @@ Flupke is a HTTP3 client build on top of Kwik.
 LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
-- **Version:** Draft-24, Draft-23, Q039, Q043, and Q046.
+- **Transport Library:** lsquic
+- **Version:** Draft-24, Draft-23.
 - **Roles:** Client, Server, Library
-- **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff000018`, `0xff000017`
-- **Public server:**
-  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-24 and ID-23 as well as Google QUIC versions Q039, Q043, and Q046
-    - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
-  - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
+- **Public server:** www.litespeedtech.com:443
 
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
 nghttp3 is an implementation of HTTP/3 mapping over QUIC and QPACK in C.
