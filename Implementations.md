@@ -346,7 +346,7 @@ Work-in-progress QUIC implementation for Go. This is based on libquic library.
 Chromium's QUIC Implementation (draft-24 supported in Chrome 80.0.3963.0 and later).
 
 - **Language:**  C, C++
-- **Version:** Q039, Q043, Q046, Q050, draft-24.
+- **Version:** Q043, Q046, Q050, draft-24.
 - **Roles:** library, client, server
 - **Handshake:** QUIC Crypto, TLS
 - **Protocol IDs:** `0xff000018`
