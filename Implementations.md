@@ -93,10 +93,10 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.
 Microsoft's general purpose QUIC implementation.
 
 - **Language:** C
-- **Version:** draft-23
+- **Version:** draft-24
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff000017`
+- **Protocol IDs:** `0xff000018`
 - **Public server:** quic.westus.cloudapp.azure.com:4433 (retry on 4434)
 
 
