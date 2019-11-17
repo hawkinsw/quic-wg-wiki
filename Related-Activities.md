@@ -160,6 +160,7 @@ QUIC as a substrate draft (https://datatracker.ietf.org/doc/draft-kuehlewind-qui
 * **Forum:** maque@ietf.org, or etosat@ietf.org for discussion regarding performance enhancements for challenging links
 * **Materials:**
   * https://datatracker.ietf.org/doc/draft-kuehlewind-quic-substrate/
+  * https://datatracker.ietf.org/doc/draft-kuehlewind-quic-proxy-discovery/ 
 
 
 ## Other Proposals
