@@ -6,7 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -24 | | WIP |
+ | -24 | v3.1.2rc0-16-g71e03ef042 | | Done |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
  | -21 | v3.1.0rc0-1288-gbafe354 | | Done |
@@ -55,9 +55,9 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -24 completion</summary>
+<details><summary>To-do items for draft -24 completion (completed)</summary>
 
-- [ ] New "quic ku" label for Key Update https://github.com/quicwg/base-drafts/commit/85db1f7181
+- [x] New "quic ku" label for Key Update https://github.com/quicwg/base-drafts/commit/85db1f7181 https://code.wireshark.org/review/35145
 - [ ] Forbid empty NEW_TOKEN frames.
 - [ ] Client Hello can span multiple packets, need to check whether this is correctly implemented.
 </details>
