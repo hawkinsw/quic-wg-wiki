@@ -49,7 +49,9 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] Stateless reset (format changed again in draft -17 and -20) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
 - [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
-- [ ] Stream reassembly support (maybe even Follow QUIC Stream like Follow TCP Stream?)
+- [x] Initial Follow QUIC Stream support https://code.wireshark.org/review/34694
+- [ ] STREAM reassembly support
+- [ ] Out-of-order and retransmission handling is not implemented and will cause decryption/dissection failures. See https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881#c263
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
