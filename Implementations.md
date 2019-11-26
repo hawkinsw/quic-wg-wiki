@@ -222,10 +222,10 @@ QUIC protocol implementation for H2O server
 Quincy is an implementation of QUIC in Java, based on the Netty framework.
 
 - **Language:** Java
-- **Version:** unknown
+- **Version:** draft-20
 - **Roles:** library, client, server
 - **Handshake:** unknown
-- **Protocol IDs:** unknown
+- **Protocol IDs:** `0xff000014`
 - **Public server:** n/a
 
 ### [Quinn](https://github.com/djc/quinn)
