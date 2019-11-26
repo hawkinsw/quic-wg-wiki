@@ -217,6 +217,17 @@ QUIC protocol implementation for H2O server
   - quic.examp1e.net:4433 (HTTP/0.9)
   - h2o.examp1e.net:8443 (HTTP/3)
 
+### [Quincy](https://github.com/protocol7/quincy)
+
+Quincy is an implementation of QUIC in Java, based on the Netty framework.
+
+- **Language:** Java
+- **Version:** unknown
+- **Roles:** library, client, server
+- **Handshake:** unknown
+- **Protocol IDs:** unknown
+- **Public server:** n/a
+
 ### [Quinn](https://github.com/djc/quinn)
 
 Rust implementation based on tokio/futures, using rustls for TLS.
