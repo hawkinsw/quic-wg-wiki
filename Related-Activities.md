@@ -171,6 +171,7 @@ Please create more detailed sections for these above.
 * auth handshake
 * multicast 
 * FEC
+* delay and loss bits (draft-cfb-tsvwg-spinbit-new-measurements)
 
 
 ## Historic Proposals
