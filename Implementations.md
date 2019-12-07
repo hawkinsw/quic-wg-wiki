@@ -406,7 +406,7 @@ Stellite project is a client library and server application that offers an easy 
 Caddy v2 master has experimental HTTP/3 support, powered by [lucas-clemente/quic-go](https://github.com/lucas-clemente/quic-go).
 
 - **Language:** Go
-- **Version:** h3-23
+- **Version:** h3-24
 - **Roles:** server
 - **Handshake:** QUIC Crypto (production)
 - **Protocol IDs:**
