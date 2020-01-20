@@ -79,7 +79,7 @@ Kwik is a QUIC client (library) in Java.
 LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
-- **Version:** Draft-24, Draft-23, Q039, Q043, and Q046.
+- **Version:** Draft-24, Draft-23, Q043, Q046, and Q050.
 - **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
 - **Protocol IDs:** `0xff000018`, `0xff000017`
