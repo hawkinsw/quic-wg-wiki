@@ -6,6 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -25 | | | WIP |
  | -24 | v3.1.2rc0-16-g71e03ef042 | | Done |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
@@ -55,6 +56,15 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
+</details>
+
+<details><summary>To-do items for draft -25 completion</summary>
+
+- [ ] New INVALID_TOKEN, CONNECTION_ID_LIMIT_ERROR transport error
+- [ ] New HANDSHAKE_DONE frame type
+- [ ] Retry packet changes (Retry Integrity Tag), see commit f220d99943
+- [ ] Check DecodePacketNumber implementation (#3187)
+- [ ] Server have to change CID in Retry.
 </details>
 
 <details><summary>To-do items for draft -24 completion (completed)</summary>
