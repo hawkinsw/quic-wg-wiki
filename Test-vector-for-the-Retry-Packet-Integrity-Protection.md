@@ -1,3 +1,6 @@
+**OOPS. Lucy moved the football again. The values below do not match the latest draft, don't use them!**
+
+
 The Retry Packet Integrity protection is defined in section 5.8 of the TLS draft. It requires authenticating an augmented version of the Retry Packet with AEAD GCM128, for which:
 * The secret key, K, is 128 bits equal to 0xf5ed4642e0e4c8d878bbbc8a828821c9.
 * The nonce, N, is 96 bits all set to zero.
