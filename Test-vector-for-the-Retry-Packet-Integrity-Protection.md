@@ -1,9 +1,12 @@
-**OOPS. Lucy moved the football again. The values below do not match the latest draft, don't use them!**
-
-
 The Retry Packet Integrity protection is defined in section 5.8 of the TLS draft. It requires authenticating an augmented version of the Retry Packet with AEAD GCM128, for which:
-* The secret key, K, is 128 bits equal to 0xf5ed4642e0e4c8d878bbbc8a828821c9.
-* The nonce, N, is 96 bits all set to zero.
+
+*  The secret key, K, is 128 bits equal to `0x4d32ecdb2a2133c841e4043df27d4430.`
+*  The nonce, N, is 96 bits equal to `0x4d1611d05513a552c587d575`.
+
+The secret key and the nonce are values derived by calling `HKDF-Expand-Label` using	
+`0x656e61e336ae9417f7f0edd8d78d461e2aa7084aba7a14c1e9f726d55709169a` as	
+the secret, with labels being `quic key` and `quic iv`.
+
 We will test a Retry Packet with the following parameters:
 ```
 #define RETRY_PROTECTION_FIRST_BYTE 0xF5
@@ -51,6 +54,6 @@ uint8_t retry_protection_pseudo_packet[] = {
 We run AEAD encryption with the specified key and nonce, on an empty plain text and using the pseudo-packet as authenticated data. The result should be:
 ```
 uint8_t retry_integrity_checksum[16] = {
-    0x53, 0x1d, 0xb4, 0xc5, 0x88, 0x7a, 0x3a, 0xb0,
-    0x7a, 0xa4, 0xfa, 0x35, 0xc2, 0xfb, 0xa6, 0x95 };
+    0xf9, 0x50, 0xf8, 0x85, 0x71, 0x4b, 0xae, 0x7a,
+    0xf1, 0xe2, 0x86, 0x7d, 0xd8, 0xf7, 0x83, 0x92 };
 ```
