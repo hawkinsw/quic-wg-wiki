@@ -79,12 +79,12 @@ Kwik is a QUIC client (library) in Java.
 LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
-- **Version:** Draft-24, Draft-23, Q043, Q046, and Q050.
+- **Version:** Draft-25, Draft-24, Q043, Q046, and Q050.
 - **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
-- **Protocol IDs:** `0xff000018`, `0xff000017`
+- **Protocol IDs:** `0xff000019`, `0xff000018`
 - **Public server:**
-  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-24 and ID-23 as well as Google QUIC versions Q039, Q043, and Q046
+  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-25 and ID-24 as well as Google QUIC versions Q043, Q046, and Q050
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
@@ -280,9 +280,9 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.
 
 - **Language:**  C
 - **Transport Library:** lsquic
-- **Version:** Draft-24, Draft-23.
+- **Version:** Draft-25, Draft-24.
 - **Roles:** Client, Server, Library
-- **Protocol IDs:** `0xff000018`, `0xff000017`
+- **Protocol IDs:** `0xff000019`, `0xff000018`
 - **Public server:** www.litespeedtech.com:443
 
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
@@ -312,7 +312,7 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanilla C.  Bindings are available for [Go](https://github.com/mpiraux/ls-qpack-go), [Python](https://github.com/aiortc/pylsqpack), and [TypeScript](https://github.com/rmarx/quicker/tree/draft-20/src/http/http3/common/qpack).
 
 - **Language:** C
-- **Version:** [-11](https://tools.ietf.org/html/draft-ietf-quic-qpack-11)
+- **Version:** [-12](https://tools.ietf.org/html/draft-ietf-quic-qpack-12)
 
 ### f5
 
@@ -371,7 +371,7 @@ Chromium's QUIC Implementation (draft-24 supported in Chrome 80.0.3963.0 and lat
 LiteSpeed QUIC implementation for use with LiteSpeed server products.
 
 - **Language:**  C, C++
-- **Version:** Q039, Q043, Q046, Draft-23, Draft-24
+- **Version:** Q043, Q046, Q050, Draft-24, Draft-25
 - **Roles:** Server and Client.  Both are available as an [open-source library](https://github.com/litespeedtech/lsquic).  Alternatively, use the full-featured web server: [OpenLiteSpeed](https://openlitespeed.org/).
 - **Handshake:** QUIC Crypto
 - **Protocol IDs:**
