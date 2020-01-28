@@ -6,7 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -25 | | | WIP |
+ | -25 | v3.3.0rc0-452-gddc03b8c87 | | Done |
  | -24 | v3.1.2rc0-16-g71e03ef042 | | Done |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
@@ -42,6 +42,8 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 <sup>1</sup>Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
 
 ## Wireshark draft support
+Caveat: if you use non-standard draft version numbers in the version field, Wireshark will assume the latest draft version.
+
 <details><summary>General issues</summary>
 
 - [x] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
@@ -58,11 +60,12 @@ For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -25 completion</summary>
+<details><summary>To-do items for draft -25 completion (completed)</summary>
 
-- [ ] New INVALID_TOKEN, CONNECTION_ID_LIMIT_ERROR transport error
-- [ ] New HANDSHAKE_DONE frame type
-- [ ] Retry packet changes (Retry Integrity Tag), see commit f220d99943
+- [x] New INVALID_TOKEN, CONNECTION_ID_LIMIT_ERROR transport error https://code.wireshark.org/review/35917
+- [x] New HANDSHAKE_DONE frame type https://code.wireshark.org/review/35917
+- [x] Retry packet changes (Retry Integrity Tag), see commit f220d99943 https://code.wireshark.org/review/35963 https://code.wireshark.org/review/35973
+- [ ] Retry Integrity Tag validation https://code.wireshark.org/review/35978
 - [ ] Check DecodePacketNumber implementation (#3187)
 - [ ] Server have to change CID in Retry.
 </details>
