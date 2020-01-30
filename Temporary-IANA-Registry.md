@@ -1,5 +1,3 @@
-# Temporary IANA registry
-
 QUIC implementers have started experimenting with QUIC extensions, and have a need for codepoints to do interop testing. To avoid collisions, please list your experimental codepoints below. This page will be deleted once the official IANA registry is operational.
 
 ## QUIC Transport Parameters
