@@ -49,9 +49,9 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x1b        | PATH_RESPONSE        | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1c - 0x1d | CONNECTION_CLOSE     | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1e        | HANDSHAKE_DONE       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
-| 0x30 - 0x31 | DATAGRAM             | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) 
-|
-| 0x34 - 0x35 | Timestamped_ACK  | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd/) |
+| 0x30 - 0x31 | DATAGRAM | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
+| | | |
+| 0x34 - 0x35 | Timestamped_ACK  | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd) |
 | 0xAF        | ACK_FREQUENCY        | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
 
 ## QUIC Transport Error Codes
