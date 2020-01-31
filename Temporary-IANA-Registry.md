@@ -21,6 +21,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x000e | active_connection_id_limit  | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 | 0x0020 | max_datagram_frame_size     | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
+| 0x10DE | enable_one_way_delay | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd/) |
 | 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
 | 0xDE1A | min_ack_delay               | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
 
@@ -48,7 +49,10 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x1b        | PATH_RESPONSE        | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1c - 0x1d | CONNECTION_CLOSE     | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1e        | HANDSHAKE_DONE       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
-| 0x30 - 0x31 | DATAGRAM             | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
+| 0x30 - 0x31 | DATAGRAM             | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) 
+|
+| 0x34 - 0x35 | Timestamped_ACK  | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd/) |
+|
 | 0xAF        | ACK_FREQUENCY        | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
 
 ## QUIC Transport Error Codes
