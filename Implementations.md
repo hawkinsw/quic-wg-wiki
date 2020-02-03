@@ -269,6 +269,13 @@ A QUIC implementation in Go.
 - **Protocol IDs:**
 - **Public server:** -
 
+### Akamai QUIC
+
+- **Roles:** Server
+- **Handshake:** TLS 1.3 RFC
+- **Protocol IDs:** 
+- **Public server:** ietf.akaquic.com
+
 ## IETF HTTP over QUIC
 
 The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
