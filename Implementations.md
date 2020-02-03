@@ -273,8 +273,8 @@ A QUIC implementation in Go.
 
 - **Roles:** Server
 - **Public server:** ietf.akaquic.com:443
-- **Version:** draft-22
-- **Protocol IDs:** `0xff000016`
+- **Version:** draft-25
+- **Protocol IDs:** `0xff000019`
 - **Handshake:** TLS 1.3 RFC
 
 ## IETF HTTP over QUIC
