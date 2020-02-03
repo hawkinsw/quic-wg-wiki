@@ -272,9 +272,10 @@ A QUIC implementation in Go.
 ### Akamai QUIC
 
 - **Roles:** Server
-- **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** 
 - **Public server:** ietf.akaquic.com
+- **Version:** draft-22
+- **Protocol IDs:** `0xff000016`
+- **Handshake:** TLS 1.3 RFC
 
 ## IETF HTTP over QUIC
 
