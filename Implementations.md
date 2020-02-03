@@ -31,7 +31,7 @@ AppleQUIC is a client and server implementation.
 - **Version:** draft-25
 - **Roles:** Client, Server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff000017`
+- **Protocol IDs:** `0xff000019`
 - **Public server:** N/A
 
 ### [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
