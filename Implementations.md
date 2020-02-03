@@ -28,7 +28,7 @@ QUIC implementation using Python and asyncio.
 AppleQUIC is a client and server implementation.  
 
 - **Language:** C, Objective-C
-- **Version:** draft-23
+- **Version:** draft-25
 - **Roles:** Client, Server
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:** `0xff000017`
