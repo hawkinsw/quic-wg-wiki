@@ -118,7 +118,7 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff000018` 
-- **Public server:** fb.mvfst.net:4433
+- **Public server:** fb.mvfst.net:443
 
 ### [Neqo](https://github.com/mozilla/neqo)
 Mozilla/Firefox QUIC and HTTP3 implementation.
