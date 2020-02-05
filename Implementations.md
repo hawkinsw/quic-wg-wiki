@@ -218,13 +218,13 @@ Live logs available at https://quic.edm.uhasselt.be/quicker/logs/
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-23
+- **Version:** draft-25
 - **Roles:** client and server
 - **Handshake:** TLS 1.3 (final)
 - **Protocol IDs:**
 - **Public server:**
   - quic.examp1e.net:4433 (HTTP/0.9)
-  - h2o.examp1e.net:8443 (HTTP/3)
+  - quic.examp1e.net:443 (HTTP/3)
 
 ### [Quincy](https://github.com/protocol7/quincy)
 
