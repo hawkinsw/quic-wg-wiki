@@ -19,4 +19,4 @@ _Feel free to add your extension to this list.  When picking a code, please do n
 |Extension | code | details  |
 |--------------------|:---:|------------------------|
 |[Delayed ACKs](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) | a | TBD |
-|[Loss bits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) | 1 | TBD |
+|[Loss bits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) | q | TBD |
