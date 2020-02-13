@@ -1,5 +1,7 @@
 ## Overview
 
+This document lists QUIC extensions participating in the QUIC extension interop.
+
 * QUIC Version draft-25 (vn=**ff000019**)
 
 * HTTP 3 (ALPN=**h3-25**)
@@ -11,6 +13,8 @@
 * List of implementations [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
 ## Extensions Tested
+
+_Feel free to add your extension to this list.  When picking a code, please do not reuse letters already defined in the [main implementation draft](16th-Implementation-Draft)._
 
 |Extension | code | details  |
 |--------------------|:---:|------------------------|
