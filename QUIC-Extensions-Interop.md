@@ -10,8 +10,9 @@
 
 * List of implementations [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
-## Features Tested
+## Extensions Tested
 
-|Feature | code | details  |
+|Extension | code | details  |
 |--------------------|:---:|------------------------|
-|TBD | TBD | TBD |
+|[Delayed ACKs](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) | a | TBD |
+|[Loss bits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) | 1 | TBD |
