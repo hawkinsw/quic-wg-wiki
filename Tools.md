@@ -6,7 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -25 | v3.3.0rc0-452-gddc03b8c87 | | Done |
+ | -25 | v3.3.0rc0-452-gddc03b8c87 / 3.2.2 | | Done |
  | -24 | v3.1.2rc0-16-g71e03ef042 | | Done |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
  | -22 | v3.1.0rc0-1289-g3967f60 | | Done |
@@ -19,31 +19,27 @@
  | -15 | v2.9.0rc0-2528-g9bd1c8f155 | v2.9.1rc0-331-gf1fa8df324 | Available on 2.9.0 |
  | -14 | v2.9.0rc0-1858-g0aaaa49af3 | v2.9.1rc0-108-g075785bd20 | Done. |
  | -13 | v2.9.0rc0-1850-g2fd42045f5 | v2.9.1rc0-100-g0964b04ee3 | Decryption updated. |
- | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3
+ | -12 | v2.9.0rc0-1816-g81710c7d3c | v2.9.0rc0-1863-g7b65208ef3 | Last draft to use TLS Exporter Secret. |
  | -11 | v2.9.0rc0-291-gee3bc52192 | v2.9.0rc0-1829-g1d2fd4f411 | +Connection migration (untested) |
  | -10 | v2.9.0rc0-200-g88435354c0 | v2.9.0rc0-1779-g351ea5940e
  | -09 | v2.5.2rc0-68-geea63ae2a7 | 2.6.x / v2.9.0rc0-173-g71ddbb69f5 | Supports payload decryption (-09) |
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
 
-Automated builds (macOS and Windows) for (odd-numbered) development versions: https://www.wireshark.org/download/automated/  
+Automated builds (macOS and Windows): https://www.wireshark.org/download/automated/  
 Upstream bug (with sample captures/keys): https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
 
-For payload decryption (>= draft -13), the QUIC traffic secrets are required. The TLS key log file follows the TLS 1.3 labels. Every line follows the format `<label> <ClientRandom> <TrafficSecret>` where `<label>` is one of:
-`CLIENT_EARLY_TRAFFIC_SECRET`, 
-`CLIENT_HANDSHAKE_TRAFFIC_SECRET`, 
-`SERVER_HANDSHAKE_TRAFFIC_SECRET`, 
-`CLIENT_TRAFFIC_SECRET_0`, 
-`SERVER_TRAFFIC_SECRET_0`. Example: https://github.com/ngtcp2/ngtcp2/pull/84
-NOTE: The `QUIC_` prefix has been dropped in v3.1.0rc0-836-gcc50ec3634
+Payload decryption (>= draft -13) requires QUIC/TLS 1.3 traffic secrets following the [SSLKEYLOGFILE key log file format](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format). OpenSSL supports this via its keylog callback.
 
-For payload decryption (<= draft -12, Wireshark v2.9.0rc0-1863-g7b65208ef3), the TLS Exporter secret is required which must be provided via a TLS key log file. See for example https://github.com/ngtcp2/ngtcp2/pull/67. Note that since OpenSSL_1_1_1-pre5-21-gd4da95a773 (2018-04-18), OpenSSL supports this via its keylog callback.
+If your QUIC traffic is not properly detected by Wireshark, note that:
+- Wireshark uses a heuristics approach to detect QUIC based on the version number. If you use an experimental version number, it might not be detected as QUIC traffic.
+- Dissectors using a standard port (such as 44818 for EtherNet-IP-2) usually takes precedence.
+- To solve this, explicitly use *Decode As* QUIC via the GUI or via the command line option `-dudp.port==443,quic`.
+- If you use non-standard draft version numbers in the version field, Wireshark will assume the latest draft version.
 
 <sup>1</sup>Wireshark is not capable of decrypting GQUIC packets itself, even if [NSS Keylogging](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format) has been configured. However, if a decrypted trace is supplied to Wireshark it will correctly dissect GQUIC if the "Force decrypt" option is enabled in the Settings.
 
 ## Wireshark draft support
-Caveat: if you use non-standard draft version numbers in the version field, Wireshark will assume the latest draft version.
-
 <details><summary>General issues</summary>
 
 - [x] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
@@ -65,7 +61,7 @@ Caveat: if you use non-standard draft version numbers in the version field, Wire
 - [x] New INVALID_TOKEN, CONNECTION_ID_LIMIT_ERROR transport error https://code.wireshark.org/review/35917
 - [x] New HANDSHAKE_DONE frame type https://code.wireshark.org/review/35917
 - [x] Retry packet changes (Retry Integrity Tag), see commit f220d99943 https://code.wireshark.org/review/35963 https://code.wireshark.org/review/35973
-- [ ] Retry Integrity Tag validation https://code.wireshark.org/review/35978
+- [x] Retry Integrity Tag validation https://code.wireshark.org/review/35978
 - [ ] Check DecodePacketNumber implementation (#3187)
 - [ ] Server have to change CID in Retry.
 </details>
