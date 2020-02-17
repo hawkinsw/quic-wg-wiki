@@ -151,6 +151,18 @@ Implementation of QUIC for NGINX based on quiche by Cloudflare
 - **Protocol IDs:** `0xff000017`, `0xff000018`, `0xff000019`
 - **Public server:** cloudflare-quic.com:443 (HTTP/3 only)
 
+### [Node.js QUIC](https://github.com/nodejs/quic)
+Implementation of QUIC and HTTP/3 support in Node.js (based on ngtcp2)
+
+- **Language:** C++ and JavaScript
+- **Version:** draft-25
+- **Roles:** client, server
+- **Handshake:** TLSv1.3
+- **Protocol IDs:** `0xff000019`
+- **Public server:** -
+
+Notes: No public server yet. Implementation is still in development and not yet merged with main Node.js repository. 
+
 ### Pandora
 
 Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.  Server setup still a bit shake; see also pandora in the QUIC Slack channel
