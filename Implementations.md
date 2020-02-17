@@ -324,6 +324,18 @@ It does not depend on any particular QUIC transport implementation.
 - **Roles:** library
 - **Public server:** nghttp2.org:4433
 
+### [Node.js QUIC](https://github.com/nodejs/quic)
+Implementation of QUIC and HTTP/3 support in Node.js (based on nghttp3)
+
+- **Language:** C++ and JavaScript
+- **Version:** draft-25
+- **Roles:** client, server
+- **Handshake:** TLSv1.3
+- **Protocol IDs:** `0xff000019`
+- **Public server:** -
+
+Notes: No public server yet. Implementation is still in development and not yet merged with main Node.js repository. 
+
 ### [proxygen](https://github.com/facebook/proxygen)
 proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the transport.
 
