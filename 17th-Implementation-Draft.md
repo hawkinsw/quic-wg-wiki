@@ -1,10 +1,10 @@
 ## Overview
 
-* QUIC Version draft-26 (vn=**ff00001a**)
+* QUIC Version draft-27 (vn=**ff00001a**)
 
-* HTTP 3 (ALPN=**h3-26**)
+* HTTP 3 (ALPN=**h3-27**)
 
-* HTTP 0.9/1.1 (ALPN=**hq-26**)
+* HTTP 0.9/1.1 (ALPN=**hq-27**)
 
 * Record interop results [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=438405370)
 
