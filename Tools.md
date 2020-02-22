@@ -6,6 +6,8 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -27 | | | WIP |
+ | -26 | | | No wire changes. |
  | -25 | v3.3.0rc0-452-gddc03b8c87 / 3.2.2 | | Done |
  | -24 | v3.1.2rc0-16-g71e03ef042 | | Done |
  | -23 | v3.1.1rc0-323-gf95d3a6 | | Done |
@@ -54,6 +56,11 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
+</details>
+
+<details><summary>To-do items for draft -27 completion</summary>
+
+- [ ] Transport parameters ID and lengths now use variable-length encoding.
 </details>
 
 <details><summary>To-do items for draft -25 completion (completed)</summary>
