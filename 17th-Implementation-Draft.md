@@ -1,6 +1,6 @@
 ## Overview
 
-* QUIC Version draft-27 (vn=**ff00001a**)
+* QUIC Version draft-27 (vn=**ff00001b**)
 
 * HTTP 3 (ALPN=**h3-27**)
 
