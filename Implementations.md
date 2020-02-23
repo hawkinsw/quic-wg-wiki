@@ -77,10 +77,10 @@ Note: This server always sends RETRY packets, but we can disable this on request
 Kwik is a QUIC client (library) in Java.
 
 - **Language:** Java
-- **Version:** draft-25
+- **Version:** draft-27
 - **Roles:** client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000019`     
+- **Protocol IDs:** `0xff00001b`     
 
 
 ### [lsquic](https://github.com/litespeedtech/lsquic)
