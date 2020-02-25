@@ -54,11 +54,11 @@ QUIC implementation in Apache Traffic Server
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-24
+- **Version:** draft-24 and 25
 - **Roles:** Server, Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff000018`
-- **ALPN:** `h3-24`. `hq-24` available upon request.
+- **Protocol IDs:** `0xff000018`, `0xff000019`
+- **ALPN:** `h3-25`, `h3-24`. `hq-25` and `hq-24` available upon request.
 - **Public server:** f5quic.com:4433
 
 Note: This server always sends RETRY packets, but we can disable this on request.
