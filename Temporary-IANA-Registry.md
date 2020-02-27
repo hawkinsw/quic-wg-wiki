@@ -22,9 +22,9 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x20  | max_datagram_frame_size     | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
-| 0x10DE | enable_one_way_delay | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd/) |
 | 0x4751 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
 | 0x4752 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
+| 0x7157 | enable_time_stamp | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
 | 0xDE1A | min_ack_delay               | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
 
@@ -53,7 +53,6 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x1c - 0x1d | CONNECTION_CLOSE     | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1e        | HANDSHAKE_DONE       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x30 - 0x31 | DATAGRAM | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
-| 0x34 - 0x35 | Timestamped_ACK  | [quic-1wd](https://datatracker.ietf.org/doc/draft-huitema-quic-1wd) |
 | 0x40        | MP_NEW_CONNECTION_ID    | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x41        | MP_RETIRE_CONNECTION_ID | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x42 - 0x43 | MP_ACK                  | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
@@ -61,6 +60,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x45        | REMOVE_ADDRESS          | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x46        | UNIFLOWS                | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0xAF        | ACK_FREQUENCY        | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
+| 0x02F5 | TIME_STAMP | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 
 ## QUIC Transport Error Codes
 
