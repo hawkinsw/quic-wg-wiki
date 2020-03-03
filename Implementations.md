@@ -69,7 +69,7 @@ Note: This server always sends RETRY packets, but we can disable this on request
 - **Version:** draft-27
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00001a`
+- **Protocol IDs:** `0xff00001b`
 - **Public server:** mew.org:4433 (stateless retry)
 
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
