@@ -298,8 +298,8 @@ Flupke is a HTTP3 client build on top of Kwik.
 
 - **Language:** Java
 - **Transport library:** [Kwik](https://bitbucket.org/pjtr/kwik)
-- **HTTP3 Version:** draft-25
-- **QUIC Verson:** draft-25
+- **HTTP3 Version:** draft-27
+- **QUIC Verson:** draft-27
 - **Roles:** client library
 - **Public server:** n.a. (client only)
 
