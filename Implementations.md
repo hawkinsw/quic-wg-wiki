@@ -66,10 +66,10 @@ Note: This server always sends RETRY packets, but we can disable this on request
 ### [Haskell quic](https://github.com/kazu-yamamoto/quic)
 
 - **Language:** Haskell
-- **Version:** draft-25 and draft-24
+- **Version:** draft-27
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000019` and `0xff000018`
+- **Protocol IDs:** `0xff00001a`
 - **Public server:** mew.org:4433 (stateless retry)
 
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
