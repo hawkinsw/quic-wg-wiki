@@ -157,7 +157,7 @@ QUIC as a substrate draft (https://datatracker.ietf.org/doc/draft-kuehlewind-qui
    * Marcus Ihlar <marcus.ihlar@ericsson.com>
    * Mirja Kuehlewind <mirja.kuehlewind@ericsson.com>
    * Zaheduzzaman Sarker <zaheduzzaman.sarker@ericsson.com>
-* **Forum:** maque@ietf.org, or etosat@ietf.org for discussion regarding performance enhancements for challenging links
+* **Forum:** masque@ietf.org, or etosat@ietf.org for discussion regarding performance enhancements for challenging links
 * **Materials:**
   * https://datatracker.ietf.org/doc/draft-kuehlewind-quic-substrate/
   * https://datatracker.ietf.org/doc/draft-kuehlewind-quic-proxy-discovery/ 
