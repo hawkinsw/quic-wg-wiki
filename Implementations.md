@@ -230,7 +230,7 @@ Live logs available at https://quic.edm.uhasselt.be/quicker/logs/
 QUIC protocol implementation for H2O server
 
 - **Language:** C
-- **Version:** draft-25
+- **Version:** draft-27
 - **Roles:** client and server
 - **Handshake:** TLS 1.3 (final)
 - **Protocol IDs:**
