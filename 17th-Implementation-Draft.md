@@ -29,7 +29,7 @@
 
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
-|Migration | M | A new CID is offered to the peer, and it migrates the connection to it |
+|Server CID change| M | A server offers new CIDs to a client in advance. Upon some events, the client sarts using a new server CID|
 |Rebinding | B | The client moves to a different address or port, and the server migrates to it |
 |Address Mobility | A | The client moves to a different IP address (and/or address family), and the server migrates with it |
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
