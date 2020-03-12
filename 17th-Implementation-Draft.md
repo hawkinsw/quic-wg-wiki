@@ -29,9 +29,9 @@
 
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
-|Server CID change| M | A server offers new CIDs to a client in advance. Upon some events, the client sarts using a new server CID|
-|Rebinding | B | The client moves to a different address or port, and the server migrates to it |
-|Address Mobility | A | The client moves to a different IP address (and/or address family), and the server migrates with it |
+|Server CID change| M | A server offers new CIDs to a client in advance. Upon some events, the client sarts using a new server CID |
+|NAT Rebiding| B | A client's port changes. The client sends packets without noticing the change |
+|Address Mobility | A | A server offers new CIDs to a client in advance. The client moves to a new address(/port). The client sends path challenges from the new address(/port) with a new server CID. The server sends path responses on any path |
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
 |H3 | 3 | An H3 transaction succeeded |
 |Spin | P | A connection with the spin succeeds and the bit is spinning |
