@@ -74,11 +74,11 @@ Note: This server always sends RETRY packets, but we can disable this on request
 
 ### [kwik](https://bitbucket.org/pjtr/kwik/)
 
-Kwik is a QUIC client (library) in Java.
+Kwik is a QUIC client (and client library) implementation in Java.
 
 - **Language:** Java
 - **Version:** draft-27
-- **Roles:** client
+- **Roles:** client, client library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001b`     
 
