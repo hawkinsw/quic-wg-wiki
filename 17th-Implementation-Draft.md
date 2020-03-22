@@ -10,6 +10,8 @@
 
 * List of implementations [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
+* Optional test of PR #3499 [here](https://github.com/quicwg/base-drafts/wiki/Testing-the-authentication-of-connection-ID-before-draft-28)
+
 ## Core Features Tested
 
 |Feature | code | details  |
