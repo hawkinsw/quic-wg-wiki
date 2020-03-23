@@ -31,7 +31,7 @@
 
 |Feature | code | details  |
 |--------------------|:---:|------------------------|
-|Server CID change| M | A server offers new CIDs to a client in advance. Upon some events, the client sarts using a new server CID |
+|Server CID change| M | A server offers new CIDs to a client in advance. Upon some events, the client starts using a new server CID |
 |NAT Rebiding| B | A client's port changes. The client sends packets without noticing the change |
 |Address Mobility | A | A server offers new CIDs to a client in advance. The client moves to a new address(/port). The client sends path challenges from the new address(/port) with a new server CID. The server sends path responses on any path |
 |Key Update | U | One endpoint can update keys and its peer responds correctly |
