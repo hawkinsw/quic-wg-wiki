@@ -444,11 +444,11 @@ Stellite project is a client library and server application that offers an easy 
 
 ### [caddyserver](https://github.com/lucas-clemente/quic-go)
 
-Caddy v2 master has experimental HTTP/3 support, powered by [lucas-clemente/quic-go](https://github.com/lucas-clemente/quic-go).
+Caddy v2 has experimental HTTP/3 support, powered by [lucas-clemente/quic-go](https://github.com/lucas-clemente/quic-go).
 
 - **Language:** Go
-- **Version:** h3-24
+- **Version:** h3-27
 - **Roles:** server
 - **Handshake:** QUIC Crypto (production)
 - **Protocol IDs:**
-- **Public server:** [matt.life](https://matt.life):443 (h3-23), [hnrk.io](https://hnrk.io):443 (h3-24)
+- **Public server:** [matt.life](https://matt.life):443 (h3-27), [hnrk.io](https://hnrk.io):443 (h3-27)
