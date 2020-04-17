@@ -110,7 +110,8 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | Reserved                     |  0x4   | N/A                       |
 | Reserved                     |  0x5   | N/A                       |
 | MAX_HEADER_LIST_SIZE         |  0x6   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-settings-parameters) |
-| QPACK_BLOCKED_STREAMS        | 0x7    | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-settings-registration)
+| QPACK_BLOCKED_STREAMS        | 0x7    | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-settings-registration) |
+| H3_DATAGRAM                  | 0x276  | [h3-datagram](https://tools.ietf.org/html/draft-schinazi-quic-h3-datagram) |
 
 
 ## HTTP/3 Error Codes
