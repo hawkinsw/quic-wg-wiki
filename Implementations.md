@@ -383,7 +383,7 @@ The following stacks implement the earlier Google versions of QUIC.
 
 ### [goquic](https://github.com/devsisters/goquic)
 
-Work-in-progress QUIC implementation for Go. This is based on libquic library.
+Out-of-date QUIC implementation for Go. This is based on libquic library, which has not been updated in years.
 
 - **Language:** Go
 - **Version:** Q030, Q031, Q032, Q033, Q033, Q034, Q035, Q036.
