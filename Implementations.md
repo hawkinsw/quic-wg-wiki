@@ -97,7 +97,7 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
   - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
 
-### msquic
+### [msquic](https://github.com/microsoft/msquic)
 
 Microsoft's general purpose QUIC implementation.
 
@@ -105,7 +105,7 @@ Microsoft's general purpose QUIC implementation.
 - **Version:** draft-27
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff00001b`
+- **Protocol IDs:** `0xff000019`
 - **Public server:** quic.westus.cloudapp.azure.com:4433 (retry on 4434)
 
 
