@@ -226,3 +226,36 @@ h2load is load testing tool and now experimentally supports HTTP/3.
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001b`
 - **ALPN:** `h3-27`
+
+# [qlog](https://github.com/quiclog/internet-drafts)
+
+qlog is a standard logging format for QUIC and HTTP/3. It is based on JSON to be both human and machine-readable. It is currently supported by over half of current QUIC implementations.
+
+- Main schema: https://quiclog.github.io/internet-drafts/draft-marx-qlog-main-schema.html
+- Events definitions for QUIC and HTTP/3: https://quiclog.github.io/internet-drafts/draft-marx-qlog-event-definitions-quic-h3.html
+- TypeScript definitions: https://github.com/quiclog/qlog/tree/master/TypeScript/draft-01
+- Rust crate: https://crates.io/crates/qlog
+- Tool to transform decrypted pcap to qlog: https://github.com/quiclog/pcap2qlog
+
+# [qvis](https://qvis.edm.uhasselt.be)
+
+Toolsuite for visualizing QUIC+HTTP/3 qlog and pcap files. Includes a sequence diagram, congestion graph, multiplexing diagram and packetization visualization. 
+
+- Live version (includes demo files): https://qvis.edm.uhasselt.be/
+- Source code: https://github.com/quiclog/qvis
+
+# [QUIC network simulator](https://github.com/marten-seemann/quic-network-simulator/)
+
+Simulation framework for automated benchmarking of QUIC implementations. Allows extensive network simulations using ns-3. 
+
+Source code: https://github.com/marten-seemann/quic-network-simulator/
+
+# [QUIC interop runner](https://interop.seemann.io/)
+
+Interoperability testing framework. Allows running automated tests between different QUIC implementations. 
+
+- Live version: https://interop.seemann.io/
+- Source code: https://github.com/marten-seemann/quic-interop-runner
+
+
+
