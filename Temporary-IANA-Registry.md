@@ -19,6 +19,8 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x0c  | disable_active_migration    | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x0d  | preferred_address           | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x0e  | active_connection_id_limit  | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
+|  0x0f  | initial_connection_id       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
+|  0x10  | retry_connection_id         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x20  | max_datagram_frame_size     | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
