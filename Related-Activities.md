@@ -14,30 +14,6 @@ A sentence or three on what this is about and how it relates to the chartered QU
 
 Below is a (not necessarily complete) list of things the chairs are aware of at the moment. Whoever feels in charge for one of the items below should feel free to create an entry (using the template) in this section, and then remove the bullet item from the list:
 
-### QUIC-LB
-
-Servers generate their Connection IDs, but numerous trusted devices it the path (load balancers, DDOS boxes, crypto offload, local switch disaggregators) need access to some of the encoded data in those CIDs, while that same data is opaque to untrusted observers. QUIC-LB defines multiple encoding strategies to allow this cooperation between servers and trusted intermediaries.
-
-* **Main contacts:** 
-  * Martin Duke, martin.h.duke@gmail.com
-  * Nick Banks, nibanks@microsoft.com
-* **Forum:** There is a Google group. Email Martin to join.
-* **Materials:**
-  * https://github.com/martinduke/draft-duke-quic-load-balancers
-  * https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
-
-### Datagram Frames
-
-Some applications, particularly those that need to transmit real-time data, prefer to transmit data unreliably. These applications can build directly upon UDP as a transport, and can add security with DTLS. Extending QUIC to support transmitting unreliable application data would provide another option for secure datagrams, with the added benefit of sharing a cryptographic and authentication context used for reliable streams.
-
-This proposal defines DATAGRAM QUIC frame types, which carry application data without requiring retransmissions.
-
-* **Main contact:** Tommy Pauly, tpauly@apple.com
-* **Forum:** #datagram channel in QUIC slack, or QUIC email list.
-* **Materials:** 
-  * https://github.com/tfpauly/draft-pauly-quic-datagram
-  * https://tools.ietf.org/html/draft-pauly-quic-datagram
-
 ### quic-network-simulator
 
 The QUIC Network Simulator is a [ns-3](https://www.nsnam.org/)-based network simulator that allows performance measurements of QUIC implementations under various network conditions. The docker-based setup can be used to run different implementations on the client and the server side. An important use case is running QUIC and TCP traffic across the same link.
@@ -100,15 +76,6 @@ This memo identifies the characteristics of a SATCOM link that impact the operat
   * GitHub: https://github.com/NicoKos/QUIC_HIGH_BDP
   * I-D: https://tools.ietf.org/html/draft-kuhn-quic-4-sat-00
 
-### MASQUE
-MASQUE is a mechanism that allows co-locating and obfuscating networking applications behind an HTTPS web server. The currently prevalent use-case is to allow running a proxy or VPN server that is indistinguishable from an HTTPS server to any unauthenticated observer. The proxy will be aware of QUIC and will be able to proxy QUIC by having the client and proxy collaborate.
-
-* **Main contact:** David Schinazi <dschinazi.ietf@gmail.com>
-* **Forum:** MASQUE IETF mailing list <masque@ietf.org>
-* **Materials:**
-  * I-D: https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html
-  * GitHub: https://github.com/DavidSchinazi/masque-drafts
-
 ### Multipath
 Multipath is an extension enabling QUIC to make use of several network paths concurrently over a single connection. The two main use-cases are bandwidth aggregation and network resiliency.
 
@@ -120,20 +87,6 @@ Multipath is an extension enabling QUIC to make use of several network paths con
   * I-D: https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/
   * GitHub: https://github.com/qdeconinck/draft-deconinck-multipath-quic
   * Blog: https://multipath-quic.org
-
-### WebTransport
-
-WebTransport is a framework for bidirectional communications between web applications and servers.  It provides, among other things, QuicTransport, an API that allows webapps to create a direct QUIC connection to a valid remote server.
-
-* **Main contact:**
-  * Victor Vasiliev <vasilvv@google.com>
-  * David Schinazi <dschinazi.ietf@gmail.com>
-* **Forum:** https://www.ietf.org/mailman/listinfo/webtransport
-* **Materials:**
-  * https://tools.ietf.org/html/draft-vvv-webtransport-overview
-  * https://tools.ietf.org/html/draft-vvv-webtransport-quic
-  * https://github.com/WICG/web-transport/blob/master/explainer.md
-  * https://wicg.github.io/web-transport/
 
 ### Pluginized QUIC
 
@@ -175,3 +128,58 @@ Please create more detailed sections for these above.
 
 
 ## Historic Proposals
+
+### QUIC-LB
+**This was adopted by the QUIC WG; see https://github.com/quicwg/load-balancers. The following text is left as a historical reference.**
+
+Servers generate their Connection IDs, but numerous trusted devices it the path (load balancers, DDOS boxes, crypto offload, local switch disaggregators) need access to some of the encoded data in those CIDs, while that same data is opaque to untrusted observers. QUIC-LB defines multiple encoding strategies to allow this cooperation between servers and trusted intermediaries.
+
+* **Main contacts:** 
+  * Martin Duke, martin.h.duke@gmail.com
+  * Nick Banks, nibanks@microsoft.com
+* **Forum:** There is a Google group. Email Martin to join.
+* **Materials:**
+  * https://github.com/martinduke/draft-duke-quic-load-balancers
+  * https://datatracker.ietf.org/doc/draft-duke-quic-load-balancers/
+
+### Datagram Frames
+
+**This was adopted by the QUIC WG; see https://github.com/quicwg/datagram. The following text is left as a historical reference.**
+
+Some applications, particularly those that need to transmit real-time data, prefer to transmit data unreliably. These applications can build directly upon UDP as a transport, and can add security with DTLS. Extending QUIC to support transmitting unreliable application data would provide another option for secure datagrams, with the added benefit of sharing a cryptographic and authentication context used for reliable streams.
+
+This proposal defines DATAGRAM QUIC frame types, which carry application data without requiring retransmissions.
+
+* **Main contact:** Tommy Pauly, tpauly@apple.com
+* **Forum:** #datagram channel in QUIC slack, or QUIC email list.
+* **Materials:** 
+  * https://github.com/tfpauly/draft-pauly-quic-datagram
+  * https://tools.ietf.org/html/draft-pauly-quic-datagram
+
+### MASQUE
+
+**This has progressed as a separate piece of work in the IETF; see https://datatracker.ietf.org/wg/masque/about/. The following text is left as a historical reference.** 
+
+MASQUE is a mechanism that allows co-locating and obfuscating networking applications behind an HTTPS web server. The currently prevalent use-case is to allow running a proxy or VPN server that is indistinguishable from an HTTPS server to any unauthenticated observer. The proxy will be aware of QUIC and will be able to proxy QUIC by having the client and proxy collaborate.
+
+* **Main contact:** David Schinazi <dschinazi.ietf@gmail.com>
+* **Forum:** MASQUE IETF mailing list <masque@ietf.org>
+* **Materials:**
+  * I-D: https://davidschinazi.github.io/masque-drafts/draft-schinazi-masque.html
+  * GitHub: https://github.com/DavidSchinazi/masque-drafts
+
+### WebTransport
+
+**This has progressed as a separate piece of work in the IETF; see https://datatracker.ietf.org/wg/https://datatracker.ietf.org/wg/webtrans/about//about/. The following text is left as a historical reference.** 
+
+WebTransport is a framework for bidirectional communications between web applications and servers.  It provides, among other things, QuicTransport, an API that allows webapps to create a direct QUIC connection to a valid remote server.
+
+* **Main contact:**
+  * Victor Vasiliev <vasilvv@google.com>
+  * David Schinazi <dschinazi.ietf@gmail.com>
+* **Forum:** https://www.ietf.org/mailman/listinfo/webtransport
+* **Materials:**
+  * https://tools.ietf.org/html/draft-vvv-webtransport-overview
+  * https://tools.ietf.org/html/draft-vvv-webtransport-quic
+  * https://github.com/WICG/web-transport/blob/master/explainer.md
+  * https://wicg.github.io/web-transport/
