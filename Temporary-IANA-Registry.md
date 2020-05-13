@@ -21,8 +21,11 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x0e  | active_connection_id_limit  | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x0f  | initial_connection_id       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x10  | retry_connection_id         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
+|  0x1B  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 |  0x20  | max_datagram_frame_size     | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
+|  0x3A  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
+|  0x59  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
 | 0x4751 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
 | 0x4752 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
