@@ -27,8 +27,12 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 |  0x59  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
-| 0x4751 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
-| 0x4752 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
+| 0x3127 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
+| 0x3128 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
+| 0x3129 | Google_internal_3 | Google-internal undocumented transport parameter 3 |
+| 0x312A | Google_internal_4 | Google-internal undocumented transport parameter 4 |
+| 0x4751 | Google_internal_5 | Google-internal undocumented transport parameter 5 |
+| 0x4752 | Google_internal_6 | Google-internal undocumented transport parameter 6 |
 | 0x7157 | enable_time_stamp | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
 | 0xDE1A | min_ack_delay               | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
