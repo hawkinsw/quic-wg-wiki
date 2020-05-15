@@ -107,7 +107,10 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | Reserved         |  0x9   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-frame-types) |
 | MAX_PUSH_ID      |  0xD   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-frame-types) |
 | DUPLICATE_PUSH   |  0xE   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-frame-types) |
-| PRIORITY_UPDATE  |  0xF   | [http-priorities](https://tools.ietf.org/html/draft-kazuho-httpbis-priority-04#section-5.2) |
+| PRIORITY_UPDATE  |  0xF   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
+| PRIORITY_UPDATE  |  0x10   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
+| PRIORITY_UPDATE  |  0x1CCB8BBF1F0700   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
+| PRIORITY_UPDATE  |  0x1CCB8BBF1F0701   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 
 # HTTP/3 Settings Parameters
 
