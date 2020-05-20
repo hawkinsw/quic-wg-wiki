@@ -4,10 +4,10 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 
 | Value  | Parameter Name              | Specification                       |
 |:-------|:----------------------------|:------------------------------------|
-|  0x00  | original_connection_id      | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
+|  0x00  | original_destination_connection_id      | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x01  | max_idle_timeout            | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x02  | stateless_reset_token       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
-|  0x03  | max_packet_size             | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
+|  0x03  | max_udp_payload_size             | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x04  | initial_max_data            | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x05  | initial_max_stream_data_bidi_local | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x06  | initial_max_stream_data_bidi_remote | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
