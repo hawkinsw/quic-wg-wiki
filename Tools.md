@@ -6,7 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
- | -28 | | | WIP |
+ | -28 | v3.3.0rc0-1246-g2b9796adc6 | | Done |
  | -27 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | Done |
  | -26 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | No wire changes. |
  | -25 | v3.3.0rc0-452-gddc03b8c87 / 3.2.2 | | Done |
