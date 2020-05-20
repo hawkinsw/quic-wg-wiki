@@ -6,6 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -28 | | | WIP |
  | -27 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | Done |
  | -26 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | No wire changes. |
  | -25 | v3.3.0rc0-452-gddc03b8c87 / 3.2.2 | | Done |
@@ -58,7 +59,14 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -27 completion</summary>
+<details><summary>To-do items for draft -28 completion</summary>
+
+- [ ] New APPLICATION_ERROR (0xC) transport error code
+- [ ] Rename TP max_packet_size (0x03) -> max_udp_payload_size.
+- [ ] New TP for authenticating connection IDs: initial_source_connection_id (0x0f), retry_source_connection_id (0x10)
+</details>
+
+<details><summary>To-do items for draft -27 completion (completed)</summary>
 
 - [x] Transport parameters ID and lengths now use variable-length encoding. https://code.wireshark.org/review/36150
 </details>
