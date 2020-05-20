@@ -61,10 +61,10 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 
 <details><summary>To-do items for draft -28 completion</summary>
 
-- [ ] New APPLICATION_ERROR (0xC) transport error code
-- [ ] Rename TP max_packet_size (0x03) -> max_udp_payload_size.
-- [ ] New TP for authenticating connection IDs: initial_source_connection_id (0x0f), retry_source_connection_id (0x10)
-</details>
+- [x] New APPLICATION_ERROR (0xC) transport error code https://code.wireshark.org/review/37262
+- [x] Rename TP max_packet_size (0x03) -> max_udp_payload_size. https://code.wireshark.org/review/37262
+- [x] New TP for authenticating connection IDs: initial_source_connection_id (0x0f), retry_source_connection_id (0x10)
+https://code.wireshark.org/review/37262 </details>
 
 <details><summary>To-do items for draft -27 completion (completed)</summary>
 
