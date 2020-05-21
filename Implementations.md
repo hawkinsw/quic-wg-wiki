@@ -49,6 +49,21 @@ QUIC implementation in Apache Traffic Server
   - quic.ogre.com:4443 (Preferred Address 4443 -> 4433)
   - https://quic.ogre.com/cgi-bin/quic_log.cgi (Debug logs)
 
+### [Chromium](https://www.chromium.org/quic/playing-with-quic)	
+
+Chromium's QUIC Implementation (draft-27 supported in Chrome 82.0.4080.0 and later).	
+
+- **Language:**  C, C++	
+- **Version:** Q043, Q046, Q050, draft-25, draft-27.	
+- **Roles:** library, client, server	
+- **Handshake:** QUIC Crypto, TLS	
+- **Protocol IDs:** `0xff000019`, `0xff00001b`	
+- **ALPN:** `h3-25`, `h3-27`	
+- **Public server:**
+  - https://quic.rocks:4433/
+  - https://google.com
+- **Entry in Interop Matrix:** ~gQUIC
+
 ### f5
 
 QUIC implementation in F5 TMOS
@@ -292,6 +307,21 @@ A QUIC implementation in Go.
 ## IETF HTTP over QUIC
 
 The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
+
+### [Chromium](https://www.chromium.org/quic/playing-with-quic)	
+
+Chromium's QUIC Implementation (draft-27 supported in Chrome 82.0.4080.0 and later).	
+
+- **Language:**  C, C++	
+- **Version:** Q043, Q046, Q050, draft-25, draft-27.	
+- **Roles:** library, client, server	
+- **Handshake:** QUIC Crypto, TLS	
+- **Protocol IDs:** `0xff000019`, `0xff00001b`	
+- **ALPN:** `h3-25`, `h3-27`	
+- **Public server:**
+  - https://quic.rocks:4433/
+  - https://google.com
+- **Entry in Interop Matrix:** ~gQUIC
 
 ### [Flupke](https://bitbucket.org/pjtr/flupke)
 Flupke is a HTTP3 client build on top of Kwik. 
