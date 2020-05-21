@@ -308,20 +308,9 @@ A QUIC implementation in Go.
 
 The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
 
-### [Chromium](https://www.chromium.org/quic/playing-with-quic)	
+### Chromium
 
-Chromium's QUIC Implementation (draft-27 supported in Chrome 82.0.4080.0 and later).	
-
-- **Language:**  C, C++	
-- **Version:** Q043, Q046, Q050, draft-25, draft-27.	
-- **Roles:** library, client, server	
-- **Handshake:** QUIC Crypto, TLS	
-- **Protocol IDs:** `0xff000019`, `0xff00001b`	
-- **ALPN:** `h3-25`, `h3-27`	
-- **Public server:**
-  - https://quic.rocks:4433/
-  - https://google.com
-- **Entry in Interop Matrix:** ~gQUIC
+See entry in the "IETF QUIC Transport" section.
 
 ### [Flupke](https://bitbucket.org/pjtr/flupke)
 Flupke is a HTTP3 client build on top of Kwik. 
@@ -377,6 +366,10 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 
 
 ## QPACK
+
+### Chromium
+
+See entry in the "IETF QUIC Transport" section.
 
 ### [ls-qpack](https://github.com/litespeedtech/ls-qpack)
 
