@@ -290,11 +290,11 @@ QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 A QUIC implementation in Go.
 
 - **Language:** Go
-- **Version:** draft-22
+- **Version:** always the current draft
 - **Roles:** client, library, server
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:**
-- **Public server:** -
+- **Public server:** https://interop.seemann.io
 
 ### Akamai QUIC
 
