@@ -269,11 +269,11 @@ Quincy is an implementation of QUIC in Java, based on the Netty framework.
 Rust implementation based on tokio/futures, using rustls for TLS.
 
 - **Language:** Rust
-- **Version:** draft-23
+- **Version:** draft-28
 - **Roles:** library, client, server
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff000014`
-- **Public server:** ralith.com:4433
+- **Protocol IDs:** `0xff00001c`
+- **Public server:** h3.stammw.eu:443
 
 ### sora_quic
 
