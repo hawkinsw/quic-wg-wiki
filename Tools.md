@@ -59,6 +59,13 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] ...
 </details>
 
+<details><summary>To-do items for draft -29 completion</summary>
+
+- [ ] Rename SERVER_BUSY (0x2) -> CONNECTION_REFUSED_ERROR transport error code 
+- [ ] Update initial Salt
+
+https://code.wireshark.org/review/37262 </details>
+
 <details><summary>To-do items for draft -28 completion (completed)</summary>
 
 - [x] New APPLICATION_ERROR (0xC) transport error code https://code.wireshark.org/review/37262
