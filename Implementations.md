@@ -219,10 +219,10 @@ QUANT is a general transport library and does *NOT* implement H3.
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
 
 - **Language:** Rust
-- **Version:** draft-27, draft-28
+- **Version:** draft-27, draft-28, draft-29
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff00001b`, `0xff00001c`
+- **Protocol IDs:** `0xff00001b`, `0xff00001c`, `0xff00001d`
 - **Public server:** quic.tech:4433 (HTTP/0.9 + 0-RTT) / quic.tech:8443 (HTTP/3 + 0-RTT) / quic.tech:8444 (HTTP/3 + Retry)
 
 ### [QUICker](https://github.com/rmarx/quicker)
