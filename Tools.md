@@ -59,7 +59,7 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -28 completion</summary>
+<details><summary>To-do items for draft -28 completion (completed)</summary>
 
 - [x] New APPLICATION_ERROR (0xC) transport error code https://code.wireshark.org/review/37262
 - [x] Rename TP max_packet_size (0x03) -> max_udp_payload_size. https://code.wireshark.org/review/37262
