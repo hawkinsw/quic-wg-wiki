@@ -6,6 +6,7 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
+ | -29 | v3.3.0rc0-1373-g9d24072 | | Done |
  | -28 | v3.3.0rc0-1246-g2b9796adc6 | | Done |
  | -27 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | Done |
  | -26 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | No wire changes. |
@@ -59,10 +60,10 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] ...
 </details>
 
-<details><summary>To-do items for draft -29 completion</summary>
+<details><summary>To-do items for draft -29 completion (completed)</summary>
 
-- [ ] Rename SERVER_BUSY (0x2) -> CONNECTION_REFUSED_ERROR transport error code 
-- [ ] Update initial Salt
+- [x] Rename SERVER_BUSY (0x2) -> CONNECTION_REFUSED_ERROR transport error code 
+- [x] Update initial Salt
 
 https://code.wireshark.org/review/37262 </details>
 
