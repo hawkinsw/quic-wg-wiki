@@ -11,4 +11,4 @@ Endpoints that receive this parameter MUST ignore it.
 
 As an alternative, clients can send a large TP with an ID reserved for greasing, or split small ClientHello into multiple QUIC packets.
 
-All credit for the discard idea goes to [RFC 863](https://tools.ietf.org/html/rfc863)
+All credit for the discard idea goes to [RFC 863](https://tools.ietf.org/html/rfc863).
