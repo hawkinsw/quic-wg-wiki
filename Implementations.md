@@ -117,10 +117,10 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, Android, and
 Microsoft's general purpose QUIC implementation.
 
 - **Language:** C
-- **Version:** draft-27, draft-28
+- **Version:** draft-27/28/29
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
-- **Protocol IDs:** `0xff00001B`, `0xff00001C`
+- **Protocol IDs:** `0xff00001B`, `0xff00001C`, `0xff00001D`
 - **Public server:** quic.westus.cloudapp.azure.com:4433 (retry on 4434)
 
 ### [mvfst](https://github.com/facebookincubator/mvfst)
