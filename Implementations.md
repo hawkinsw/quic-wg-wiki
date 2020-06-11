@@ -207,11 +207,11 @@ QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 impleme
 
 QUANT is a general transport library and does *NOT* implement H3.
 
-- **Language:** C11
-- **Version:** draft-28
+- **Language:** C
+- **Version:** draft-29
 - **Roles:** client, library, server
 - **Handshake:** TLS1.3
-- **Protocol IDs:** `0xff00001c`
+- **Protocol IDs:** `0xff00001d`
 - **Public server:** quant.eggert.org:4433 (and more, see [wiki](https://github.com/NTAP/quant/wiki) for description)
 
 ### [quiche](https://github.com/cloudflare/quiche)
