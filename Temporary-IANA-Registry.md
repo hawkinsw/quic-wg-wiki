@@ -27,7 +27,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 |  0x59  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
-| 0x173E | discard                   | Discard upon receipt |
+| 0x173E | discard                   | [Discard upon receipt](https://github.com/quicwg/base-drafts/wiki/Quantum-Readiness-test) |
 | 0x3127 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
 | 0x3128 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
 | 0x3129 | Google_internal_3 | Google-internal undocumented transport parameter 3 |
