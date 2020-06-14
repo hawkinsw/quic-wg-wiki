@@ -237,11 +237,11 @@ The "Spindump" tool is a Unix command-line utility that can be used for latency 
 h2load is load testing tool and now experimentally supports HTTP/3.
 
 - **Language:** C++
-- **Version:** draft-28
+- **Version:** draft-29
 - **Roles:** client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00001c`
-- **ALPN:** `h3-28`
+- **Protocol IDs:** `0xff00001d`
+- **ALPN:** `h3-29`
 
 # [qlog](https://github.com/quiclog/internet-drafts)
 
