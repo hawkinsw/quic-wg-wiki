@@ -51,14 +51,14 @@ QUIC implementation in Apache Traffic Server
 
 ### [Chromium](https://www.chromium.org/quic/playing-with-quic)	
 
-Chromium's QUIC Implementation (draft-28 supported in Chrome 85.0.4163.0 and later).	
+Chromium's QUIC Implementation (draft-29 supported in Chrome 85.0.4171.0 and later).	
 
 - **Languages:**  C, C++
-- **Versions:** Q043, Q046, Q050, draft-25, draft-27, draft-28.
+- **Versions:** Q043, Q046, Q050, draft-25, draft-27, draft-28, draft-29.
 - **Roles:** library, client, server
 - **Handshakes:** QUIC Crypto, TLS
-- **Protocol IDs:** `0xff000019`, `0xff00001b`, `0xff00001c`
-- **ALPNs:** `h3-25`, `h3-27`, `h3-28`
+- **Protocol IDs:** `Q043`, `Q046`, `Q050`, `0xff000019`, `0xff00001b`, `0xff00001c`, `0xff00001d`
+- **ALPNs:** `h3-Q043`, `h3-Q046`, `h3-Q050`, `h3-25`, `h3-27`, `h3-28`, `h3-29`
 - **Public Servers:**
   - https://quic.rocks:4433
   - https://google.com
