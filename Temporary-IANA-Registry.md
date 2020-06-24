@@ -91,6 +91,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0xC   | APPLICATION_ERROR         | Application error           | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-error-codes-) |
 | 0xD   | CRYPTO_BUFFER_EXCEEDED    | CRYPTO data buffer overflowed | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-error-codes-) |
 | 0xE   | KEY_UPDATE_ERROR    | Key update error | [quic-tls](https://quicwg.org/base-drafts/draft-ietf-quic-tls.html#key-update-error) |
+| 0x100-0x1ff   | CRYPTO_ERROR    | TLS error | [quic-tls](https://quicwg.org/base-drafts/draft-ietf-quic-tls.html#name-tls-errors) |
 | 0x53F8 | VERSION_NEGOTIATION_ERROR | Version Negotiation Error | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
 
 ## HTTP/3 Frame Types
