@@ -150,9 +150,9 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | H3_REQUEST_INCOMPLETE             | 0x010D     | Stream terminated early                  | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-error-codes)   |
 | H3_CONNECT_ERROR                  | 0x010F     | TCP reset or error on CONNECT request    | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-error-codes)   |
 | H3_VERSION_FALLBACK               | 0x0110     | Retry over HTTP/1.1                      | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-error-codes)   |
-| HTTP_QPACK_DECOMPRESSION_FAILED   | 0x200 | Decompression of a header block failed   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
-| HTTP_QPACK_ENCODER_STREAM_ERROR   | 0x201 | Error on the encoder stream              | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
-| HTTP_QPACK_DECODER_STREAM_ERROR   | 0x202 | Error on the decoder stream              | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
+| QPACK_DECOMPRESSION_FAILED   | 0x200 | Decompression of a header block failed   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
+| QPACK_ENCODER_STREAM_ERROR   | 0x201 | Error on the encoder stream              | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
+| QPACK_DECODER_STREAM_ERROR   | 0x202 | Error on the decoder stream              | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-error-code-registration) |
 
 ## HTTP/3 Stream Types
 
