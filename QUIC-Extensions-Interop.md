@@ -21,3 +21,4 @@ _Feel free to add your extension to this list.  When picking a code, please do n
 |[Delayed ACKs](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) | a | TBD |
 |[Loss bits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) | q | TBD |
 |[Datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05) | g | Can be tested using [Siduck](https://datatracker.ietf.org/doc/draft-pardue-quic-siduck/)
+|[Quic-bit-grease](https://https://tools.ietf.org/html/draft-thomson-quic-bit-grease-00) | b | Tested by just running against a server, and checking whether options are accepted and Quic Bit is greased |
