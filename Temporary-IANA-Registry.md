@@ -29,12 +29,23 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x1057 | loss_bits                   | [quic-lossbits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) |
 | 0x2ab2 | grease_quic_bit             | [quic-bit-grease](https://tools.ietf.org/html/draft-thomson-quic-bit-grease) |
 | 0x173E | discard                   | [Discard upon receipt](https://github.com/quicwg/base-drafts/wiki/Quantum-Readiness-test) |
-| 0x3127 | Google_internal_1 | Google-internal undocumented transport parameter 1 |
-| 0x3128 | Google_internal_2 | Google-internal undocumented transport parameter 2 |
-| 0x3129 | Google_internal_3 | Google-internal undocumented transport parameter 3 |
-| 0x312A | Google_internal_4 | Google-internal undocumented transport parameter 4 |
-| 0x4751 | Google_internal_5 | Google-internal undocumented transport parameter 5 |
-| 0x4752 | Google_internal_6 | Google-internal undocumented transport parameter 6 |
+| 0x3127 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3128 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3129 | Google_internal | Google-internal undocumented transport parameter |
+| 0x312A | Google_internal | Google-internal undocumented transport parameter |
+| 0x312B | Google_internal | Google-internal undocumented transport parameter |
+| 0x312C | Google_internal | Google-internal undocumented transport parameter |
+| 0x312D | Google_internal | Google-internal undocumented transport parameter |
+| 0x312E | Google_internal | Google-internal undocumented transport parameter |
+| 0x312F | Google_internal | Google-internal undocumented transport parameter |
+| 0x3130 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3131 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3132 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3133 | Google_internal | Google-internal undocumented transport parameter |
+| 0x3134 | Google_internal | Google-internal undocumented transport parameter |
+| 0x465A | Google_internal | Google-internal undocumented transport parameter |
+| 0x4751 | Google_internal | Google-internal undocumented transport parameter |
+| 0x4752 | Google_internal | Google-internal undocumented transport parameter |
 | 0x7157 | enable_time_stamp | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
 | 0xDE1A | min_ack_delay               | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
