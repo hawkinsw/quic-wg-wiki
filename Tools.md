@@ -2,7 +2,7 @@
 **This is a listing of tools for analysing, debugging and visualising QUIC (and potentially the HTTP mapping). See also the [Implementations listing](Implementations).**
 
 # Wireshark
-[Wireshark](https://wireshark.org/) has a GQUIC decoder<sup>1</sup> and IETF-QUIC decoder. ~~HTTP analysis is possible via integration with the [HTTP/2 decoder](https://wiki.wireshark.org/HTTP2).~~ http3 is not yet supported. To enable handshake/payload decryption, use a Wireshark version that matches the QUIC version:
+[Wireshark](https://wireshark.org/) has a GQUIC decoder<sup>1</sup> and IETF-QUIC decoder. ~~HTTP analysis is possible via integration with the [HTTP/2 decoder](https://wiki.wireshark.org/HTTP2).~~ http3 is in [development](https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16761). To enable handshake/payload decryption, use a Wireshark version that matches the QUIC version:
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- |
@@ -30,7 +30,7 @@
  | -08 | ? | v2.9.0rc0-173-g71ddbb69f5 |
 
 Automated builds (macOS and Windows): https://www.wireshark.org/download/automated/  
-Upstream bug (with sample captures/keys): https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881  
+Upstream bug (with sample captures/keys): https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881 (QUIC) / https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16761 (HTTP/3)  
 Patches under review: https://code.wireshark.org/review/#/q/status:open+branch:master+topic:QUIC
 
 Payload decryption (>= draft -13) requires QUIC/TLS 1.3 traffic secrets following the [SSLKEYLOGFILE key log file format](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format). OpenSSL supports this via its keylog callback.
@@ -53,9 +53,9 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [ ] Stateless reset (format changed again in draft -17 and -20) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
 - [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
 - [x] Initial Follow QUIC Stream support https://code.wireshark.org/review/34694
-- [ ] STREAM reassembly support
+- [ ] STREAM reassembly support (dependency for https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16761)
 - [ ] Out-of-order and retransmission handling is not implemented and will cause decryption/dissection failures. See https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=13881#c263
-- [ ] Missing QPACK and HTTP/3 support. (Planned to be added.)
+- [ ] Missing QPACK and HTTP/3 support. https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16761
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
 </details>
