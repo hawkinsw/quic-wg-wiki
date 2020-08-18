@@ -201,6 +201,16 @@ A small(ish) implementation of QUIC in C, to explore the protocol and the API, f
 - **Protocol IDs:** `0xff00001d`, `0xff00001c`, `0xff00001b`
 - **Public server:** test.privateoctopus.com:4433 (server log accessible at https://test.privateoctopus.com/). Use port 4434 to test retries.
 
+### [Pluginized QUIC](https://github.com/p-quic/pquic)
+The PQUIC implementation, a framework that enables QUIC clients and servers to dynamically exchange protocol plugins that extend the protocol on a per-connection basis.
+
+- **Language:** C (and eBPF)
+- **Version:** draft-29
+- **Roles:** library, client and server
+- **Handshake:** TLS 1.3 (using picotls)
+- **Protocol IDs:** `0xff00001d`
+- **Public server:** test.pquic.org:443 (server logs not yet publicly available).
+
 ### [quant](https://github.com/NTAP/quant)
 
 QUANT (QUIC Userspace Accelerated Network Transfers), a BSD-licensed C11 implementation on top of the zero-copy [warpcore](https://github.com/NTAP/warpcore) userspace UDP/IPv4 stack for the [netmap](http://info.iet.unipi.it/~luigi/netmap/) packet I/O framework. (Also works over the standard Sockets API.)
