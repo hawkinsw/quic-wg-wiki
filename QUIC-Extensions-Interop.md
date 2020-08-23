@@ -21,6 +21,6 @@ _Feel free to add your extension to this list.  When picking a code, please do n
 |[Delayed ACKs](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) | a | TBD |
 |[Loss bits](https://tools.ietf.org/html/draft-ferrieuxhamchaoui-quic-lossbits) | q | TBD |
 |[Datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05) | g | Can be tested using [Siduck](https://datatracker.ietf.org/doc/draft-pardue-quic-siduck/)
-|[Quic-bit-grease allowed](https://https://tools.ietf.org/html/draft-thomson-quic-bit-grease-00) | b | Tested by just running against a server, and checking whether Quic Bit is greased in received packets |
-|[Quic-bit-grease implemented](https://https://tools.ietf.org/html/draft-thomson-quic-bit-grease-00) | i | Tested by just running against a server, and checking whether it accepts greased Quic Bits |
+|[Quic-bit-grease allowed](https://tools.ietf.org/html/draft-thomson-quic-bit-grease-00) | b | Tested by just running against a server, and checking whether Quic Bit is greased in received packets |
+|[Quic-bit-grease implemented](https://tools.ietf.org/html/draft-thomson-quic-bit-grease-00) | i | Tested by just running against a server, and checking whether it accepts greased Quic Bits |
 |[Time-stamp](https://tools.ietf.org/html/draft-huitema-quic-ts-02) | t | TBD |
