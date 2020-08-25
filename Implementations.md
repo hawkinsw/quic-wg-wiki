@@ -165,6 +165,7 @@ Implementation of QUIC for NGINX based on quiche, by Cloudflare.
 - **Protocol IDs:** `0xff00001b`, `0xff00001c`, `0xff00001d`
 - **Public server:** cloudflare-quic.com:443 (HTTP/3 only)
 
+<!--
 ### [Node.js QUIC](https://github.com/nodejs/quic)
 Implementation of QUIC and HTTP/3 support in Node.js (based on ngtcp2)
 
@@ -176,7 +177,8 @@ Implementation of QUIC and HTTP/3 support in Node.js (based on ngtcp2)
 - **Public server:** -
 
 Notes: No public server yet. Implementation is still in development and not yet merged with main Node.js repository. 
-
+-->
+<!--
 ### Pandora
 
 Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.  Server setup still a bit shake; see also pandora in the QUIC Slack channel
@@ -190,6 +192,7 @@ Client and server library for our experimenting with different QUIC applications
   - pandora.cm.in.tum.de:4433 (hq-23)
   - pandora.cm.in.tum.de:4434 (Stateless Retry)
   - https://pandora.cm.in.tum.de (Debug logs)
+-->
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
 A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD/IOS.
@@ -235,6 +238,7 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 - **Protocol IDs:** `0xff00001b`, `0xff00001c`, `0xff00001d`
 - **Public server:** quic.tech:4433 (HTTP/0.9 + 0-RTT) / quic.tech:8443 (HTTP/3 + 0-RTT) / quic.tech:8444 (HTTP/3 + Retry)
 
+<!--
 ### [QUICker](https://github.com/rmarx/quicker)
 
 QUICker is a NodeJS/TypeScript based QUIC and HTTP/3 implementation from the University of Hasselt, Belgium. 
@@ -247,7 +251,7 @@ Live logs available at https://quic.edm.uhasselt.be/quicker/logs/
 - **Handshake:** TLS 1.3 (RFC8446)
 - **Protocol IDs:** `0xff000014`
 - **Public server:** quicker.edm.uhasselt.be:4433 (both HTTP/0.9 and HTTP/3 based on ALPN)
-
+-->
 
 ### [quicly](https://github.com/h2o/quicly)
 
@@ -262,6 +266,7 @@ QUIC protocol implementation for H2O server
   - quic.examp1e.net:4433 (HTTP/0.9)
   - quic.examp1e.net:443 (HTTP/3)
 
+<!--
 ### [Quincy](https://github.com/protocol7/quincy)
 
 Quincy is an implementation of QUIC in Java, based on the Netty framework.
@@ -272,6 +277,7 @@ Quincy is an implementation of QUIC in Java, based on the Netty framework.
 - **Handshake:** unknown
 - **Protocol IDs:** `0xff000014`
 - **Public server:** n/a
+-->
 
 ### [Quinn](https://github.com/djc/quinn)
 
@@ -284,6 +290,7 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 - **Protocol IDs:** `0xff00001c`
 - **Public server:** h3.stammw.eu:443
 
+<!--
 ### sora_quic
 
 QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
@@ -293,6 +300,7 @@ QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
 - **Roles:** server,library
 - **Handshake:** TLS 1.3 (RFC 8446)
 - **Protocol IDs:** `0xff000013`
+-->
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
