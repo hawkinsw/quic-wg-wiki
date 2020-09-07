@@ -48,7 +48,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x4752 | Google_internal | Google-internal undocumented transport parameter |
 | 0x7157 | enable_time_stamp | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
-| 0xBAAD | disable_1rtt_encryption     | [draft-banks-quic-disable-encryption](https://tools.ietf.org/html/draft-banks-quic-disable-encryption) |
+| 0xBAAD | disable_1rtt_encryption     | [quic-disable-encryption](https://tools.ietf.org/html/draft-banks-quic-disable-encryption) |
 | 0xDE1A | min_ack_delay               | [quic-delayed-ack](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack) |
 
 ## QUIC Frame Types
