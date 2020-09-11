@@ -5,7 +5,8 @@
 [Wireshark](https://wireshark.org/) has a GQUIC decoder<sup>1</sup> and IETF-QUIC decoder. ~~HTTP analysis is possible via integration with the [HTTP/2 decoder](https://wiki.wireshark.org/HTTP2).~~ http3 is in [development](https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16761). To enable handshake/payload decryption, use a Wireshark version that matches the QUIC version:
 
  | # | First Wireshark version | Last WS version | notes |
- | -- | -- | -- | -- |
+ | -- | -- | -- | -- 
+ | -30 | | | |
  | -29 | v3.3.0rc0-1373-g9d24072 | | Done |
  | -28 | v3.3.0rc0-1246-g2b9796adc6 | | Done |
  | -27 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | Done |
@@ -59,6 +60,12 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [x] 0-RTT decryption support https://code.wireshark.org/review/33695
 - [ ] ...
 </details>
+
+<details><summary>To-do items for draft -30 completion</summary>
+
+- [ ] Add AEAD_LIMIT_REACHED transport error code (0x0e with PR https://github.com/quicwg/base-drafts/pull/4088)
+
+ </details>
 
 <details><summary>To-do items for draft -29 completion (completed)</summary>
 
