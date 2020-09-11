@@ -65,6 +65,7 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 
 - [ ] Add AEAD_LIMIT_REACHED transport error code (0x0e with PR https://github.com/quicwg/base-drafts/pull/4088)
 
+ https://gitlab.com/wireshark/wireshark/-/merge_requests/211
  </details>
 
 <details><summary>To-do items for draft -29 completion (completed)</summary>
