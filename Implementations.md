@@ -103,14 +103,14 @@ Kwik is a QUIC client (and client library) implementation in Java.
 LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, Android, and Windows.  Turn-key open-source web server that uses lsquic is available at [openlitespeed.org](https://openlitespeed.org/) in both source and package forms.
 
 - **Language:**  C
-- **Version:** Draft-29, Draft-28, Draft-27, Q043, Q046, and Q050.
+- **Version:** Draft-30, Draft-29, Draft-28, Draft-27, Q043, Q046, and Q050.
 - **Roles:** Client, Server, Library
 - **Handshake:** QUIC Crypto, RFC 8446
-- **Protocol IDs:** `0xff00001d`, `0xff00001C`, `0xff00001B`
+- **Protocol IDs:** `0xff00001E`, `0xff00001D`, `0xff00001C`, `0xff00001B`
 - **Public server:**
-  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging) for ID-29, ID-28, and ID-27 as well as Google QUIC versions Q043, Q046, and Q050
+  - http3-test.litespeedtech.com:4433, http3-test.litespeedtech.com:4434 (sends stateless retry packets), and http3-test.litespeedtech.com:4435 (faster downloads due to less logging), :4437 (siduck-00 :duck:), and :4440 (delayed acks) for ID-29, ID-28, and ID-27 as well as Google QUIC versions Q043, Q046, and Q050
     - This server supports HTTP/3 and QPACK and provides some services to test transfer of data each way.  `GET /` for details.
-  - www.litespeedtech.com:443 for the standard fare of Google QUIC versions.
+  - www.litespeedtech.com:443 is our production web server.
 
 ### [MsQuic](https://github.com/microsoft/msquic)
 
@@ -345,9 +345,9 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, and Windows.
 
 - **Language:**  C
 - **Transport Library:** lsquic
-- **Version:** Draft-29, Draft-28, Draft-27.
+- **Version:** Draft-30, Draft-29, Draft-28, Draft-27.
 - **Roles:** Client, Server, Library
-- **Protocol IDs:** `0xFF00001D`, `0xFF00001C`, `0xFF00001B`
+- **Protocol IDs:** `0xFF00001E`, `0xFF00001D`, `0xFF00001C`, `0xFF00001B`
 - **Public server:** www.litespeedtech.com:443
 
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
@@ -393,7 +393,7 @@ See entry in the "IETF QUIC Transport" section.
 A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanilla C.  Bindings are available for [Go](https://github.com/mpiraux/ls-qpack-go), [Python](https://github.com/aiortc/pylsqpack), and [TypeScript](https://github.com/rmarx/quicker/tree/draft-20/src/http/http3/common/qpack).
 
 - **Language:** C
-- **Version:** [-14](https://tools.ietf.org/html/draft-ietf-quic-qpack-14)
+- **Version:** [-16](https://tools.ietf.org/html/draft-ietf-quic-qpack-16)
 
 ### f5
 
