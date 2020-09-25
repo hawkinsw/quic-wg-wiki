@@ -1,12 +1,12 @@
 ## Overview
 
-* QUIC Version draft-29 (vn=**ff00001d**)
+* QUIC Version draft-31 (vn=**ff00001f**)
 
-* HTTP 3 (ALPN=**h3-29**)
+* HTTP 3 (ALPN=**h3-31**)
 
-* HTTP 0.9/1.1 (ALPN=**hq-29**)
+* HTTP 0.9/1.1 (ALPN=**hq-31**)
 
-* Record interop results [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1268516408)
+* Record interop results [here](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit#gid=1991873121)
 
 * List of implementations [here](https://github.com/quicwg/base-drafts/wiki/Implementations)
 
