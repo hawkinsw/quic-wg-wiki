@@ -148,10 +148,10 @@ Mozilla/Firefox QUIC and HTTP3 implementation.
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
-- **Version:** draft-29, draft-30, and draft-31
+- **Version:** draft-29, draft-30, draft-31, and draft-32
 - **Roles:** client, library, server
 - **Handshake:** TLSv1.3 (RFC 8446)
-- **Protocol IDs:** `0xff00001d`, `0xff00001e`, and `0xff00001f`
+- **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, and `0xff000020`
 - **Public server:** nghttp2.org:4433
 
 
@@ -356,7 +356,7 @@ It does not depend on any particular QUIC transport implementation.
 
 - **Language:** C
 - **Transport library:** It does not depend on any particular QUIC transport library.
-- **HTTP over QUIC Version:** draft-31
+- **HTTP over QUIC Version:** draft-32
 - **Roles:** library
 - **Public server:** nghttp2.org:4433
 
@@ -403,7 +403,7 @@ A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanil
 ### [nghttp3](https://github.com/ngtcp2/nghttp3)
 
 - **Language:** C
-- **Version:** [-18](https://tools.ietf.org/html/draft-ietf-quic-qpack-18)
+- **Version:** [-18](https://tools.ietf.org/html/draft-ietf-quic-qpack-19)
 
 ### [quiche](https://github.com/cloudflare/quiche)
 
