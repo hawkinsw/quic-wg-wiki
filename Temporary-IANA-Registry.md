@@ -146,6 +146,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | MAX_HEADER_LIST_SIZE         |  0x6   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-settings-parameters) |
 | QPACK_BLOCKED_STREAMS        | 0x7    | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-settings-registration) |
 | H3_DATAGRAM                  | 0x276  | [h3-datagram](https://tools.ietf.org/html/draft-schinazi-quic-h3-datagram) |
+| ENABLE_WEBTRANSPORT          | 0x2b603742 | [h3-webtransport](https://tools.ietf.org/html/draft-vvv-webtransport-http3) |
 
 
 ## HTTP/3 Error Codes
