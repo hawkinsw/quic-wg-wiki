@@ -69,14 +69,12 @@ Chromium's QUIC Implementation (draft-29 supported in Chrome 85.0.4171.0 and lat
 QUIC implementation in F5 TMOS
 
 - **Language:** C
-- **Version:** draft-27 and 28
+- **Version:** draft-29 and 32
 - **Roles:** Server, Client
 - **Handshake:** RFC 8446
-- **Protocol IDs:** `0xff00001b`, `0xff00001c`
-- **ALPN:** `h3-27`, `h3-28`. `hq-27` and `hq-28` available upon request.
-- **Public server:** f5quic.com:4433
-
-Note: This server always sends RETRY packets, but we can disable this on request. It is not currently serving Retry for version 28.
+- **Protocol IDs:** `0xff00001d`, `0xff000020`
+- **ALPN:** `h3-29`, `h3-32`. `hq-29` and `hq-32` available upon request.
+- **Public server:** f5quic.com:4433. spin, logging, and retry on f5quic.com:4434.
 
 ### [Haskell quic](https://github.com/kazu-yamamoto/quic)
 
