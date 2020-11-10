@@ -154,6 +154,15 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, and `0xff000020`
 - **Public server:** nghttp2.org:4433
 
+### [nginx](https://hg.nginx.org/nginx-quic/)
+QUIC and HTTP/3 server implementation in nginx
+
+- **Language:** C
+- **Version:** draft-27 .. draft-32
+- **Roles:** server
+- **Handshake:** TLSv1.3 (RFC8446)
+- **Protocol IDs:** `0xff00001b` .. `0xff000020`
+- **Public server:** quic.nginx.org:443 (draft-29)
 
 ### [nginx-cloudflare](https://github.com/cloudflare/quiche/tree/master/extras/nginx)
 Implementation of QUIC for NGINX based on quiche, by Cloudflare.
