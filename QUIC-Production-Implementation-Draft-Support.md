@@ -12,6 +12,10 @@ Version 3.0: h3-27, h3-29
 
 h3-27, h3-29
 
+## Chrome (and other Chromium-based browsers)
+
+h3-29
+
 # Servers
 
 ## F5 BIG-IP
@@ -35,4 +39,6 @@ Customers that have not performed recommended maintenance upgrades may be operat
 - 1.7.x: h3-27, h3-29
 - 1.6.x: h3-25, h3-27
 
+## Google
 
+h3-29
