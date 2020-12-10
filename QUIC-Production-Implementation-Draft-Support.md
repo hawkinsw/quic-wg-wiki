@@ -42,3 +42,7 @@ Customers that have not performed recommended maintenance upgrades may be operat
 ## Google
 
 h3-29
+
+## Fastly
+
+h3-27, h3-29
