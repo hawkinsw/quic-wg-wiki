@@ -79,6 +79,9 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x1b        | PATH_RESPONSE        | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1c - 0x1d | CONNECTION_CLOSE     | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
 | 0x1e        | HANDSHAKE_DONE       | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#frame-types) |
+| 0x22 - 0x23 | MP_ACK               | [multipath-quic](https://datatracker.ietf.org/doc/draft-liu-multipath-quic/) |
+| 0x24        | QOE_CONTROL_SIGNALS  | [multipath-quic](https://datatracker.ietf.org/doc/draft-liu-multipath-quic/) |
+| 0x2a        | PATH_STATUS          | [multipath-quic](https://datatracker.ietf.org/doc/draft-liu-multipath-quic/) |
 | 0x30 - 0x31 | DATAGRAM | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
 | 0x40        | MP_NEW_CONNECTION_ID    | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 | 0x41        | MP_RETIRE_CONNECTION_ID | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
