@@ -6,8 +6,10 @@
 
  | # | First Wireshark version | Last WS version | notes |
  | -- | -- | -- | -- 
- | -31 | v3.3.1rc0-81-gec7c5699a711 | | Done |
- | -30 | v3.3.0rc0-2026-g889dd0cbfbc7 | | Done |
+ | -33 | v3.5.0rc0-411-g01e64f996bfb | | Quic v1 final constants. Back-ported to 3.4.x |
+ | -32 | v3.3.2rc0-159-ge6adc940ac5c | | Done (no packet changes) |
+ | -31 | v3.3.1rc0-81-gec7c5699a711 | | Done (no packet changes) |
+ | -30 | v3.3.0rc0-2026-g889dd0cbfbc7 | | Done (no packet changes) |
  | -29 | v3.3.0rc0-1373-g9d24072 | | Done |
  | -28 | v3.3.0rc0-1246-g2b9796adc6 | | Done |
  | -27 | v3.3.0rc0-572-ge4138a3b98 / 3.2.2 | | Done |
