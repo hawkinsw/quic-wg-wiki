@@ -25,16 +25,16 @@ The QUIC Network Simulator is a [ns-3](https://www.nsnam.org/)-based network sim
 * **Materials:** https://github.com/marten-seemann/quic-network-simulator/
 
 ### qlog logging format and associated tooling and visualizations
-qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations would output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported (partially) by quicker, lsquic, mvfst, quant and aioquic. 
+qlog is a proposal for a flexible, interoperable endpoint logging format/schema spanning multiple modern protocols and networking use cases, as well as its associated tooling. The idea is that all QUIC and HTTP/3 implementations output logs in the same JSON-based format, making it easier to write reusable (browser-based) tools. The format is evolving rapidly and we welcome feedback and implementation experience. Currently supported by over 70% of all QUIC stacks and on track to be adopted by the QUIC wg in 2021.
 
 * **Main contact:** Robin Marx, robin.marx@uhasselt.be
 * **Forum:** qlog@ietf.org, #qlog in the QUIC slack, github issues on the repo (see below)
 * **Materials:**
   * https://github.com/quiclog
+  * https://qvis.edm.uhasselt.be
   * https://tools.ietf.org/html/draft-marx-qlog-main-schema
   * https://tools.ietf.org/html/draft-marx-qlog-event-definitions-quic-h3
   * https://quic.edm.uhasselt.be
-  * https://quic.edm.uhasselt.be/qtr-to-qlog/
 
 ### Loss Bits
 
