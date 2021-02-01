@@ -321,17 +321,17 @@ A QUIC implementation in Go.
 - **Protocol IDs:**
 - **Public server:** https://interop.seemann.io
 
+## IETF HTTP over QUIC
+
+The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
+
 ### Akamai QUIC
 
 - **Roles:** Server
 - **Public server:** ietf.akaquic.com:443
-- **Version:** draft-25
-- **Protocol IDs:** `0xff000019`
+- **Version:** draft-29
+- **Protocol IDs:** `0xff00001d` 
 - **Handshake:** TLS 1.3 RFC
-
-## IETF HTTP over QUIC
-
-The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
 
 ### Chromium
 
