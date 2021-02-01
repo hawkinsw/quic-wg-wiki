@@ -22,6 +22,15 @@ QUIC implementation using Python and asyncio.
 - **Public server:**
   - quic.aiortc.org:443
   - quic.aiortc.org:4434 (Stateless Retry)
+applicable.
+
+### Akamai QUIC
+
+- **Roles:** Server
+- **Public server:** ietf.akaquic.com:443
+- **Version:** draft-29
+- **Protocol IDs:** `0xff00001d` 
+- **Handshake:** TLS 1.3 RFC
 
 ### AppleQUIC
 
@@ -327,11 +336,7 @@ The following implement IETF HTTP over QUIC. The "Transport library" field ident
 
 ### Akamai QUIC
 
-- **Roles:** Server
-- **Public server:** ietf.akaquic.com:443
-- **Version:** draft-29
-- **Protocol IDs:** `0xff00001d` 
-- **Handshake:** TLS 1.3 RFC
+See entry in the "IETF QUIC Transport" section.
 
 ### Chromium
 
