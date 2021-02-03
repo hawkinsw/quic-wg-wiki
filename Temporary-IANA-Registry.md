@@ -133,6 +133,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | DUPLICATE_PUSH   |  0xE   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-frame-types) |
 | PRIORITY_UPDATE  |  0xF   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0x10   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
+| ACCEPT_CH        |  0x89   |[http-client-hint-reliability](https://datatracker.ietf.org/doc/draft-davidben-http-client-hint-reliability/) |
 | PRIORITY_UPDATE  |  0xF0700   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0xF0701   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0x1CCB8BBF1F0700   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
