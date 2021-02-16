@@ -125,7 +125,7 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, Android, and
 Microsoft's general purpose QUIC implementation.
 
 - **Language:** C
-- **Version:** draft-29/1
+- **Version:** Draft-29 & v1
 - **Roles:** client, server
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:** `0xff00001D`, `0x1`
