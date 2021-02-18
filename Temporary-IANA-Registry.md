@@ -134,6 +134,8 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | PRIORITY_UPDATE  |  0xF   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0x10   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | ACCEPT_CH        |  0x89   |[http-client-hint-reliability](https://datatracker.ietf.org/doc/draft-davidben-http-client-hint-reliability/) |
+| DATA_WITH_OFFSET |  0xD00 | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
+| DATA_WITH_OFFSET |  0xD0F | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
 | PRIORITY_UPDATE  |  0xF0700   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0xF0701   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0x1CCB8BBF1F0700   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
@@ -151,6 +153,8 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | MAX_HEADER_LIST_SIZE         |  0x6   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-settings-parameters) |
 | QPACK_BLOCKED_STREAMS        | 0x7    | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-settings-registration) |
 | H3_DATAGRAM                  | 0x276  | [h3-datagram](https://tools.ietf.org/html/draft-schinazi-quic-h3-datagram) |
+| ENABLE_DATA_WITH_OFFSET      | 0xD00  | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
+| ENABLE_DATA_WITH_OFFSET      | 0xD0F  | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
 | ENABLE_WEBTRANSPORT          | 0x2b603742 | [h3-webtransport](https://tools.ietf.org/html/draft-vvv-webtransport-http3) |
 
 
