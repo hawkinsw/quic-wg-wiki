@@ -1,6 +1,6 @@
 # Overview
 
-For [IETF 110 hackathon](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon) we will attempt to do some QUIC performance measurements across different implementations that support the QUIC [perf protocol](https://tools.ietf.org/html/draft-banks-quic-performance). Primarily we will be testing single connection, single (bidirectional) stream throughput (probably upload and download) performance scenarios. Other scenarios may be tested if there is time and/or interest.
+For [IETF 110 hackathon](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon) we will attempt to do some QUIC performance testing across different implementations that support the QUIC [perf protocol](https://tools.ietf.org/html/draft-banks-quic-performance). Primarily we will be testing single connection, single (bidirectional) stream throughput (probably upload and download) performance scenarios. Other scenarios may be tested if there is time and/or interest.
 
 # Set up
 
