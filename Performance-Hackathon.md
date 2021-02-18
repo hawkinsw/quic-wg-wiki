@@ -10,6 +10,8 @@ Each implementation will upload a zip of their implementation and instructions t
 
 # Tests
 
+Outlines the various scenarios to be tested.
+
 ## Single Connection Client Upload
 
 The client will send 1000000000 bytes to the server (zero requested response size) over a single bidirectional stream.
