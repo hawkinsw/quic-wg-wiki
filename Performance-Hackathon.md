@@ -14,11 +14,11 @@ Outlines the various scenarios to be tested.
 
 ## Single Connection Client Upload
 
-The client will send 1000000000 bytes to the server (zero requested response size) over a single bidirectional stream.
+The client will send 5000000000 bytes to the server (zero requested response size) over a single bidirectional stream.
 
 ## Single Connection Client Download
 
-The client will request 1000000000 bytes from the server (no other client payload) over a single bidirectional stream.
+The client will request 5000000000 bytes from the server (no other client payload) over a single bidirectional stream.
 
 ## Maximum Requests per Second
 
