@@ -15,7 +15,7 @@ The following stacks implement the IETF versions of QUIC Transport. They may inc
 QUIC implementation using Python and asyncio.
 
 - **Language:** Python
-- **Version:** draft-29
+- **Version:** draft-29 through version 1
 - **Roles:** client, server, library
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, `0xff000020`, `0x1`
