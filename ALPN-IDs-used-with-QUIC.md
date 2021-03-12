@@ -23,3 +23,4 @@ While IANA holds the formal registration table of Protocol IDs at https://www.ia
 |siduck-NN | Simple DATAGRAM test over QUIC |
 |wq-vvv-NN | WebTransport QuicTransport (https://tools.ietf.org/html/draft-vvv-webtransport-quic-02#section-9.1) |
 |doq-iNN | DNS over QUIC (https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/) |
+|qrt-NN | QRT: QUIC RTP Tunnelling (https://datatracker.ietf.org/doc/draft-hurst-quic-rtp-tunnelling/) |
