@@ -10,6 +10,7 @@ While IANA holds the formal registration table of Protocol IDs at https://www.ia
 |h3 | HTTP/3 over QUIC v1 |
 |h3-T0NN | Google variant of HTTP/3 over QUIC |
 |h3-Q0NN | Google variant of HTTP/3 over QUIC |
+|http/2+quic | Google variant of HTTP/3 over QUIC |
 |http/2+quic/NN | Google variant of HTTP/3 over QUIC |
 |quic | Google variant of HTTP/3 over QUIC |
 |h3-fb-NN | Facebook variant of HTTP/3 over QUIC I-D draft |
