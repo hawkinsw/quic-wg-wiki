@@ -16,6 +16,7 @@ While IANA holds the formal registration table of Protocol IDs at https://www.ia
 |h3-fb-NN | Facebook variant of HTTP/3 over QUIC I-D draft |
 |hq-NN | HTTP/0.9 over QUIC I-D draft, used for interoperability testing |
 |hq | HTTP/0.9 over QUIC v1, used for interoperability testing |
+|hq-interop | HTTP/0.9 over QUIC v1, used for interoperability testing |
 |smb| SMB over QUIC |
 |perf | Performance testing protocol over QUIC (https://datatracker.ietf.org/doc/draft-banks-quic-performance/) |
 |siduck| Simple DATAGRAM test over QUIC (https://datatracker.ietf.org/doc/draft-pardue-quic-siduck/) |
