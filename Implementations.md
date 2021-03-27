@@ -58,7 +58,7 @@ QUIC implementation in Apache Traffic Server
   - quic.ogre.com:4443 (Preferred Address 4443 -> 4433)
   - https://quic.ogre.com/cgi-bin/quic_log.cgi (Debug logs)
 
-### [Chromium](https://www.chromium.org/quic/playing-with-quic)	
+### [Chromium](https://quiche.googlesource.com/quiche/)	
 
 Chromium's QUIC Implementation (draft-29 supported in Chrome 85.0.4171.0 and later).	
 
@@ -72,6 +72,8 @@ Chromium's QUIC Implementation (draft-29 supported in Chrome 85.0.4171.0 and lat
   - https://quic.rocks:4433
   - https://google.com
 - **Entry in Interop Matrix:** ~gQUIC
+
+**NOTE**: Google has named their implementation "quiche", but it is wholly unrelated to Cloudflare's Rust implementation by the same name.
 
 ### f5
 
@@ -247,6 +249,8 @@ QUANT is a general transport library and does *NOT* implement H3.
 ### [quiche](https://github.com/cloudflare/quiche)
 
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
+
+**NOTE**: do not confuse this with the Google implementation which uses the same exact name.
 
 - **Language:** Rust
 - **Version:** draft-27, draft-28, draft-29
