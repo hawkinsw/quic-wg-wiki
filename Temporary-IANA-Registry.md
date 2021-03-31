@@ -133,6 +133,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | DUPLICATE_PUSH   |  0xE   | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-frame-types) |
 | PRIORITY_UPDATE  |  0xF   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
 | PRIORITY_UPDATE  |  0x10   | [http-priorities](https://httpwg.org/http-extensions/draft-ietf-httpbis-priority.html#section-5.2) |
+| WEBTRANSPORT_STREAM | 0x41 | [webtransport-http3](https://www.ietf.org/archive/id/draft-ietf-webtrans-http3-00.html#name-unidirectional-streams) |
 | ACCEPT_CH        |  0x89   |[http-client-hint-reliability](https://datatracker.ietf.org/doc/draft-davidben-http-client-hint-reliability/) |
 | DATA_WITH_OFFSET |  0xD00 | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
 | DATA_WITH_OFFSET |  0xD0F | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
@@ -190,6 +191,4 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | Push Stream      |  0x01  | [quic-http](https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-stream-types) |
 | QPACK Encoder Stream         | 0x02   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-stream-type-registration) |
 | QPACK Decoder Stream         | 0x03   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-stream-type-registration) |
-
-
-
+| WebTransport Unidirectional Stream | 0x54 | [webtransport-http3](https://www.ietf.org/archive/id/draft-ietf-webtrans-http3-00.html#name-unidirectional-streams) |
