@@ -124,8 +124,9 @@ LiteSpeed QUIC and HTTP/3 library.  Works on Linux, FreeBSD, MacOS, Android, and
 
 ### [MsQuic](https://github.com/microsoft/msquic)
 
-Microsoft's general purpose QUIC implementation.
+Microsoft's general purpose (cross-platform) QUIC implementation. Optimized for [high performance](https://microsoft.github.io/msquic/). More documentation [here](https://github.com/microsoft/msquic#documentation).
 
+- **Platforms:** Windows, Linux, macOS (alpha)
 - **Language:** C
 - **Version:** Draft-29 & v1
 - **Roles:** client, server
