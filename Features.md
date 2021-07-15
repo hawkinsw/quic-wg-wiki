@@ -16,6 +16,12 @@ QUIC protocol/implementation specific features.
 
 - `migration` - Supports explicit path migration by the client.
 
+- `cubic` - Supports the cubic congestion control algorithm.
+
+- `bbr` - Supports the BBR v1 congestion control algorithm.
+
+- `bbr2` - Supports the BBR v2 congestion control algorithm.
+
 - `ecn-recv` - Supports receiving and acknowledging ECN marked QUIC packets.
 
 - `ecn-send` - Supports reacting to ECN acknowledgements in congestion control logic.
