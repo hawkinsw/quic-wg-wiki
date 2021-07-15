@@ -1,5 +1,7 @@
 This wiki outlines the set of various features supported by at least some of the available implementations. Please note that this isn't a 1 to 1 map of features tested for [interop](21st-Implementation-Draft) because many of those are fundamental requirements to claim support at all. This list is just for the set of features that aren't always implemented by all.
 
+Some of the above features might only be supported for the client or server roles. In this case, the feature tag should be post-fixed with either `-client` or `-server` as appropriate. For instance, if 0-RTT is only supported on the server side, then the tag would be `0-rtt-server`.
+
 # QUIC Features
 
 QUIC protocol/implementation specific features.
@@ -35,8 +37,6 @@ QUIC protocol/implementation specific features.
 - `ack-freq` - Supports the ACK frequency extension.
 
 - `lb` - Supports at least some form of QUIC based load balancing.
-
-Some of the above features might only be supported for the client or server roles. In this case, the feature tag should be post-fixed with either `-client` or `-server` as appropriate. For instance, if 0-RTT is only supported on the server side, then the tag would be `0-rtt-server`.
 
 # HTTP/3 Features
 
