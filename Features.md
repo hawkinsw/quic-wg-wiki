@@ -36,4 +36,12 @@ QUIC protocol/implementation specific features.
 
 - `lb` - Supports at least some form of QUIC based load balancing.
 
+Some of the above features might only be supported for the client or server roles. In this case, the feature tag should be post-fixed with either `-client` or `-server` as appropriate. For instance, if 0-RTT is only supported on the server side, then the tag would be `0-rtt-server`.
+
 # HTTP/3 Features
+
+HTTP/3 protocol/implementation specific features.
+
+- `h3-client` - Supports the client role/side of a connection.
+
+- `h3-server` - Supports the server role/side of a connection. This includes things like creating a "listener" to accept incoming connections.
