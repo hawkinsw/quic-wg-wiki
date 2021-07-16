@@ -53,7 +53,7 @@ If your QUIC traffic is not properly detected by Wireshark, note that:
 - [x] TLS 1.3 handshake fragmentation over multiple packets. Related: https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=15537
 - [x] Key Update: verify decrypted result before switching cipher. https://code.wireshark.org/review/33279
 - [x] Connection migration: supported as of v2.9.0rc0-1879-g17bc055138 (tested with draft -14)
-- [ ] Stream ID dissection (two LSB -> direction/initiator)
+- [x] Stream ID dissection (two LSB -> direction/initiator)
 - [ ] Stateless reset (format changed again in draft -17 and -20) https://tools.ietf.org/html/draft-ietf-quic-transport-17#section-10.4
 - [x] Deprecate and alias `QUIC_*SECRET*` decryption secrets for `*SECRET*` since it is the same since draft -14. https://code.wireshark.org/review/33275
 - [x] Initial Follow QUIC Stream support https://code.wireshark.org/review/34694
