@@ -159,11 +159,11 @@ Mozilla/Firefox QUIC and HTTP3 implementation.
 ngtcp2 project is an effort to implement IETF QUIC protocol
 
 - **Language:** C
-- **Version:** draft-29, draft-30, draft-31, and draft-32
+- **Version:** v1, draft-29, draft-30, draft-31, and draft-32
 - **Roles:** client, library, server
 - **Handshake:** TLSv1.3 (RFC 8446)
-- **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, and `0xff000020`
-- **Public server:** nghttp2.org:4433
+- **Protocol IDs:** `0x00000001`, `0xff00001d`, `0xff00001e`, `0xff00001f`, and `0xff000020`
+- **Public server:** nghttp2.org:4433, nghttp2.org:443
 
 ### [nginx](https://hg.nginx.org/nginx-quic/)
 QUIC and HTTP/3 server implementation in nginx
