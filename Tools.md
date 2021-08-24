@@ -243,16 +243,16 @@ The "Spindump" tool is a Unix command-line utility that can be used for latency 
 - **Protocol IDs:** `0x00000001` `0xff000010`, `0xff000011`, `0xff000012`, `0xff000013`, `0xff000014`, `0xff000015`, `0xff000016`, `0xff000017`, `0xff000018`,`0xff000019`,`0x50435131`, etc.
 - **Public server:** n.a.
 
-# [h2load](https://github.com/nghttp2/nghttp2/tree/quic)
+# [h2load](https://github.com/nghttp2/nghttp2)
 
 h2load is load testing tool and now experimentally supports HTTP/3.
 
 - **Language:** C++
-- **Version:** draft-29
+- **Version:** v1
 - **Roles:** client
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00001d`
-- **ALPN:** `h3-29`
+- **Protocol IDs:** `0x00000001`
+- **ALPN:** `h3`
 
 # [qlog](https://github.com/quiclog/internet-drafts)
 
