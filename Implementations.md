@@ -1,6 +1,6 @@
 This wiki tracks known implementations of QUIC. See also our [Tools listing](Tools). Current [interop status](https://docs.google.com/spreadsheets/d/1D0tW89vOoaScs3IY9RGC0UesWGAwE6xyLk0l4JtvTVg/edit?usp=sharing); make sure you are looking at or editing the correct tab.
 
-Please add your implementation below. Keep sorted alphabetically. There are three sections, one for "IETF QUIC Transport", one for "IETF HTTP over QUIC", and one for "QPACK". Entries may appear in multiple sections e.g. where a stack provides both IETF QUIC Transport and IETF HTTP over QUIC.
+Please add your implementation below. Keep sorted alphabetically. There are three sections, one for "IETF QUIC Transport", one for "HTTP/3C", and one for "QPACK". Entries may appear in multiple sections e.g. where a stack provides both IETF QUIC Transport and HTTP/3.
 
 ## Note ##
 
@@ -73,7 +73,7 @@ Chromium's QUIC Implementation (draft-29 supported in Chrome 85.0.4171.0 and lat
   - https://google.com
 - **Entry in Interop Matrix:** ~gQUIC
 
-**NOTE**: Google has named their implementation "quiche", but it is wholly unrelated to Cloudflare's Rust implementation by the same name.
+**NOTE**: Not to be confused with Cloudflare quiche.
 
 ### f5
 
@@ -198,21 +198,6 @@ Implementation of QUIC and HTTP/3 support in Node.js (based on ngtcp2)
 
 Notes: No public server yet. Implementation is still in development and not yet merged with main Node.js repository. 
 -->
-<!--
-### Pandora
-
-Client and server library for our experimenting with different QUIC applications and for measurements, developed by Aalto Univ and now TUM.  Developed on GitHub but not yet public.  Server setup still a bit shake; see also pandora in the QUIC Slack channel
-
-- **Language:** C
-- **Version:** draft-23
-- **Roles:** library with minimal client, server
-- **Handshake:** TLSv1.3 (using picotls)
-- **Protocol IDs:** `0xff000017`
-- **Public server:** 
-  - pandora.cm.in.tum.de:4433 (hq-23)
-  - pandora.cm.in.tum.de:4434 (Stateless Retry)
-  - https://pandora.cm.in.tum.de (Debug logs)
--->
 
 ### [picoquic](https://github.com/private-octopus/picoquic)
 A small(ish) implementation of QUIC in C, to explore the protocol and the API, for example for DNS over QUIC. Relies on PicoTLS for TLS 1.3. MIT license. Tested on Windows, Linux, FreeBSD/IOS.
@@ -251,29 +236,15 @@ QUANT is a general transport library and does *NOT* implement H3.
 
 quiche is an implementation of the QUIC transport protocol as specified by the IETF. It provides a low level API for processing QUIC packets and handling connection state, while leaving I/O (including dealing with sockets) to the application. Example client and server are also provided.
 
-**NOTE**: do not confuse this with the Google implementation which uses the same exact name.
+**NOTE**: Not to be confused with Google QUICHE.
 
 - **Language:** Rust
-- **Version:** draft-27, draft-28, draft-29
+- **Version:** v1, draft-27, draft-28, draft-29
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff00001b`, `0xff00001c`, `0xff00001d`
+- **Protocol IDs:** `0x00000001`, `0xff00001b`, `0xff00001c`, `0xff00001d`
 - **Public server:** quic.tech:4433 (HTTP/0.9 + 0-RTT) / quic.tech:8443 (HTTP/3 + 0-RTT) / quic.tech:8444 (HTTP/3 + Retry)
 
-<!--
-### [QUICker](https://github.com/rmarx/quicker)
-
-QUICker is a NodeJS/TypeScript based QUIC and HTTP/3 implementation from the University of Hasselt, Belgium. 
-NodeJS C++ changes and TLS1.3 integration at https://github.com/kevin-kp/node/tree/add_quicker_support-draft-18
-Live logs available at https://quic.edm.uhasselt.be/quicker/logs/
-
-- **Language:** TypeScript
-- **Version:** draft-20
-- **Roles:** client,server,library
-- **Handshake:** TLS 1.3 (RFC8446)
-- **Protocol IDs:** `0xff000014`
-- **Public server:** quicker.edm.uhasselt.be:4433 (both HTTP/0.9 and HTTP/3 based on ALPN)
--->
 
 ### [quicly](https://github.com/h2o/quicly)
 
@@ -288,19 +259,6 @@ QUIC protocol implementation for H2O server
   - quic.examp1e.net:4433 (HTTP/0.9)
   - quic.examp1e.net:443 (HTTP/3)
 
-<!--
-### [Quincy](https://github.com/protocol7/quincy)
-
-Quincy is an implementation of QUIC in Java, based on the Netty framework.
-
-- **Language:** Java
-- **Version:** draft-20
-- **Roles:** library, client, server
-- **Handshake:** unknown
-- **Protocol IDs:** `0xff000014`
-- **Public server:** n/a
--->
-
 ### [Quinn](https://github.com/djc/quinn)
 
 Rust implementation based on tokio/futures, using rustls for TLS.
@@ -311,18 +269,6 @@ Rust implementation based on tokio/futures, using rustls for TLS.
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001c`
 - **Public server:** h3.stammw.eu:443
-
-<!--
-### sora_quic
-
-QUIC protocol implementation for WebRTC SFU (Selective Forwarding Unit)
-
-- **Language:** Erlang/OTP
-- **Version:** draft-19
-- **Roles:** server,library
-- **Handshake:** TLS 1.3 (RFC 8446)
-- **Protocol IDs:** `0xff000013`
--->
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
@@ -335,9 +281,9 @@ A QUIC implementation in Go.
 - **Protocol IDs:**
 - **Public server:** https://interop.seemann.io
 
-## IETF HTTP over QUIC
+## HTTP/3
 
-The following implement IETF HTTP over QUIC. The "Transport library" field identifies one (or more) of the above stacks if applicable.
+The following implement HTTP/3. The "Transport library" field identifies one (or more) of the above stacks if applicable.
 
 ### Akamai QUIC
 
@@ -399,6 +345,10 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 - **Roles:** library, sample server/client
 - **Public server:** fb.mvfst.net:4433, facebook.com:443
 
+### quiche
+
+See entry in the "IETF QUIC Transport" section.
+
 
 ## QPACK
 
@@ -422,7 +372,7 @@ A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanil
 ### [quiche](https://github.com/cloudflare/quiche)
 
 - **Language:** Rust
-- **Version:** [-06](https://tools.ietf.org/html/draft-ietf-quic-qpack-06)
+- **Version:** [-21](https://tools.ietf.org/html/draft-ietf-quic-qpack-21)
 
 ### [proxygen](https://github.com/facebook/proxygen)
 
