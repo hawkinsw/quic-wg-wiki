@@ -154,11 +154,9 @@ The ancillary messages are the same for IPv6 as for Linux (see above).  For IPv4
 
 ## Microsoft Windows
 
-There is no current documented way to set the ECN bits.
+Windows documentation for ECN usage is available [here](https://docs.microsoft.com/en-us/windows/win32/winsock/winsock-ecn).
 
-IP_RECVTOS (for IPv4) and IP_RECVTCLASS (for IPv6) socket option will allow a datagram socket to retrieve TOS bits including ECN values. See https://msdn.microsoft.com/en-us/library/windows/desktop/ms738586(v=vs.85).aspx. 
-
-This API was added in Windows 10 Creators Update.
+These APIs were added in Windows 10 Creators Update.
 
 ## Apple iOS, macOS, watchOS, etc.
 
