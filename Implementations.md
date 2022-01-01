@@ -101,10 +101,10 @@ QUIC implementation in F5 TMOS
 Kwik is a QUIC client (and client library) implementation in Java.
 
 - **Language:** Java
-- **Version:** draft-29, draft-30, draft-31, draft-32
-- **Roles:** client, client library
+- **Version:** draft-29 through version 1
+- **Roles:** client, client library, server
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, `0xff000020`
+- **Protocol IDs:** `0xff00001d`, `0xff00001e`, `0xff00001f`, `0xff000020`, `0x1`
 
 
 ### [lsquic](https://github.com/litespeedtech/lsquic)
@@ -298,10 +298,10 @@ Flupke is a HTTP3 client build on top of Kwik.
 
 - **Language:** Java
 - **Transport library:** [Kwik](https://bitbucket.org/pjtr/kwik)
-- **HTTP3 Version:** draft-29
-- **QUIC Verson:** draft-29
-- **Roles:** client library
-- **Public server:** n.a. (client only)
+- **HTTP3 Version:** draft-29 through version 1
+- **QUIC Verson:** draft-29 through version 1
+- **Roles:** client, client library, server
+- **Public server:** -
 
 ### [lsquic](https://github.com/litespeedtech/lsquic)
 
