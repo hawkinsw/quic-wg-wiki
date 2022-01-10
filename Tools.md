@@ -284,5 +284,15 @@ Interoperability testing framework. Allows running automated tests between diffe
 - Live version: https://interop.seemann.io/
 - Source code: https://github.com/marten-seemann/quic-interop-runner
 
+# [Fuzi_q](https://github.com/private-octopus/fuzi_q/)
+
+Over the net fuzzing of QUIC servers or clients. Fuzi_q can be used as a client to test a QUIC server, or as a server to test a QUIC client.
+
+Fuzi_q started from the testsuite of [picoquic](https://github.com/private-octopus/picoquic/).
+Fuzi_q hooks into the Picoquic stack, catching messages just before they would be encrypted and fuzzing them. It tries to do that intelligently. For each connection, Fuzi_q determines an encryption point, such as "the initial messages ave been processed", or "the handshake is confirmed", or "the connection is closing". The connection progresses up to that state, and then packets are fuzzed. The fuzzing itself is based on knowledge of the QUIC protocol. The fuzzer might modify QUIC frames, or insert randomly chosen QUIC frames in the packets. The procedures implemented in the initial version are simple, there is clearly room for more sophistication. Suggestions are welcome.
+
+- Source code: https://github.com/private-octopus/fuzi_q/
+- Supported versions: v1, also drafts 27 to 32.
+
 
 
