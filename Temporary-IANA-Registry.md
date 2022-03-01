@@ -23,6 +23,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 |  0x10  | retry_connection_id         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-quic-transport-parameter-re) |
 |  0x1B  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 |  0x20  | max_datagram_frame_size     | [quic-datagram](https://tools.ietf.org/html/draft-pauly-quic-datagram-05#section-7) |
+|  0x30  | cibir_encoding              | [quic-cibir](https://datatracker.ietf.org/doc/html/draft-banks-quic-cibir#section-4.1) 
 |  0x3A  | reserved for GREASE         | [quic-transport](https://quicwg.org/base-drafts/draft-ietf-quic-transport.html#name-reserved-transport-paramete) |
 |  0x40  | max_sending_uniflow_id      | [quic-multipath](https://datatracker.ietf.org/doc/draft-deconinck-quic-multipath/) |
 |  0x41  | enable_multipath            | [multipath-quic](https://datatracker.ietf.org/doc/draft-liu-multipath-quic/) |
