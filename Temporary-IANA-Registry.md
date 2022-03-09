@@ -50,11 +50,11 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0x4752 | Google_internal | Google-internal undocumented transport parameter |
 | 0x7157 | enable_time_stamp (v0) | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x7158 | enable_time_stamp (v1) | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
-| 0x73DB | version_negotiation         | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
-| 0xBAAD | disable_1rtt_encryption     | [quic-disable-encryption](https://tools.ietf.org/html/draft-banks-quic-disable-encryption) |
-| 0xDE1A | min_ack_delay               | [quic-delayed-ack-00](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-00) |
-| 0xFF02DE1A | min_ack_delay           | [quic-delayed-ack-02](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-02) |
-
+| 0x73DB | version_negotiation | [quic-version-negotiation](https://tools.ietf.org/html/draft-schinazi-quic-version-negotiation-02#section-9) |
+| 0xBAAD | disable_1rtt_encryption | [quic-disable-encryption](https://tools.ietf.org/html/draft-banks-quic-disable-encryption) |
+| 0xDE1A | min_ack_delay | [quic-delayed-ack-00](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-00) |
+| 0xFF02DE1A | min_ack_delay | [quic-delayed-ack-02](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-02) |
+| 0xFF03DE1A | min_ack_delay | [quic-delayed-ack-02](https://datatracker.ietf.org/doc/html/draft-ietf-quic-ack-frequency) |
 
 ## QUIC Frame Types
 
