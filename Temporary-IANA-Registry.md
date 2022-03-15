@@ -54,7 +54,7 @@ QUIC implementers have started experimenting with QUIC extensions, and have a ne
 | 0xBAAD | disable_1rtt_encryption | [quic-disable-encryption](https://tools.ietf.org/html/draft-banks-quic-disable-encryption) |
 | 0xDE1A | min_ack_delay | [quic-delayed-ack-00](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-00) |
 | 0xFF02DE1A | min_ack_delay | [quic-delayed-ack-02](https://tools.ietf.org/html/draft-iyengar-quic-delayed-ack-02) |
-| 0xFF03DE1A | min_ack_delay | [quic-delayed-ack-02](https://datatracker.ietf.org/doc/html/draft-ietf-quic-ack-frequency) |
+| 0xFF03DE1A | min_ack_delay | [quic-ack-frequency-01](https://datatracker.ietf.org/doc/html/draft-ietf-quic-ack-frequency-01) |
 
 ## QUIC Frame Types
 
