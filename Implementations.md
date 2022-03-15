@@ -281,6 +281,14 @@ A QUIC implementation in Go.
 - **Protocol IDs:**
 - **Public server:** https://interop.seemann.io
 
+### [s2n-quic](https://github.com/aws/s2n-quic)
+
+- **Language:** Rust
+- **Version:** v1
+- **Roles:** library, client, server
+- **Handshake:** TLS 1.3
+- **Protocol IDs:** `0x00000001`
+
 ## HTTP/3
 
 The following implement HTTP/3. The "Transport library" field identifies one (or more) of the above stacks if applicable.
