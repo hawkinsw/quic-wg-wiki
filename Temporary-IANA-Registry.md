@@ -1,4 +1,9 @@
-QUIC implementers have started experimenting with QUIC extensions, and have a need for codepoints to do interop testing. To avoid collisions, please list your experimental codepoints below. This page will be deleted once the official IANA registry is operational.
+The IANA tables now exist, please register codepoints with IANA.
+
+QUIC: https://www.iana.org/assignments/quic/quic.xhtml
+HTTP/3: https://www.iana.org/assignments/http3-parameters/http3-parameters.xhtml
+
+~~QUIC implementers have started experimenting with QUIC extensions, and have a need for codepoints to do interop testing. To avoid collisions, please list your experimental codepoints below. This page will be deleted once the official IANA registry is operational.~~
 
 ## QUIC Transport Parameters
 
