@@ -289,6 +289,18 @@ A QUIC implementation in Go.
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0x00000001`
 
+### [XQUIC](https://github.com/alibaba/xquic)
+
+XQUIC Library released by Alibaba is a cross-platform implementation of IETF QUIC and HTTP/3 protocol.
+
+- **Platforms:** Linux, macOS, Android, iOS
+- **Language:** C
+- **Version:** v1, Draft-29
+- **Roles:** Client, Server, Library
+- **Handshake:** TLSv1.3 (RFC8446)
+- **Protocol IDs:** `0x00000001`, `0xFF00001D`
+
+
 ## HTTP/3
 
 The following implement HTTP/3. The "Transport library" field identifies one (or more) of the above stacks if applicable.
@@ -354,6 +366,10 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 - **Public server:** fb.mvfst.net:4433, facebook.com:443
 
 ### quiche
+
+See entry in the "IETF QUIC Transport" section.
+
+### [XQUIC](https://github.com/alibaba/xquic)
 
 See entry in the "IETF QUIC Transport" section.
 
