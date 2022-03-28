@@ -406,3 +406,7 @@ A standalone, portable library (Linux, FreeBSD, Windows, MacOS) written in vanil
 ### Chromium
 
 See entry in the "IETF QUIC Transport" section.
+
+### [XQUIC](https://github.com/alibaba/xquic)
+- **Language:** C
+- **Version:** [-21](https://tools.ietf.org/html/draft-ietf-quic-qpack-21)
