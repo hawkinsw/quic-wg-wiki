@@ -39,19 +39,7 @@ HTTP/3: https://www.iana.org/assignments/http3-parameters/http3-parameters.xhtml
 | 0x3127 | Google_internal | Google-internal undocumented transport parameter |
 | 0x3128 | Google_internal | Google-internal undocumented transport parameter |
 | 0x3129 | Google_internal | Google-internal undocumented transport parameter |
-| 0x312A | Google_internal | Google-internal undocumented transport parameter |
 | 0x312B | Google_internal | Google-internal undocumented transport parameter |
-| 0x312C | Google_internal | Google-internal undocumented transport parameter |
-| 0x312D | Google_internal | Google-internal undocumented transport parameter |
-| 0x312E | Google_internal | Google-internal undocumented transport parameter |
-| 0x312F | Google_internal | Google-internal undocumented transport parameter |
-| 0x3130 | Google_internal | Google-internal undocumented transport parameter |
-| 0x3131 | Google_internal | Google-internal undocumented transport parameter |
-| 0x3132 | Google_internal | Google-internal undocumented transport parameter |
-| 0x3133 | Google_internal | Google-internal undocumented transport parameter |
-| 0x3134 | Google_internal | Google-internal undocumented transport parameter |
-| 0x465A | Google_internal | Google-internal undocumented transport parameter |
-| 0x4751 | Google_internal | Google-internal undocumented transport parameter |
 | 0x4752 | Google_internal | Google-internal undocumented transport parameter |
 | 0x7157 | enable_time_stamp (v0) | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
 | 0x7158 | enable_time_stamp (v1) | [quic-ts](https://datatracker.ietf.org/doc/draft-huitema-quic-ts/) |
