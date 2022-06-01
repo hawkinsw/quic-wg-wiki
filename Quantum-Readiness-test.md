@@ -6,6 +6,8 @@ client hello packets that do not fit in one packet. This can be achieved by send
 * Parameter code: 0x173E
 * Parameter value: anything, it's discarded!
 
+All lengths are allowed for this transport parameter, including zero.
+
 The client who wants to test Quantum readiness inserts the parameter in the transport parameter list.
 Endpoints that receive this parameter MUST ignore it.
 
