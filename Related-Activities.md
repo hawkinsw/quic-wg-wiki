@@ -170,7 +170,7 @@ MASQUE is a mechanism that allows co-locating and obfuscating networking applica
 
 ### WebTransport
 
-**This has progressed as a separate piece of work in the IETF; see https://datatracker.ietf.org/wg/https://datatracker.ietf.org/wg/webtrans/about//about/. The following text is left as a historical reference.** 
+**This has progressed as a separate piece of work in the IETF; see https://datatracker.ietf.org/wg/webtrans/about/. The following text is left as a historical reference.** 
 
 WebTransport is a framework for bidirectional communications between web applications and servers.  It provides, among other things, QuicTransport, an API that allows webapps to create a direct QUIC connection to a valid remote server.
 
