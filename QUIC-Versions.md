@@ -24,6 +24,7 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0x5430353[0-9] | Google | Google QUIC with TLS 50 - 59 (T050 - T059) |
 | 0x54303939 | Google | Google QUIC with TLS 99 (T099) |
 | 0x50524f58 | Google | Proxied QUIC (PROX) |
+| 0x5c10000[0-f] | Anapaya | QUIC over SCION |
 | 0x51474f[0-255] | quic-go | "QGO" + [0-255]
 | 0x91c170[0-255] | quicly | "qicly0" + [0-255] |
 | 0xabcd000[0-f] | Microsoft | MsQuic |
