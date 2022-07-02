@@ -151,6 +151,7 @@ HTTP/3: https://www.iana.org/assignments/http3-parameters/http3-parameters.xhtml
 | ENABLE_DATA_WITH_OFFSET      | 0xD00  | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
 | ENABLE_DATA_WITH_OFFSET      | 0xD0F  | [quic-http-data-offset-frame](https://datatracker.ietf.org/doc/draft-hurst-quic-http-data-offset-frame/) |
 | ENABLE_WEBTRANSPORT          | 0x2b603742 | [h3-webtransport](https://tools.ietf.org/html/draft-vvv-webtransport-http3) |
+| WEBTRANSPORT_MAX_SESSIONS    | 0x2b603743 | [h3-webtransport](https://tools.ietf.org/html/draft-vvv-webtransport-http3) |
 
 
 ## HTTP/3 Error Codes
