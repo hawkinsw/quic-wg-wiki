@@ -25,3 +25,5 @@ While IANA holds the formal registration table of Protocol IDs at https://www.ia
 |doq-iNN | DNS over QUIC (https://datatracker.ietf.org/doc/draft-ietf-dprive-dnsoquic/) |
 |qrt-NN | QRT: QUIC RTP Tunnelling (https://datatracker.ietf.org/doc/draft-hurst-quic-rtp-tunnelling/) |
 |libp2p | [libp2p](https://libp2p.io/) |
+|xmpp-client | XMPP over QUIC (https://xmpp.org/extensions/xep-0467.html), client to server connections |
+|xmpp-server | XMPP over QUIC (https://xmpp.org/extensions/xep-0467.html), server to server connections |
