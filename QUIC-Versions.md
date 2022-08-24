@@ -34,3 +34,4 @@ The (WIP) QUIC specification reserves 0x00000001 to 0x0000ffff for standardized 
 | 0xf0f0f0f[0-f] | ETH Zürich | Measurability experiments |
 | 0xf0f0f1f[0-f] | Telecom Italia | Measurability experiments |
 | 0xf0f0f2f[0-f] | quinn-noise | https://github.com/ipfs-rust/quinn-noise |
+| 0x0700700[0-f] | Tencent | TencentQuic |
