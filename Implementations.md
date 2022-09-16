@@ -87,6 +87,18 @@ QUIC implementation in F5 TMOS
 - **ALPN:** `h3-29`, `h3-32`. `hq-29` and `hq-32` available upon request.
 - **Public server:** f5quic.com:4433. spin, logging, and retry on f5quic.com:4434.
 
+### [haproxy](https://github.com/haproxy/haproxy/)
+QUIC - HTTP/3 implementation in haproxy
+
+- **Language:** C
+- **Version:** draft-29, v1, v2
+- **Roles:** server
+- **Handshake:** TLSv1.3 (RFC8446)
+- **Protocol IDs:** `0xff00001d`, `0x00000001`, `0x709a50c4`
+- **ALPN:** `h3-29`, `h3`, `hq-interop`
+- **Public server:** https://www.haproxy.org/, 
+  look out for "Site served using" section after a reload
+
 ### [Haskell quic](https://github.com/kazu-yamamoto/quic)
 
 - **Language:** Haskell
