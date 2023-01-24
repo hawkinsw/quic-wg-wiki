@@ -1,8 +1,8 @@
 The IANA tables now exist, please register codepoints with IANA.
 
-QUIC: https://www.iana.org/assignments/quic/quic.xhtml
+QUIC: https://www.iana.org/assignments/quic/quic.xhtml<br>
 HTTP/3: https://www.iana.org/assignments/http3-parameters/http3-parameters.xhtml
-
+<!---
 ~~QUIC implementers have started experimenting with QUIC extensions, and have a need for codepoints to do interop testing. To avoid collisions, please list your experimental codepoints below. This page will be deleted once the official IANA registry is operational.~~
 
 ## QUIC Transport Parameters
@@ -187,3 +187,4 @@ HTTP/3: https://www.iana.org/assignments/http3-parameters/http3-parameters.xhtml
 | QPACK Encoder Stream         | 0x02   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-stream-type-registration) |
 | QPACK Decoder Stream         | 0x03   | [quic-qpack](https://quicwg.org/base-drafts/draft-ietf-quic-qpack.html#name-stream-type-registration) |
 | WebTransport Unidirectional Stream | 0x54 | [webtransport-http3](https://www.ietf.org/archive/id/draft-ietf-webtrans-http3-00.html#name-unidirectional-streams) |
+-->
