@@ -42,6 +42,7 @@ AppleQUIC is a client and server implementation.
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:** `0xff00001d` + `0x00000001`
 - **Public server:** N/A
+- **Vulnerability reporting:** https://support.apple.com/en-us/HT201220
 
 ### [ats](https://cwiki.apache.org/confluence/display/TS/QUIC)
 
@@ -57,6 +58,7 @@ QUIC implementation in Apache Traffic Server
   - quic.ogre.com:4434 (Stateless Retry)
   - quic.ogre.com:4443 (Preferred Address 4443 -> 4433)
   - https://quic.ogre.com/cgi-bin/quic_log.cgi (Debug logs)
+- **Vulnerability reporting:** https://github.com/apache/trafficserver/security/policy
 
 ### [Chromium](https://quiche.googlesource.com/quiche/)	
 
@@ -145,6 +147,7 @@ Microsoft's general purpose (cross-platform) QUIC implementation. Optimized for 
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:** `0xff00001D`, `0x1`
 - **Public server:** msquic.net or quic.westus.cloudapp.azure.com
+- **Vulnerability reporting:** https://github.com/microsoft/msquic/security/policy
 
 ### [mvfst](https://github.com/facebookincubator/mvfst)
 
@@ -156,6 +159,7 @@ mvfst (pronounced move fast) is an implementation of QUIC by Facebook
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001b` 
 - **Public server:** fb.mvfst.net:443, www.facebook.com, www.instagram.com
+- **Vulnerability reporting:** https://github.com/facebookincubator/mvfst/security/policy
 
 ### [Neqo](https://github.com/mozilla/neqo)
 Mozilla/Firefox QUIC and HTTP3 implementation.
@@ -176,6 +180,7 @@ ngtcp2 project is an effort to implement IETF QUIC protocol
 - **Handshake:** TLSv1.3 (RFC 8446)
 - **Protocol IDs:** `0x00000001`, `0xff00001d`, `0xff00001e`, `0xff00001f`, and `0xff000020`
 - **Public server:** nghttp2.org:4433, nghttp2.org:443
+- **Vulnerability reporting:** https://nghttp2.org/documentation/security.html
 
 ### [nginx](https://hg.nginx.org/nginx-quic/)
 QUIC and HTTP/3 server implementation in nginx
@@ -191,11 +196,12 @@ QUIC and HTTP/3 server implementation in nginx
 Implementation of QUIC for NGINX based on quiche, by Cloudflare.
 
 - **Language:** C
-- **Version:** draft-27, draft-28, draft-29
+- **Version:** v1, draft-29
 - **Roles:** server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0xff00001b`, `0xff00001c`, `0xff00001d`
+- **Protocol IDs:** `0x00000001`, `0xff00001d`
 - **Public server:** cloudflare-quic.com:443 (HTTP/3 only)
+- **Vulnerability reporting:** https://github.com/cloudflare/quiche/security/policy
 
 <!--
 ### [Node.js QUIC](https://github.com/nodejs/quic)
@@ -220,6 +226,7 @@ A small(ish) implementation of QUIC in C, to explore the protocol and the API, f
 - **Handshake:** TLS 1.3 (using picotls)
 - **Protocol IDs:** `0xff000020`, `0xff00001f`, `0xff00001e`, `0xff00001d`, `0xff00001c`, `0xff00001b`
 - **Public server:** test.privateoctopus.com:4433 (server log accessible at https://test.privateoctopus.com/). Use port 4434 to test retries.
+- **Vulnerability reporting:** https://github.com/private-octopus/picoquic/security/policy
 
 ### [Pluginized QUIC](https://github.com/p-quic/pquic)
 The PQUIC implementation, a framework that enables QUIC clients and servers to dynamically exchange protocol plugins that extend the protocol on a per-connection basis.
@@ -251,11 +258,12 @@ quiche is an implementation of the QUIC transport protocol as specified by the I
 **NOTE**: Not to be confused with Google QUICHE.
 
 - **Language:** Rust
-- **Version:** v1, draft-27, draft-28, draft-29
+- **Version:** v1, draft-29
 - **Roles:** library, client, server
 - **Handshake:** TLSv1.3 (RFC8446)
-- **Protocol IDs:** `0x00000001`, `0xff00001b`, `0xff00001c`, `0xff00001d`
+- **Protocol IDs:** `0x00000001`, `0xff00001d`
 - **Public server:** quic.tech:4433 (HTTP/0.9 + 0-RTT) / quic.tech:8443 (HTTP/3 + 0-RTT) / quic.tech:8444 (HTTP/3 + Retry)
+- **Vulnerability reporting:** https://github.com/cloudflare/quiche/security/policy
 
 
 ### [quicly](https://github.com/h2o/quicly)
@@ -270,6 +278,7 @@ QUIC protocol implementation for H2O server
 - **Public server:**
   - quic.examp1e.net:4433 (HTTP/0.9)
   - quic.examp1e.net:443 (HTTP/3)
+- **Vulnerability reporting:** https://github.com/h2o/h2o/security/policy
 
 ### [Quinn](https://github.com/djc/quinn)
 
@@ -292,6 +301,7 @@ A QUIC implementation in Go.
 - **Handshake:** TLS 1.3 RFC
 - **Protocol IDs:**
 - **Public server:** https://interop.seemann.io
+- **Vulnerability reporting:** https://github.com/quic-go/quic-go/security/policy
 
 ### [s2n-quic](https://github.com/aws/s2n-quic)
 
@@ -300,6 +310,7 @@ A QUIC implementation in Go.
 - **Roles:** library, client, server
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0x00000001`
+- **Vulnerability reporting:** https://github.com/aws/s2n-quic/security/policy
 
 ### [XQUIC](https://github.com/alibaba/xquic)
 
@@ -311,6 +322,7 @@ XQUIC Library released by Alibaba is a cross-platform implementation of IETF QUI
 - **Roles:** Client, Server, Library
 - **Handshake:** TLSv1.3 (RFC8446)
 - **Protocol IDs:** `0x00000001`, `0xFF00001D`
+- **Vulnerability reporting:** https://github.com/alibaba/xquic/security/policy
 
 
 ## HTTP/3
@@ -356,6 +368,7 @@ It does not depend on any particular QUIC transport implementation.
 - **Roles:** library
 - **Public server:** nghttp2.org:4433
 
+<!--
 ### [Node.js QUIC](https://github.com/nodejs/quic)
 Implementation of QUIC and HTTP/3 support in Node.js (based on nghttp3)
 
@@ -367,6 +380,7 @@ Implementation of QUIC and HTTP/3 support in Node.js (based on nghttp3)
 - **Public server:** -
 
 Notes: No public server yet. Implementation is still in development and not yet merged with main Node.js repository. 
+-->
 
 ### [proxygen](https://github.com/facebook/proxygen)
 proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the transport.
@@ -376,6 +390,7 @@ proxygen implements HTTP/3 mapping over QUIC and QPACK in C++, with MVFST as the
 - **HTTP over QUIC Version:** draft-23
 - **Roles:** library, sample server/client
 - **Public server:** fb.mvfst.net:4433, facebook.com:443
+- **Vulnerability reporting:** https://github.com/facebook/proxygen/security/policy
 
 ### quiche
 
