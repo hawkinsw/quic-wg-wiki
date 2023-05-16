@@ -24,14 +24,6 @@ QUIC implementation using Python and asyncio.
   - quic.aiortc.org:4434 (Stateless Retry)
 applicable.
 
-### Akamai QUIC
-
-- **Roles:** Server
-- **Public server:** ietf.akaquic.com:443
-- **Version:** draft-29
-- **Protocol IDs:** `0xff00001d` 
-- **Handshake:** TLS 1.3 RFC
-
 ### AppleQUIC
 
 AppleQUIC is a client and server implementation.  
@@ -328,10 +320,6 @@ XQUIC Library released by Alibaba is a cross-platform implementation of IETF QUI
 ## HTTP/3
 
 The following implement HTTP/3. The "Transport library" field identifies one (or more) of the above stacks if applicable.
-
-### Akamai QUIC
-
-See entry in the "IETF QUIC Transport" section.
 
 ### Chromium
 
