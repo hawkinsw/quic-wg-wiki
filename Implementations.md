@@ -272,16 +272,15 @@ QUIC protocol implementation for H2O server
   - quic.examp1e.net:443 (HTTP/3)
 - **Vulnerability reporting:** https://github.com/h2o/h2o/security/policy
 
-### [Quinn](https://github.com/djc/quinn)
+### [Quinn](https://github.com/quinn-rs/quinn)
 
-Rust implementation based on tokio/futures, using rustls for TLS.
+Rust implementation with both a synchronous (sans-I/O) interface and an async interface, using rustls for TLS.
 
 - **Language:** Rust
-- **Version:** draft-28
+- **Version:** draft-29 - draft-31, v1, v2
 - **Roles:** library, client, server
 - **Handshake:** TLS 1.3
 - **Protocol IDs:** `0xff00001c`
-- **Public server:** h3.stammw.eu:443
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
