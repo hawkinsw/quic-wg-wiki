@@ -280,7 +280,6 @@ Rust implementation with both a synchronous (sans-I/O) interface and an async in
 - **Version:** draft-29 - draft-31, v1, v2
 - **Roles:** library, client, server
 - **Handshake:** TLS 1.3
-- **Protocol IDs:** `0xff00001c`
 
 ### [quic-go](https://github.com/lucas-clemente/quic-go)
 
