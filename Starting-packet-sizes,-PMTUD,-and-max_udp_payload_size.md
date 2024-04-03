@@ -5,6 +5,7 @@ This page collects the results of an informal survey of implementations' approac
 | google quiche | 1250 | No | - |
 | MsQuic | 1240 | Yes | Based on MTU of the socket/interface |
 | mvfst | 1232 | No (experimented with and subsequently removed) | - |
+| neqo | 1537 (IPv4), 1337 (IPv6) | No | - |
 | ngtcp2 | 1200 | Yes | - |
 | pico-quic | 1252 (IPv4), 1232 (IPv6) | Yes | 1440 |
 | quinn | 1200 | Yes | - |
