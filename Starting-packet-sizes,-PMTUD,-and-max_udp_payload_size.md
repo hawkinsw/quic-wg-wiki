@@ -9,4 +9,5 @@ This page collects the results of an informal survey of implementations' approac
 | ngtcp2 | 1200 | Yes | - |
 | pico-quic | 1252 (IPv4), 1232 (IPv6) | Yes | 1440 |
 | quinn | 1200 | Yes | - |
+| quiche | 1200 | Yes | - |
 | s2n-quic | 1200 | Yes | - |
