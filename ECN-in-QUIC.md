@@ -26,7 +26,7 @@ differentiation between the use of the ECT(0) and ECT(1) code points.
 [ECN draft](https://tools.ietf.org/id/draft-johansson-quic-ecn-03.txt) also covers this work, there may however be occasions where the wiki and the draft are not in synch, the ultimate goal is to move the specific wireformat and how-to´s to the QUIC transport draft later on.
 
 # Requirements
-The folloing requirements are placed on a transport supporting ECN:
+The following requirements are placed on a transport supporting ECN:
 * R.1 The ECN specification SHOULD be easy to implement. Care ought be taken to minimize additional complexity in the implementation of ACK frames and the QUIC congestion control/recovery.
 * R.2 The ECN feedback MUST report all ECN-CE marked packets. This is important for any ECN reaction that is based on the rate or pattern of marking (including L4S support). It is an open question whether detailed packet information is needed or if it is sufficient to report the accumulated number of packets that are ECN-CE marked.
 * R.3 The ECN feedback SHOULD report the number of packets with the ECT(0) and ECT(1) codepoint. This is beneficial for the detection of remarking, bleaching or ECN black holes. 
@@ -132,12 +132,12 @@ At the receiver endpoint, it is necessary to use the recvmsg call with an extend
   - To set ECN value on outgoing packet, set cmsg_level to `IPPROTO_IP` and cmsg_type to `IP_TOS` and use an `int` value.
   - To read ECN value:
     - The socket must have socket option `IPPROTO_IP`, `IP_RECVTOS` set to 1.
-    - The ancillary message on level `IPPROTO_IP` and of type `IP_TOS` will contain an integer with the ECN.  You may need to mask off just the relevant two bites using `IPTOS_ECN_MASK`
+    - The ancillary message on level `IPPROTO_IP` and of type `IP_TOS` will contain an integer with the ECN.  You may need to mask off just the relevant two bytes using `IPTOS_ECN_MASK`
 - IPv6:
   - To set ECN value  on outgoing packet, set cmsg_level to `IPPROTO_IPV6` and cmsg_type to `IPV6_TCLASS` and use an `int` value.
   - To read ECN value:
     - The socket must have socket option `IPPROTO_IPV6`, `IP_RECVTCLASS` to set 1.
-    - The ancillary message on level `IPPROTO_IPV6` and of type `IP_TCLASS` will contain an integer with the ECN.  You may need to mask off just the relevant two bites using `IPTOS_ECN_MASK`
+    - The ancillary message on level `IPPROTO_IPV6` and of type `IP_TCLASS` will contain an integer with the ECN.  You may need to mask off just the relevant two bytes using `IPTOS_ECN_MASK`
 
 What's interesting about IPv6 socket options is that they may not be documented in the Linux man pages.  In that case (or in any case), more details are available in [RFC 3542](https://tools.ietf.org/html/rfc3542).
 
